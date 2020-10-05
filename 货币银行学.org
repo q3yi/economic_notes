@@ -1,14 +1,7 @@
 #+TITLE: 货币银行学笔记
 #+DATE: Wed Sep 16 2020 14:17:28 GMT+0800 (China Standard Time)
 #+STARTUP: indent
-
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/styles/readtheorg/css/htmlize.css"/>
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/styles/readtheorg/css/readtheorg.css"/>
-
-#+HTML_HEAD: <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-#+HTML_HEAD: <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-#+HTML_HEAD: <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/lib/js/jquery.stickytableheaders.min.js"></script>
-#+HTML_HEAD: <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/readtheorg/js/readtheorg.js"></script>
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/setup/theme-bigblow.setup
 
 * 货币银行学
 
@@ -1586,32 +1579,47 @@ $M \to E \to Y$
 
 ***** 内外均衡理论
 
-****** 两种目标
+- 两种目标
+  
+  1. 内部均衡
 
-******* 内部均衡
+  2. 外部均衡
 
-******* 外部均衡
+- 两种工具
 
-****** 两种工具
+  1. 支出调整政策
 
-******* 支出调整政策
+     - 财政政策
 
-******** 财政政策
+     - 货币政策
 
-******** 货币政策
+  2. 支出转换政策
+     
+     能够影响贸易品的国际竞争力
 
-******* 支出转换政策
+     - 汇率调整
 
-******** 能够影响贸易品的国际竞争力
-
-********* 汇率调整
-
-********* 关税
+     - 关税
 
 ***** 米德冲突
 
+在某些情况下，单独使用指出调整政策追求内、外部均衡，将会导致一国内部均
+衡与外部均衡之间的冲突
+
 ***** 丁伯根法则
 
+要实现n个经济目标，必须具备n种政策工具
+
 **** 实践中各国追求内外均衡的具体做法及原因
+
+以财政与货币政策维持内部均衡，并将汇率政策与直接管制结合起来维持外部均
+衡
+
+原因：
+
+1. 财政政策与货币政策相对于支出转换政策对于达到内部均衡更有利，而汇率
+   政策与直接控制对外部均衡的调节更有效
+
+2. 直接控制与汇率政策的结合能够实现总量与结构调整的统一
 
 *** 蒙带尔的"政策配合说"
