@@ -1,4 +1,4 @@
-#+TITLE: 微观经济学
+#+TITLE: 西方经济学
 #+STARTUP: indent
 #+DATE: <2020-09-24 Thu>
 #+SETUPFILE: https://fniessen.github.io/org-html-themes/setup/theme-readtheorg.setup
@@ -602,3 +602,19 @@ $\frac{MP_L(L, K)}{MP_K(L, K)} = \frac{w}{r}$
 * 一般均衡与福利经济学
 
 * 市场失灵与微观经济政策
+
+* 宏观经济活动与宏观经济学
+
+* 简单国民收入决定理论
+
+* 产品市场与货币市场的一般均衡
+
+* 宏观经济政策
+
+* 总需求与总供给分析
+
+* 经济增长
+
+* 通货膨胀理论
+
+* 宏观经济学的意见分歧
