@@ -1,6 +1,7 @@
 #+TITLE: 西方经济学
 #+STARTUP: indent
 #+DATE: <2020-09-24 Thu>
+#+OPTIONS: toc:2
 #+SETUPFILE: readtheorg-theme.setup
 
 * 需求和供给
