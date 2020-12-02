@@ -1,7 +1,7 @@
 #+TITLE: 西方经济学
 #+STARTUP: indent
 #+DATE: <2020-09-24 Thu>
-#+SETUPFILE: https://fniessen.github.io/org-html-themes/setup/theme-readtheorg.setup
+#+SETUPFILE: readtheorg-theme.setup
 
 * 需求和供给
 

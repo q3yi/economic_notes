@@ -1,7 +1,7 @@
 #+TITLE: 国际经济学
 #+STARTUP: indent
 #+DATE: <2020-10-14 Wed>
-#+SETUPFILE: https://fniessen.github.io/org-html-themes/setup/theme-readtheorg.setup
+#+SETUPFILE: readtheorg-theme.setup
 
 * 考试分数分布
 

@@ -1,0 +1,2713 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-12-02 Wed 17:52 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>国际经济学</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Qing Yi" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="../static/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="../static/readtheorg_theme/css/readtheorg.css"/>
+<script type="text/javascript" src="../static/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="../static/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../static/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="../static/readtheorg_theme/js/readtheorg.js"></script>
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">国际经济学</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgb860a9b">1. 考试分数分布</a></li>
+<li><a href="#orge177453">2. 绪论</a>
+<ul>
+<li><a href="#orgd036537">2.1. 国际经济学的基本概念</a></li>
+<li><a href="#orgbad90d4">2.2. 国际经济学的研究内容</a></li>
+</ul>
+</li>
+<li><a href="#orga36bd98">3. 国际贸易纯理论</a>
+<ul>
+<li><a href="#orge48df18">3.1. 绝对利益学说</a>
+<ul>
+<li><a href="#orga648dd1">3.1.1. 绝对利益学说的基本内容</a></li>
+<li><a href="#orgfde0d6f">3.1.2. 斯密绝对利益学说的数学说明</a></li>
+<li><a href="#org926be43">3.1.3. 斯密绝对利益学说的图形解释</a></li>
+<li><a href="#orgc89bf73">3.1.4. 对斯密绝对利益学说的评价</a></li>
+</ul>
+</li>
+<li><a href="#orgdad1561">3.2. 李嘉图的比较利益学说</a>
+<ul>
+<li><a href="#org3f245fb">3.2.1. 比较利益（相对优势）学说的基本内容</a></li>
+<li><a href="#org39146df">3.2.2. 比较利益学说的简单数学说明</a></li>
+<li><a href="#org0c5e1c7">3.2.3. 比较利益学说的图形解释</a></li>
+<li><a href="#orga65d8bc">3.2.4. 对比较利益学说的评价</a></li>
+<li><a href="#org57f9b0c">3.2.5. 比较利益的分解</a></li>
+</ul>
+</li>
+<li><a href="#org0615cdd">3.3. 国际贸易价格的确定</a>
+<ul>
+<li><a href="#org0042738">3.3.1. 相互需求方程式</a></li>
+<li><a href="#org3a1ed3a">3.3.2. 相互需求方程式的均衡条件</a></li>
+<li><a href="#orgd912258">3.3.3. 提供曲线</a></li>
+<li><a href="#orgf8873f7">3.3.4. 贸易条件</a></li>
+<li><a href="#org65d4934">3.3.5. 出口的贫困化增长</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org1b37c4f">4. 国际贸易的现代与当代理论</a>
+<ul>
+<li><a href="#orge562511">4.1. H-O模型（要素禀赋理论）及其分析</a>
+<ul>
+<li><a href="#orgddeacc4">4.1.1. 基本命题分析</a></li>
+<li><a href="#orge243986">4.1.2. H-O模型基本内在逻辑关系</a></li>
+<li><a href="#org8acf349">4.1.3. H-O模型的评价</a></li>
+</ul>
+</li>
+<li><a href="#org276d8bf">4.2. 列昂惕夫反论及国际贸易新要素理论</a>
+<ul>
+<li><a href="#org8f14b17">4.2.1. 列昂惕夫反论</a></li>
+<li><a href="#org1c5c3cf">4.2.2. 国际贸易新要素理论</a></li>
+<li><a href="#orgfcf606e">4.2.3. 国际贸易产品生命周期理论</a></li>
+</ul>
+</li>
+<li><a href="#orgf0550db">4.3. 国际贸易的当代理论</a>
+<ul>
+<li><a href="#org4ad4091">4.3.1. 产业内贸易理论</a></li>
+<li><a href="#org8a9373e">4.3.2. 政策贸易理论</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org1521090">5. 国际贸易政策分析</a>
+<ul>
+<li><a href="#org39b39b3">5.1. 关税分析</a>
+<ul>
+<li><a href="#org5e5eb6c">5.1.1. 关税概念</a></li>
+<li><a href="#orgb47f333">5.1.2. 小国进口关税的局部均衡分析</a></li>
+<li><a href="#org802f612">5.1.3. 小国进口关税一般均衡分析</a></li>
+</ul>
+</li>
+<li><a href="#org899d018">5.2. 非关税壁垒分析</a>
+<ul>
+<li><a href="#org546527b">5.2.1. 进口配额</a></li>
+<li><a href="#orgcc7ade9">5.2.2. 进口配额与等额关税的政策含义比较</a></li>
+<li><a href="#org3ae49f1">5.2.3. 反倾销与反补贴分析</a></li>
+</ul>
+</li>
+<li><a href="#orgeb725a5">5.3. 幼稚产业保护</a>
+<ul>
+<li><a href="#org05ae9a3">5.3.1. 幼稚产业保护的理论基础</a></li>
+<li><a href="#orgb61840e">5.3.2. 幼稚产业的定义（M-B-K标准）</a></li>
+<li><a href="#org0a97870">5.3.3. 关税有效保护率的计算</a></li>
+<li><a href="#org807d59c">5.3.4. 关税有效保护的政策含义与评价</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgd12599b">6. 国际收支分析</a>
+<ul>
+<li><a href="#orgec5fbbe">6.1. 国际收支与国际收支表</a>
+<ul>
+<li><a href="#org87c43c8">6.1.1. 国际收支</a></li>
+<li><a href="#org109386c">6.1.2. 国际收支表的构成</a></li>
+</ul>
+</li>
+<li><a href="#org62ce673">6.2. 国际收支的调节</a>
+<ul>
+<li><a href="#orgc8a472c">6.2.1. 国际收支的失衡</a></li>
+<li><a href="#org1965320">6.2.2. 国际收支失衡调节理论</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgf845505">7. 汇率决定的一般理论</a>
+<ul>
+<li><a href="#org209ac7a">7.1. 外汇及汇率</a>
+<ul>
+<li><a href="#orgb8d43ca">7.1.1. 外汇的定义及其作用</a></li>
+<li><a href="#org6f62472">7.1.2. 汇率定义与汇率的标价法</a></li>
+</ul>
+</li>
+<li><a href="#org3a5ed15">7.2. 汇率决定的若干理论</a>
+<ul>
+<li><a href="#orgcf23026">7.2.1. 汇率决定的传统理论（二战前）</a></li>
+<li><a href="#org3b9ea26">7.2.2. 二战后汇率决定的理论</a></li>
+<li><a href="#org239080c">7.2.3. 一般理论（一价定律）</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org9c8b52e">8. 要素的国际流动</a>
+<ul>
+<li><a href="#org51a9321">8.1. 资本国际流动及其经济效应</a>
+<ul>
+<li><a href="#org64cba71">8.1.1. 资本国际流动</a></li>
+<li><a href="#orgc592e32">8.1.2. 资本国际流动的经济分析</a></li>
+<li><a href="#org8c2824a">8.1.3. 国际生产折衷理论（为什么产生FDI）</a></li>
+</ul>
+</li>
+<li><a href="#orga7bff58">8.2. 劳动力国际流动及其经济效应</a>
+<ul>
+<li><a href="#org54eeb00">8.2.1. 劳动力国际流动的原因</a></li>
+<li><a href="#orgaa6c6f8">8.2.2. 劳动力国际流动的经济分析</a></li>
+</ul>
+</li>
+<li><a href="#orgae79b76">8.3. 技术转移及其经济效应</a>
+<ul>
+<li><a href="#org6eb29da">8.3.1. 技术的国际转移</a></li>
+<li><a href="#org382137d">8.3.2. 国际技术转移的经济分析</a></li>
+</ul>
+</li>
+<li><a href="#orgf209390">8.4. 国际要素转移的其他经济效应</a>
+<ul>
+<li><a href="#orgec1a5b8">8.4.1. 两缺口模型&#xa0;&#xa0;&#xa0;<span class="tag"><span class="2020__">2020重点</span></span></a></li>
+<li><a href="#org48c3fa5">8.4.2. 外资引进的经济分析</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org1f02b6f">9. 宏观经济的内外均衡</a>
+<ul>
+<li><a href="#org1ba5803">9.1. 国际传导机制（非均衡传导）</a></li>
+<li><a href="#orgc3b9310">9.2. 贸易乘数</a></li>
+</ul>
+</li>
+<li><a href="#org1f1462c">10. 经济一体化与国际经济秩序分析</a>
+<ul>
+<li><a href="#orgbe4fc84">10.1. 经济一体化分析</a>
+<ul>
+<li><a href="#org950b70f">10.1.1. 关税同盟</a></li>
+<li><a href="#org7414e7f">10.1.2. 最优货币区理论</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org24fc7c1">11. 经济全球化趋势</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb860a9b" class="outline-2">
+<h2 id="orgb860a9b"><span class="section-number-2">1</span> 考试分数分布</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+2个选择题（4分）
+</p>
+
+<p>
+1个名词解释（3分）
+</p>
+
+<p>
+1个简答（8分）
+</p>
+
+<p>
+一共15分，难度较大，考题简单
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge177453" class="outline-2">
+<h2 id="orge177453"><span class="section-number-2">2</span> 绪论</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgd036537" class="outline-3">
+<h3 id="orgd036537"><span class="section-number-3">2.1</span> 国际经济学的基本概念</h3>
+<div class="outline-text-3" id="text-2-1">
+<ol class="org-ol">
+<li>资源的国际配置</li>
+
+<li>福利的国际最大化分析</li>
+
+<li>国际经济活动往来的内在联系</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgbad90d4" class="outline-3">
+<h3 id="orgbad90d4"><span class="section-number-3">2.2</span> 国际经济学的研究内容</h3>
+<div class="outline-text-3" id="text-2-2">
+<ol class="org-ol">
+<li>国际贸易纯理论研究</li>
+
+<li>国际贸易政策研究</li>
+
+<li>国际收支研究</li>
+
+<li>外汇理论研究</li>
+
+<li>生产要素的国际流动研究</li>
+
+<li>跨国公司研究</li>
+
+<li>经济发展研究</li>
+
+<li>开放经济的宏观调控研究</li>
+
+<li>经济全球化与国际经济秩序研究</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga36bd98" class="outline-2">
+<h2 id="orga36bd98"><span class="section-number-2">3</span> 国际贸易纯理论</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orge48df18" class="outline-3">
+<h3 id="orge48df18"><span class="section-number-3">3.1</span> 绝对利益学说</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-orga648dd1" class="outline-4">
+<h4 id="orga648dd1"><span class="section-number-4">3.1.1</span> 绝对利益学说的基本内容</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<ol class="org-ol">
+<li><p>
+绝对优势
+</p>
+
+<p>
+指在某种商品生产上，一国所耗费的劳动成本绝对低于其贸易伙伴国，那么
+劳动生产率就占绝对优势
+</p></li>
+
+<li><p>
+贸易方法
+</p>
+
+<p>
+各国从事占绝对优势的产品的生产，然后进行交换，那么双方都可以通过交
+换得到绝对利益，世界总体的福利水平也可以得到提高
+</p></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgfde0d6f" class="outline-4">
+<h4 id="orgfde0d6f"><span class="section-number-4">3.1.2</span> 斯密绝对利益学说的数学说明</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">分工前</th>
+<th scope="col" class="org-left">X</th>
+<th scope="col" class="org-left">Y</th>
+<th scope="col" class="org-left">分工后</th>
+<th scope="col" class="org-left">X</th>
+<th scope="col" class="org-left">Y</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">A</td>
+<td class="org-left">1*1</td>
+<td class="org-left">2*0.5</td>
+<td class="org-left">A</td>
+<td class="org-left">3*1</td>
+<td class="org-left">0</td>
+</tr>
+
+<tr>
+<td class="org-left">B</td>
+<td class="org-left">2*0.5</td>
+<td class="org-left">1*1</td>
+<td class="org-left">B</td>
+<td class="org-left">0</td>
+<td class="org-left">3*1</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<b>表中数字第一个表示投入的劳动力，后一个表示单位劳动力的生产的产品数量</b>
+</p>
+
+<p>
+对比分工前分工后可知：
+</p>
+
+<ol class="org-ol">
+<li>分工前AB两国共同投入6单位劳动力生产出了4单位的产品</li>
+
+<li>分工后AB两国仍然投入6单位劳动力生产出了6单位产品，世界总福利水平上升</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org926be43" class="outline-4">
+<h4 id="org926be43"><span class="section-number-4">3.1.3</span> 斯密绝对利益学说的图形解释</h4>
+<div class="outline-text-4" id="text-3-1-3">
+<p>
+<i>参考大纲和教材</i>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc89bf73" class="outline-4">
+<h4 id="orgc89bf73"><span class="section-number-4">3.1.4</span> 对斯密绝对利益学说的评价</h4>
+<div class="outline-text-4" id="text-3-1-4">
+<ol class="org-ol">
+<li><p>
+进步意义
+</p>
+
+<p>
+促进国际贸易的发展
+</p></li>
+
+<li>不足
+
+<ol class="org-ol">
+<li>只能解决发达国家与发达国家之间的贸易问题，但对于发展中国家和发达
+国家，或者发展中国家之间的贸易较难解释（有些国家没有绝对优势也进
+行国际贸易）</li>
+
+<li>没有解释两种商品X、Y进行交换的内在等价要求是什么</li>
+</ol></li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgdad1561" class="outline-3">
+<h3 id="orgdad1561"><span class="section-number-3">3.2</span> 李嘉图的比较利益学说</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-org3f245fb" class="outline-4">
+<h4 id="org3f245fb"><span class="section-number-4">3.2.1</span> 比较利益（相对优势）学说的基本内容</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<p>
+假设前提：
+</p>
+
+<ol class="org-ol">
+<li>两个国家、两种商品、一种生产要素</li>
+
+<li>自由贸易，无贸易限制</li>
+
+<li>要素在国内自由流动，国家间不能流动</li>
+
+<li>生产成本不变，无规模收益</li>
+</ol>
+
+<p>
+基本内容：
+</p>
+
+<p>
+即使一个过家生产每种产品都处于绝对优势，而另一国家生产每种产品都处于绝
+对劣势，只要它们的劳动生产率在不同产品存在差别，遵循“两利相权取其重，
+两弊相衡取其轻”的原则，处于绝对优势的国家不必生产全部产品，而应该集中
+生产本国国内具有最大优势的产品，处于绝对劣势的国家也不必停产所有的产品，
+而只应该停止生产在本国国内处于最大劣势的产品，通过自由交换，双方便能从
+国际分工和贸易种获得利益
+</p>
+</div>
+</div>
+
+<div id="outline-container-org39146df" class="outline-4">
+<h4 id="org39146df"><span class="section-number-4">3.2.2</span> 比较利益学说的简单数学说明</h4>
+<div class="outline-text-4" id="text-3-2-2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">分工前</th>
+<th scope="col" class="org-left">X</th>
+<th scope="col" class="org-left">Y</th>
+<th scope="col" class="org-left">分工后</th>
+<th scope="col" class="org-left">X</th>
+<th scope="col" class="org-left">Y</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">A</td>
+<td class="org-left">\(6 \times \frac{1}{6}\)</td>
+<td class="org-left">\(4 \times \frac{1}{4}\)</td>
+<td class="org-left">A</td>
+<td class="org-left">0</td>
+<td class="org-left">\(10 \times \frac{1}{4}\)</td>
+</tr>
+
+<tr>
+<td class="org-left">B</td>
+<td class="org-left">\(1 \times 1\)</td>
+<td class="org-left">\(2 \times \frac{1}{2}\)</td>
+<td class="org-left">B</td>
+<td class="org-left">\(3 \times 1\)</td>
+<td class="org-left">0</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+同绝对利益学说一样，可以发现
+</p>
+
+<ol class="org-ol">
+<li>分工前AB两国共同投入13单位劳动力生产出了4单位的产品</li>
+
+<li>分工后AB两国仍然投入13单位劳动力生产出了5.5单位产品，世界总福利水平
+上升</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org0c5e1c7" class="outline-4">
+<h4 id="org0c5e1c7"><span class="section-number-4">3.2.3</span> 比较利益学说的图形解释</h4>
+<div class="outline-text-4" id="text-3-2-3">
+<p>
+<i>参考大纲或者教材</i>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga65d8bc" class="outline-4">
+<h4 id="orga65d8bc"><span class="section-number-4">3.2.4</span> 对比较利益学说的评价</h4>
+<div class="outline-text-4" id="text-3-2-4">
+<ol class="org-ol">
+<li>从国际贸易实际角度
+
+<ol class="org-ol">
+<li><p>
+进步之处
+</p>
+
+<p>
+揭示出了国际贸易因比较利益而发生并具有互利性，证明了各国出口相对
+成本较低而进口相对成本较高的产品可以实现贸易互利，进而可以发生国
+际贸易
+</p></li>
+
+<li>不足之处
+
+<ol class="org-ol">
+<li>假设过于苛刻，不符合实际情况</li>
+
+<li>按照学说，比较利益相差越大越容易发生贸易，当今的贸易便应该发
+生在发达国家和发展中国家之间，但实际情况是贸易主要发生在发达
+国家之间</li>
+
+<li>按照学说，贸易会使得贸易参与过都获得好处，因此各国都应该积极
+参与，但现实是存在不同程度的贸易保护</li>
+</ol></li>
+</ol></li>
+
+<li>从劳动价值论角度
+
+<ol class="org-ol">
+<li>相对优势承认国内价值和国际价值的差异和交换比率不同，违背了李嘉图
+自己坚持劳动价值论</li>
+
+<li>理论没有从根本上解释贸易发生的原因。李嘉图认为，比较利益（超额利
+润）是贸易产生的原因，但是即使不存在比较利益，只要能够实现商品的
+价值，贸易就会发生</li>
+
+<li>比较利益学说暗含了一层意思：即越落后的国家参与国际贸易则越会从中
+受益。这实际上没有看到国际贸易具有的不等价交换和价值流向，难于被
+相对落后的国家所接受</li>
+</ol></li>
+
+<li>我国理论界对比较利益学说的认识和评价
+
+<ol class="org-ol">
+<li>20世纪50年代与苏联学者共同批判</li>
+
+<li>20世纪60年代，评判吸收</li>
+
+<li>改革开放以来，一分为二</li>
+</ol></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org57f9b0c" class="outline-4">
+<h4 id="org57f9b0c"><span class="section-number-4">3.2.5</span> 比较利益的分解</h4>
+<div class="outline-text-4" id="text-3-2-5">
+<p>
+<i>参考大纲和教材的图形，注意约束线的斜率是价格的比，价格不表的福利提升
+意味着分工带来的福利提升</i>
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="org19dfb8a"></a>来源贸易的利益<br /></li>
+
+<li><a id="org26a72d2"></a>来源分工的利益<br /></li>
+
+<li><a id="org3f1b520"></a>利益的合成分析与评价<br /></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org0615cdd" class="outline-3">
+<h3 id="org0615cdd"><span class="section-number-3">3.3</span> 国际贸易价格的确定</h3>
+<div class="outline-text-3" id="text-3-3">
+</div>
+<div id="outline-container-org0042738" class="outline-4">
+<h4 id="org0042738"><span class="section-number-4">3.3.1</span> 相互需求方程式</h4>
+<div class="outline-text-4" id="text-3-3-1">
+<p>
+比较交换AB两国国内XY交换与国际XY商品交换，确定两个可以交换的区间和国际
+交换的均衡条件
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-right">X</th>
+<th scope="col" class="org-right">Y</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">A</td>
+<td class="org-right">10</td>
+<td class="org-right">15</td>
+</tr>
+
+<tr>
+<td class="org-left">B</td>
+<td class="org-right">10</td>
+<td class="org-right">20</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<b>表中数字代表单一劳动的各种商品产出</b>
+</p>
+
+<p>
+表中可知
+</p>
+
+<ul class="org-ul">
+<li>A国的比较优势是生产X，国内的交换比率\(10X = 15Y\)</li>
+
+<li>B国的比较优势是生产Y，国内的交换比率\(10X = 20Y\)</li>
+</ul>
+
+<p>
+所以
+</p>
+
+<ul class="org-ul">
+<li>当国际市场的XY交换比率大于\(10X:15Y\) 时A国会进入国际市场交换得到Y，反
+之会自己国内生产Y</li>
+
+<li>当国际市场的XY交换比率小于\(10X:20Y\) 时B国会进入国际市场交换得到X，反
+之会退出国际市场自己国内组织生产</li>
+
+<li>实际国际市场的交换率在\(10X:15F\) 和\(10X:20F\) 之间，距离哪个国家的国内
+交换比率比较近，则得到的福利越少</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org3a1ed3a" class="outline-4">
+<h4 id="org3a1ed3a"><span class="section-number-4">3.3.2</span> 相互需求方程式的均衡条件</h4>
+<div class="outline-text-4" id="text-3-3-2">
+<p>
+通国横置AB国国内X需求供给曲线图，可以确定世界市场上X的需求与供给
+</p>
+
+<p>
+<i>详细参考大纲和教材</i>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd912258" class="outline-4">
+<h4 id="orgd912258"><span class="section-number-4">3.3.3</span> 提供曲线</h4>
+<div class="outline-text-4" id="text-3-3-3">
+<p>
+提供曲线由马歇尔和埃奇沃斯提出，它是相互需求曲线，表明一个国家为了进口
+一定量的商品，必须向其他国家出口一定量的商品，因此提供曲线即对应某一进
+口量意愿提供的出口量的轨迹。两个国家的提供曲线的交汇点所决定的价格，就
+是国际商品交换价格
+</p>
+
+<p>
+<i>这里书上有推导，详细参照教材</i>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf8873f7" class="outline-4">
+<h4 id="orgf8873f7"><span class="section-number-4">3.3.4</span> 贸易条件</h4>
+<div class="outline-text-4" id="text-3-3-4">
+<p>
+一般指单位出口能够换回的进口，即出口商品价格与进口商品价格的比率，简称
+“交换比价”。一般用在一定时期（如一年）内的出口商品价格指数同进口商品价
+格指数对比来表示。
+</p>
+
+<p>
+贸易条件改善就是指与基期相比较而言，交换比价上升，即同等数量的出口商品
+能够换回比基期更多的进口商品，反之称为贸易条件恶化。
+</p>
+</div>
+</div>
+
+<div id="outline-container-org65d4934" class="outline-4">
+<h4 id="org65d4934"><span class="section-number-4">3.3.5</span> 出口的贫困化增长</h4>
+<div class="outline-text-4" id="text-3-3-5">
+<p>
+在一定条件下，一国生产规模的扩大，即生产可能性曲线向外推移，沿着原有优
+势推进，即如果该国原有优势在于生产某种产品，现在进一步扩大该中产品的生
+产，这种产品的相对价格下降，因此，贸易出口的扩大不仅没有使得该国的福利
+有所提高，反而因为出口增加而有所下降。
+</p>
+
+<p>
+这种现象的根源在与该国的贸易条件由于扩大出口而恶化。
+</p>
+
+<p>
+出口的贫困化增长的条件：
+</p>
+
+<ol class="org-ol">
+<li>单一经济的发展中国家</li>
+
+<li>国际市场上的大国，出口商品为初级产品</li>
+
+<li>产品价格弹性小（价格的下降所带来的需求量的增量小）</li>
+
+<li>出口导向型经济，严重依赖出口</li>
+</ol>
+
+<p>
+经济意义：
+</p>
+
+<p>
+产业结构调整，平衡出口量和出口价格
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1b37c4f" class="outline-2">
+<h2 id="org1b37c4f"><span class="section-number-2">4</span> 国际贸易的现代与当代理论</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orge562511" class="outline-3">
+<h3 id="orge562511"><span class="section-number-3">4.1</span> H-O模型（要素禀赋理论）及其分析</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+基本假设（2 &times; 2 &times; 2）：
+</p>
+
+<p>
+要素生产率相等且可以自由流动；一个国家资本丰富，一个国家劳动丰富
+</p>
+</div>
+
+<div id="outline-container-orgddeacc4" class="outline-4">
+<h4 id="orgddeacc4"><span class="section-number-4">4.1.1</span> 基本命题分析</h4>
+<div class="outline-text-4" id="text-4-1-1">
+<ol class="org-ol">
+<li>在国际贸易体系中，一国出口自己相对丰富的要素生产的产品，进口自己相
+对稀缺的要素生产的产品</li>
+
+<li>如果两国生产要素比例不同，即使要素的生产率相同，也会产生生产成本差
+异，两国会发生贸易</li>
+
+<li>交换的结果是使得各国间要素的报酬差异趋于减小，出现要素价格趋于均等
+化趋势</li>
+
+<li>理论中存在雷布津斯基定理和斯托尔泼-萨缪尔森定理（ <b>这点大纲没有要
+求, 参考教材</b> ）</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orge243986" class="outline-4">
+<h4 id="orge243986"><span class="section-number-4">4.1.2</span> H-O模型基本内在逻辑关系</h4>
+<div class="outline-text-4" id="text-4-1-2">
+<p>
+“靠山吃山，靠水吃水”
+</p>
+
+<p>
+要素的自然禀赋\(\implies\) 要素的相对富饶程度\(\implies\) 要素的供给
+\(\implies\) 要素相对价格差\(\implies\) 生产成本差异\(\implies\) 商品价格差异
+\(\implies\) 贸易产生
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8acf349" class="outline-4">
+<h4 id="org8acf349"><span class="section-number-4">4.1.3</span> H-O模型的评价</h4>
+<div class="outline-text-4" id="text-4-1-3">
+<p>
+丰富了贸易理论，从实际优势出发决定贸易模式（产品结构、地理格局），从贸
+易对经济的影响分析贸易的作用，具有积极效果。不足之处在于从静态出发，没
+有考虑动态效果及广泛性。
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org276d8bf" class="outline-3">
+<h3 id="org276d8bf"><span class="section-number-3">4.2</span> 列昂惕夫反论及国际贸易新要素理论</h3>
+<div class="outline-text-3" id="text-4-2">
+</div>
+<div id="outline-container-org8f14b17" class="outline-4">
+<h4 id="org8f14b17"><span class="section-number-4">4.2.1</span> 列昂惕夫反论</h4>
+<div class="outline-text-4" id="text-4-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgec453fc"></a>内容<br />
+<div class="outline-text-5" id="text-4-2-1-1">
+<p>
+列昂惕夫对美国20世纪40年代和50年代的对外贸易情况进行了分析，发现美国参
+加国际分工是建立在劳动密集型专业分工基础之上的，即出口劳动密集型商品，
+进口资本密集型商品，通过对外贸易安排剩余劳动力和节约资本，这一结果与
+H-O理论恰恰相反。
+</p>
+</div>
+</li>
+
+<li><a id="orge88ca70"></a>解释<br />
+<div class="outline-text-5" id="text-4-2-1-2">
+<ol class="org-ol">
+<li><p>
+列昂惕夫的解释（有效劳动理论）
+</p>
+
+<p>
+由于劳动素质各国不同，在同样的资本配合下，美国的劳动生产力约为他国
+（比如意大利）的3倍，因此若以他国作为衡量标准，则美国的有效劳动数量
+应该是现存劳动量的3倍。从有效劳动数量看，美国应为（有效）劳动相对丰
+富的国家，而资本在美国则成为相对稀缺的要素。
+</p></li>
+
+<li><p>
+要素密度逆转解释
+</p>
+
+<p>
+在某些国家中，X是资本密集型的，Y是劳动密集型的，但在一些国家，X变成
+劳动密集型，Y变成资本密集型。
+</p></li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org1c5c3cf" class="outline-4">
+<h4 id="org1c5c3cf"><span class="section-number-4">4.2.2</span> 国际贸易新要素理论</h4>
+<div class="outline-text-4" id="text-4-2-2">
+</div>
+<ol class="org-ol">
+<li><a id="orgb218ba2"></a>人力资本说<br />
+<div class="outline-text-5" id="text-4-2-2-1">
+<p>
+所谓人力资本是资本与劳动力结合而形成的一种新的生产要素，人们通过对劳动
+力进行投资（教育、职业培训、保健等），可以提高原有劳动力的素质和技能，
+劳动生产率得到提升，从而对一个国家参加国际分工的比较优势产生作用与影响。
+</p>
+
+<p>
+该学说认为，人力资本结构与物质资本结构同样重要，一个国家应重视人力投资，
+取得好的投资效益，才能产生新的比较优势。
+</p>
+</div>
+</li>
+
+<li><a id="org4bf346f"></a>R&amp;D学说<br />
+<div class="outline-text-5" id="text-4-2-2-2">
+<p>
+研究与开发也是一种影响国际贸易格局的生产要素。研究是指新产品紧密相关联
+的思路、技术、工艺方面的基础研究与应用研究；开发是指新产品的设计与试制，
+即新产品的开发和创造。
+</p>
+
+<p>
+在实际中，人们主要是通过考察衡量一个国家开发经费占产品销售总额的比重，
+来间接考察一个国家的研究与开发水平。
+</p>
+
+<p>
+强调了科技发展在国际贸易优势形成中的作用，符合目前社会向前发展的趋势。
+</p>
+</div>
+</li>
+
+<li><a id="orgdc8fd8c"></a>信息贸易理论<br />
+<div class="outline-text-5" id="text-4-2-2-3">
+<p>
+信息是一种可以创造价值并能进行交换的一种无形资源，是现代生产要素的组成
+部分。信息是生产中的软件，是比较优势的软要素，它本身是可以交换的产品，
+是一种可以做交换对象的软件要素，具有相应的价格。不同国家占有信息的多寡，
+会使得他们在国家贸易中的比较优势发生变化，影响国际贸易的价格。
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-orgfcf606e" class="outline-4">
+<h4 id="orgfcf606e"><span class="section-number-4">4.2.3</span> 国际贸易产品生命周期理论</h4>
+<div class="outline-text-4" id="text-4-2-3">
+</div>
+<ol class="org-ol">
+<li><a id="orgea183a6"></a>技术差距理论<br />
+<div class="outline-text-5" id="text-4-2-3-1">
+<p>
+不同国家因技术创新、技术模仿而存在的技术方面的时间和空间上的差异是解释
+某类贸易发生的原因。由于科技市场资金人才等方面的差距，新产品一般先在发
+达国家产生，其他国家由于技术差距，要等一段时间才能进行模仿生产，这段时
+间便是贸易机会与可能性。
+</p>
+
+<p>
+<i>图表参考大纲</i>
+</p>
+
+<ol class="org-ol">
+<li>\(T_0-T_1\) ：需求滞后，取决于收入因素、模仿国消费者对新产品的认识</li>
+
+<li>\(T_0-T_2\) ：反应滞后，取决于模仿国厂商的反应，以及规模经济、价格、
+市场、关税等</li>
+
+<li>\(T_2-T_3\) ：掌握滞后，取决于模仿国取得技术的渠道、消化技术的能力</li>
+
+<li>\(T_0-T_3\) ：模仿滞后之后，模仿国以低成本为基础出口</li>
+
+<li>\(T_1-T_3\) ：两国贸易期间</li>
+</ol>
+</div>
+</li>
+
+<li><a id="orgcccaf9d"></a>产品的生命周期理论<br />
+<ol class="org-ol">
+<li><a id="org81956ce"></a>基本内容<br />
+<div class="outline-text-6" id="text-4-2-3-2-1">
+<ol class="org-ol">
+<li>第一阶段，产品创新阶段</li>
+
+<li>第二阶段，外国开始模仿生产该产品的阶段，创新国产品在该国的竞争力下降</li>
+
+<li>第三阶段，外国模仿国以低成本为基础开始向第三国出口的阶段。创新国出
+口受到影响。</li>
+
+<li>第四阶段，外国产品进入创新市场，创新国开始从出口国转变为进口。</li>
+</ol>
+</div>
+</li>
+
+<li><a id="org0db3212"></a>图形说明<br />
+<div class="outline-text-6" id="text-4-2-3-2-2">
+<p>
+<i>参考大纲或者教材</i>
+</p>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgf0550db" class="outline-3">
+<h3 id="orgf0550db"><span class="section-number-3">4.3</span> 国际贸易的当代理论</h3>
+<div class="outline-text-3" id="text-4-3">
+</div>
+<div id="outline-container-org4ad4091" class="outline-4">
+<h4 id="org4ad4091"><span class="section-number-4">4.3.1</span> 产业内贸易理论</h4>
+<div class="outline-text-4" id="text-4-3-1">
+</div>
+<ol class="org-ol">
+<li><a id="orga0d44b2"></a>产品的同质性与异质性<br />
+<div class="outline-text-5" id="text-4-3-1-1">
+<ul class="org-ul">
+<li>产品同质性指产品间可以完全相互替代，市场区位不同，市场时间不同，但是
+商品需求的交叉弹性极高，且消费者对这类产品的消费偏好完全相同</li>
+
+<li>产品异质性指产品相似但不完全相同，存在一定的差异，产品彼此之间不能完
+全替代但尚可进行一定程度的替代，交叉弹性小于同质产品，在生产中要素投
+入具有相似性</li>
+</ul>
+</div>
+</li>
+
+<li><a id="org1fc04bd"></a>同质产品的产业内贸易<br />
+<div class="outline-text-5" id="text-4-3-1-2">
+<ul class="org-ul">
+<li>不同国家间大宗产品的交叉型产业内贸易</li>
+
+<li>经济合作或因经济技术因素而产生产业内贸易</li>
+
+<li>大宗商品的转口贸易</li>
+
+<li>政府干预产生的价格扭曲</li>
+
+<li>季节性产品贸易</li>
+
+<li>跨国公司的内部贸易也会形成产业内贸易</li>
+</ul>
+</div>
+</li>
+
+<li><a id="org7b2ee67"></a>异质产品的产业内贸易<br />
+<div class="outline-text-5" id="text-4-3-1-3">
+<p>
+产品在品牌、规格和服务上等特点上的不同，需求因特点不同产生既进口又出口
+的现象
+</p>
+</div>
+</li>
+
+<li><a id="org4c6308b"></a>需求偏好相似论<br />
+<div class="outline-text-5" id="text-4-3-1-4">
+<p>
+国际贸易可以看成是一国国内贸易跨越国界的延伸。实践中，厂商首先满足国内
+熟悉的市场，人均收入决定一个国家的需求结构，收入相似则市场之间的隔阂较
+小，易于发生贸易
+</p>
+</div>
+</li>
+
+<li><a id="org36675ec"></a>规模经济的贸易利益（规模经济贸易理论）<br />
+<div class="outline-text-5" id="text-4-3-1-5">
+<p>
+企业的长期平均成本随着产量增加而下降，企业面对的是市场需求曲线，市场需
+求量会随着价格下跌而增加。在参与国际贸易之前，企业所面向的只是国内的需
+求。由于国内市场需求有限，企业不能生产太多，从而使生产成本和产品价格不
+得不保持在较高的水平上。如果企业参与国际贸易，产品所面临的市场就会扩大，
+国内需求加上国外需求，企业生产就可以增加。由于生产处于规模经济阶段，产
+量的增加反而使产品的平均成本降低，从而在国际市场上增加了竞争能力。规模
+经济效应使资源禀赋即使无差异的国家之间也能凭生产规模大的优势形成竞争力，
+取得贸易利益。
+</p>
+</div>
+</li>
+
+<li><a id="orgfd2ab52"></a>产业内贸易水平的衡量指数<br />
+<div class="outline-text-5" id="text-4-3-1-6">
+<ul class="org-ul">
+<li><p>
+巴萨特指数
+</p>
+
+<p>
+\(A_j = \frac{|X_j - M_j|}{X_j + M_j}\)
+</p></li>
+
+<li><p>
+格鲁贝尔-劳埃德指数（G-L指数）
+</p>
+
+<p>
+\(B_j = 1 - A_j \times 100\)
+</p></li>
+</ul>
+</div>
+</li>
+
+<li><a id="org1069d4b"></a>对产业内贸易理论的评价<br />
+<div class="outline-text-5" id="text-4-3-1-7">
+<ul class="org-ul">
+<li>对传统贸易理论的批判，假设更符合实际情况，扩大了探讨的内容</li>
+
+<li>从需求角度出发对国际贸易进行了考察</li>
+
+<li>规模经济是当代经济重要的内容，对与它的追求，产生了许多利益</li>
+
+<li>是对比较利益的补充和发展，但是基本是静态分析</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org8a9373e" class="outline-4">
+<h4 id="org8a9373e"><span class="section-number-4">4.3.2</span> 政策贸易理论</h4>
+<div class="outline-text-4" id="text-4-3-2">
+</div>
+<ol class="org-ol">
+<li><a id="org5fd25f6"></a>战略政策理论<br />
+<div class="outline-text-5" id="text-4-3-2-1">
+<p>
+国家通过各种政策干预（税收、补贴等），在对本国至关重要的生产领域中创造
+出比较优势，而这些生产领域具有很强的各种前后向联系，不仅可以带动经济发
+展，而且具有广泛的外部经济效益，进而获得贸易收益，促进经济增长与发展。
+因此一国政府在不完全竞争和规模经济条件下，可以凭借生产补贴、出口补贴或
+保护国内市场等政策手段，扶持本国战略性工业的成长，增强其在国际市场上的
+竞争能力，促使国际贸易的发生。
+</p>
+</div>
+</li>
+
+<li><a id="org306138d"></a>贸易扭曲理论<br />
+<div class="outline-text-5" id="text-4-3-2-2">
+<p>
+政府通过政策干预，实施贸易保护政策，在边际进口替代率、产品边际转换率、
+消费的边际替代率和边际技术替代率之间制造不相等，进而是的边际成本不等于
+价格，出现贸易扭曲，让贸易畸形发展。
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1521090" class="outline-2">
+<h2 id="org1521090"><span class="section-number-2">5</span> 国际贸易政策分析</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org39b39b3" class="outline-3">
+<h3 id="org39b39b3"><span class="section-number-3">5.1</span> 关税分析</h3>
+<div class="outline-text-3" id="text-5-1">
+</div>
+<div id="outline-container-org5e5eb6c" class="outline-4">
+<h4 id="org5e5eb6c"><span class="section-number-4">5.1.1</span> 关税概念</h4>
+<div class="outline-text-4" id="text-5-1-1">
+<p>
+是进出口商品在经过一个国家的关境时，由海关代表国家向进出口商品征收的一
+种税赋。
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb47f333" class="outline-4">
+<h4 id="orgb47f333"><span class="section-number-4">5.1.2</span> 小国进口关税的局部均衡分析</h4>
+<div class="outline-text-4" id="text-5-1-2">
+<p>
+<i>和微观经济学中征税的效应分析相近，参考大纲或者教材</i>
+</p>
+
+<ol class="org-ol">
+<li>保护效应</li>
+
+<li>消费效应</li>
+
+<li>贸易效应</li>
+
+<li>税收效应</li>
+
+<li>国际收支效应</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org802f612" class="outline-4">
+<h4 id="org802f612"><span class="section-number-4">5.1.3</span> 小国进口关税一般均衡分析</h4>
+</div>
+</div>
+
+<div id="outline-container-org899d018" class="outline-3">
+<h3 id="org899d018"><span class="section-number-3">5.2</span> 非关税壁垒分析</h3>
+<div class="outline-text-3" id="text-5-2">
+</div>
+<div id="outline-container-org546527b" class="outline-4">
+<h4 id="org546527b"><span class="section-number-4">5.2.1</span> 进口配额</h4>
+<div class="outline-text-4" id="text-5-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgd625f42"></a>概念<br />
+<div class="outline-text-5" id="text-5-2-1-1">
+<p>
+指一国政府在一定时期内，对与某些商品的进口数量或金额加以直接的限制
+</p>
+</div>
+</li>
+
+<li><a id="orge134c9d"></a>经济效应<br />
+<div class="outline-text-5" id="text-5-2-1-2">
+<p>
+国内需求增加，进口配额不变，结果使该种商品价格上升，生产和消费都增加，
+但是进口数量不变
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-orgcc7ade9" class="outline-4">
+<h4 id="orgcc7ade9"><span class="section-number-4">5.2.2</span> 进口配额与等额关税的政策含义比较</h4>
+<div class="outline-text-4" id="text-5-2-2">
+<ol class="org-ol">
+<li>政策含义比较：
+
+<ol class="org-ol">
+<li>进口配额下，需求变动，国内的价格升高，国内生产增加；等额关税时，国
+内价格不变，生产不变，消费与进口要增加</li>
+
+<li>进口配额下，许可证可以拍卖或者无偿分配，导致寻租行为</li>
+
+<li>进口配额的进口数量是确定的，而进口关税的结果则因供求曲线的弹性不明
+而无法掌握</li>
+</ol></li>
+
+<li><p>
+进口配额的评价
+</p>
+
+<p>
+进口配额因数量明确而对国际贸易限制清楚，限制更强，国内厂商更愿意采
+用，对自由贸易的限制、危害更大
+</p></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org3ae49f1" class="outline-4">
+<h4 id="org3ae49f1"><span class="section-number-4">5.2.3</span> 反倾销与反补贴分析</h4>
+<div class="outline-text-4" id="text-5-2-3">
+</div>
+<ol class="org-ol">
+<li><a id="org86190e1"></a>倾销的界定<br />
+<div class="outline-text-5" id="text-5-2-3-1">
+<ul class="org-ul">
+<li><p>
+倾销的定义
+</p>
+
+<p>
+倾销是一种商品在不同市场之间的价格歧视，是海外商品以低于同样商品在同
+一时间在国内市场类似条件下的销售价格出售
+</p></li>
+
+<li>构成倾销的条件
+
+<ol class="org-ol">
+<li>产品以低于正常价值或公平价值的价格销售</li>
+
+<li>低价销售的行为对进口国产业造成实质性的损害</li>
+
+<li>损害与价格之间存在因果关系</li>
+</ol></li>
+</ul>
+</div>
+</li>
+
+<li><a id="orgc4fb1af"></a>倾销的危害<br />
+<div class="outline-text-5" id="text-5-2-3-2">
+<ol class="org-ol">
+<li>对出口国的影响
+
+<ol class="org-ol">
+<li>基站出口国其他企业的海外市场份额</li>
+
+<li>损害出口国消费者的利益</li>
+
+<li>扰乱出口国市场秩序</li>
+</ol></li>
+
+<li>对进口国影响
+
+<ol class="org-ol">
+<li>阻碍进口国相应产业的发展</li>
+
+<li>扭曲进口国市场秩序</li>
+
+<li>威胁和抑制进口国产业结构调整和新兴产业的建立</li>
+</ol></li>
+
+<li><p>
+对第三国的影响
+</p>
+
+<p>
+导致进口国对第三国产品的市场需求下降，使第三国在进口国的市场份额和
+利润减少
+</p></li>
+</ol>
+</div>
+</li>
+
+<li><a id="org38de0f8"></a>无政府补贴的长期性倾销的条件<br />
+<div class="outline-text-5" id="text-5-2-3-3">
+<ol class="org-ol">
+<li>出口国的企业具有一定的垄断能力</li>
+
+<li>国内外市场的弹性差异</li>
+
+<li>出口国对国外商品设置足够高的贸易壁垒</li>
+</ol>
+</div>
+</li>
+
+<li><a id="org1ead3c4"></a>反倾销的措施<br />
+<div class="outline-text-5" id="text-5-2-3-4">
+<ol class="org-ol">
+<li>反倾销税</li>
+
+<li>出口商承诺（负面清单）</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgeb725a5" class="outline-3">
+<h3 id="orgeb725a5"><span class="section-number-3">5.3</span> 幼稚产业保护</h3>
+<div class="outline-text-3" id="text-5-3">
+</div>
+<div id="outline-container-org05ae9a3" class="outline-4">
+<h4 id="org05ae9a3"><span class="section-number-4">5.3.1</span> 幼稚产业保护的理论基础</h4>
+<div class="outline-text-4" id="text-5-3-1">
+<ol class="org-ol">
+<li><p>
+李斯特的贸易保护理论
+</p>
+
+<p>
+建立在生产力论的基础上，认为生产财富的能力比财富本身，农业、原材料、
+科技可以自由贸易，但是工业必须得到保护，以获取未来的贸易利益，应该
+建立起保护性的关税制度。
+</p></li>
+
+<li><p>
+新贸易保护理论
+</p>
+
+<p>
+该学派认为，贸易利益在旧的国际经济秩序下是发达国家攫取发展中国家财
+富的渠道，即财富向发达国家转移，从外围向中心国家转移，科技利益均为
+发达国家获得，财富在发达国家聚集，而贫困则在发展中国家聚集。因此发
+展中国家应该实施贸易保护，切断不等价交换的价值渠道。
+</p></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgb61840e" class="outline-4">
+<h4 id="orgb61840e"><span class="section-number-4">5.3.2</span> 幼稚产业的定义（M-B-K标准）</h4>
+<div class="outline-text-4" id="text-5-3-2">
+<ul class="org-ul">
+<li><p>
+穆勒标准（产业自理原则）
+</p>
+
+<p>
+某种产业由于技术不足，生产率低下哦，成本高于国际市场，无法竞争，在保
+护下，能够在自由贸易下获利，自我投资发展，即为幼稚产业。
+</p></li>
+
+<li><p>
+巴斯塔布尔标准（成本收益原则）
+</p>
+
+<p>
+保护、扶植幼稚行业所需要的社会成本不超过该产业将来利润的现值总和，符
+合条件即为幼稚产业。
+</p></li>
+
+<li><p>
+肯普标准（外部性原则）
+</p>
+
+<p>
+如果某种技术可以为其他产业所获得，即使本产业利润无法增加，将来利润无
+法补偿投资成本，国家也应该予以保护。
+</p></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org0a97870" class="outline-4">
+<h4 id="org0a97870"><span class="section-number-4">5.3.3</span> 关税有效保护率的计算</h4>
+<div class="outline-text-4" id="text-5-3-3">
+<p>
+关税的保护分为名义保护和有效保护，名义保护率即为名义税率；而有效保护则
+是指对与受保护行业的单位产品附加价值增加率的保护
+</p>
+
+<p>
+\(EPR = \frac{V' - V}{V}\)
+</p>
+
+<p>
+\(V'\) 为附加价值（最终产品价格-原料价格）
+</p>
+
+<p>
+\(V\) 为新加入的价值
+</p>
+</div>
+</div>
+
+<div id="outline-container-org807d59c" class="outline-4">
+<h4 id="org807d59c"><span class="section-number-4">5.3.4</span> 关税有效保护的政策含义与评价</h4>
+<div class="outline-text-4" id="text-5-3-4">
+<ol class="org-ol">
+<li>最终产品名义税率不变时，对进口原材料关税征收越低，该名义税率的保护
+作用也越大。</li>
+
+<li>如果用进口原料做加工出口，对原材料征税，将降低产品竞争力（政策上因
+此需要出口退税）。</li>
+
+<li>发展中国家的两难：若对原材料不征税，对最终产品征税，形成国内市场高
+保护，国内会出现大量的装配线，用组装占领市场，导致中间产业发展不足；
+如果对原材料征税，则产品无竞争力，无法与进口产品竞争，也无法转换称
+出口型产业。</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd12599b" class="outline-2">
+<h2 id="orgd12599b"><span class="section-number-2">6</span> 国际收支分析</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-orgec5fbbe" class="outline-3">
+<h3 id="orgec5fbbe"><span class="section-number-3">6.1</span> 国际收支与国际收支表</h3>
+<div class="outline-text-3" id="text-6-1">
+</div>
+<div id="outline-container-org87c43c8" class="outline-4">
+<h4 id="org87c43c8"><span class="section-number-4">6.1.1</span> 国际收支</h4>
+<div class="outline-text-4" id="text-6-1-1">
+<ul class="org-ul">
+<li><p>
+广义国际收支
+</p>
+
+<p>
+在特定时期（通常是一年）内，一个经济体与世界其他地方的各项经济交易。
+大部分交易是在居民和非居民之间进行的。
+</p></li>
+
+<li><p>
+狭义国际收支
+</p>
+
+<p>
+指一国在一定时期，同其他国家由于贸易、劳务、资本等往来而引起的资产转
+移，其特点是仅计入现在或者将来有外汇收支的项目。
+</p></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org109386c" class="outline-4">
+<h4 id="org109386c"><span class="section-number-4">6.1.2</span> 国际收支表的构成</h4>
+<div class="outline-text-4" id="text-6-1-2">
+<ul class="org-ul">
+<li><p>
+经常账户（贸易、劳务）
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">项目</th>
+<th scope="col" class="org-left">内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">货物</td>
+<td class="org-left">一般货物、用于加工的货物、货物修理、各种运输工具的采购、非货币黄金</td>
+</tr>
+
+<tr>
+<td class="org-left">服务</td>
+<td class="org-left">运输、旅游、通信、建筑、保险、金融、计算机、专有权使用费、个人娱乐、文化服务和别处未提及的政府服务</td>
+</tr>
+
+<tr>
+<td class="org-left">收入</td>
+<td class="org-left">职工报酬、投资收入（直接、间接投资）</td>
+</tr>
+
+<tr>
+<td class="org-left">经常转移</td>
+<td class="org-left">除了固定资产所有权的转移、与固定资产联系的收买或放弃为条件的资金转移、债权人不要回报的债务取消这三项之外的其他转移，例如保险费、侨汇等</td>
+</tr>
+</tbody>
+</table></li>
+
+<li><p>
+资本和金融账户
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">项目</th>
+<th scope="col" class="org-left">内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">资本账户</td>
+<td class="org-left">资本转移（各级政府和其他转移，如债务减免）、非生产、非金融资产的收购、放弃（各种无形资产，如可转让的合同及商誉等）</td>
+</tr>
+
+<tr>
+<td class="org-left">金融账户</td>
+<td class="org-left">直接投资、证劵投资、其他投资、储备资产（货币化黄金、SDR、外汇资产、在基金组织中的头寸等）、金融补充信息，包括构成外国当局储备的负债（欠国外的债务证劵、存款等）和特殊融资交易（国际赠款、债务减免和央行借款等）</td>
+</tr>
+</tbody>
+</table></li>
+
+<li><p>
+国际头寸
+</p>
+
+<p>
+不属于国际收支表的标准组成，它与国际收支表构成一国全面的国际账户，是
+一国对外金融资产和负债存量的平衡，其构成为资产、负债，项目与国际收支
+的金融账户一致。
+</p>
+
+<p>
+<i>国际收支表反应流量情况，国际头寸反应存量情况</i>
+</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org62ce673" class="outline-3">
+<h3 id="org62ce673"><span class="section-number-3">6.2</span> 国际收支的调节</h3>
+<div class="outline-text-3" id="text-6-2">
+</div>
+<div id="outline-container-orgc8a472c" class="outline-4">
+<h4 id="orgc8a472c"><span class="section-number-4">6.2.1</span> 国际收支的失衡</h4>
+<div class="outline-text-4" id="text-6-2-1">
+<p>
+指经常账户、金融与资本账户的余额出现问题，即对外经济出现了需要调整的情
+况
+</p>
+
+<p>
+影响：
+</p>
+
+<ul class="org-ul">
+<li>对外，造成汇率、资源配置、福利提高的困难</li>
+
+<li>对内，造成经济增长与经济发展困难</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1965320" class="outline-4">
+<h4 id="org1965320"><span class="section-number-4">6.2.2</span> 国际收支失衡调节理论</h4>
+<div class="outline-text-4" id="text-6-2-2">
+</div>
+<ol class="org-ol">
+<li><a id="orgd8bae1c"></a>弹性调节法<br />
+<div class="outline-text-5" id="text-6-2-2-1">
+<ul class="org-ul">
+<li>调节机制
+
+<ul class="org-ul">
+<li>贸易逆差\(\implies\) 本币对外贬值\(\implies\) 本国出口价格下降（进口价
+格上升）\(\implies\) 出口量上升（进口量下降）\(\implies\) 国际收支改善</li>
+
+<li>贸易顺差\(\implies\) 本币对外升值\(\implies\) 本国出口价格上升（进口价
+格下降）\(\implies\) 出口量下降（进口量上升）\(\implies\) 国际收支改善</li>
+</ul></li>
+
+<li>发挥作用的条件
+
+<ul class="org-ul">
+<li>贸易对手国对于上述流程这样的结果表示接受</li>
+
+<li>本币的对外贬值速度快于对内贬值</li>
+
+<li>出口商品的变化对于价格调整的反应程度要大（弹性之和大于1），符合马
+歇尔-勒纳条件</li>
+</ul></li>
+
+<li><p>
+J曲线效应
+</p>
+
+<p>
+本币贬值先造成收支的继续恶化，然后才会好转。因为出口增长有时滞
+</p></li>
+</ul>
+</div>
+</li>
+
+<li><a id="orgea37442"></a>吸收法<br />
+<div class="outline-text-5" id="text-6-2-2-2">
+<p>
+宏观经济分析方法(总需求管理）
+</p>
+
+\begin{cases}
+Y = C + I + G + (X - M) \\
+BOP = X - M \\
+A = C + I + G \\
+BOP = Y - A \\
+\end{cases}
+</div>
+</li>
+
+<li><a id="org9d5996c"></a>货币法<br />
+<div class="outline-text-5" id="text-6-2-2-3">
+<p>
+通过调整国内货币供给调节国内需求，进而调整国际收支的变动。即国内货币供
+给是国际储备与国内信贷之和，于是国际储备的变动是国内货币供给减去国内信
+贷额的结果。如果信贷额的发行大于货币供给的需要，国际收支就会恶化，反之
+则改善。
+</p>
+
+<p>
+调节手段：
+</p>
+
+<p>
+控制信贷发行和出售储备资产
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf845505" class="outline-2">
+<h2 id="orgf845505"><span class="section-number-2">7</span> 汇率决定的一般理论</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-org209ac7a" class="outline-3">
+<h3 id="org209ac7a"><span class="section-number-3">7.1</span> 外汇及汇率</h3>
+<div class="outline-text-3" id="text-7-1">
+</div>
+<div id="outline-container-orgb8d43ca" class="outline-4">
+<h4 id="orgb8d43ca"><span class="section-number-4">7.1.1</span> 外汇的定义及其作用</h4>
+<div class="outline-text-4" id="text-7-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="org2d76b0b"></a>外汇的概念<br />
+<div class="outline-text-5" id="text-7-1-1-1">
+<p>
+一国货币当局保有的以银行存款、财政部库卷、长短期政府证劵等形式持有的可
+以在国际收支出现逆差时进行支付的债券
+</p>
+</div>
+</li>
+
+<li><a id="org1fb0e68"></a>外汇的作用<br />
+<div class="outline-text-5" id="text-7-1-1-2">
+<ol class="org-ol">
+<li>价值尺度</li>
+
+<li>国际购买手段</li>
+
+<li>国际支付手段</li>
+
+<li>国际储备手段</li>
+</ol>
+</div>
+</li>
+
+<li><a id="orge97d4b1"></a>最佳外汇储备规模<br />
+<div class="outline-text-5" id="text-7-1-1-3">
+<ul class="org-ul">
+<li>三个月进口支付水平</li>
+
+<li>10%国内生产总值</li>
+
+<li>外债余额的30%</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org6f62472" class="outline-4">
+<h4 id="org6f62472"><span class="section-number-4">7.1.2</span> 汇率定义与汇率的标价法</h4>
+<div class="outline-text-4" id="text-7-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="org16f7991"></a>定义<br />
+<div class="outline-text-5" id="text-7-1-2-1">
+<p>
+不同货币在外汇买卖过程中形成的交换比例
+</p>
+</div>
+</li>
+
+<li><a id="orgf0ce47b"></a>汇率标价法<br />
+<div class="outline-text-5" id="text-7-1-2-2">
+<ul class="org-ul">
+<li>直接标价法（一单位外币换多少本币）</li>
+
+<li>间接标价法（一单位本币换多少外币）</li>
+
+<li>美元标价法</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org3a5ed15" class="outline-3">
+<h3 id="org3a5ed15"><span class="section-number-3">7.2</span> 汇率决定的若干理论</h3>
+<div class="outline-text-3" id="text-7-2">
+</div>
+<div id="outline-container-orgcf23026" class="outline-4">
+<h4 id="orgcf23026"><span class="section-number-4">7.2.1</span> 汇率决定的传统理论（二战前）</h4>
+<div class="outline-text-4" id="text-7-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="org966c265"></a>铸币平价说<br />
+<div class="outline-text-5" id="text-7-2-1-1">
+<p>
+该学说认为两国货币的价值量之比表现为货币的法定含金量之比，它是汇率决定
+的基础。在该制度下，实际汇率围绕平价浮动，只要黄金自由流动，对其不加限
+制，不会出现银行卷超过黄金储备的过量发行，银行卷不会贬值，汇率将在黄金
+输送点之间波动。
+</p>
+</div>
+</li>
+
+<li><a id="org19c2fda"></a>国际借贷说<br />
+<div class="outline-text-5" id="text-7-2-1-2">
+<p>
+国际借贷的差额是决定汇率变动的基础，该差额是由经常项目与资本项目的差额
+决定的。一国债权大于债务，国际市场对该国货币供不应求，汇率上升，反之下
+降。
+</p>
+</div>
+</li>
+
+<li><a id="orgeec949b"></a>传统购买力平价说<br />
+<div class="outline-text-5" id="text-7-2-1-3">
+<p>
+该学说是纸币本位的产物。分为绝对购买力平价和相对购买力平价两种。
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="org16df75d"></a>绝对购买力平价<br />
+<div class="outline-text-6" id="text-7-2-1-3-1">
+<p>
+汇率决定于两国一般物价水平比值。
+</p>
+
+<p>
+\(E_0 = \frac{\sum P_a}{\sum P_b}\)
+</p>
+</div>
+</li>
+
+<li><a id="org71e2235"></a>相对购买力平价<br />
+<div class="outline-text-6" id="text-7-2-1-3-2">
+<p>
+当两个国家都存在通货膨胀时，名义汇率等于过去的汇率乘以两国通货膨胀的比
+值。甲国发生通货膨胀，其货币购买力下降，若乙国物价不变，则甲国货币在乙
+国的价值下降。
+</p>
+
+<p>
+汇率决定于两国货币的购买力之比，购买力取决于通货膨胀，而通货膨胀取决于
+货币数量，因而该学说的理论基础是货币数量论。
+</p>
+
+<p>
+\(E_t = E_0 \cdot \frac{I_a}{I_b}\)
+</p>
+</div>
+</li>
+</ol>
+</li>
+
+<li><a id="org720a50f"></a>汇兑心理说<br />
+<div class="outline-text-5" id="text-7-2-1-4">
+<p>
+人们主观上对外汇的平价不同（心理平价不同），造成外汇供求的变化，进而导
+致汇率变动。实际中，人们的心里平价会受到外汇质和量两方面的影响：前者为
+货币特定购买力、支付债务能力、制度性因素等；后者为国际收支、货币数量、
+财政状况等，二者结合才能构成对于外汇完全的主观评价。如果外汇供给增加，
+边际效用下降，心理评价降低，汇率下浮，货币价值下降。
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org3b9ea26" class="outline-4">
+<h4 id="org3b9ea26"><span class="section-number-4">7.2.2</span> 二战后汇率决定的理论</h4>
+<div class="outline-text-4" id="text-7-2-2">
+</div>
+<ol class="org-ol">
+<li><a id="orge4be127"></a>流动资产选择说<br />
+<div class="outline-text-5" id="text-7-2-2-1">
+<p>
+<i>发展自国际借贷学说</i>
+</p>
+
+<p>
+人们对于资产形式的选择，即资产替换和资本流动如果量大且过于频繁，有可能
+引起资本的大规模流动，在短期甚至中期内对于国际收支的影响要远大于经常项
+目，资本大量流出，国际收支逆差加大，汇率下浮。
+</p>
+</div>
+</li>
+
+<li><a id="org0675c65"></a>目标汇率说<br />
+<div class="outline-text-5" id="text-7-2-2-2">
+<p>
+国际收支平衡是一个国家的宏观经济目标之一，为了达到平衡，人们总是将汇率
+变动作为一种政策手段，因此结合经济状况确定某一汇率，结合财政、金融的其
+他手段来实现经济的最终目标，即汇率应该由经济目标来决定，人为进行干预是
+必要的。
+</p>
+</div>
+</li>
+
+<li><a id="org3c3960c"></a>货币主义的汇率理论<br />
+<div class="outline-text-5" id="text-7-2-2-3">
+<p>
+这一理论是从购买力平价的绝对平价发展而来，认为汇率于货币供给之间存在着
+非常密切的关系，通货膨胀因素在汇率决定中具有重要的作用，进而国家货币发
+行量最终决定汇率。该理论认为汇率应该是浮动的而不是固定的，汇率的稳定有
+待世界通货膨胀的解决，而这又必须在各国共同努力下才能做到，因此，大国应
+该对世界通货膨胀稳定性负责。
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org239080c" class="outline-4">
+<h4 id="org239080c"><span class="section-number-4">7.2.3</span> 一般理论（一价定律）</h4>
+<div class="outline-text-4" id="text-7-2-3">
+</div>
+<ol class="org-ol">
+<li><a id="orgf0e9225"></a>一价定律<br />
+<div class="outline-text-5" id="text-7-2-3-1">
+<p>
+在有无数交易者的完全竞争市场上，相同的交易产品或金融资产，经过汇率调整
+后。在世界范围内其交易成本一定相等。它主要由购买力平价、利息平价和远期
+汇率等经济关系表现出来。
+</p>
+</div>
+</li>
+
+<li><a id="org5cd9492"></a>利息平价于远期汇率的决定<br />
+<ol class="org-ol">
+<li><a id="orgb192108"></a>费舍效应<br />
+<div class="outline-text-6" id="text-7-2-3-2-1">
+<p>
+名义利率之差应该等于预期通货膨胀之差。
+</p>
+
+<p>
+\(R_{ht} - R_{ft} = I_{ht} - I_{ft}\)
+</p>
+</div>
+</li>
+
+<li><a id="orgede0d4c"></a>国际费雪效应<br />
+<div class="outline-text-6" id="text-7-2-3-2-2">
+<p>
+将利率关系、通货膨胀于货币价值关系结合在一起考虑。一国相对于其他国家发
+生通货膨胀，将会伴随该国货币价值下降，同时伴随该国名义利率相对于外国利
+率提高。
+</p>
+</div>
+</li>
+
+<li><a id="orge60d353"></a>远期汇率和升贴水公式<br />
+<div class="outline-text-6" id="text-7-2-3-2-3">
+<p>
+假设当前拥有\(Y\) 资产，国内利率为\(R_h\) ，外国利率为\(R_f\) ，当期两国汇率
+为\(E_0\) ，远期两国汇率为\(E_t\)
+</p>
+
+<p>
+\(Y\) 资产有两种投资方式，一种存国内，一种存国外，两种方式的到期收益为
+</p>
+
+<p>
+国内：\(Y \cdot (1 + R_h)\)
+</p>
+
+<p>
+国外：\(Y \cdot E_0 \cdot (1 + R_f) \cdot \frac{1}{E_t}\)
+</p>
+
+<p>
+根据一价定律，两种投资获得的收益应该相等，所以有
+</p>
+
+<p>
+\(Y \cdot (1 + R_h) = Y \cdot E_0 \cdot (1 + R_f) \cdot \frac{1}{E_t}\)
+</p>
+
+<p>
+化简之后可的
+</p>
+
+<p>
+远期汇率的公式：\(E_t = E_0 \cdot \frac{1 + R_f}{1 + R_h}\)
+</p>
+
+<p>
+升贴水公式：\(E_t - E_0 = E_0 \cdot \frac{R_f - R_h}{1 + R_h}\)
+</p>
+
+<p>
+因为\(R_h\) 一般比较小，\(1+R_h\) 约等于1，所以升贴水公式可以约简为:
+\(E_t - E_0 = E_0 \cdot (R_f - R_h)\)
+</p>
+
+<ol class="org-ol">
+<li>升水\(E_t - E_0 > 0\)</li>
+
+<li>贴水\(E_t - E_0 < 0\)</li>
+
+<li>平价\(E_t - E_0 = 0\)</li>
+</ol>
+
+<p>
+一般情况下，利息较高的货币远期汇率大多呈贴水，利息较低的货币远期汇率大
+多呈升水，这被成为*利率平价理论*。
+</p>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9c8b52e" class="outline-2">
+<h2 id="org9c8b52e"><span class="section-number-2">8</span> 要素的国际流动</h2>
+<div class="outline-text-2" id="text-8">
+</div>
+<div id="outline-container-org51a9321" class="outline-3">
+<h3 id="org51a9321"><span class="section-number-3">8.1</span> 资本国际流动及其经济效应</h3>
+<div class="outline-text-3" id="text-8-1">
+</div>
+<div id="outline-container-org64cba71" class="outline-4">
+<h4 id="org64cba71"><span class="section-number-4">8.1.1</span> 资本国际流动</h4>
+<div class="outline-text-4" id="text-8-1-1">
+<ol class="org-ol">
+<li>资本国际流动的动因：
+
+<ol class="org-ol">
+<li>不同国家间资本收益率的差异</li>
+
+<li>汇率变动及国际收支不平衡</li>
+
+<li>风险因素</li>
+
+<li>其他因素</li>
+</ol></li>
+
+<li>资本国际流动的主要形式
+
+<ol class="org-ol">
+<li>国家资本的输出和私人资本的输出</li>
+
+<li>长期资本的国际流动和短期资本的国际流动</li>
+
+<li>直接投资和间接投资</li>
+</ol></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgc592e32" class="outline-4">
+<h4 id="orgc592e32"><span class="section-number-4">8.1.2</span> 资本国际流动的经济分析</h4>
+<div class="outline-text-4" id="text-8-1-2">
+<ol class="org-ol">
+<li><p>
+资本国际流动的图形和福利分析
+</p>
+
+<p>
+<i>参考大纲或教材的图形解释</i>
+</p></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org8c2824a" class="outline-4">
+<h4 id="org8c2824a"><span class="section-number-4">8.1.3</span> 国际生产折衷理论（为什么产生FDI）</h4>
+<div class="outline-text-4" id="text-8-1-3">
+<p>
+一个企业的所有权特定优势、内部化、区位特定优势三者结合决定了该企业与其
+他企业相比较是否具有对外投资的优势，或者可以通过出口、技术转移来开拓优
+势。所有权特定优势与市场内部化优势是跨国公司对外投资的必要条件，它们并
+不能决定一个公司一定要通过直接投资参与国际经济活动，而工业区位优势则是
+跨国公司进行对外投资的充分条件，二者结合决定了直接投资的发生。
+</p>
+
+<ul class="org-ul">
+<li><p>
+所有权特定优势
+</p>
+
+<p>
+指企业具有的组织管理能力、金融融资方面的优势、技术方面的特点和优势、
+企业的规模与其垄断地位及其它能力，这些优势组成了企业比投资所在国公司
+更大的优势，可以克服在国外生产碰到的附加成本和制度风险。
+</p></li>
+
+<li><p>
+内部化
+</p>
+
+<p>
+指将企业所有权特定优势内部化的能力。因为外部市场不完全，企业所有权特
+定优势可能会受到打击而丧失，内部化是在企业内部更好地实行资源配置，克
+服不利条件。
+</p></li>
+
+<li><p>
+区位特定优势
+</p>
+
+<p>
+包括东道国的劳动力成本情况，市场的条件和需求状况、关税与非关税壁垒、
+东道国政府的各种政策等等
+</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga7bff58" class="outline-3">
+<h3 id="orga7bff58"><span class="section-number-3">8.2</span> 劳动力国际流动及其经济效应</h3>
+<div class="outline-text-3" id="text-8-2">
+</div>
+<div id="outline-container-org54eeb00" class="outline-4">
+<h4 id="org54eeb00"><span class="section-number-4">8.2.1</span> 劳动力国际流动的原因</h4>
+<div class="outline-text-4" id="text-8-2-1">
+<ol class="org-ol">
+<li>国民收入的国际差异</li>
+
+<li>各国劳动力供求不平衡</li>
+
+<li>经济周期</li>
+
+<li>伴随国际贸易和国际投资及其他国际经济活动的劳动力流动</li>
+
+<li>劳动力日益具有跨国流动的必要条件</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgaa6c6f8" class="outline-4">
+<h4 id="orgaa6c6f8"><span class="section-number-4">8.2.2</span> 劳动力国际流动的经济分析</h4>
+<div class="outline-text-4" id="text-8-2-2">
+<p>
+<i>参考大纲或者教材的分析，和资本流动的分析完全一致</i>
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgae79b76" class="outline-3">
+<h3 id="orgae79b76"><span class="section-number-3">8.3</span> 技术转移及其经济效应</h3>
+<div class="outline-text-3" id="text-8-3">
+</div>
+<div id="outline-container-org6eb29da" class="outline-4">
+<h4 id="org6eb29da"><span class="section-number-4">8.3.1</span> 技术的国际转移</h4>
+<div class="outline-text-4" id="text-8-3-1">
+</div>
+<ol class="org-ol">
+<li><a id="org6524ec5"></a>技术转移的动因<br />
+<div class="outline-text-5" id="text-8-3-1-1">
+<p>
+技术对于经济的促进作用和带个企业的经济利益，同时能够使得产业结构发生变
+化，以及在国际市场中竞争力提高。
+</p>
+</div>
+</li>
+
+<li><a id="org8626d16"></a>技术转移的形式<br />
+<div class="outline-text-5" id="text-8-3-1-2">
+<p>
+技术转移属于软件的流动，形式包括专利使用、技术秘密的使用、制造技术的传
+播、专有技术的转让等，具体有着垂直型、水平型、混合型，简单型、吸收型等。
+</p>
+
+<ol class="org-ol">
+<li><p>
+垂直型技术转移
+</p>
+
+<p>
+一国基础研究成果被另一国在应用研究中采用，或一国应用研究的成果被另
+一国家的生产所采用。
+</p></li>
+
+<li><p>
+水平型技术转移
+</p>
+
+<p>
+一国以应用的技术被另一国生产所采用。
+</p></li>
+
+<li><p>
+混合型技术转移
+</p>
+
+<p>
+一国技术转移同时存在垂直型与水平型的情况。
+</p></li>
+
+<li><p>
+简单型技术转移
+</p>
+
+<p>
+一国技术转移到另一国，不理会被转移国家能否复制出该技术。
+</p></li>
+
+<li><p>
+吸收型技术转移
+</p>
+
+<p>
+一国技术转移到另一国，被转移国家能够复制出该技术。
+</p></li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org382137d" class="outline-4">
+<h4 id="org382137d"><span class="section-number-4">8.3.2</span> 国际技术转移的经济分析</h4>
+<div class="outline-text-4" id="text-8-3-2">
+</div>
+<ol class="org-ol">
+<li><a id="org6efb0c0"></a>技术转移的新古典价格刺激模型<br />
+<div class="outline-text-5" id="text-8-3-2-1">
+<p>
+劳动资本可以相互转换，导致生产往生产成本小的组合方向移动。
+</p>
+</div>
+</li>
+
+<li><a id="org710b680"></a>中性技术进步说<br /></li>
+
+<li><a id="org91a4701"></a>技术转移的周期理论<br />
+<div class="outline-text-5" id="text-8-3-2-3">
+<p>
+产品出口、直接投资、技术输出
+</p>
+</div>
+</li>
+
+<li><a id="org8e9c156"></a>国际技术转移的政策含义<br /></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgf209390" class="outline-3">
+<h3 id="orgf209390"><span class="section-number-3">8.4</span> 国际要素转移的其他经济效应</h3>
+<div class="outline-text-3" id="text-8-4">
+</div>
+<div id="outline-container-orgec1a5b8" class="outline-4">
+<h4 id="orgec1a5b8"><span class="section-number-4">8.4.1</span> 两缺口模型&#xa0;&#xa0;&#xa0;<span class="tag"><span class="2020__">2020重点</span></span></h4>
+<div class="outline-text-4" id="text-8-4-1">
+</div>
+<ol class="org-ol">
+<li><a id="org3d47d40"></a>模型内容<br />
+<div class="outline-text-5" id="text-8-4-1-1">
+<p>
+总需求：\(Y = C + S + T + M\)
+</p>
+
+<p>
+总供给：\(AD = C + I + G + X\)
+</p>
+
+<p>
+总需求等于总供给，不考虑国内均衡，所以假设\(G=T\) ，得到：\(I - S = M -X\)
+</p>
+
+<p>
+\(I-S\) 为储蓄缺口
+</p>
+
+<p>
+\(M-X\) 为进口缺口
+</p>
+</div>
+</li>
+
+<li><a id="org5266519"></a>模型意义<br />
+<div class="outline-text-5" id="text-8-4-1-2">
+<p>
+模型强调了发展中国家利用外部资源的必要性。通过引入外部资源，可以提高一
+国出口能力，是的高收入高储蓄的良性循环出现，更加合理地配置资源。在引进
+外部资源时，国内的经济结构需要进行调整以适应引进外部资源的要求，同时应
+该发挥政府在调控经济活动中的作用。
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org48c3fa5" class="outline-4">
+<h4 id="org48c3fa5"><span class="section-number-4">8.4.2</span> 外资引进的经济分析</h4>
+<div class="outline-text-4" id="text-8-4-2">
+</div>
+<ol class="org-ol">
+<li><a id="org9061672"></a>国内的恶性循环<br />
+<div class="outline-text-5" id="text-8-4-2-1">
+<p>
+发展中国家人均收入低\(\implies\) 储蓄低\(\implies\) 资本形成不足\(\implies\)
+生产率低下，收入不高\(\implies\) 低购买力\(\implies\) 投资不足\(\implies\)
+生产率低下\(\implies\) 收入低下
+</p>
+
+<p>
+从外部引进资源，注入到生产过程中是打破恶性循环的有效方法之一
+</p>
+</div>
+</li>
+
+<li><a id="org4b819cd"></a>最佳外资引进分析<br />
+<div class="outline-text-5" id="text-8-4-2-2">
+<p>
+\(MR = MC\)
+</p>
+</div>
+</li>
+
+<li><a id="orge7765a5"></a>债务指标及其政策意义<br />
+<div class="outline-text-5" id="text-8-4-2-3">
+<ol class="org-ol">
+<li><p>
+偿债率
+</p>
+
+<p>
+当年还本付息额占出口总收入的比重，即每年出口收入中有多少被用于偿付
+到期的本息，应该小于20%。
+</p></li>
+
+<li><p>
+出口债务率
+</p>
+
+<p>
+当年外债余额与当前出口总额之比，表示所欠外债额与出口收入之间的关系，
+应该小于100%。
+</p></li>
+
+<li><p>
+经济债务率
+</p>
+
+<p>
+当年外债余额占当年国民生产总值的比重，表示所欠外债额与整体经济之间
+的关系。安全线为30%
+</p></li>
+
+<li><p>
+现值债务率（95年以后计算方法）
+</p>
+
+<p>
+未偿还债务现值占国民生产总值的比重，80%为临界值
+</p></li>
+
+<li><p>
+出口现值债务率（95年以后计算方法）
+</p>
+
+<p>
+未偿还债务现值与出口之比，20%临界值，大于60%为中等债务国家
+</p></li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1f02b6f" class="outline-2">
+<h2 id="org1f02b6f"><span class="section-number-2">9</span> 宏观经济的内外均衡</h2>
+<div class="outline-text-2" id="text-9">
+</div>
+<div id="outline-container-org1ba5803" class="outline-3">
+<h3 id="org1ba5803"><span class="section-number-3">9.1</span> 国际传导机制（非均衡传导）</h3>
+<div class="outline-text-3" id="text-9-1">
+<ol class="org-ol">
+<li>国际商品流动的非均衡传导机制</li>
+
+<li>国际资本流动的非均衡传导机制</li>
+
+<li>国际劳动力流动的非均衡传导机制</li>
+
+<li>国际信息流动的非均衡传导机制</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgc3b9310" class="outline-3">
+<h3 id="orgc3b9310"><span class="section-number-3">9.2</span> 贸易乘数</h3>
+</div>
+</div>
+
+<div id="outline-container-org1f1462c" class="outline-2">
+<h2 id="org1f1462c"><span class="section-number-2">10</span> 经济一体化与国际经济秩序分析</h2>
+<div class="outline-text-2" id="text-10">
+</div>
+<div id="outline-container-orgbe4fc84" class="outline-3">
+<h3 id="orgbe4fc84"><span class="section-number-3">10.1</span> 经济一体化分析</h3>
+<div class="outline-text-3" id="text-10-1">
+</div>
+<div id="outline-container-org950b70f" class="outline-4">
+<h4 id="org950b70f"><span class="section-number-4">10.1.1</span> 关税同盟</h4>
+<div class="outline-text-4" id="text-10-1-1">
+<ol class="org-ol">
+<li><p>
+含义
+</p>
+
+<p>
+是经济一体化的组成形式之一，关税同盟从欧洲开始。对内实行减免关税，
+商品自由流动，从而成员国居民可以享受比过去更低成本的商品消费，同时
+增加了可选择机会，因此成员国乃至关税同盟整体的经济福利会提高；对外
+则采取统一或逐步实行统一的对外关税和对外贸易政策。关税同盟有两种经
+济效应，即静态效应和动态效应，静态效应有贸易创造效应和贸易转移效应
+两种。各国之间结成贸易联盟在一定程度上比自由贸易更能提高成员国的福
+利水平。
+</p></li>
+
+<li>关税同盟的经济效应
+
+<ol class="org-ol">
+<li><p>
+贸易创造效应
+</p>
+
+<p>
+指产品从生产成本较高的国内生产转向较低成本的关税同盟中贸易对象国
+生产，本国从贸易对象国进口的一种过程和现象。对发展有积极的促进意
+义。
+</p></li>
+
+<li><p>
+贸易转移效应
+</p>
+
+<p>
+指产品从过去进口自较低生产成本国转向从较高成本国进口的过程和现象。
+是在一体化过程中应该注意的情况。
+</p></li>
+
+<li>当贸易创造效应大于转移效应是，参加关税同盟给成员国带来的综合效应
+就是净效应，意味着成员国经济福利水平提高；反之，则为净损失和经济
+福利水平下降。</li>
+</ol></li>
+
+<li>关税同盟的政策含义
+
+<ol class="org-ol">
+<li>关税同盟成员国与外部世界国家生产成本相差小则利益大</li>
+
+<li>结成关税同盟前，成员间关税高，则结成后同盟利益大</li>
+
+<li>同盟成员与非成员之间的贸易壁垒低，则贸易创造多</li>
+
+<li>关税同盟成员数目越多，则低成本成员国存在的可能性大，进而贸易创造
+的机会多</li>
+
+<li>关税同盟成员家的竞争性大于互补性，则结成关税同盟的利益大</li>
+</ol></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org7414e7f" class="outline-4">
+<h4 id="org7414e7f"><span class="section-number-4">10.1.2</span> 最优货币区理论</h4>
+<div class="outline-text-4" id="text-10-1-2">
+<ol class="org-ol">
+<li><p>
+基本概念
+</p>
+
+<p>
+指采用单一货币，或者几种货币之间汇率永久固定、对外统一浮动的经济区
+域。
+</p></li>
+
+<li>形成条件
+
+<ol class="org-ol">
+<li>价格与工资弹性</li>
+
+<li>要素市场融合</li>
+
+<li>金融市场融合</li>
+
+<li>商品市场高度融合</li>
+
+<li>宏观经济协调与政治融合</li>
+</ol></li>
+
+<li>单一货币的收益
+
+<ol class="org-ol">
+<li>消除交易成本</li>
+
+<li>消除汇率不确定性</li>
+
+<li>形成更稳健的价格机制和降低实际利率水平</li>
+
+<li>信用延伸收益</li>
+
+<li>稳健的政府财政
+
+<ol class="org-ol">
+<li><p>
+稳健自律的重要性
+</p>
+
+<p>
+如果过度赤字，则债务货币化或着政府破产
+</p></li>
+
+<li>欧盟有关财政约束的实践（《马约》）
+
+<ol class="org-ol">
+<li>欧盟成员国在加入欧元区前一年财政赤字不得超过当年GDP的3%</li>
+
+<li>公债占GDP的比重不得超过60%</li>
+</ol></li>
+</ol></li>
+</ol></li>
+
+<li>单一货币的成本
+
+<ol class="org-ol">
+<li>缺乏需求变化的调节手段</li>
+
+<li>改变国内非均衡偏好的成本</li>
+
+<li>劳动力市场结构差异造成的成本</li>
+
+<li>单一货币下财政体制不同的成本</li>
+
+<li>国家间经济增长率不同导致贸易不平衡</li>
+</ol></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org24fc7c1" class="outline-2">
+<h2 id="org24fc7c1"><span class="section-number-2">11</span> 经济全球化趋势</h2>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: 2020-10-14 Wed 00:00</p>
+<p class="author">Author: Qing Yi</p>
+<p class="date">Created: 2020-12-02 Wed 17:52</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

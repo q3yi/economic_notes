@@ -1,0 +1,3402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-12-02 Wed 17:52 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>社会主义经济理论</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Qing Yi" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="../static/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="../static/readtheorg_theme/css/readtheorg.css"/>
+<script type="text/javascript" src="../static/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="../static/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../static/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="../static/readtheorg_theme/js/readtheorg.js"></script>
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">社会主义经济理论</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org660ea63">1. 考试分数分布</a></li>
+<li><a href="#org91f7d24">2. 经济理论的基本理解框架</a></li>
+<li><a href="#orge1f875b">3. 导论</a>
+<ul>
+<li><a href="#orgc10511d">3.1. 社会主义经济理论的发展脉络</a></li>
+<li><a href="#org30a5bf1">3.2. 社会主义经济理论呈现的特征</a></li>
+<li><a href="#org1e2b8af">3.3. 马克思主义经济学与西方经济学的方法比较</a></li>
+<li><a href="#orgf236bd7">3.4. 社会主义经济理论在方法上的二元性&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">待更新</span></span></a></li>
+<li><a href="#orga88b654">3.5. 社会主义经济理论方法的创新</a></li>
+</ul>
+</li>
+<li><a href="#org8f1051f">4. 社会主义经济制度的本质特征</a>
+<ul>
+<li><a href="#org2512e11">4.1. 社会主义从空想到科学发展</a>
+<ul>
+<li><a href="#org86886a0">4.1.1. 空想社会主义与科学社会主义的根本区别</a></li>
+<li><a href="#org60c985d">4.1.2. 关于未来社会的基本经济特征</a></li>
+</ul>
+</li>
+<li><a href="#orgd49422e">4.2. 有中国特色的社会主义经济理论</a>
+<ul>
+<li><a href="#org8064a1a">4.2.1. 关于社会主义初级阶段的理论</a></li>
+<li><a href="#org9852de3">4.2.2. 关于社会主义本质的理论</a></li>
+<li><a href="#org95e13a6">4.2.3. 关于经济体制改革理论</a></li>
+<li><a href="#orgf5f73c5">4.2.4. 关于社会主义市场经济理论</a></li>
+<li><a href="#orgac494d1">4.2.5. 关于社会主义收入分配的理论</a></li>
+<li><a href="#org4ecf835">4.2.6. 关于对外开放的理论</a></li>
+<li><a href="#orgfa2b4af">4.2.7. 关于以人为本的科学发展理论</a></li>
+</ul>
+</li>
+<li><a href="#org2d745d7">4.3. 社会主义初级阶段的基本经济制度</a>
+<ul>
+<li><a href="#orgb129e96">4.3.1. 社会主义初级阶段</a></li>
+<li><a href="#org499cbe5">4.3.2. 社会主义初级阶段基本经济制度的形成和发展</a></li>
+<li><a href="#org20e78a0">4.3.3. 坚持公有制经济主体地位与多种所有制经济共同发展&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">论述题</span></span></a></li>
+<li><a href="#org63737d5">4.3.4. 公有制实现形式的多样化</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orga92b017">5. 社会主义市场经济理论</a>
+<ul>
+<li><a href="#orge9716ef">5.1. 社会主义为什么要发展市场经济？&#xa0;&#xa0;&#xa0;<span class="tag"><span class="____">大概了解</span></span></a>
+<ul>
+<li><a href="#orga67a059">5.1.1. 计划经济的弊端</a></li>
+<li><a href="#org139870d">5.1.2. 市场经济的基本特征</a></li>
+</ul>
+</li>
+<li><a href="#org5009e51">5.2. 什么是社会主义市场经济？</a>
+<ul>
+<li><a href="#orgc9e6f76">5.2.1. 对计划与市场关系的认识过程</a></li>
+<li><a href="#orgaac5833">5.2.2. 社会主义市场经济体制的基本特征</a></li>
+<li><a href="#orgee148b5">5.2.3. 向社会主义市场经济的渐进过渡&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">选择题</span>&#xa0;<span class="___">论述题</span></span></a></li>
+</ul>
+</li>
+<li><a href="#org71e8e65">5.3. 怎样建设社会主义市场经济体制？</a>
+<ul>
+<li><a href="#org5e2ed9b">5.3.1. 深化国有企业改革，重塑市场竞争主体</a></li>
+<li><a href="#orge4a5885">5.3.2. 健全现代市场体系</a></li>
+<li><a href="#org95b9712">5.3.3. 加强和完善宏观调控</a></li>
+<li><a href="#orge91bb55">5.3.4. 深化分配制度改革，健全社会保障制度</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org53742da">6. 向社会主义市场经济体制的渐进过渡</a>
+<ul>
+<li><a href="#org1f515fa">6.1. 向市场经济体制过渡的方式和路径比较</a>
+<ul>
+<li><a href="#org16acd49">6.1.1. 我国向市场经济的过渡的特征&#xa0;&#xa0;&#xa0;<span class="tag"><span class="2020__">2020补充</span></span></a></li>
+<li><a href="#orgedcebca">6.1.2. 华盛顿共识与北京共识&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">选择题</span></span></a></li>
+<li><a href="#orgaa9d5e5">6.1.3. 激进式改革与渐进式改革的比较</a></li>
+</ul>
+</li>
+<li><a href="#orge2ee3b5">6.2. 市场取向改革与供给主导型制度变迁方式</a>
+<ul>
+<li><a href="#org4f39aaf">6.2.1. 供给主导型制度变迁方式的特征</a></li>
+<li><a href="#orga828cae">6.2.2. 约束制度供给的因素分析</a></li>
+<li><a href="#org8fccde6">6.2.3. 供给主导型制度变迁方式与制度选择目标之间的冲突</a></li>
+</ul>
+</li>
+<li><a href="#orgd280130">6.3. 中间扩散型制度变迁方式与地方政府的特殊功能</a>
+<ul>
+<li><a href="#orgb0c402e">6.3.1. 供给主导型制度变迁中的“诺思悖论”</a></li>
+<li><a href="#org6ede83c">6.3.2. 地方政府在中间扩散型制度变迁方式中的功能</a></li>
+<li><a href="#org7450629">6.3.3. 地方政府自发制度创新的事后追认</a></li>
+</ul>
+</li>
+<li><a href="#org4d54945">6.4. 从中间扩散型向需求诱致型制度变迁方式的渐进转换</a>
+<ul>
+<li><a href="#org084cc9a">6.4.1. 地方政府制度创新的效率导向</a></li>
+<li><a href="#org21faad0">6.4.2. 地方政府与企业间的合作博弈基市场主体的培育</a></li>
+<li><a href="#orgea824ae">6.4.3. 向需求诱致型制度变迁方式的转换</a></li>
+</ul>
+</li>
+<li><a href="#orgd3413f9">6.5. 对我国制度变迁方式转变的规范分析（制度变迁过程中遇到的问题）</a></li>
+</ul>
+</li>
+<li><a href="#org4d5eca7">7. 社会主义企业制度与国有企业改革&#xa0;&#xa0;&#xa0;<span class="tag"><span class="____">重点掌握</span></span></a>
+<ul>
+<li><a href="#org98d79a2">7.1. 马克思的所有制理论</a>
+<ul>
+<li><a href="#org5523de6">7.1.1. 财产所有权是所有制关系的法律表现</a></li>
+<li><a href="#org4cb6c66">7.1.2. 所有权的职能</a></li>
+<li><a href="#org430b4ca">7.1.3. 所有权各项权能的分离</a></li>
+</ul>
+</li>
+<li><a href="#orgc00032a">7.2. 国有企业产权制度改革</a>
+<ul>
+<li><a href="#orga85fed2">7.2.1. 国有企业产权结构分析</a></li>
+<li><a href="#orgf018df4">7.2.2. 传统国有产权的行政代理模式及其效率分析</a></li>
+<li><a href="#org042d147">7.2.3. 深化国有企业产权制度改革的内在必然性</a></li>
+<li><a href="#org380edf5">7.2.4. 产权及产权制度</a></li>
+<li><a href="#org66adc18">7.2.5. 提高国有企业效率就必须明确产权关系的原因&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">论述题</span></span></a></li>
+<li><a href="#orgd610857">7.2.6. 产权明晰化的条件就是建立现代化企业产权制度</a></li>
+</ul>
+</li>
+<li><a href="#org8e6ea53">7.3. 国有产权的多级委托代理及其面临的问题</a></li>
+<li><a href="#orgfbcd0c9">7.4. 国有企业的分类改革战略</a>
+<ul>
+<li><a href="#org7bea266">7.4.1. 对国有企业性质的划分</a></li>
+<li><a href="#org7ec4761">7.4.2. 各类不同企业分类改革战略</a></li>
+</ul>
+</li>
+<li><a href="#org5aad1bc">7.5. 国有企业股份制改造的模式选择&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">论述题</span></span></a>
+<ul>
+<li><a href="#org34a567e">7.5.1. 股份公司是现代企业制度的主要组织形式</a></li>
+<li><a href="#org969bc3b">7.5.2. 国有企业股份制改造的模式选择</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orge7e4ee9">8. 国有企业治理结构的创新</a>
+<ul>
+<li><a href="#org839354a">8.1. 利益相关者合作逻辑与国有企业治理结构创新原则</a>
+<ul>
+<li><a href="#org2c16fbb">8.1.1. 企业治理的核心是激励与约束经理人行为</a></li>
+<li><a href="#org1024c5e">8.1.2. 股东至少主义企业治理模式面临的挑战</a></li>
+<li><a href="#orgbccbf74">8.1.3. 产权的内涵与企业治理结构的主体</a></li>
+<li><a href="#orga2d6497">8.1.4. 人力资本的产权特征和企业所有权安排</a></li>
+</ul>
+</li>
+<li><a href="#org0148fe1">8.2. 国有企业治理结构效率的实证分析</a>
+<ul>
+<li><a href="#org72c77ae">8.2.1. 行政干预下经营者控制型治理结构</a></li>
+<li><a href="#org546fc01">8.2.2. “股东至上”治理结构的困境</a></li>
+</ul>
+</li>
+<li><a href="#orgff3855c">8.3. 国有企业治理结构创新：共同治理机制设计</a>
+<ul>
+<li><a href="#org339861c">8.3.1. 利益相关者合作逻辑</a></li>
+<li><a href="#org3fcf0be">8.3.2. 共同治理</a></li>
+<li><a href="#org3df4f48">8.3.3. 实施机制</a></li>
+</ul>
+</li>
+<li><a href="#org894ab0d">8.4. 国有企业治理结构创新：相机治理机制的设计</a>
+<ul>
+<li><a href="#org07bd992">8.4.1. 相机治理机制含义</a></li>
+<li><a href="#org24bd7d0">8.4.2. 相机治理机制的原理</a></li>
+<li><a href="#org9f13477">8.4.3. 相机治理的程序</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org01f42df">9. 社会主义市场经济条件下的分配制度</a>
+<ul>
+<li><a href="#orgde423da">9.1. 社会主义市场经济中的按劳分配与多种分配方式</a>
+<ul>
+<li><a href="#org57393dd">9.1.1. 社会主义市场经济中的按劳分配</a></li>
+<li><a href="#orge6212b6">9.1.2. 多种分配方式并存</a></li>
+</ul>
+</li>
+<li><a href="#org0545558">9.2. 按劳分配与按要素分配相结合&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">论述题</span></span></a></li>
+<li><a href="#org068f67d">9.3. 微观收入分配与宏观收入调节</a>
+<ul>
+<li><a href="#org06b7569">9.3.1. 微观收入分配过程</a></li>
+<li><a href="#orgb201221">9.3.2. 宏观收入调节过程</a></li>
+<li><a href="#orgc7e4145">9.3.3. 社会保障</a></li>
+</ul>
+</li>
+<li><a href="#orgcd43950">9.4. 微观收入分配中的公平与效率</a>
+<ul>
+<li><a href="#orgb882cd6">9.4.1. 效率优先，兼顾公平</a></li>
+<li><a href="#orgad81cec">9.4.2. 如何理解和实现社会主义市场经济下收入分配的公平？</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org3bbf2f2">10. 社会主义经济增长与经济发展&#xa0;&#xa0;&#xa0;<span class="tag"><span class="2020___">2020非重点</span></span></a>
+<ul>
+<li><a href="#orga61905b">10.1. 经济增长与经济发展的一般理论</a>
+<ul>
+<li><a href="#org9047885">10.1.1. 经济增长与经济发展</a></li>
+<li><a href="#org24d35db">10.1.2. 平衡增长与非平衡增长</a></li>
+</ul>
+</li>
+<li><a href="#org69fdeba">10.2. 制度创新与经济增长方式的转变&#xa0;&#xa0;&#xa0;<span class="tag"><span class="2020___">2020非重点</span></span></a>
+<ul>
+<li><a href="#org2504364">10.2.1. 经济增长方式及类型和条件</a></li>
+<li><a href="#org62bdef5">10.2.2. 经济增长的转变依赖于体制模式的转换</a></li>
+<li><a href="#orgfe5efd6">10.2.3. 制度创新推动经济增长的机理</a></li>
+</ul>
+</li>
+<li><a href="#org3442684">10.3. 邓小平经济发展理论</a>
+<ul>
+<li><a href="#org9d2cc82">10.3.1. 分三步走的台阶式发展战略</a></li>
+<li><a href="#org5c3a142">10.3.2. 实施“科教兴国”战略</a></li>
+</ul>
+</li>
+<li><a href="#orga2e97cb">10.4. 可持续发展与科学发展观</a>
+<ul>
+<li><a href="#orgc9d62d9">10.4.1. 传统经济发展模式的基本特征及发展模式的转换</a></li>
+<li><a href="#org517d0bb">10.4.2. 可持续发展理论及战略</a></li>
+<li><a href="#orgf55442e">10.4.3. 科学发展观</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org5f9c2c0">11. 社会主义市场经济条件下的经济结构调整&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">选择题</span></span></a>
+<ul>
+<li><a href="#org974eb81">11.1. 二元经济结构与农村剩余劳动力转移</a>
+<ul>
+<li><a href="#org80ce109">11.1.1. 二元经济结构的含义及衡量指标</a></li>
+<li><a href="#org2ac02fd">11.1.2. 中国二元经济结构的特征和原因</a></li>
+<li><a href="#orgfbd88df">11.1.3. 中国二元经济结构转换中的农村剩余劳动力转移</a></li>
+</ul>
+</li>
+<li><a href="#org081d8e3">11.2. 市场经济条件下产业结构高级化的进程</a>
+<ul>
+<li><a href="#org8cd470a">11.2.1. 影响产业结构调整的因素分析</a></li>
+<li><a href="#org565b980">11.2.2. 中国产业结构的现状及其调整的必要性&#xa0;&#xa0;&#xa0;<span class="tag"><span class="____">大概了解</span></span></a></li>
+<li><a href="#orge1b606e">11.2.3. 中国产业结构调整的目标及对策&#xa0;&#xa0;&#xa0;<span class="tag"><span class="____">大概了解</span></span></a></li>
+</ul>
+</li>
+<li><a href="#org8406d7b">11.3. 技术进步与经济结构调整</a>
+<ul>
+<li><a href="#orgc9d69c8">11.3.1. 技术进步与经济增长方式的转变</a></li>
+<li><a href="#org57ef5c5">11.3.2. 技术创兴与经济结构的演进</a></li>
+<li><a href="#org00f2638">11.3.3. 促进技术进步的技术政策选择</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgeab5ebe">12. 社会主义对外经济关系</a>
+<ul>
+<li><a href="#org6ed341f">12.1. 对外开放的理论基础</a>
+<ul>
+<li><a href="#org451317b">12.1.1. 现代经济从封闭走向开发的必然逻辑&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">论述题</span></span></a></li>
+<li><a href="#orge939017">12.1.2. 贸易开放与经济增长的联系&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">论述题</span></span></a></li>
+</ul>
+</li>
+<li><a href="#org04d0362">12.2. 经济全球化趋势下的我国对外开放实践</a></li>
+<li><a href="#org21a7190">12.3. 对外贸易、工业化与我国经济增长&#xa0;&#xa0;&#xa0;<span class="tag"><span class="____">大概了解</span></span></a>
+<ul>
+<li><a href="#org9a50bee">12.3.1. 工业化是中国经济增长的主要动力来源</a></li>
+<li><a href="#org6b72282">12.3.2. 对外贸易是突破工业化约束的手段</a></li>
+<li><a href="#org94a71a4">12.3.3. 我国外向型工业化战略的比较优势</a></li>
+<li><a href="#org81a2432">12.3.4. 我国当前外贸发展模式存在的问题</a></li>
+</ul>
+</li>
+<li><a href="#org821101c">12.4. 金融开放与对我国经济的影响</a>
+<ul>
+<li><a href="#org1c27ecc">12.4.1. 金融开发作用于我国经济增长的渠道</a></li>
+<li><a href="#org1094eb7">12.4.2. 金融开放对我国经济的影响</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org14b2a7d">13. 经济增长相关内容的总结（前三章内容）</a>
+<ul>
+<li><a href="#org09d931e">13.1. 经济增长（ \(Y\uparrow\) ）靠什么？</a>
+<ul>
+<li><a href="#org643201a">13.1.1. 技术进步：（改革）</a></li>
+<li><a href="#org7fcac19">13.1.2. 对外开发</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org0d561d5">14. 社会主义市场经济条件下的政府调节&#xa0;&#xa0;&#xa0;<span class="tag"><span class="2020___">2020概率大</span></span></a>
+<ul>
+<li><a href="#orgba622d8">14.1. 政府调节的必要性</a>
+<ul>
+<li><a href="#orgd9711ee">14.1.1. 市场机制并非尽善尽美</a></li>
+<li><a href="#orgd4da85f">14.1.2. 政府纠正市场失灵的能力是有限的</a></li>
+<li><a href="#org0c674c3">14.1.3. 政府干预与市场调节的合理界定</a></li>
+</ul>
+</li>
+<li><a href="#orgfc37a31">14.2. 政府干预经济的功能界定与范围界定&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">论述题</span></span></a>
+<ul>
+<li><a href="#org9fe59d8">14.2.1. 适度政府干预的界定&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">论述题</span></span></a></li>
+<li><a href="#orgc48e586">14.2.2. 政府干预经济的职能分解</a></li>
+</ul>
+</li>
+<li><a href="#org2809744">14.3. 政府干预经济的政策目标选择</a>
+<ul>
+<li><a href="#orgd19ed90">14.3.1. 经济政策的基本目标</a></li>
+<li><a href="#org5f792ca">14.3.2. 经济政策的具体目标</a></li>
+<li><a href="#orgb59e2a0">14.3.3. 经济发展中政策目标可能冲突的区域</a></li>
+</ul>
+</li>
+<li><a href="#org513aab9">14.4. 政府干预经济的政策手段选择</a>
+<ul>
+<li><a href="#org4c02d5a">14.4.1. 经济政策手段的构成</a></li>
+<li><a href="#org8523472">14.4.2. 经济政策手段的传导机制与选择原则</a></li>
+<li><a href="#orgfc98aac">14.4.3. 经济政策手段的效率及其选择原则&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">论述题</span></span></a></li>
+</ul>
+</li>
+<li><a href="#orge664e31">14.5. 经济政策选择与经济效率</a>
+<ul>
+<li><a href="#orgd0ab13b">14.5.1. 政策目标约束下的政策手段选择和组合</a></li>
+<li><a href="#orgf34c6dc">14.5.2. 政府干预经济的效率标准</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org660ea63" class="outline-2">
+<h2 id="org660ea63"><span class="section-number-2">1</span> 考试分数分布</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+分值分布（22'-25'）
+</p>
+
+<ol class="org-ol">
+<li>论述+选择</li>
+
+<li>论述+选择+名词</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org91f7d24" class="outline-2">
+<h2 id="org91f7d24"><span class="section-number-2">2</span> 经济理论的基本理解框架</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+马列和中国特色社会主义都可以从以下的基本框架来帮助理解其理论内容：
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">涵盖内容</th>
+<th scope="col" class="org-left">说明</th>
+<th scope="col" class="org-left">子项</th>
+<th scope="col" class="org-left">马列</th>
+<th scope="col" class="org-left">社会主义市场经济</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">国情</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">社会主义初级阶段（两大含义，反左反右）</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">制度</td>
+<td class="org-left">制度由国情决定,包含所有制和分配制</td>
+<td class="org-left">所有制（社会的本质）</td>
+<td class="org-left">公有制代替私有制。本质尽快发展生产力，实现共同富裕</td>
+<td class="org-left">公有制为主体，多种所有制并存。本质解放发展生产力，实现共同富裕</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">分配制</td>
+<td class="org-left">在两个阶段分别实行按劳分配与按需分配</td>
+<td class="org-left">按劳分配为主，多种分配方式并存</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">体制</td>
+<td class="org-left">体制由制度决定</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">消灭商品，消灭货币，实行计划经济</td>
+<td class="org-left">计划体制转为社会主义市场经济体制，通过改革和开放</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">中期目标</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">建立社会主义市场经济体制</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">长期目标</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">自由人的联合和个人自由全面的发展；消灭阶级和阶级对立，让人成为社会、自然和自身的主人</td>
+<td class="org-left">以人为本的科学发展观</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orge1f875b" class="outline-2">
+<h2 id="orge1f875b"><span class="section-number-2">3</span> 导论</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgc10511d" class="outline-3">
+<h3 id="orgc10511d"><span class="section-number-3">3.1</span> 社会主义经济理论的发展脉络</h3>
+<div class="outline-text-3" id="text-3-1">
+<ol class="org-ol">
+<li>80年代初放权让利：企业自主盈亏改革</li>
+
+<li>90年代初计划与市场的讨论：计划与市场只是实现资源配置的手段</li>
+
+<li>90年代末至今产权制度为主线的社会主义经济理论讨论状况：产权改革，建
+立现代企业制度（16字方针：产权清晰、权责明确、政企分开，管理科学）</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org30a5bf1" class="outline-3">
+<h3 id="org30a5bf1"><span class="section-number-3">3.2</span> 社会主义经济理论呈现的特征</h3>
+<div class="outline-text-3" id="text-3-2">
+<ol class="org-ol">
+<li>从只关注生产关系到同时十分关注资源配置</li>
+
+<li>从封闭的一花独放到开放性的百花争鸣</li>
+
+<li>从纯理论推导到十分重视理论联系实际</li>
+
+<li>从单调的分析方法到多元的分析方法：规范分析与实证缝隙相结合、定量分
+析与定性分析相结合、静态分析与动态分析相结合</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org1e2b8af" class="outline-3">
+<h3 id="org1e2b8af"><span class="section-number-3">3.3</span> 马克思主义经济学与西方经济学的方法比较</h3>
+<div class="outline-text-3" id="text-3-3">
+<ol class="org-ol">
+<li>传统政治经济学：在讨论市场经济的社会主义制度基础时采用的是马克思主
+义方法论，在分析市场经济运行是采用的是西方经济学惯用的方法论，两者
+之间处于割裂状态</li>
+
+<li>西方主流经济学：在资源稀缺性假设前提下遵循个体主义成本收益分析方法。
+强调经济人假设</li>
+
+<li>马克思主义经济学：从唯物辩证法和历史唯物主义出发，在社会人假设的基
+础上，形成了整体主义分析方法。强调社会人假设</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgf236bd7" class="outline-3">
+<h3 id="orgf236bd7"><span class="section-number-3">3.4</span> 社会主义经济理论在方法上的二元性&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">待更新</span></span></h3>
+<div class="outline-text-3" id="text-3-4">
+<p>
+排斥西方经济学构建社会主义经济理论体系或者完全采用西方经济学的分析方法
+构建社会主义经济理论体系
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga88b654" class="outline-3">
+<h3 id="orga88b654"><span class="section-number-3">3.5</span> 社会主义经济理论方法的创新</h3>
+<div class="outline-text-3" id="text-3-5">
+<p>
+承认和考虑整体主义和个体主义方法论的合理方面，拒绝两者的极端形式，走一
+条整体主义和个体主义方法论相结合的“中间道路”。最终形成经济学分析方法：
+直面现实的经济学分析方法
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8f1051f" class="outline-2">
+<h2 id="org8f1051f"><span class="section-number-2">4</span> 社会主义经济制度的本质特征</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org2512e11" class="outline-3">
+<h3 id="org2512e11"><span class="section-number-3">4.1</span> 社会主义从空想到科学发展</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+<i>主要讲社会主义的发展历程</i>
+</p>
+</div>
+
+<div id="outline-container-org86886a0" class="outline-4">
+<h4 id="org86886a0"><span class="section-number-4">4.1.1</span> 空想社会主义与科学社会主义的根本区别</h4>
+<div class="outline-text-4" id="text-4-1-1">
+<ul class="org-ul">
+<li>空想社会主义（欧文/圣西门）：从人类公平、正义等理性原则出发批判资本
+主义，并在此基础上构想或者空想未来的理想王国</li>
+
+<li>科学社会主义（马列）：从方法，分析对象与目的上有创新
+
+<ul class="org-ul">
+<li>方法：历史唯物主义</li>
+
+<li>分析对象：资本主义生产方式内在矛盾和动力规律</li>
+
+<li>目的： 找到物质规律和经济规律</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org60c985d" class="outline-4">
+<h4 id="org60c985d"><span class="section-number-4">4.1.2</span> 关于未来社会的基本经济特征</h4>
+<div class="outline-text-4" id="text-4-1-2">
+<p>
+<i>其实就是讲科学社会主义（马列）是如何认识未来社会的</i>
+</p>
+
+<ol class="org-ol">
+<li>自由人的联合和个人自由全面的发展：消灭阶级和阶级对立，让人成为社会、
+自然和自身的主人</li>
+
+<li>以生产资料公有制代替私有制</li>
+
+<li>尽快发展生产力，实现共同富裕</li>
+
+<li>消灭商品生产，对全部生产实行有计划的调节。 <i>消灭商品，消灭货币</i></li>
+
+<li>在共产主义两个阶段分别实行按劳分配和按需分配</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd49422e" class="outline-3">
+<h3 id="orgd49422e"><span class="section-number-3">4.2</span> 有中国特色的社会主义经济理论</h3>
+<div class="outline-text-3" id="text-4-2">
+</div>
+<div id="outline-container-org8064a1a" class="outline-4">
+<h4 id="org8064a1a"><span class="section-number-4">4.2.1</span> 关于社会主义初级阶段的理论</h4>
+<div class="outline-text-4" id="text-4-2-1">
+<p>
+对我国现实国情的描述，包含两大含义
+</p>
+
+<ol class="org-ol">
+<li>我国已经进入社会主义（反右）</li>
+
+<li>社会主义还处于不发达阶段（反左）</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org9852de3" class="outline-4">
+<h4 id="org9852de3"><span class="section-number-4">4.2.2</span> 关于社会主义本质的理论</h4>
+<div class="outline-text-4" id="text-4-2-2">
+<p>
+社会主义的本质是 <b>解放和发展生产力，消灭剥削，消除两极分化，最终达到共
+同富裕</b>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org95e13a6" class="outline-4">
+<h4 id="org95e13a6"><span class="section-number-4">4.2.3</span> 关于经济体制改革理论</h4>
+<div class="outline-text-4" id="text-4-2-3">
+<p>
+改革的定义：改革是一场新的革命，是要从根本上改革束缚我国生产力发展的传
+统经济制度，建立充满生机的社会主义经济体制
+</p>
+
+<p>
+目标：建立社会主义市场经济体制
+</p>
+
+<p>
+内容：把体制改革与制度创新相结合，实现社会主义与市场经济的最佳组合
+</p>
+
+<p>
+方式：从实际出发，整体推进，重点突破，循序渐进
+</p>
+
+<p>
+模式：渐进式改革，渐进式改革采用三天路径
+</p>
+
+<p>
+战略：兼顾改革、发展与稳定的方针，以改革统筹全局。稳定是基础，改革是动
+力，发展是目的
+</p>
+
+<p>
+改革路径：三条路径，供给主导型、中间扩散型和需求诱导型
+</p>
+
+<p>
+改革的具体操作方法：改国企（重塑市场竞争主体）、建市场、做调控和促保障
+（收入分配和社会保障）
+</p>
+
+<p>
+改革的判断标准，三个“有利于”，是否有利于发展社会主义生产力，是否有利于
+增强社会主义国家的综合国力，是否有利于提高人民的生活水平
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf5f73c5" class="outline-4">
+<h4 id="orgf5f73c5"><span class="section-number-4">4.2.4</span> 关于社会主义市场经济理论</h4>
+<div class="outline-text-4" id="text-4-2-4">
+<p>
+要使市场机制在资源配置中起基础性作用。政府做好宏观调控、收入分配与社会
+保障
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgac494d1" class="outline-4">
+<h4 id="orgac494d1"><span class="section-number-4">4.2.5</span> 关于社会主义收入分配的理论</h4>
+<div class="outline-text-4" id="text-4-2-5">
+<p>
+按劳分配为主、其他分配方式相结合，劳动标准和所有权标准相结合
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4ecf835" class="outline-4">
+<h4 id="org4ecf835"><span class="section-number-4">4.2.6</span> 关于对外开放的理论</h4>
+<div class="outline-text-4" id="text-4-2-6">
+<p>
+基本国策
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfa2b4af" class="outline-4">
+<h4 id="orgfa2b4af"><span class="section-number-4">4.2.7</span> 关于以人为本的科学发展理论</h4>
+<div class="outline-text-4" id="text-4-2-7">
+<p>
+以人为本，全面协调可持续的科学发展观
+</p>
+
+<ol class="org-ol">
+<li>邓小平，三步走战略</li>
+
+<li>江泽民，可持续发展战略</li>
+
+<li>胡景涛，科学发展观</li>
+
+<li>习近平，新时代有中国特色社会主义发展观</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2d745d7" class="outline-3">
+<h3 id="org2d745d7"><span class="section-number-3">4.3</span> 社会主义初级阶段的基本经济制度</h3>
+<div class="outline-text-3" id="text-4-3">
+</div>
+<div id="outline-container-orgb129e96" class="outline-4">
+<h4 id="orgb129e96"><span class="section-number-4">4.3.1</span> 社会主义初级阶段</h4>
+<div class="outline-text-4" id="text-4-3-1">
+<p>
+社会主义初级阶段是指我国生产力落后，商品经济不发达条件下建设社会主义必然要经历的特定阶段，即从我国进入社会主义到基本实现社会现代化的整个历史阶段，包含了两大含义：
+</p>
+
+<ol class="org-ol">
+<li>我国已经进入社会主义</li>
+
+<li>我国社会主义还处于不发达阶段</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org499cbe5" class="outline-4">
+<h4 id="org499cbe5"><span class="section-number-4">4.3.2</span> 社会主义初级阶段基本经济制度的形成和发展</h4>
+<div class="outline-text-4" id="text-4-3-2">
+<p>
+基本经济制度：以公有制为主体，多种所有制经济共同发展的基本经济制度
+</p>
+</div>
+</div>
+
+<div id="outline-container-org20e78a0" class="outline-4">
+<h4 id="org20e78a0"><span class="section-number-4">4.3.3</span> 坚持公有制经济主体地位与多种所有制经济共同发展&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">论述题</span></span></h4>
+<div class="outline-text-4" id="text-4-3-3">
+<ol class="org-ol">
+<li>公有制经济居于主体地位
+
+<ol class="org-ol">
+<li>公有制经济：国有经济、集体经济和混合所有制中的国有成分和集体成分</li>
+
+<li>公有制：量上，在社会总资产中占优势；质上，国民经济命脉上具有控制力、影响力和对经济发展具有导向作用</li>
+
+<li>国有经济：发挥国家经济的主导作用提高国有经济的控制力、竞争力和影响力</li>
+
+<li>国有经济的调整原则：坚持有进有退，有所为有所部位，集中力量，加强重点，提高国有经济的整体素质</li>
+
+<li>集体经济：顽强生命力</li>
+
+<li>混合所有制：不同性质的所有制经济组合而成的一种经济形式。各种所有制相互交融、参股、持股，从而形成的一种新的所有制形态</li>
+</ol></li>
+
+<li><p>
+在社会主义初级阶段，不仅要发展多种形式的公有制经济，还要发展多种形式的非公有制经济。
+</p>
+
+<p>
+个体经济、私营经济和外贸经济具有不可替代的作用：就业、多样化的产品和服务和与市场经济较强的兼容性和经济活力
+</p></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org63737d5" class="outline-4">
+<h4 id="org63737d5"><span class="section-number-4">4.3.4</span> 公有制实现形式的多样化</h4>
+<div class="outline-text-4" id="text-4-3-4">
+<p>
+合作经济、股份制、股份合作制和各种混合所有制经济
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga92b017" class="outline-2">
+<h2 id="orga92b017"><span class="section-number-2">5</span> 社会主义市场经济理论</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-orge9716ef" class="outline-3">
+<h3 id="orge9716ef"><span class="section-number-3">5.1</span> 社会主义为什么要发展市场经济？&#xa0;&#xa0;&#xa0;<span class="tag"><span class="____">大概了解</span></span></h3>
+<div class="outline-text-3" id="text-5-1">
+</div>
+<div id="outline-container-orga67a059" class="outline-4">
+<h4 id="orga67a059"><span class="section-number-4">5.1.1</span> 计划经济的弊端</h4>
+<div class="outline-text-4" id="text-5-1-1">
+<ol class="org-ol">
+<li>赶超型发展的战略：数量增长和以外延式为主的粗放型经济增长模式</li>
+
+<li>指令性计划经济体制：
+
+<ul class="org-ul">
+<li>决策结构，中央集权</li>
+
+<li>动力结构，忽视物质利益刺激，实行平均主义分配</li>
+
+<li>信息结构，实行计划指令的纵向传递，全部经济活动都纳入计划的轨道</li>
+
+<li>所有制结构，追求“一大二公”，实行“穷过渡”</li>
+</ul></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org139870d" class="outline-4">
+<h4 id="org139870d"><span class="section-number-4">5.1.2</span> 市场经济的基本特征</h4>
+<div class="outline-text-4" id="text-5-1-2">
+<ol class="org-ol">
+<li>资源配置遵循产权规则（供求机制）</li>
+
+<li>决策分散化（供求机制）</li>
+
+<li>自由和平等竞争（竞争机制）</li>
+
+<li>价格协调微观决策（价格机制）</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5009e51" class="outline-3">
+<h3 id="org5009e51"><span class="section-number-3">5.2</span> 什么是社会主义市场经济？</h3>
+<div class="outline-text-3" id="text-5-2">
+</div>
+<div id="outline-container-orgc9e6f76" class="outline-4">
+<h4 id="orgc9e6f76"><span class="section-number-4">5.2.1</span> 对计划与市场关系的认识过程</h4>
+<div class="outline-text-4" id="text-5-2-1">
+<ul class="org-ul">
+<li><p>
+第一阶段，1978年至1983年，提出了计划经济为主、市场调节为辅的改革思想。
+</p>
+
+<p>
+放权让利，把计划建立在价值规律的基础上。
+</p></li>
+
+<li><p>
+第二阶段，1984年至1987年，提出了有计划商品经济理论。
+</p>
+
+<p>
+商品经济是社会主义经济不可逾越的阶段，计划经济与商品经济具有统一性。
+经济体制改革的重心从农村转向城市，并进行市场取向改革。
+</p></li>
+
+<li><p>
+第三阶段，1987年至1992年，提出了社会主义商品经济理论。
+</p>
+
+<p>
+社会主义商品经济应该是计划与市场内在统一的体制，计划调节与市场调节应
+有机结合。社会主义市场体系不仅包括商品市场，还包括资本市场和劳动力市
+场等。“国家调节市场，市场引导企业”
+</p></li>
+
+<li>第四阶段，1992年以后，提出了社会主义市场经济理论。
+
+<ol class="org-ol">
+<li>1992年小平南巡讲话和1992江主席十四大报告：确立了社会主义市场经济
+改革的目标：建立社会主义市场经济体制。</li>
+
+<li>重温党的基本路线一百年不动摇，为经济发展奠定了基础和方向（领导和
+团结全国各族人民，以经济假设为中心，坚持四项基本原则，坚持改革开
+放，自力更生，艰苦创业，为把我国建设成为富强民主文明和谐的社会主
+义现代化国家而奋斗）。</li>
+
+<li>党的十五大（1997）：建设中国特色社会主义经济，就是在社会主义条件
+下发展市场经济，不断解放和发展生产力。</li>
+
+<li>党的十六大：坚持社会主义市场经济的改革方向，使市场在国家宏观调控
+下对资源配置起到基础心作用。</li>
+
+<li>党的十六大至党的十九大：国有企业战略性结构调整，组建大型国有企业
+竞争集团，新时代有中国特色社会主义市场经济理论。供给侧结构性改革、
+关注民生、扩大开发、注重生态。</li>
+</ol></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgaac5833" class="outline-4">
+<h4 id="orgaac5833"><span class="section-number-4">5.2.2</span> 社会主义市场经济体制的基本特征</h4>
+<div class="outline-text-4" id="text-5-2-2">
+<ol class="org-ol">
+<li>以公有制为主体，多种所有制形式共同发展的所有制结构构成了社会主义市
+场经济的所有制基础。
+
+<ol class="org-ol">
+<li>巩固和发展公有制经济：国有经济控制国民经济命脉，对于发挥社会主义
+制度的优越性、增强经济实力、国防实力和民族凝聚力具有关键性作用。
+集体经济可以消除两极分化、实现共同富裕。</li>
+
+<li>促进、鼓励、支持和引导非公有制经济的发展。相互促进、相互交融和相
+互渗透。</li>
+
+<li>坚持和促进统一于社会主义现代化建设的进程中。</li>
+</ol></li>
+
+<li><p>
+按劳分配为主、多种分配方式并存的分配制度是社会主义市场经济的分配方
+式。
+</p>
+
+<p>
+所有制决定分配制，必须通过市场进行，公有制也必须体现自负盈亏，必须
+有偿使用，因此必须涉及分配。
+</p></li>
+
+<li>社会主义市场经济体制的主要特点是在坚持1，2的基础上，让市场在资源配
+置中起到基础作用，而政府宏观调控起到补充</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgee148b5" class="outline-4">
+<h4 id="orgee148b5"><span class="section-number-4">5.2.3</span> 向社会主义市场经济的渐进过渡&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">选择题</span>&#xa0;<span class="___">论述题</span></span></h4>
+<div class="outline-text-4" id="text-5-2-3">
+<p>
+渐进式的改革方式，指在工业化和社会主义宪法制度基础上进行的市场化改革，
+强调利用已有的组织资源推进改革。
+</p>
+
+<p>
+我国改革成功的主要原因：
+</p>
+
+<ol class="org-ol">
+<li>经济制度与市场经济相结合起来</li>
+
+<li>三个有利于标准判断成败</li>
+
+<li>处理好改革、发展和稳定的关系</li>
+
+<li>适时地推出政治体制改革</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org71e8e65" class="outline-3">
+<h3 id="org71e8e65"><span class="section-number-3">5.3</span> 怎样建设社会主义市场经济体制？</h3>
+<div class="outline-text-3" id="text-5-3">
+<p>
+<i>改国企，建市场，做调控，促保障</i>
+</p>
+</div>
+
+<div id="outline-container-org5e2ed9b" class="outline-4">
+<h4 id="org5e2ed9b"><span class="section-number-4">5.3.1</span> 深化国有企业改革，重塑市场竞争主体</h4>
+<div class="outline-text-4" id="text-5-3-1">
+<ol class="org-ol">
+<li>国有企业分类改革：</li>
+
+<li>有所为有所不为阶段；</li>
+
+<li>改革国有资产管理体制；</li>
+
+<li>股份制改造</li>
+
+<li>建立现代企业制度；</li>
+
+<li>企业治理；</li>
+
+<li>技术创新；</li>
+
+<li>以改革促管理。</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orge4a5885" class="outline-4">
+<h4 id="orge4a5885"><span class="section-number-4">5.3.2</span> 健全现代市场体系</h4>
+<div class="outline-text-4" id="text-5-3-2">
+<ol class="org-ol">
+<li>营造平等竞争的市场环境</li>
+
+<li>建立统一、开放、竞争、有序的市场体系</li>
+
+<li>深化流通体制改革，发展现代流通方式</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org95b9712" class="outline-4">
+<h4 id="org95b9712"><span class="section-number-4">5.3.3</span> 加强和完善宏观调控</h4>
+<div class="outline-text-4" id="text-5-3-3">
+<ol class="org-ol">
+<li>理顺政府与企业之间的关系</li>
+
+<li>明确经济目标，优化经济政策</li>
+
+<li>建立精简型、透明型、法治型与公平型政府</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orge91bb55" class="outline-4">
+<h4 id="orge91bb55"><span class="section-number-4">5.3.4</span> 深化分配制度改革，健全社会保障制度</h4>
+<div class="outline-text-4" id="text-5-3-4">
+<p>
+内容：建立起按劳分配为主、多种分配方式并存的分配制度
+</p>
+
+<p>
+原则：兼顾效率和公平
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org53742da" class="outline-2">
+<h2 id="org53742da"><span class="section-number-2">6</span> 向社会主义市场经济体制的渐进过渡</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-org1f515fa" class="outline-3">
+<h3 id="org1f515fa"><span class="section-number-3">6.1</span> 向市场经济体制过渡的方式和路径比较</h3>
+<div class="outline-text-3" id="text-6-1">
+</div>
+<div id="outline-container-org16acd49" class="outline-4">
+<h4 id="org16acd49"><span class="section-number-4">6.1.1</span> 我国向市场经济的过渡的特征&#xa0;&#xa0;&#xa0;<span class="tag"><span class="2020__">2020补充</span></span></h4>
+<div class="outline-text-4" id="text-6-1-1">
+<ol class="org-ol">
+<li>中国的社会转型是工业化和市场化双重转型的统一</li>
+
+<li>中国的市场化是以社会主义制度为基础的体制转轨</li>
+
+<li>从计划经济向市场经济的过渡首先是一种经济体制或资源配置方式的转变过程</li>
+
+<li>经济过渡的目标是建立社会主义市场经济体制</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgedcebca" class="outline-4">
+<h4 id="orgedcebca"><span class="section-number-4">6.1.2</span> 华盛顿共识与北京共识&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">选择题</span></span></h4>
+<div class="outline-text-4" id="text-6-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="org773a67d"></a>华盛顿共识<br />
+<div class="outline-text-5" id="text-6-1-2-1">
+<p>
+私用产权条件下的资本与市场的全面开放，自由化和私有制。
+</p>
+
+<ol class="org-ol">
+<li>加强财政纪律，压缩财政赤字</li>
+
+<li>政府开支转向（经济效益好/收入分配改善）</li>
+
+<li>放松政府管制</li>
+
+<li>改革税制</li>
+
+<li>实施利率市场化</li>
+
+<li>采用一种具有竞争力的汇率制度</li>
+
+<li>实施贸易自由化，开放市场</li>
+
+<li>开放外国直接投资</li>
+
+<li>国有企业私有化</li>
+
+<li>立法保护私有财产</li>
+</ol>
+</div>
+</li>
+
+<li><a id="org9198134"></a>北京共识<br />
+<div class="outline-text-5" id="text-6-1-2-2">
+<ol class="org-ol">
+<li>价值创新</li>
+
+<li>持续、均衡和稳定发展的环境</li>
+
+<li>自主发展理论</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-orgaa9d5e5" class="outline-4">
+<h4 id="orgaa9d5e5"><span class="section-number-4">6.1.3</span> 激进式改革与渐进式改革的比较</h4>
+<div class="outline-text-4" id="text-6-1-3">
+</div>
+<ol class="org-ol">
+<li><a id="org715fc87"></a>市场化过程的含义<br />
+<div class="outline-text-5" id="text-6-1-3-1">
+<p>
+市场化过程或过渡问题，讨论的就是从计划经济体制向市场体制转变的过程。体
+制的差别体现在资源分配方式的不同。
+</p>
+
+<p>
+实质：资源配置从等级规则向产权规则转变。
+</p>
+
+<p>
+核心：资源配置权由政府转变为企业和个人。
+</p>
+
+<p>
+等级规则：金字塔型等级结构，所处位置决定资源配置权利。
+</p>
+
+<p>
+产权规则：资源配置权利与其所拥有的资产数量正相关。
+</p>
+</div>
+</li>
+
+<li><a id="org53fb6c9"></a>我国渐进式改革的特点<br />
+<div class="outline-text-5" id="text-6-1-3-2">
+<ol class="org-ol">
+<li>利用已有资源推动市场取向的改革。</li>
+
+<li>增量改革，在基本不触动既得利益格局的前提下，在边际上推进市场取向改
+革，也就是说，在等级规则较小的边际上，选择具有帕累托改进意义的利益
+调整方式进行体制改革，逐渐向市场经济体制过渡。</li>
+
+<li>先试点，后推广，即现在局部范围取得改革的经验，然后再在全局范围内推
+广改革经验。</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orge2ee3b5" class="outline-3">
+<h3 id="orge2ee3b5"><span class="section-number-3">6.2</span> 市场取向改革与供给主导型制度变迁方式</h3>
+<div class="outline-text-3" id="text-6-2">
+</div>
+<div id="outline-container-org4f39aaf" class="outline-4">
+<h4 id="org4f39aaf"><span class="section-number-4">6.2.1</span> 供给主导型制度变迁方式的特征</h4>
+<div class="outline-text-4" id="text-6-2-1">
+<ol class="org-ol">
+<li>制度：决定人们的相互关系而认为设定的一些规则，其主要作用是通过建立
+人们相互作用、稳定的结构来减少不确定性。</li>
+
+<li>制度变迁：行为人的收益与成本的对比</li>
+
+<li><p>
+供给主导型制度变迁方式：
+</p>
+
+<p>
+组织和领导（权利中心）+行政命令和法律法规+强制的自上而下
+</p>
+
+<p>
+定义：由权力中心推进的强制性制度变迁，是指在一定的宪法秩序和行为规
+范下，权力中心提供新的制度安排和制度创新。权力中心的能力与意愿是决
+定制度变迁的主导因素，而这种能力与意愿主要取决于一个社会既得利益集
+团的权力结构与力量对比。
+</p>
+
+<p>
+特征：
+</p>
+
+<ol class="org-ol">
+<li>政府的主导力量</li>
+
+<li>政府主体是由一个权力中心和层层隶属的行政系统构成</li>
+
+<li>权利中心边际收益大于成本时，制度变迁才会可能发生</li>
+
+<li>为制度创新制定严格的壁垒</li>
+
+<li>统一观念，降低交易成本</li>
+</ol></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orga828cae" class="outline-4">
+<h4 id="orga828cae"><span class="section-number-4">6.2.2</span> 约束制度供给的因素分析</h4>
+<div class="outline-text-4" id="text-6-2-2">
+<ol class="org-ol">
+<li>宪法秩序</li>
+
+<li>制度的供给成本（财政约束）</li>
+
+<li>知识约束</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org8fccde6" class="outline-4">
+<h4 id="org8fccde6"><span class="section-number-4">6.2.3</span> 供给主导型制度变迁方式与制度选择目标之间的冲突</h4>
+<div class="outline-text-4" id="text-6-2-3">
+<p>
+制度选择目标是市场经济，要求产权明晰，要贯彻分权。与供给主导型遵循的等
+级规则冲突。
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd280130" class="outline-3">
+<h3 id="orgd280130"><span class="section-number-3">6.3</span> 中间扩散型制度变迁方式与地方政府的特殊功能</h3>
+<div class="outline-text-3" id="text-6-3">
+</div>
+<div id="outline-container-orgb0c402e" class="outline-4">
+<h4 id="orgb0c402e"><span class="section-number-4">6.3.1</span> 供给主导型制度变迁中的“诺思悖论”</h4>
+<div class="outline-text-4" id="text-6-3-1">
+<ol class="org-ol">
+<li>权力中心在界定与保护产权的过程中立场并不是中立的，追求双重目标：社
+会总产出最大化与统治者集团的垄断租金最大化。同时受到交易费用和竞争
+的双重约束，会对不同利益集团采取歧视性政策，从而容忍低效率产权结构
+的长期存在和导致经济衰退。</li>
+
+<li>诺思悖论：国家保护产权时受到双重约束（交易费用和竞争），对利益集团
+采取歧视性政策，从而容忍低效率产权结构的长期存在和导致经济衰退。</li>
+
+<li><p>
+化解诺思悖论，组织的集体行动
+</p>
+
+<p>
+微观主体和权力中心之间，既能满足个体追求最大化利益，又可以通过和权
+力中心谈判与交易中形成均势来实现国家的垄断租金最大化的制度变迁方式。
+这种组织就是地方政府（利益独立化）。
+</p></li>
+
+<li>中间扩散型制度变迁方式：利益独立化的地方政府，在拥有较大资源配置权
+利的同时也是追求经济利益最大化的政治组织。当这样的地方政府成为沟通
+权力中心的制度供给意愿和微观主体的制度创新需求的中间环节时，就有可
+能冲破权力中心设置的制度创新新进入壁垒，从而使得权力中心的垄断租金
+最大化和有效产权保护之间达成一致。从而化解诺思悖论。这种制度变迁方
+式被称为中间扩散型。</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org6ede83c" class="outline-4">
+<h4 id="org6ede83c"><span class="section-number-4">6.3.2</span> 地方政府在中间扩散型制度变迁方式中的功能</h4>
+<div class="outline-text-4" id="text-6-3-2">
+<ol class="org-ol">
+<li>地方政府成为中间扩散型制度变迁方式中的“第一行动集团”</li>
+
+<li><p>
+非平衡改革战略下的潜在制度收益与地方政府对制度创新进入权的竞争
+</p>
+
+<p>
+地方政府获得制度创新进入权的办法：
+</p>
+
+<ol class="org-ol">
+<li>试点权</li>
+
+<li>制度创新优先权</li>
+
+<li>为改革试点权展开竞争</li>
+
+<li>变通方式获权</li>
+
+<li>先斩后奏</li>
+</ol></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org7450629" class="outline-4">
+<h4 id="org7450629"><span class="section-number-4">6.3.3</span> 地方政府自发制度创新的事后追认</h4>
+<div class="outline-text-4" id="text-6-3-3">
+<ol class="org-ol">
+<li>制度创新的方式
+
+<ol class="org-ol">
+<li>先做不说</li>
+
+<li>做了再说</li>
+
+<li>领导批示</li>
+
+<li>先上车，后买票</li>
+</ol></li>
+
+<li>权力中心对地方政府制度创新容忍的影响因素
+
+<ol class="org-ol">
+<li>地方政府经济实力</li>
+
+<li>权威的扩散化程度</li>
+
+<li>收益与成本对比</li>
+</ol></li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4d54945" class="outline-3">
+<h3 id="org4d54945"><span class="section-number-3">6.4</span> 从中间扩散型向需求诱致型制度变迁方式的渐进转换</h3>
+<div class="outline-text-3" id="text-6-4">
+</div>
+<div id="outline-container-org084cc9a" class="outline-4">
+<h4 id="org084cc9a"><span class="section-number-4">6.4.1</span> 地方政府制度创新的效率导向</h4>
+<div class="outline-text-4" id="text-6-4-1">
+<p>
+地方政府在界定和保护产权时更偏重与效率，通过追求效率获取垄断租金，进而
+化解诺思悖论。
+</p>
+</div>
+</div>
+
+<div id="outline-container-org21faad0" class="outline-4">
+<h4 id="org21faad0"><span class="section-number-4">6.4.2</span> 地方政府与企业间的合作博弈基市场主体的培育</h4>
+<div class="outline-text-4" id="text-6-4-2">
+<p>
+冲突：决策权分享和剩余索取权
+</p>
+
+<p>
+一致：和其他地方争夺优先进入权进而获得垄断租金
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgea824ae" class="outline-4">
+<h4 id="orgea824ae"><span class="section-number-4">6.4.3</span> 向需求诱致型制度变迁方式的转换</h4>
+<div class="outline-text-4" id="text-6-4-3">
+<ol class="org-ol">
+<li>优先进入权带来的垄断租金将诱使地方政府寻利</li>
+
+<li>中间扩散过程实际上是确立排他性产权的过程，地方政府和企业分享剩余额
+度，它们相互竞争，此时企业希望限制地方政府干预企业的行为。由于排他
+性产权的建立，地方政府控制企业成本高，采用“无为而治”的手段</li>
+
+<li>需求诱致型制度变迁，建立排他性产权的微观经济主体成为制度变迁的“第一
+行动集团”是，制度变迁方式就从中间扩散型向需求诱致型转变。即指人们在
+给定的约束条件下，为确立能导致自身利益最大化的制度安排和权利界定而
+自发组织实施制度创新</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd3413f9" class="outline-3">
+<h3 id="orgd3413f9"><span class="section-number-3">6.5</span> 对我国制度变迁方式转变的规范分析（制度变迁过程中遇到的问题）</h3>
+<div class="outline-text-3" id="text-6-5">
+<ol class="org-ol">
+<li>政治企业家行为规范模糊化导致腐败日益严重</li>
+
+<li>过渡追求GDP</li>
+
+<li>“诸侯”经济现象</li>
+
+<li>获得垄断租金（试点权）而获得优先发展机会</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4d5eca7" class="outline-2">
+<h2 id="org4d5eca7"><span class="section-number-2">7</span> 社会主义企业制度与国有企业改革&#xa0;&#xa0;&#xa0;<span class="tag"><span class="____">重点掌握</span></span></h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-org98d79a2" class="outline-3">
+<h3 id="org98d79a2"><span class="section-number-3">7.1</span> 马克思的所有制理论</h3>
+<div class="outline-text-3" id="text-7-1">
+</div>
+<div id="outline-container-org5523de6" class="outline-4">
+<h4 id="org5523de6"><span class="section-number-4">7.1.1</span> 财产所有权是所有制关系的法律表现</h4>
+<div class="outline-text-4" id="text-7-1-1">
+<p>
+对所有制的理解：
+</p>
+
+<ol class="org-ol">
+<li>经济关系的所有制范畴：占有关系</li>
+
+<li>法律关系的所有制范畴：意志关系和法权关系</li>
+
+<li>所有制的性质和内容决定所有权的性质和内容</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org4cb6c66" class="outline-4">
+<h4 id="org4cb6c66"><span class="section-number-4">7.1.2</span> 所有权的职能</h4>
+<div class="outline-text-4" id="text-7-1-2">
+<p>
+所有权：是确定物的最终归属，表明主体对确定物的独占和垄断的财产权利，是
+同一物上不依赖于其他权利而独立存在的财产权利
+</p>
+
+<p>
+所有权的职能：
+</p>
+
+<ol class="org-ol">
+<li>占有权能，对财产直接加以控制的可能性</li>
+
+<li>使用权能，指不改变财产的所有和占有性质，依其用途而对其加以利用的可
+能性</li>
+
+<li>收益权能，指获取基于财产而产生的经济利益的可能性</li>
+
+<li>处分权能，指法律所保障的改变财产的经济用途或状态的可能性</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org430b4ca" class="outline-4">
+<h4 id="org430b4ca"><span class="section-number-4">7.1.3</span> 所有权各项权能的分离</h4>
+<div class="outline-text-4" id="text-7-1-3">
+<ol class="org-ol">
+<li>资本的法律所有权与经济所有权的分离</li>
+
+<li>资本职能与管理、监督职能的分离</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc00032a" class="outline-3">
+<h3 id="orgc00032a"><span class="section-number-3">7.2</span> 国有企业产权制度改革</h3>
+<div class="outline-text-3" id="text-7-2">
+</div>
+<div id="outline-container-orga85fed2" class="outline-4">
+<h4 id="orga85fed2"><span class="section-number-4">7.2.1</span> 国有企业产权结构分析</h4>
+<div class="outline-text-4" id="text-7-2-1">
+<ol class="org-ol">
+<li>公共产权，全体公民共同占有，国家代理制和国家所有制
+
+<ol class="org-ol">
+<li>产权具有不可分性</li>
+
+<li>使用权的非排他性</li>
+
+<li>外部性</li>
+
+<li>剩余索取权不可转让性</li>
+</ol></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgf018df4" class="outline-4">
+<h4 id="orgf018df4"><span class="section-number-4">7.2.2</span> 传统国有产权的行政代理模式及其效率分析</h4>
+<div class="outline-text-4" id="text-7-2-2">
+<p>
+政府代理公共产权
+</p>
+
+<p>
+行政代理效率低下的原因：
+</p>
+
+<ol class="org-ol">
+<li>激励成本较高：激励成本高昂</li>
+
+<li>信息成本较高：信息不对称</li>
+
+<li>降低约束效率：代理关系政治化</li>
+
+<li>影响力成本：用自己的利益去影响上级的决策</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org042d147" class="outline-4">
+<h4 id="org042d147"><span class="section-number-4">7.2.3</span> 深化国有企业产权制度改革的内在必然性</h4>
+<div class="outline-text-4" id="text-7-2-3">
+<ol class="org-ol">
+<li>为体制模式和增长方式的转变提供微观基础</li>
+
+<li>为体制模式转换创造必要的市场条件</li>
+
+<li>实现宏观控制方式的转变</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org380edf5" class="outline-4">
+<h4 id="org380edf5"><span class="section-number-4">7.2.4</span> 产权及产权制度</h4>
+<div class="outline-text-4" id="text-7-2-4">
+<ol class="org-ol">
+<li>产权：是一种通过社会强制而实现的对某种经济物品的多种用途进行选择的
+权利，包括使用权、收益权和转让权。</li>
+
+<li>产权制度：是指由产权关系和产权规则结合而成的且能对产权关系实行有效
+的组合、调节和保护的制度安排。</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org66adc18" class="outline-4">
+<h4 id="org66adc18"><span class="section-number-4">7.2.5</span> 提高国有企业效率就必须明确产权关系的原因&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">论述题</span></span></h4>
+<div class="outline-text-4" id="text-7-2-5">
+<ol class="org-ol">
+<li>产权关系明晰化有利于明确界定交易界区</li>
+
+<li>产权关系明晰化有助于规范交易行为</li>
+
+<li>产权关系明晰化有助于使交易者形成稳定的收益预期</li>
+
+<li>产权关系明晰化有助于提高合作效率</li>
+
+<li>产权关系明晰化有助于提高志愿配置效率</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgd610857" class="outline-4">
+<h4 id="orgd610857"><span class="section-number-4">7.2.6</span> 产权明晰化的条件就是建立现代化企业产权制度</h4>
+<div class="outline-text-4" id="text-7-2-6">
+<p>
+主要内容包括：
+</p>
+
+<ol class="org-ol">
+<li>产权的排他性</li>
+
+<li>产权的可分割性</li>
+
+<li>产权的可转让性</li>
+
+<li>产权的有效保护</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8e6ea53" class="outline-3">
+<h3 id="org8e6ea53"><span class="section-number-3">7.3</span> 国有产权的多级委托代理及其面临的问题</h3>
+<div class="outline-text-3" id="text-7-3">
+<ol class="org-ol">
+<li>所有权主体的非人格化资本行为与要求企业以盈利为目标经营国有资产之间
+的冲突</li>
+
+<li>剩余索取权不可转让性与要求企业产权具有可交易性之间的冲突</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgfbcd0c9" class="outline-3">
+<h3 id="orgfbcd0c9"><span class="section-number-3">7.4</span> 国有企业的分类改革战略</h3>
+<div class="outline-text-3" id="text-7-4">
+</div>
+<div id="outline-container-org7bea266" class="outline-4">
+<h4 id="org7bea266"><span class="section-number-4">7.4.1</span> 对国有企业性质的划分</h4>
+<div class="outline-text-4" id="text-7-4-1">
+<ul class="org-ul">
+<li>竞争性企业</li>
+
+<li>非竞争性企业
+
+<ul class="org-ul">
+<li>公共产品企业</li>
+
+<li>垄断性企业</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7ec4761" class="outline-4">
+<h4 id="org7ec4761"><span class="section-number-4">7.4.2</span> 各类不同企业分类改革战略</h4>
+<div class="outline-text-4" id="text-7-4-2">
+</div>
+<ol class="org-ol">
+<li><a id="org445a565"></a>公共产品企业选择国有国营模式<br />
+<div class="outline-text-5" id="text-7-4-2-1">
+<ol class="org-ol">
+<li>政府筹资创建提供准公共产品的企业</li>
+
+<li>政府直接任命或罢免企业负责人</li>
+
+<li>对进出进行控制</li>
+
+<li>政府对垄断企业进行规制，避免损害消费者利益</li>
+
+<li>对收入分配的控制</li>
+
+<li>控制价格与确定财政补贴数额</li>
+</ol>
+</div>
+</li>
+
+<li><a id="org22b8e1e"></a>自然垄断性国有企业选择国有国控模式<br />
+<div class="outline-text-5" id="text-7-4-2-2">
+<ol class="org-ol">
+<li>明确所有权的约束方式</li>
+
+<li>除满足一定社会目标外，还要实现国有资产的保值与增值</li>
+
+<li>对自然垄断性国有企业实行有效的监督</li>
+
+<li>国家对价格形成的监督</li>
+
+<li>国家对企业财务活动进行监督</li>
+</ol>
+</div>
+</li>
+
+<li><a id="org79bb4a9"></a>大型竞争性国有企业实行股份制改造<br />
+<div class="outline-text-5" id="text-7-4-2-3">
+<p>
+明确产权关系：
+</p>
+
+<ol class="org-ol">
+<li>界定企业产权归属主体</li>
+
+<li>以利润最大化为目标经营</li>
+
+<li>明确界定产权归属主体享有的权益及责任</li>
+
+<li>企业具有排他性，拥有可以自由支配和自由转让产权</li>
+
+<li>形成对经理人有效的激励和约束</li>
+
+<li>法律制度对产权实行有效的保护</li>
+</ol>
+</div>
+</li>
+
+<li><a id="org1ab3599"></a>竞争性国有中小企业完全放开<br />
+<div class="outline-text-5" id="text-7-4-2-4">
+<p>
+构建所有权和退出机制
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org5aad1bc" class="outline-3">
+<h3 id="org5aad1bc"><span class="section-number-3">7.5</span> 国有企业股份制改造的模式选择&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">论述题</span></span></h3>
+<div class="outline-text-3" id="text-7-5">
+</div>
+<div id="outline-container-org34a567e" class="outline-4">
+<h4 id="org34a567e"><span class="section-number-4">7.5.1</span> 股份公司是现代企业制度的主要组织形式</h4>
+<div class="outline-text-4" id="text-7-5-1">
+<p>
+股份公司是法人资产制度的主要组成形式，其特征有：
+</p>
+
+<ol class="org-ol">
+<li>独立的法人资格</li>
+
+<li>有限责任</li>
+
+<li>股票的自由转让</li>
+
+<li>界定经营者与公司关系</li>
+
+<li>有效的所有权约束</li>
+
+<li>高素质的企业家队伍</li>
+
+<li>外部约束条件，市场约束和法律约束</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org969bc3b" class="outline-4">
+<h4 id="org969bc3b"><span class="section-number-4">7.5.2</span> 国有企业股份制改造的模式选择</h4>
+<div class="outline-text-4" id="text-7-5-2">
+</div>
+<ol class="org-ol">
+<li><a id="orgae79fd8"></a>国有资产第一层次授权经营：在政资分开的基础上实行政企分开<br />
+<div class="outline-text-5" id="text-7-5-2-1">
+<ol class="org-ol">
+<li>政府职能分解，明晰产权关系，建立国有资产管理委员会</li>
+
+<li>国资委代表国家履行所有者职能</li>
+
+<li>明确国资委的相关责任</li>
+
+<li>对国资委管理国有资产行为的监控</li>
+
+<li>评估国有资产</li>
+</ol>
+</div>
+</li>
+
+<li><a id="org5914c05"></a>国有资产第二层次授权经营：国有股股权分散化<br />
+<div class="outline-text-5" id="text-7-5-2-2">
+<ol class="org-ol">
+<li>组建控股公司</li>
+
+<li>确定控股公司的主要职责，代理国家操作国有股权</li>
+
+<li>确定控股公司获取国有股权控股权的方式：竞价招标转让国有股的控股权</li>
+
+<li>界定国资委、控股公司和股份公司之间的关系</li>
+
+<li>明确控股公司的运作机理：风险最小，收益最大</li>
+</ol>
+</div>
+</li>
+
+<li><a id="org1af9d00"></a>国有资产第三层次授权经营：公司产权独立化<br />
+<div class="outline-text-5" id="text-7-5-2-3">
+<ol class="org-ol">
+<li>国有股可转让性使股权分散化成为可能</li>
+
+<li>持股主体多元化</li>
+
+<li>竞争性企业的所有制性质具有不确定性</li>
+
+<li>公司产权独立化后，可确立法人资产制度</li>
+
+<li>控股公司享有股东权利</li>
+</ol>
+</div>
+</li>
+
+<li><a id="org0ad0b4a"></a>国有资产第四层次授权经营：内部治理结构高效化<br />
+<div class="outline-text-5" id="text-7-5-2-4">
+<p>
+确立股东大会、董事会、监事会和总经理的相关职责
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge7e4ee9" class="outline-2">
+<h2 id="orge7e4ee9"><span class="section-number-2">8</span> 国有企业治理结构的创新</h2>
+<div class="outline-text-2" id="text-8">
+</div>
+<div id="outline-container-org839354a" class="outline-3">
+<h3 id="org839354a"><span class="section-number-3">8.1</span> 利益相关者合作逻辑与国有企业治理结构创新原则</h3>
+<div class="outline-text-3" id="text-8-1">
+<p>
+企业治理结构：是一种契约制度，它通过一定的治理手段合理配置剩余索取权和
+控制权，以使得企业内部的不同利益主体形成有效的自我约束和相互制衡的机制
+</p>
+</div>
+
+<div id="outline-container-org2c16fbb" class="outline-4">
+<h4 id="org2c16fbb"><span class="section-number-4">8.1.1</span> 企业治理的核心是激励与约束经理人行为</h4>
+<div class="outline-text-4" id="text-8-1-1">
+<ol class="org-ol">
+<li>委托代理问题及产生
+
+<ul class="org-ul">
+<li>资本所有权和控制权的分离</li>
+
+<li>委托人和代理人的目标不一致（逆向选择和道德风险）</li>
+</ul></li>
+
+<li>委托代理关系下激励约束机制的设计
+
+<ul class="org-ul">
+<li>原则：代理人实现自身利益最大化同时实现委托人利益最大化</li>
+
+<li>基本约束条件
+
+<ol class="org-ol">
+<li>刺激一致性约束：机制提供的刺激必须要能诱使代理人自愿地选择它们
+所属类型而设定的合同</li>
+
+<li>个人理性约束：代理人接受合同所得到得效用不少于其保留效用</li>
+</ol></li>
+</ul></li>
+
+<li>代理成本及降低代理成本的途径
+
+<ul class="org-ul">
+<li>代理成本及内容： 酬金及奖金、非货币物品、效率损失</li>
+
+<li>代理成本的降低：
+
+<ol class="org-ol">
+<li>最优的激励约束机制</li>
+
+<li>通过市场制度降低代理成本（经理劳务市场，产品市场，资本市场）</li>
+</ol></li>
+</ul></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org1024c5e" class="outline-4">
+<h4 id="org1024c5e"><span class="section-number-4">8.1.2</span> 股东至少主义企业治理模式面临的挑战</h4>
+</div>
+
+<div id="outline-container-orgbccbf74" class="outline-4">
+<h4 id="orgbccbf74"><span class="section-number-4">8.1.3</span> 产权的内涵与企业治理结构的主体</h4>
+<div class="outline-text-4" id="text-8-1-3">
+<ol class="org-ol">
+<li>企业是一系列契约的组合</li>
+
+<li>不同的契约组合要求产权主体平等性和独立性，从而组成了利益相关者</li>
+
+<li>企业治理结构主体多元化是现代产权内涵的逻辑延伸</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orga2d6497" class="outline-4">
+<h4 id="orga2d6497"><span class="section-number-4">8.1.4</span> 人力资本的产权特征和企业所有权安排</h4>
+<div class="outline-text-4" id="text-8-1-4">
+<ol class="org-ol">
+<li>人力资本的产权特征：可抵押性和专用性</li>
+
+<li>企业所有权安排
+
+<ol class="org-ol">
+<li>企业产权要体现人力资本的价值</li>
+
+<li>企业治理结构主体多元化（职工持股、股票期权等）</li>
+</ol></li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0148fe1" class="outline-3">
+<h3 id="org0148fe1"><span class="section-number-3">8.2</span> 国有企业治理结构效率的实证分析</h3>
+<div class="outline-text-3" id="text-8-2">
+</div>
+<div id="outline-container-org72c77ae" class="outline-4">
+<h4 id="org72c77ae"><span class="section-number-4">8.2.1</span> 行政干预下经营者控制型治理结构</h4>
+<div class="outline-text-4" id="text-8-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="orga3b5d26"></a>治理结构特征<br />
+<div class="outline-text-5" id="text-8-2-1-1">
+<ol class="org-ol">
+<li>经营者的自主权有政府直接授予</li>
+
+<li>经营者一旦被授权，可以独立行使决策权</li>
+
+<li>经营者在企业所有权分配中处于支配地位</li>
+
+<li>企业主管部门充当经营者的监督人</li>
+
+<li>政府监督经营者的主要手段是任免经营者或者干预企业重大决策</li>
+</ol>
+</div>
+</li>
+
+<li><a id="org181ae27"></a>治理结构的缺陷<br />
+<div class="outline-text-5" id="text-8-2-1-2">
+<ol class="org-ol">
+<li>只有激励没有相应的约束和惩罚</li>
+
+<li>单向权威无多变制约</li>
+
+<li>个人决策，集体负责</li>
+
+<li>衍生决策和监督志愿的浪费（债权人、职工的合法利益被忽略）</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org546fc01" class="outline-4">
+<h4 id="org546fc01"><span class="section-number-4">8.2.2</span> “股东至上”治理结构的困境</h4>
+<div class="outline-text-4" id="text-8-2-2">
+<ol class="org-ol">
+<li>所有者缺位：经营者权利无限膨胀</li>
+
+<li>权责利不统一：个人决策，集体负责</li>
+
+<li>职工的参与决策权流于形式</li>
+
+<li>小股东和债权人的利益可以随意被剥夺</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgff3855c" class="outline-3">
+<h3 id="orgff3855c"><span class="section-number-3">8.3</span> 国有企业治理结构创新：共同治理机制设计</h3>
+<div class="outline-text-3" id="text-8-3">
+</div>
+<div id="outline-container-org339861c" class="outline-4">
+<h4 id="org339861c"><span class="section-number-4">8.3.1</span> 利益相关者合作逻辑</h4>
+<div class="outline-text-4" id="text-8-3-1">
+<p>
+公司的目标是为利益相关者服务，而不仅仅追求股东的利益最大化。“利益相关
+者合作逻辑”不否仍每个产权主体的自利追求，而是强调理性的产权主体把公司
+的适应能力看作自身利益的源泉
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3fcf0be" class="outline-4">
+<h4 id="org3fcf0be"><span class="section-number-4">8.3.2</span> 共同治理</h4>
+<div class="outline-text-4" id="text-8-3-2">
+<p>
+贯彻了“利益相关者合作逻辑”的治理结构就是“共同治理”机制。它强调决策的共
+同参与和监督的相互制约。共同治理的核心就是经济民主化，是指公司章程等正
+式制度安排确保每个产权主体具有平等参与企业所有权分配的机会，同时又依靠
+相互监督的机制来制衡各产权主体的行为。适当的投票机制和约束机制用来稳定
+合作的基础，并达到产权主体行为与企业适应能力提高相统一这一共同目标
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3df4f48" class="outline-4">
+<h4 id="org3df4f48"><span class="section-number-4">8.3.3</span> 实施机制</h4>
+<div class="outline-text-4" id="text-8-3-3">
+<ol class="org-ol">
+<li><p>
+董事会
+</p>
+
+<p>
+确保产权主体又平等机会参与公司重大决策
+</p></li>
+
+<li><p>
+监事会
+</p>
+
+<p>
+确保各个产权主体平等地享受监督权，从而实现相互制衡
+</p></li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org894ab0d" class="outline-3">
+<h3 id="org894ab0d"><span class="section-number-3">8.4</span> 国有企业治理结构创新：相机治理机制的设计</h3>
+<div class="outline-text-3" id="text-8-4">
+</div>
+<div id="outline-container-org07bd992" class="outline-4">
+<h4 id="org07bd992"><span class="section-number-4">8.4.1</span> 相机治理机制含义</h4>
+<div class="outline-text-4" id="text-8-4-1">
+<p>
+没有事先法律规定，企业所有权分配的支配权的让渡必须依靠产权主体的自愿谈
+判完成，这套制度就是相机治理
+</p>
+</div>
+</div>
+
+<div id="outline-container-org24bd7d0" class="outline-4">
+<h4 id="org24bd7d0"><span class="section-number-4">8.4.2</span> 相机治理机制的原理</h4>
+<div class="outline-text-4" id="text-8-4-2">
+<ol class="org-ol">
+<li>相机治理的基础是企业所有权的状态依存特征，不同的经营特征反映了不同
+的利益分配格局，当其中某一利益相关者的权益收到侵害时，他必然要求改
+变既定利益格局，进行企业所有权分配的再谈判。相机治理就是要确保在非
+正常经营状态下，受损的利益相关者又合适的制度来完成再谈判</li>
+
+<li>相机治理机制主要通过控制权的争夺来改变既定利益格局，它主要针对企业
+决策者，包含三个要素：人、信号和治理程序</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org9f13477" class="outline-4">
+<h4 id="org9f13477"><span class="section-number-4">8.4.3</span> 相机治理的程序</h4>
+<div class="outline-text-4" id="text-8-4-3">
+<ol class="org-ol">
+<li>事前监督</li>
+
+<li>事中监督</li>
+
+<li>事后监督</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org01f42df" class="outline-2">
+<h2 id="org01f42df"><span class="section-number-2">9</span> 社会主义市场经济条件下的分配制度</h2>
+<div class="outline-text-2" id="text-9">
+</div>
+<div id="outline-container-orgde423da" class="outline-3">
+<h3 id="orgde423da"><span class="section-number-3">9.1</span> 社会主义市场经济中的按劳分配与多种分配方式</h3>
+<div class="outline-text-3" id="text-9-1">
+</div>
+<div id="outline-container-org57393dd" class="outline-4">
+<h4 id="org57393dd"><span class="section-number-4">9.1.1</span> 社会主义市场经济中的按劳分配</h4>
+<div class="outline-text-4" id="text-9-1-1">
+<ul class="org-ul">
+<li>按劳分配是社会主义公有制经济中个人消费品分配的基本原则，按劳分配以劳
+动为标准，在对劳动者创造的产品作了必要的扣除之后，按照劳动者提供的劳
+动量分配个人消费品，多劳多得，少劳少得，不劳动者不得食</li>
+
+<li>社会主义初级阶段与马克思所设想的差别
+
+<ol class="org-ol">
+<li>借助商品货币关系</li>
+
+<li>通过企业这一环节来实现</li>
+
+<li>实现机制是工资</li>
+</ol></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orge6212b6" class="outline-4">
+<h4 id="orge6212b6"><span class="section-number-4">9.1.2</span> 多种分配方式并存</h4>
+<div class="outline-text-4" id="text-9-1-2">
+<p>
+分配方式由所有制关系决定
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0545558" class="outline-3">
+<h3 id="org0545558"><span class="section-number-3">9.2</span> 按劳分配与按要素分配相结合&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">论述题</span></span></h3>
+<div class="outline-text-3" id="text-9-2">
+<ol class="org-ol">
+<li>按劳分配与按要素分配相结合是收入分配的劳动标准与所有权标准相结合</li>
+
+<li><p>
+按劳分配与按要素分配相结合是按劳分配的实现形式与按要素分配的实现形
+式相结合
+</p>
+
+<p>
+按劳分配（工资），其他收入（利息，租金，红利等）
+</p></li>
+
+<li>在社会主义初级阶段，实行按劳分配和按生产要素分配相结合，不仅有助于
+调动劳动者和生产要素所有者的积极性，促进劳动和资本的积累，而且有利
+于生产要素的有效合理利用</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org068f67d" class="outline-3">
+<h3 id="org068f67d"><span class="section-number-3">9.3</span> 微观收入分配与宏观收入调节</h3>
+<div class="outline-text-3" id="text-9-3">
+</div>
+<div id="outline-container-org06b7569" class="outline-4">
+<h4 id="org06b7569"><span class="section-number-4">9.3.1</span> 微观收入分配过程</h4>
+<div class="outline-text-4" id="text-9-3-1">
+<ol class="org-ol">
+<li>定义：指在市场机制的作用下，微观主体按照社会必要劳动时间来确定和分
+配价值的过程</li>
+
+<li>意义：微观收入分配是通过市场机制进行的，市场机制能强化收入分配的刺
+激作用。有助于调动要素所有者的积极性，但是单靠市场机制不能有效地调
+节和平衡各放利益关系，不能维护社会公平</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgb201221" class="outline-4">
+<h4 id="orgb201221"><span class="section-number-4">9.3.2</span> 宏观收入调节过程</h4>
+<div class="outline-text-4" id="text-9-3-2">
+<ol class="org-ol">
+<li>定义：指在微观收入分配的基础上，对不同部门、不同领域、不同社会成员
+之间的收入分配关系进行调节，促进社会公平与和谐的过程</li>
+
+<li>意义：宏观收入分配的调节一方面通过税收把高收入者的部分收入转移到国
+家手中，另一方面通过国家预算指出保障非生产领域发展的需要，利用转移
+性支付和社会保障制度等为低收入者提供收入保障</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgc7e4145" class="outline-4">
+<h4 id="orgc7e4145"><span class="section-number-4">9.3.3</span> 社会保障</h4>
+<div class="outline-text-4" id="text-9-3-3">
+<p>
+参考《财政学》
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgcd43950" class="outline-3">
+<h3 id="orgcd43950"><span class="section-number-3">9.4</span> 微观收入分配中的公平与效率</h3>
+<div class="outline-text-3" id="text-9-4">
+</div>
+<div id="outline-container-orgb882cd6" class="outline-4">
+<h4 id="orgb882cd6"><span class="section-number-4">9.4.1</span> 效率优先，兼顾公平</h4>
+</div>
+
+<div id="outline-container-orgad81cec" class="outline-4">
+<h4 id="orgad81cec"><span class="section-number-4">9.4.2</span> 如何理解和实现社会主义市场经济下收入分配的公平？</h4>
+<div class="outline-text-4" id="text-9-4-2">
+<ol class="org-ol">
+<li>收入分配不公的根源是生产条件分配不公</li>
+
+<li>实现对策
+
+<ol class="org-ol">
+<li>规范制度，强化约束，防止市场化分离中各种代理人控制公有财产条件进
+而控制公有剩余</li>
+
+<li>统一制度安排，实行统一国民待遇</li>
+
+<li>消除市场分割，促进生产条件在不同部门之间的均衡分配</li>
+
+<li>加强对弱势群体权利的保护，增加对他们人力资本的投资，改善他们的收
+入状况</li>
+</ol></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3bbf2f2" class="outline-2">
+<h2 id="org3bbf2f2"><span class="section-number-2">10</span> 社会主义经济增长与经济发展&#xa0;&#xa0;&#xa0;<span class="tag"><span class="2020___">2020非重点</span></span></h2>
+<div class="outline-text-2" id="text-10">
+</div>
+<div id="outline-container-orga61905b" class="outline-3">
+<h3 id="orga61905b"><span class="section-number-3">10.1</span> 经济增长与经济发展的一般理论</h3>
+<div class="outline-text-3" id="text-10-1">
+</div>
+<div id="outline-container-org9047885" class="outline-4">
+<h4 id="org9047885"><span class="section-number-4">10.1.1</span> 经济增长与经济发展</h4>
+<div class="outline-text-4" id="text-10-1-1">
+<ol class="org-ol">
+<li>经济增长：指更多的产出产品和劳务的增加</li>
+
+<li>衡量标准：人均GDP或者人均GNP</li>
+
+<li>经济发展：既包括更多的产出，也包括产品生产和分配所包含的技术进步和
+体制安排上的变革</li>
+
+<li>人均GDP或GNP不能完全反应一个国家的经济发展水平的原因
+
+<ol class="org-ol">
+<li>没有反应国民生产总值的分配情况</li>
+
+<li>人口因素</li>
+
+<li>非市场的产品和劳务没有计算在内</li>
+
+<li>不能反应从使用产品或者服务中得到的福利，例如污染</li>
+
+<li>不能反应生活质量，例如预期寿命</li>
+</ol></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org24d35db" class="outline-4">
+<h4 id="org24d35db"><span class="section-number-4">10.1.2</span> 平衡增长与非平衡增长</h4>
+<div class="outline-text-4" id="text-10-1-2">
+<ol class="org-ol">
+<li>平衡增长：通过实施全面增长投资计划，使各种工业同时有所发展</li>
+
+<li>非平衡增长：将经济发展过程看作是不同部门先后不同的成长，并互相联系
+着彼此施加压力和推力的结构演化过程</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org69fdeba" class="outline-3">
+<h3 id="org69fdeba"><span class="section-number-3">10.2</span> 制度创新与经济增长方式的转变&#xa0;&#xa0;&#xa0;<span class="tag"><span class="2020___">2020非重点</span></span></h3>
+<div class="outline-text-3" id="text-10-2">
+</div>
+<div id="outline-container-org2504364" class="outline-4">
+<h4 id="org2504364"><span class="section-number-4">10.2.1</span> 经济增长方式及类型和条件</h4>
+<div class="outline-text-4" id="text-10-2-1">
+<ol class="org-ol">
+<li>类型，粗放型增长方式和集约型增长方式</li>
+
+<li>体制条件：粗放型增长方式以传统公有制和计划经济为基础，而集约型增长
+方式以市场经济和技术创新为基础</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org62bdef5" class="outline-4">
+<h4 id="org62bdef5"><span class="section-number-4">10.2.2</span> 经济增长的转变依赖于体制模式的转换</h4>
+<div class="outline-text-4" id="text-10-2-2">
+<ol class="org-ol">
+<li>经济增长方式的转变：粗放型向集约型转变</li>
+
+<li>经济增长方式的转变取决于技术进步，而技术创新在相当大程度上依赖于体
+制创新</li>
+
+<li>体制创新之所以能推动或阻碍经济增长方式的转变，是因为体制变化具有既
+改变收入分配，又改变经济中资源使用效率的潜在可能性
+
+<ol class="org-ol">
+<li>体制为经纪人规定了行为规则和约束条件</li>
+
+<li>体制创新可以塑造新的激励机制，激发技术创新的动机</li>
+
+<li>新的伦理道德规范有利于克服机会主义，以较低的代价换取较快的增长</li>
+
+<li>体制因素还影响信息和资源的可获得性</li>
+</ol></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgfe5efd6" class="outline-4">
+<h4 id="orgfe5efd6"><span class="section-number-4">10.2.3</span> 制度创新推动经济增长的机理</h4>
+<div class="outline-text-4" id="text-10-2-3">
+<ol class="org-ol">
+<li><p>
+制度的含义和类型
+</p>
+
+<p>
+被制定出来的规则、守法程序和行为伦理道德规范，包括三种类型，宪法秩
+序、制度安排、行为伦理道德规范
+</p></li>
+
+<li>制度可以通过以下三个环节影响经济增长
+
+<ol class="org-ol">
+<li>产权：减少未来不确定性和避免产生机会主义</li>
+
+<li>国家：界定和保护产权来降低交易费用</li>
+
+<li>意识形态：解决免费搭车为题，节约交易费用</li>
+</ol></li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3442684" class="outline-3">
+<h3 id="org3442684"><span class="section-number-3">10.3</span> 邓小平经济发展理论</h3>
+<div class="outline-text-3" id="text-10-3">
+</div>
+<div id="outline-container-org9d2cc82" class="outline-4">
+<h4 id="org9d2cc82"><span class="section-number-4">10.3.1</span> 分三步走的台阶式发展战略</h4>
+<div class="outline-text-4" id="text-10-3-1">
+<p>
+上世纪走两步，达到温饱和小康，本世纪再走一步，达到中等发达国家的水平
+</p>
+
+<ol class="org-ol">
+<li>提出战略目标是实现四个现代化</li>
+
+<li>提出分三步走战略</li>
+
+<li>提出发展战略的重点，一是农业，二是能源和交通，三是教育和科学</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org5c3a142" class="outline-4">
+<h4 id="org5c3a142"><span class="section-number-4">10.3.2</span> 实施“科教兴国”战略</h4>
+<div class="outline-text-4" id="text-10-3-2">
+<ol class="org-ol">
+<li>必须把教育放在优先发展的战略地位，这是实施“科教兴国”战略的基础和前提</li>
+
+<li>教育要面向现代化、面向世界、面向未来</li>
+
+<li>发展教育要在普及的基础上又发展重点</li>
+
+<li>振兴教育，教师是关键</li>
+
+<li>尊重知识，尊重人才</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga2e97cb" class="outline-3">
+<h3 id="orga2e97cb"><span class="section-number-3">10.4</span> 可持续发展与科学发展观</h3>
+<div class="outline-text-3" id="text-10-4">
+</div>
+<div id="outline-container-orgc9d62d9" class="outline-4">
+<h4 id="orgc9d62d9"><span class="section-number-4">10.4.1</span> 传统经济发展模式的基本特征及发展模式的转换</h4>
+<div class="outline-text-4" id="text-10-4-1">
+<ol class="org-ol">
+<li><p>
+经济发展模式
+</p>
+
+<p>
+国民经济发展战略及生产力要素增长机制、运行原则的特殊类型，包括发展
+目标、方式、重点、步骤等。
+</p></li>
+
+<li>传统经济发展模式的特征
+
+<ol class="org-ol">
+<li>高速增长为主要目标</li>
+
+<li>借助政府行政力量实施发展</li>
+
+<li>结构倾斜型发展模式</li>
+
+<li>粗放型发展模式</li>
+
+<li>封闭性发展模式</li>
+</ol></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org517d0bb" class="outline-4">
+<h4 id="org517d0bb"><span class="section-number-4">10.4.2</span> 可持续发展理论及战略</h4>
+<div class="outline-text-4" id="text-10-4-2">
+<ol class="org-ol">
+<li><p>
+含义
+</p>
+
+<p>
+既满足当代人需要，又不对后代人满足需要的能力构成危害的发展
+</p></li>
+
+<li>核心：发展</li>
+
+<li>基本原则
+
+<ul class="org-ul">
+<li>持续性（资源）</li>
+
+<li>公平性（代际）</li>
+
+<li>共同性（发展中国家和发达国家）</li>
+</ul></li>
+
+<li>面临的问题
+
+<ol class="org-ol">
+<li>资源、环境承载利的约束</li>
+
+<li>观念上的偏差</li>
+
+<li>可持续发展战略机制的缺陷（决策、政绩考核、行为主体）</li>
+</ol></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgf55442e" class="outline-4">
+<h4 id="orgf55442e"><span class="section-number-4">10.4.3</span> 科学发展观</h4>
+<div class="outline-text-4" id="text-10-4-3">
+<ol class="org-ol">
+<li><p>
+产生背景
+</p>
+
+<p>
+初级阶段的基本国情、世界经济发展趋势、世界各国发展经验、我国建设小
+康伟大实践
+</p></li>
+
+<li>内涵
+
+<ol class="org-ol">
+<li>以人为本，促进人的全面发展是科学发展观的本质和核心</li>
+
+<li>全面、协调和可持续发展是科学发展观的基本内容</li>
+
+<li>统筹兼顾是科学发展观的根本要求</li>
+</ol></li>
+
+<li><p>
+科学发展观是发展观的重大创新
+</p>
+
+<p>
+提供了价值观念、指明了价值目标。拓展了发展观的范围、完善了发展观的
+理论基础。科学发展观指明了发展观的实现途径
+</p></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5f9c2c0" class="outline-2">
+<h2 id="org5f9c2c0"><span class="section-number-2">11</span> 社会主义市场经济条件下的经济结构调整&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">选择题</span></span></h2>
+<div class="outline-text-2" id="text-11">
+</div>
+<div id="outline-container-org974eb81" class="outline-3">
+<h3 id="org974eb81"><span class="section-number-3">11.1</span> 二元经济结构与农村剩余劳动力转移</h3>
+<div class="outline-text-3" id="text-11-1">
+</div>
+<div id="outline-container-org80ce109" class="outline-4">
+<h4 id="org80ce109"><span class="section-number-4">11.1.1</span> 二元经济结构的含义及衡量指标</h4>
+<div class="outline-text-4" id="text-11-1-1">
+<ol class="org-ol">
+<li>二元经济结构：以城市工业为主的现代部门和以农村为主的传统部门并存，
+传统部门比重过大、现代部门发展不足，以及城乡差距十分明显的经济结构</li>
+
+<li>衡量标准
+
+<ol class="org-ol">
+<li><p>
+比较劳动生产力
+</p>
+
+<p>
+指一个部门的产值比重与在此部门就业的劳动力比重的比率
+</p></li>
+
+<li><p>
+二元对比系数
+</p>
+
+<p>
+指二元经济机构中农业比较劳动生产率与非农业比较劳动生产率的比率
+</p></li>
+
+<li><p>
+二元反差指数
+</p>
+
+<p>
+指工业或非农业产值比重与劳动力比重之差的绝对值
+</p></li>
+</ol></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org2ac02fd" class="outline-4">
+<h4 id="org2ac02fd"><span class="section-number-4">11.1.2</span> 中国二元经济结构的特征和原因</h4>
+<div class="outline-text-4" id="text-11-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="org56157ba"></a>特征&#xa0;&#xa0;&#xa0;<span class="tag"><span class="____">大概了解</span></span><br />
+<div class="outline-text-5" id="text-11-1-2-1">
+<ol class="org-ol">
+<li>农业严重落后与工业和其他产业，农业劳动生产率低下</li>
+
+<li>城乡差距、地区差距大</li>
+
+<li>城乡收入差距拉大</li>
+
+<li>城乡消费水平悬殊</li>
+</ol>
+</div>
+</li>
+
+<li><a id="org633a7ae"></a>形成原因<br />
+<div class="outline-text-5" id="text-11-1-2-2">
+<ol class="org-ol">
+<li>赶超型经济发展战略所引起的生产率水平差异</li>
+
+<li>传统体制造成的城乡分割（户口、用工）</li>
+
+<li>非农业产业发展政策扩大了二元差距</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-orgfbd88df" class="outline-4">
+<h4 id="orgfbd88df"><span class="section-number-4">11.1.3</span> 中国二元经济结构转换中的农村剩余劳动力转移</h4>
+<div class="outline-text-4" id="text-11-1-3">
+<p>
+90年代乡镇企业，就地转移，现在城镇化，转移到城镇就业
+</p>
+
+<p>
+城镇化要求产业结构高级化
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org081d8e3" class="outline-3">
+<h3 id="org081d8e3"><span class="section-number-3">11.2</span> 市场经济条件下产业结构高级化的进程</h3>
+<div class="outline-text-3" id="text-11-2">
+</div>
+<div id="outline-container-org8cd470a" class="outline-4">
+<h4 id="org8cd470a"><span class="section-number-4">11.2.1</span> 影响产业结构调整的因素分析</h4>
+<div class="outline-text-4" id="text-11-2-1">
+<ol class="org-ol">
+<li><p>
+产业
+</p>
+
+<p>
+是指生产相似或相同产品的一系列企业
+</p></li>
+
+<li><p>
+产业结构
+</p>
+
+<p>
+国民经济内部各产业之间在再生产过程中的经济联系和数量比例关系
+</p></li>
+
+<li>影响产业结构调整的因素
+
+<ol class="org-ol">
+<li><p>
+社会需求
+</p>
+
+<p>
+包括消费、投资和出口
+</p></li>
+
+<li><p>
+技术进步
+</p>
+
+<p>
+形成新产业、改造传统产业、推动产业结构更新换代
+</p></li>
+
+<li><p>
+制度安排
+</p>
+
+<p>
+影响资源配置和产业结构调整
+</p></li>
+
+<li><p>
+资源供给
+</p>
+
+<p>
+自然资源、人力资源和资金资源
+</p></li>
+</ol></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org565b980" class="outline-4">
+<h4 id="org565b980"><span class="section-number-4">11.2.2</span> 中国产业结构的现状及其调整的必要性&#xa0;&#xa0;&#xa0;<span class="tag"><span class="____">大概了解</span></span></h4>
+</div>
+
+<div id="outline-container-orge1b606e" class="outline-4">
+<h4 id="orge1b606e"><span class="section-number-4">11.2.3</span> 中国产业结构调整的目标及对策&#xa0;&#xa0;&#xa0;<span class="tag"><span class="____">大概了解</span></span></h4>
+</div>
+</div>
+
+<div id="outline-container-org8406d7b" class="outline-3">
+<h3 id="org8406d7b"><span class="section-number-3">11.3</span> 技术进步与经济结构调整</h3>
+<div class="outline-text-3" id="text-11-3">
+</div>
+<div id="outline-container-orgc9d69c8" class="outline-4">
+<h4 id="orgc9d69c8"><span class="section-number-4">11.3.1</span> 技术进步与经济增长方式的转变</h4>
+<div class="outline-text-4" id="text-11-3-1">
+<ol class="org-ol">
+<li><p>
+技术进步
+</p>
+
+<p>
+是通过各种途径改变投入到产出过程及这一过程的各方面。例如组合比例、
+工艺流程等
+</p></li>
+
+<li><p>
+技术进步是经济增长方式转变的根本原因
+</p>
+
+<p>
+技术创新不仅能促进经济增长，使得人均产出水平和人民生活水平不断提高，
+而且导致生产方法机械化和自动化的进步以及经济结构高级化
+</p></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org57ef5c5" class="outline-4">
+<h4 id="org57ef5c5"><span class="section-number-4">11.3.2</span> 技术创兴与经济结构的演进</h4>
+<div class="outline-text-4" id="text-11-3-2">
+<ol class="org-ol">
+<li>创新是指新的产品、工业和方法在经济中的引入。能否完成创新，关键在商
+业价值的大小。商业价值的提升促使技术创新</li>
+
+<li>竞争程度、企业规模和垄断力量是技术创新的制约因素。竞争影响创新的必
+要性、企业规模影响市场前景、垄断影响创新的持久性</li>
+
+<li>技术创新的扩散和传播，对于一国总体经济实力提高有重要影响</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org00f2638" class="outline-4">
+<h4 id="org00f2638"><span class="section-number-4">11.3.3</span> 促进技术进步的技术政策选择</h4>
+<div class="outline-text-4" id="text-11-3-3">
+<ol class="org-ol">
+<li>形成企业技术创新的动力机制</li>
+
+<li>建立一批技术先导型企业</li>
+
+<li>完善技术市场</li>
+
+<li>实行集约化企业管理战略</li>
+
+<li>积极创造有利于企业进行技术创新的政策环境</li>
+
+<li>加快现有企业的设备更新和技术改造</li>
+
+<li>建立高薪技术产业开发区，促进高新技术产业化</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgeab5ebe" class="outline-2">
+<h2 id="orgeab5ebe"><span class="section-number-2">12</span> 社会主义对外经济关系</h2>
+<div class="outline-text-2" id="text-12">
+</div>
+<div id="outline-container-org6ed341f" class="outline-3">
+<h3 id="org6ed341f"><span class="section-number-3">12.1</span> 对外开放的理论基础</h3>
+<div class="outline-text-3" id="text-12-1">
+</div>
+<div id="outline-container-org451317b" class="outline-4">
+<h4 id="org451317b"><span class="section-number-4">12.1.1</span> 现代经济从封闭走向开发的必然逻辑&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">论述题</span></span></h4>
+<div class="outline-text-4" id="text-12-1-1">
+<ol class="org-ol">
+<li><p>
+经济开放
+</p>
+
+<p>
+经济体系通过产品、服务、技术、要素等流动与外界发生联系
+</p></li>
+
+<li>经济开放的必然性
+
+<ol class="org-ol">
+<li>分工带来生产效率的提高是经济增长的源泉，而交换是解决分工内生矛盾
+的手段</li>
+
+<li>市场经济本质上是开放的，市场在规模和流动性达到一定程度后，效率才
+能发挥出来</li>
+
+<li>市场的本性和分工的互动关系都决定了市场具有内在的开放冲动</li>
+</ol></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orge939017" class="outline-4">
+<h4 id="orge939017"><span class="section-number-4">12.1.2</span> 贸易开放与经济增长的联系&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">论述题</span></span></h4>
+<div class="outline-text-4" id="text-12-1-2">
+<ol class="org-ol">
+<li>理论上看，开放意味着分工的深化和发展，这是提高劳动生产率，推动经济
+增长的关键</li>
+
+<li>从现实看，实行外向型发展战略的国家比实行内向型发展战略的国家有更好
+的经济增长</li>
+
+<li>对外贸易的发展，可以带来动态收益
+
+<ol class="org-ol">
+<li>出口增加提高进口能力，有助于弥补落后国家的外汇缺口和提高资本设备
+的进口能力</li>
+
+<li>对外贸易的发展可以提高国内的资源配置效率，引导国内资源向具有比较
+优势的行业流动</li>
+
+<li>对外贸易可以带来规模经济</li>
+
+<li>对外贸易可以带来相关产业的发展，尤其是提供给中间投入的上游产业产
+业发展，促进国内市场统一</li>
+
+<li>对外贸易可以带动外资流入的增加，提高管理经验和技术进步</li>
+
+<li>对外贸易可以促进国内改进技术、降低成本、提高效率</li>
+</ol></li>
+
+<li>对外贸易配合工业化可以实现经济增长 <i>（第三节讨论的内容）</i></li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org04d0362" class="outline-3">
+<h3 id="org04d0362"><span class="section-number-3">12.2</span> 经济全球化趋势下的我国对外开放实践</h3>
+<div class="outline-text-3" id="text-12-2">
+</div>
+<ol class="org-ol">
+<li><a id="org5d3495b"></a>经济全球化<br />
+<div class="outline-text-5" id="text-12-2-0-1">
+<p>
+经济活动的全球扩张和融合的过程，是各国经济活动从国内走向全球，在全球范
+围内实现社会化的过程
+</p>
+</div>
+</li>
+
+<li><a id="orgd2babcf"></a>我国对外开放政策的演变<br />
+<div class="outline-text-5" id="text-12-2-0-2">
+<ol class="org-ol">
+<li>1982年：党的基本路线确立对外开发是重要内容</li>
+
+<li>1984年：《关于经济体制改革的决定》把对外开放作为长期基本国策</li>
+
+<li>1992年：提出扩大对外开放的三个主要目标和任务
+
+<ol class="org-ol">
+<li>对外开放地域要扩大，形成多层次、多渠道、全方位开放格局</li>
+
+<li>利用外资的领域要拓宽，方式更加灵活，条件更加便利</li>
+
+<li>对外开放的领域要多元，积极开拓国际市场，促进对外贸易多元化，发展
+外向型经济</li>
+</ol></li>
+
+<li>2001年我国加入WTO，成为提高对外开放水平的新起点</li>
+
+<li>“一带一路”，对外开放的新格局</li>
+</ol>
+</div>
+</li>
+
+<li><a id="org2996f1a"></a>我国全方位对外开放格局的形成<br />
+<div class="outline-text-5" id="text-12-2-0-3">
+<ol class="org-ol">
+<li>从“进口替代”到“出口导向”，再到全面开放</li>
+
+<li>渐进的开放战略与全方位、多层次、宽领域对外开放格局的形成</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org21a7190" class="outline-3">
+<h3 id="org21a7190"><span class="section-number-3">12.3</span> 对外贸易、工业化与我国经济增长&#xa0;&#xa0;&#xa0;<span class="tag"><span class="____">大概了解</span></span></h3>
+<div class="outline-text-3" id="text-12-3">
+</div>
+<div id="outline-container-org9a50bee" class="outline-4">
+<h4 id="org9a50bee"><span class="section-number-4">12.3.1</span> 工业化是中国经济增长的主要动力来源</h4>
+<div class="outline-text-4" id="text-12-3-1">
+<ol class="org-ol">
+<li>工业化提高人均资本存量和全要素劳动生产率</li>
+
+<li>工业化促使“二元经济”转型</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org6b72282" class="outline-4">
+<h4 id="org6b72282"><span class="section-number-4">12.3.2</span> 对外贸易是突破工业化约束的手段</h4>
+<div class="outline-text-4" id="text-12-3-2">
+<ol class="org-ol">
+<li>发展外向型经济的根本目的在于通过对外开放来突破工业化的约束</li>
+
+<li>对外贸易对于中国经济增长的作用在于配合了中国工业化的进程</li>
+
+<li><p>
+<del>我国外向型工业化战略的特点是基于劳动成本优势，构建相互关联的外贸战
+略和工业化模式，使我国工业在出口带动下迅速发展</del>
+</p>
+
+<p>
+<b>这里大纲有点陈旧，目前我国的优势是全要素生产率的优势</b>
+</p></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org94a71a4" class="outline-4">
+<h4 id="org94a71a4"><span class="section-number-4">12.3.3</span> 我国外向型工业化战略的比较优势</h4>
+<div class="outline-text-4" id="text-12-3-3">
+<ol class="org-ol">
+<li>我国外向型工业化发展战略的基本内涵是利用进口和出口突破国内工业化过
+程在投入和产出两方面的约束</li>
+
+<li><del>我国外向型工业化发展战略的基础是劳动成本优势</del> <b>全要素生产率</b></li>
+
+<li>随着国际市场竞争格局的变化和国际制造也结构的调整和转移，中国发挥劳
+动成本优势和形式、产业载体和产品载体在不断变化（比较优势的实现手段
+和产业载体的变化）</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org81a2432" class="outline-4">
+<h4 id="org81a2432"><span class="section-number-4">12.3.4</span> 我国当前外贸发展模式存在的问题</h4>
+<div class="outline-text-4" id="text-12-3-4">
+<ol class="org-ol">
+<li>外贸条件恶化的趋势日益明显</li>
+
+<li>资源环境的压力逐渐加大</li>
+
+<li>贸易品部门过渡发展和服务也发展滞后</li>
+
+<li>比较优势固化的风险</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org821101c" class="outline-3">
+<h3 id="org821101c"><span class="section-number-3">12.4</span> 金融开放与对我国经济的影响</h3>
+<div class="outline-text-3" id="text-12-4">
+</div>
+<div id="outline-container-org1c27ecc" class="outline-4">
+<h4 id="org1c27ecc"><span class="section-number-4">12.4.1</span> 金融开发作用于我国经济增长的渠道</h4>
+<div class="outline-text-4" id="text-12-4-1">
+<ol class="org-ol">
+<li>最直接的渠道是通过资本流动变化影响一国宏观经济运行过程，主要有：对
+外借款、证券资金跨境流动和外商直接投资</li>
+
+<li>FDI（外商直接投资）对我国经济增长的影响
+
+<ol class="org-ol">
+<li>从发展看，外资企业带来先进的技术，提升了导向产业的比较优势</li>
+
+<li>从行业看，FDI集中与中高技术行业，技术外溢效应和干中学效果明显</li>
+
+<li>从贸易看，FDI的流入还带动我国技术引进和出口增加</li>
+</ol></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org1094eb7" class="outline-4">
+<h4 id="org1094eb7"><span class="section-number-4">12.4.2</span> 金融开放对我国经济的影响</h4>
+<div class="outline-text-4" id="text-12-4-2">
+<ol class="org-ol">
+<li>由于我国外汇管制，外资流入往往成为政府分配国内信贷资金资金的特殊机制</li>
+
+<li>资金的跨国双向流动有助于降低总消费、储蓄和总资产的波动性</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org14b2a7d" class="outline-2">
+<h2 id="org14b2a7d"><span class="section-number-2">13</span> 经济增长相关内容的总结（前三章内容）</h2>
+<div class="outline-text-2" id="text-13">
+</div>
+<div id="outline-container-org09d931e" class="outline-3">
+<h3 id="org09d931e"><span class="section-number-3">13.1</span> 经济增长（ \(Y\uparrow\) ）靠什么？</h3>
+<div class="outline-text-3" id="text-13-1">
+</div>
+<div id="outline-container-org643201a" class="outline-4">
+<h4 id="org643201a"><span class="section-number-4">13.1.1</span> 技术进步：（改革）</h4>
+<div class="outline-text-4" id="text-13-1-1">
+<p>
+自动化，机械化，产业高级化，工业化
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7fcac19" class="outline-4">
+<h4 id="org7fcac19"><span class="section-number-4">13.1.2</span> 对外开发</h4>
+<div class="outline-text-4" id="text-13-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="org6998a21"></a>贸易<br />
+<ol class="org-ol">
+<li><a id="org5ace55c"></a>对外开放的必然性<br />
+<div class="outline-text-6" id="text-13-1-2-1-1">
+<p>
+分工、市场本性、内在冲动
+</p>
+</div>
+</li>
+
+<li><a id="org2b0d93c"></a>贸易如何推动经济增长<br />
+<div class="outline-text-6" id="text-13-1-2-1-2">
+<p>
+理论、现实、动态收益、工业化
+</p>
+</div>
+</li>
+</ol>
+</li>
+
+<li><a id="org5b64463"></a>资本（FDI）<br />
+<div class="outline-text-5" id="text-13-1-2-2">
+<p>
+发展、行业、贸易
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0d561d5" class="outline-2">
+<h2 id="org0d561d5"><span class="section-number-2">14</span> 社会主义市场经济条件下的政府调节&#xa0;&#xa0;&#xa0;<span class="tag"><span class="2020___">2020概率大</span></span></h2>
+<div class="outline-text-2" id="text-14">
+</div>
+<div id="outline-container-orgba622d8" class="outline-3">
+<h3 id="orgba622d8"><span class="section-number-3">14.1</span> 政府调节的必要性</h3>
+<div class="outline-text-3" id="text-14-1">
+</div>
+<div id="outline-container-orgd9711ee" class="outline-4">
+<h4 id="orgd9711ee"><span class="section-number-4">14.1.1</span> 市场机制并非尽善尽美</h4>
+<div class="outline-text-4" id="text-14-1-1">
+<p>
+市场失灵：垄断、外部性、公共物品、信息不对称、收入分配不均、市场波动、
+体制不完善
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd4da85f" class="outline-4">
+<h4 id="orgd4da85f"><span class="section-number-4">14.1.2</span> 政府纠正市场失灵的能力是有限的</h4>
+<div class="outline-text-4" id="text-14-1-2">
+<ol class="org-ol">
+<li>政府是否按照全社会利益进行决策值得怀疑（诺斯悖论）</li>
+
+<li>政府干预受到客观条件的限制</li>
+
+<li>政府纠正市场失灵的能力有限</li>
+
+<li>政府对市场的干预会产生“租金”，而“租金”会导致寻租行为</li>
+
+<li>政府干预常常采用直接掌握投资决策权，往往效率不高</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org0c674c3" class="outline-4">
+<h4 id="org0c674c3"><span class="section-number-4">14.1.3</span> 政府干预与市场调节的合理界定</h4>
+<div class="outline-text-4" id="text-14-1-3">
+</div>
+<ol class="org-ol">
+<li><a id="org6d99dba"></a>政府在纠正市场失灵方面具有某些优势<br />
+<div class="outline-text-5" id="text-14-1-3-1">
+<ol class="org-ol">
+<li>征税权，消除外部性等</li>
+
+<li>禁止权，可以维护市场秩序和调整经济结构</li>
+
+<li>处罚权，处罚违规行为和违反合同行为，维护市场秩序</li>
+
+<li>节约交易费用</li>
+</ol>
+</div>
+</li>
+
+<li><a id="org998878e"></a>市场调节与政府干预相结合<br />
+<div class="outline-text-5" id="text-14-1-3-2">
+<ol class="org-ol">
+<li>市场机制，调节资源配置，效率较高</li>
+
+<li>政府干预，协调不同产业部门、社会经济关系、短期目标和长期目标，总量
+平衡与结构平衡</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgfc37a31" class="outline-3">
+<h3 id="orgfc37a31"><span class="section-number-3">14.2</span> 政府干预经济的功能界定与范围界定&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">论述题</span></span></h3>
+<div class="outline-text-3" id="text-14-2">
+</div>
+<div id="outline-container-org9fe59d8" class="outline-4">
+<h4 id="org9fe59d8"><span class="section-number-4">14.2.1</span> 适度政府干预的界定&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">论述题</span></span></h4>
+<div class="outline-text-4" id="text-14-2-1">
+<ol class="org-ol">
+<li>提供公共服务</li>
+
+<li>维护市场秩序</li>
+
+<li>直接参与某种经济活动</li>
+
+<li>进行必要的行政控制</li>
+
+<li>影响对资源的合理利用</li>
+
+<li>具有财政调节功能</li>
+
+<li>运用适当的经济政策实现一定的宏观经济政策目标</li>
+
+<li>影响收入分配</li>
+
+<li>制度创新</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgc48e586" class="outline-4">
+<h4 id="orgc48e586"><span class="section-number-4">14.2.2</span> 政府干预经济的职能分解</h4>
+<div class="outline-text-4" id="text-14-2-2">
+<ol class="org-ol">
+<li>行政管理职能</li>
+
+<li>政府调节职能</li>
+
+<li>所有者职能</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2809744" class="outline-3">
+<h3 id="org2809744"><span class="section-number-3">14.3</span> 政府干预经济的政策目标选择</h3>
+<div class="outline-text-3" id="text-14-3">
+</div>
+<div id="outline-container-orgd19ed90" class="outline-4">
+<h4 id="orgd19ed90"><span class="section-number-4">14.3.1</span> 经济政策的基本目标</h4>
+<div class="outline-text-4" id="text-14-3-1">
+<ol class="org-ol">
+<li>效率、增长、稳定</li>
+
+<li>经济福利，最低生存需要和精神文化需要</li>
+
+<li>分配公正，兼顾效率与公平</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org5f792ca" class="outline-4">
+<h4 id="org5f792ca"><span class="section-number-4">14.3.2</span> 经济政策的具体目标</h4>
+<div class="outline-text-4" id="text-14-3-2">
+<ol class="org-ol">
+<li>经济增长</li>
+
+<li>物价稳定</li>
+
+<li>充分就业</li>
+
+<li>国际收支平衡</li>
+
+<li>产业结构高级化</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgb59e2a0" class="outline-4">
+<h4 id="orgb59e2a0"><span class="section-number-4">14.3.3</span> 经济发展中政策目标可能冲突的区域</h4>
+<div class="outline-text-4" id="text-14-3-3">
+<ol class="org-ol">
+<li>经济增长与物价稳定的交替关系</li>
+
+<li>充分就业与物价稳定的交替关系</li>
+
+<li>公平与效率之间的交替关系</li>
+
+<li>国内均衡与国外均衡之间的交替关系（充分就业与物价稳定与国际收支平衡
+的关系）</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org513aab9" class="outline-3">
+<h3 id="org513aab9"><span class="section-number-3">14.4</span> 政府干预经济的政策手段选择</h3>
+<div class="outline-text-3" id="text-14-4">
+</div>
+<div id="outline-container-org4c02d5a" class="outline-4">
+<h4 id="org4c02d5a"><span class="section-number-4">14.4.1</span> 经济政策手段的构成</h4>
+<div class="outline-text-4" id="text-14-4-1">
+<ol class="org-ol">
+<li>财政政策</li>
+
+<li>货币政策</li>
+
+<li>行政管理手段</li>
+
+<li>经济法制手段</li>
+
+<li>制度约束</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org8523472" class="outline-4">
+<h4 id="org8523472"><span class="section-number-4">14.4.2</span> 经济政策手段的传导机制与选择原则</h4>
+<div class="outline-text-4" id="text-14-4-2">
+<ol class="org-ol">
+<li>具有敏感边际行为的市场主体</li>
+
+<li>价格、利率等市场信号反应资源的稀缺性</li>
+
+<li>市场体系的完善</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgfc98aac" class="outline-4">
+<h4 id="orgfc98aac"><span class="section-number-4">14.4.3</span> 经济政策手段的效率及其选择原则&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">论述题</span></span></h4>
+<div class="outline-text-4" id="text-14-4-3">
+<ol class="org-ol">
+<li>对政策手段反应的大小</li>
+
+<li>政策手段效果体现的速度和结果</li>
+
+<li>对克服不合理经济现象所起的作用的大小</li>
+
+<li>资源成本</li>
+
+<li>选择性和变动性</li>
+
+<li>间接经济效应</li>
+
+<li>社会政治效应</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge664e31" class="outline-3">
+<h3 id="orge664e31"><span class="section-number-3">14.5</span> 经济政策选择与经济效率</h3>
+<div class="outline-text-3" id="text-14-5">
+</div>
+<div id="outline-container-orgd0ab13b" class="outline-4">
+<h4 id="orgd0ab13b"><span class="section-number-4">14.5.1</span> 政策目标约束下的政策手段选择和组合</h4>
+<div class="outline-text-4" id="text-14-5-1">
+<p>
+用政策手段的组合完成政府的政策目标
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf34c6dc" class="outline-4">
+<h4 id="orgf34c6dc"><span class="section-number-4">14.5.2</span> 政府干预经济的效率标准</h4>
+<div class="outline-text-4" id="text-14-5-2">
+</div>
+<ol class="org-ol">
+<li><a id="org4b21973"></a>效率的三个层次<br />
+<div class="outline-text-5" id="text-14-5-2-1">
+<ol class="org-ol">
+<li><p>
+静态效率
+</p>
+
+<p>
+产量最大化，符合技术可能性也满足社会全体成员的愿望
+</p></li>
+
+<li><p>
+分配效率
+</p>
+
+<p>
+公平性和分配效率
+</p></li>
+
+<li><p>
+动态效率
+</p>
+
+<p>
+收支平衡，\(AS=AD\)
+</p></li>
+</ol>
+</div>
+</li>
+
+<li><a id="org4838d90"></a>经济政策选择是应该注意的问题&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">论述题</span></span><br />
+<div class="outline-text-5" id="text-14-5-2-2">
+<ol class="org-ol">
+<li>一个功能齐全的市场机制更容易实现静态效率</li>
+
+<li>向社会提供各种公共产品是政府的责任</li>
+
+<li>政府要采取多种政策消除垄断以实现静态效率</li>
+
+<li>市场机制自发调节可能会引起收入分配不公平</li>
+
+<li>稳定应成为经济政策的重要目标</li>
+
+<li>政府适度干预有助于实现长期动态效率</li>
+
+<li>政府要进行动态跟踪调节</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: 2020-09-21 Mon 00:00</p>
+<p class="author">Author: Qing Yi</p>
+<p class="date">Created: 2020-12-02 Wed 17:52</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

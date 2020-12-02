@@ -1,0 +1,3476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-12-02 Wed 17:53 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>货币银行学笔记</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Qing Yi" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="../static/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="../static/readtheorg_theme/css/readtheorg.css"/>
+<script type="text/javascript" src="../static/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="../static/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../static/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="../static/readtheorg_theme/js/readtheorg.js"></script>
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">货币银行学笔记</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgdf42d38">1. 考题分数分布</a></li>
+<li><a href="#orga6e7dfa">2. 货币供求理论</a>
+<ul>
+<li><a href="#org41f1db2">2.1. 货币供给</a>
+<ul>
+<li><a href="#org30d9e78">2.1.1. 概念与统计</a></li>
+<li><a href="#org2b40ee3">2.1.2. 信用货币的创造过程</a></li>
+<li><a href="#org34daa2b">2.1.3. 货币供给的内生性与外生性</a></li>
+</ul>
+</li>
+<li><a href="#org7129662">2.2. 货币需求</a>
+<ul>
+<li><a href="#orgc27b2c3">2.2.1. 传统货币数量理论</a></li>
+<li><a href="#org053e5c2">2.2.2. 凯恩斯主义的货币需求理论</a></li>
+<li><a href="#orgba55f30">2.2.3. 弗里德曼的现代货币数量论</a></li>
+<li><a href="#orgb9c76b9">2.2.4. 货币需求理论的发展脉络</a></li>
+</ul>
+</li>
+<li><a href="#org2d2118a">2.3. 货币均衡与总供求</a>
+<ul>
+<li><a href="#org04d4284">2.3.1. 简单的货币供求均衡 \(M_s = M_d\)</a></li>
+<li><a href="#orgfc9a659">2.3.2. 货币均衡与市场均衡</a></li>
+<li><a href="#org0540a37">2.3.3. 货币供给的产出效应及其扩张界限</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgebf8204">3. 利率理论</a>
+<ul>
+<li><a href="#orgff1cb19">3.1. 利率及利率体系</a>
+<ul>
+<li><a href="#orgdfd4431">3.1.1. 利息的本质</a></li>
+<li><a href="#org36789e5">3.1.2. 利率体系</a></li>
+<li><a href="#org400146a">3.1.3. 名义利率与实际利率</a></li>
+<li><a href="#orgd539241">3.1.4. 利率与收益率</a></li>
+</ul>
+</li>
+<li><a href="#org9ff39de">3.2. 利率理论</a>
+<ul>
+<li><a href="#org939da07">3.2.1. 马克思利率理论</a></li>
+<li><a href="#orge2cebb4">3.2.2. 西方利率理论</a></li>
+</ul>
+</li>
+<li><a href="#orgadfe959">3.3. 利率的作用</a></li>
+</ul>
+</li>
+<li><a href="#orgd363a11">4. 通货膨胀和通货紧缩</a>
+<ul>
+<li><a href="#org55b0155">4.1. 通货膨胀的定义与度量</a></li>
+<li><a href="#orgb8b7e4b">4.2. 通货膨胀的社会经济效应</a></li>
+<li><a href="#org48410fd">4.3. 通货膨胀的原因及其治理</a>
+<ul>
+<li><a href="#orgf0440b5">4.3.1. 需求拉动型</a></li>
+<li><a href="#orga1e7bab">4.3.2. 成本推动型</a></li>
+<li><a href="#orgd27d1a4">4.3.3. 供求混合推动说</a></li>
+<li><a href="#orgf2986c8">4.3.4. 通货膨胀目标制</a></li>
+</ul>
+</li>
+<li><a href="#org5d4e494">4.4. 通货紧缩</a></li>
+</ul>
+</li>
+<li><a href="#orgc6a99c7">5. 金融中介体系&#xa0;&#xa0;&#xa0;<span class="tag"><span class="2020__">2020重点</span></span></a>
+<ul>
+<li><a href="#org83e3531">5.1. 金融中介体系的构成和国际金融体系</a>
+<ul>
+<li><a href="#org41021de">5.1.1. 金融中介体系的构成</a></li>
+<li><a href="#org5b81a44">5.1.2. 国际金融机构体系</a></li>
+</ul>
+</li>
+<li><a href="#org51a2b01">5.2. 存款货币银行（商业银行）</a></li>
+<li><a href="#org2d8f5d7">5.3. 中央银行</a></li>
+</ul>
+</li>
+<li><a href="#orgb6b78ba">6. 金融市场&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_____">未考过大题</span></span></a>
+<ul>
+<li><a href="#orga2c1f62">6.1. 金融市场体系及其功能</a>
+<ul>
+<li><a href="#org96350cb">6.1.1. 金融市场体系</a></li>
+<li><a href="#orgac46883">6.1.2. 金融市场功能</a></li>
+</ul>
+</li>
+<li><a href="#org4daa260">6.2. 金融工具的发展</a>
+<ul>
+<li><a href="#org62bce9d">6.2.1. 金融工具类型</a></li>
+<li><a href="#org1e212f1">6.2.2. 金融工程</a></li>
+</ul>
+</li>
+<li><a href="#org134c4bb">6.3. 风险投资</a>
+<ul>
+<li><a href="#orgbcc46bc">6.3.1. 投资过程</a></li>
+</ul>
+</li>
+<li><a href="#orgc1b57c9">6.4. 金融市场理论的发展</a>
+<ul>
+<li><a href="#org4e1aff6">6.4.1. 风险与收益</a></li>
+<li><a href="#org651b07f">6.4.2. 有效市场假说</a></li>
+<li><a href="#org76683c8">6.4.3. 投资组合理论&#xa0;&#xa0;&#xa0;<span class="tag"><span class="____">大概了解</span></span></a></li>
+<li><a href="#orge7af4e2">6.4.4. 资本资产定价模型&#xa0;&#xa0;&#xa0;<span class="tag"><span class="____">大概了解</span></span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org2487abe">7. 金融监管体系&#xa0;&#xa0;&#xa0;<span class="tag"><span class="2020___">2020小概率</span></span></a>
+<ul>
+<li><a href="#org8ee405e">7.1. 金融监管的原则和理论</a>
+<ul>
+<li><a href="#org85c6b21">7.1.1. 金融风险类型</a></li>
+<li><a href="#orgd7c16e8">7.1.2. 金融监管原则&#xa0;&#xa0;&#xa0;<span class="tag"><span class="____">重点理解</span></span></a></li>
+<li><a href="#orgdd6beb1">7.1.3. 金融监管理论&#xa0;&#xa0;&#xa0;<span class="tag"><span class="19__">19考过</span></span></a></li>
+</ul>
+</li>
+<li><a href="#org6dcfd25">7.2. 金融监管的成本</a>
+<ul>
+<li><a href="#org22b4976">7.2.1. 执法成本</a></li>
+<li><a href="#org7fc8d44">7.2.2. 守法成本</a></li>
+<li><a href="#org8720520">7.2.3. 道德风险</a></li>
+</ul>
+</li>
+<li><a href="#orgd0ff98c">7.3. 我国金融监管组织体系</a></li>
+<li><a href="#org7802c55">7.4. 金融监管的一般内容&#xa0;&#xa0;&#xa0;<span class="tag"><span class="____">重点理解</span></span></a></li>
+<li><a href="#org679f1d0">7.5. 国际金融监管协调</a>
+<ul>
+<li><a href="#org39a5b46">7.5.1. 巴塞尔协议</a></li>
+<li><a href="#org708e8a3">7.5.2. 新资本协议（新巴塞尔协议）</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org13f7bb1">8. 货币政策&#xa0;&#xa0;&#xa0;<span class="tag"><span class="____">重点理解</span></span></a>
+<ul>
+<li><a href="#org69f3112">8.1. 货币政策目标</a>
+<ul>
+<li><a href="#org2c5cda3">8.1.1. 政策目标</a></li>
+<li><a href="#org7aa5c73">8.1.2. 目标之间的统一与冲突</a></li>
+</ul>
+</li>
+<li><a href="#org308afe6">8.2. 货币政策目标的选择</a>
+<ul>
+<li><a href="#org7e5e78d">8.2.1. 两种选择</a></li>
+<li><a href="#orgca6afb2">8.2.2. 中国的货币政策目标及其争论</a></li>
+<li><a href="#org129acb6">8.2.3. 通货膨胀目标制</a></li>
+</ul>
+</li>
+<li><a href="#orga0e2fff">8.3. 货币政策规则</a>
+<ul>
+<li><a href="#org56153bf">8.3.1. 货币政策的内涵</a></li>
+<li><a href="#orgd08d547">8.3.2. 需要货币政策的原因</a></li>
+<li><a href="#orge57ffff">8.3.3. 货币政策规则的设定</a></li>
+<li><a href="#org8f467d3">8.3.4. 货币政策的各种规则</a></li>
+</ul>
+</li>
+<li><a href="#org263a210">8.4. 货币政策工具</a>
+<ul>
+<li><a href="#orge782737">8.4.1. 一般性政策工具</a></li>
+<li><a href="#orgb73f066">8.4.2. 可选择性货币政策工具</a></li>
+</ul>
+</li>
+<li><a href="#org5de54bd">8.5. 货币政策传导机制理论，货币政策如何影响经济增长&#xa0;&#xa0;&#xa0;<span class="tag"><span class="____">重点理解</span></span></a>
+<ul>
+<li><a href="#org363e5d7">8.5.1. 凯恩斯学派的货币政策传导机制</a></li>
+<li><a href="#org641d31e">8.5.2. 货币学派的货币政策传导机制理论</a></li>
+<li><a href="#orgfa9e7b8">8.5.3. 货币传导机制的信用渠道</a></li>
+</ul>
+</li>
+<li><a href="#org6ee0946">8.6. 货币政策中介指标的选择</a>
+<ul>
+<li><a href="#org0f10b75">8.6.1. 中介目标</a></li>
+<li><a href="#orgc12a931">8.6.2. 中介指标应该具备的条件</a></li>
+<li><a href="#orge7f10dd">8.6.3. 短期中介指标</a></li>
+</ul>
+</li>
+<li><a href="#orgf75c5ee">8.7. 货币政策与财政政策的配合</a>
+<ul>
+<li><a href="#org3efb723">8.7.1. 配合基础</a></li>
+<li><a href="#org8dd887b">8.7.2. 配合模式</a></li>
+</ul>
+</li>
+<li><a href="#org3bae2e0">8.8. 货币政策效应（缺点）</a>
+<ul>
+<li><a href="#org92753cb">8.8.1. 货币政策时滞</a></li>
+<li><a href="#org5acc3dd">8.8.2. 微观主体预期的对消作用</a></li>
+<li><a href="#org249580a">8.8.3. 透明度和取信于公众问题</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgc06d02b">9. 汇率理论</a>
+<ul>
+<li><a href="#orgc114d62">9.1. 汇率理论的历史脉络</a>
+<ul>
+<li><a href="#orgb403b46">9.1.1. 汇率的两重含义</a></li>
+<li><a href="#orgafe9e2c">9.1.2. 汇率理论的研究内容</a></li>
+<li><a href="#orge0b789a">9.1.3. 汇率理论的发展</a></li>
+</ul>
+</li>
+<li><a href="#org9a87eb7">9.2. 汇率制度安排</a>
+<ul>
+<li><a href="#orgde785f1">9.2.1. 汇率制度的概念和内容</a></li>
+<li><a href="#org097d185">9.2.2. 汇率制度的种类</a></li>
+<li><a href="#orgb5b3220">9.2.3. 各种汇率安排的优劣</a></li>
+<li><a href="#orgd997171">9.2.4. 汇率制度选择的理论依据</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org8a8fb21">10. 国际货币体系</a>
+<ul>
+<li><a href="#orgcedf9c6">10.1. 国际货币体系概述</a>
+<ul>
+<li><a href="#orgdc3d0b2">10.1.1. 含义</a></li>
+<li><a href="#orge2d2b71">10.1.2. 构成</a></li>
+<li><a href="#org008a605">10.1.3. 作用</a></li>
+</ul>
+</li>
+<li><a href="#orgb41fa8d">10.2. 国际金本位体系</a>
+<ul>
+<li><a href="#org8860e49">10.2.1. 特点</a></li>
+<li><a href="#org1b93e33">10.2.2. 历史地位</a></li>
+</ul>
+</li>
+<li><a href="#org613bb3b">10.3. 布雷顿森林体系</a>
+<ul>
+<li><a href="#org2c41ded">10.3.1. 主要内容</a></li>
+<li><a href="#orgd3ca653">10.3.2. 崩溃及原因</a></li>
+<li><a href="#orgf707025">10.3.3. 评价</a></li>
+</ul>
+</li>
+<li><a href="#orgb6e8d7e">10.4. 牙买加体系</a>
+<ul>
+<li><a href="#orga3d2fb0">10.4.1. 主要内容</a></li>
+<li><a href="#orgb596502">10.4.2. 体系的运行</a></li>
+<li><a href="#orgd0e650f">10.4.3. 评价</a></li>
+</ul>
+</li>
+<li><a href="#org301b0d0">10.5. 国际货币体系改革</a>
+<ul>
+<li><a href="#orgcb0ea93">10.5.1. 现存国际货币体系的脆弱性</a></li>
+<li><a href="#org107418c">10.5.2. 国际货币体系改革的进展</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org8e9a4ec">11. 内外均衡理论</a>
+<ul>
+<li><a href="#org89b672c">11.1. 内外均衡理论的基本内容</a>
+<ul>
+<li><a href="#org4000002">11.1.1. 米德内外均衡理论的基本内容</a></li>
+<li><a href="#orgf890ed9">11.1.2. 实践中各国追求内外均衡的具体做法及原因</a></li>
+</ul>
+</li>
+<li><a href="#orgb22b2ce">11.2. 蒙带尔的"政策配合说"</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgdf42d38" class="outline-2">
+<h2 id="orgdf42d38"><span class="section-number-2">1</span> 考题分数分布</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+考试的分数分布(20')：
+</p>
+
+<ul class="org-ul">
+<li>2个简答(2*8')</li>
+<li>2个选择(2*2')或者1个选择和名词解释(2'+3')</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orga6e7dfa" class="outline-2">
+<h2 id="orga6e7dfa"><span class="section-number-2">2</span> 货币供求理论</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org41f1db2" class="outline-3">
+<h3 id="org41f1db2"><span class="section-number-3">2.1</span> 货币供给</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org30d9e78" class="outline-4">
+<h4 id="org30d9e78"><span class="section-number-4">2.1.1</span> 概念与统计</h4>
+<div class="outline-text-4" id="text-2-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgcc44f1c"></a>货币定义<br />
+<div class="outline-text-5" id="text-2-1-1-1">
+<p>
+指的是在商品的交易与债务偿付中被普遍接受的东西。中央银行在建立货币统计
+体系时采取的一个主要标准是各种金融资产的流动性。
+</p>
+
+<p>
+流动性，指一种资产以较小代价转换为实际购买力的便利性。
+</p>
+</div>
+</li>
+
+<li><a id="orgaf00844"></a>国际货币基金组织的货币统计（按流动性统计）<br />
+<div class="outline-text-5" id="text-2-1-1-2">
+<ul class="org-ul">
+<li>通货，采用一般定义。 就相当于流动的现金</li>
+
+<li>货币，等于存款货币以外的通货加私人部门的活期存款之和，相当于各国通常
+采用的 \(M1\) 。通货+活期存款</li>
+
+<li>准货币，相当于定期存款、储蓄存款与外币存款之和，即包括除 \(M1\) 之外可
+以称之为货币的各种形态。"准货币"加"货币"，相当于各国通常采用的 \(M2\)
+。\(M2\) = \(M1\) + 定期存款+外币存款</li>
+</ul>
+</div>
+</li>
+
+<li><a id="orgbe7bcde"></a>我国的货币统计体系<br />
+<div class="outline-text-5" id="text-2-1-1-3">
+<ul class="org-ul">
+<li>\(M0\) ，流通中的现金</li>
+
+<li>\(M1\) ，\(M0\) + 活期存款</li>
+
+<li>\(M2\) ，\(M1\) + 准货币（定期存款+储蓄存款+其他存款）</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org2b40ee3" class="outline-4">
+<h4 id="org2b40ee3"><span class="section-number-4">2.1.2</span> 信用货币的创造过程</h4>
+<div class="outline-text-4" id="text-2-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="orgb4e9fd3"></a>商业银行的信用货币扩张<br />
+<div class="outline-text-5" id="text-2-1-2-1">
+<p>
+现代经济中的信用货币是由银行体系供应的，其中，中央银行垄断货币的发行，
+提供原始货币，形成货币供应的源头；商业银行体系则通过对原始货币的辗转存
+贷，可以将其数量多倍扩张。
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">银行</th>
+<th scope="col" class="org-right">法定准备（RR）</th>
+<th scope="col" class="org-right">存款（D）</th>
+<th scope="col" class="org-right">贷款（L）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">A</td>
+<td class="org-right">100</td>
+<td class="org-right">1000</td>
+<td class="org-right">900</td>
+</tr>
+
+<tr>
+<td class="org-left">B</td>
+<td class="org-right">90</td>
+<td class="org-right">900</td>
+<td class="org-right">810</td>
+</tr>
+
+<tr>
+<td class="org-left">C</td>
+<td class="org-right">81</td>
+<td class="org-right">810</td>
+<td class="org-right">729</td>
+</tr>
+
+<tr>
+<td class="org-left">D</td>
+<td class="org-right">72.9</td>
+<td class="org-right">729</td>
+<td class="org-right">656.9</td>
+</tr>
+
+<tr>
+<td class="org-left">&#x2026;</td>
+<td class="org-right">&#x2026;</td>
+<td class="org-right">&#x2026;</td>
+<td class="org-right">&#x2026;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">合计</td>
+<td class="org-right">1000</td>
+<td class="org-right">10000</td>
+<td class="org-right">9000</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+
+<li><a id="org0933958"></a>中央银行与基础货币供应<br />
+<div class="outline-text-5" id="text-2-1-2-2">
+<p>
+一个高度简化的央行资产负债表：
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">资产</th>
+<th scope="col" class="org-left">负债</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">对商业银行贷款</td>
+<td class="org-left">现金</td>
+</tr>
+
+<tr>
+<td class="org-left">对财政贷款</td>
+<td class="org-left">商业银行存款</td>
+</tr>
+
+<tr>
+<td class="org-left">外汇、黄金储备</td>
+<td class="org-left">财政存款</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<a href="http://www.pbc.gov.cn/diaochatongjisi/resource/cms/2020/09/2020091518000291056.htm">我国实际的央行资产负债表</a>
+</p>
+
+<p>
+正常情况下，中央银行是为了适应经济增长的需要发行货币的。可以给财政贷款，
+也可以给商业银行贷款。
+</p>
+</div>
+</li>
+
+<li><a id="org24f0a3d"></a>货币供给的完整模型<br />
+<div class="outline-text-5" id="text-2-1-2-3">
+<ol class="org-ol">
+<li>基础货币
+
+<ul class="org-ul">
+<li>\(基础货币B = 现金C + 商业银行在央行的存款准备R\)</li>
+
+<li>\(商业银行在央行的存款准备R = 法定准备金RR + 商业银行超额准备金ER\)</li>
+</ul></li>
+
+<li>货币供应量
+
+<ul class="org-ul">
+<li>\(货币供应量M = 现金C + 存款货币D\)</li>
+</ul></li>
+
+<li><p>
+货币乘数 \(m\)
+</p>
+
+<p>
+货币供应量 \(M\) 是基础货币 \(B\) 在商业银行中多倍扩张形成的，假设倍数
+为 \(m\) ，则有如下推导：
+</p>
+
+\begin{align}
+M & = mB \\
+\frac{M}{B} & = \frac{C+D}{C + RR + ER} = m \\
+M & = \frac{\frac{C}{D} + 1}{\frac{C}{D} + \frac{RR}{D} + \frac{ER}{D}}B
+\end{align}
+
+<p>
+其中：
+</p>
+
+<ul class="org-ul">
+<li>\(\frac{C}{D}\) 为现金-存款比率</li>
+
+<li>\(\frac{RR}{D}\) 为法定准备金率</li>
+
+<li>\(\frac{ER}{D}\) 为商业银行超额准备率</li>
+</ul></li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org34daa2b" class="outline-4">
+<h4 id="org34daa2b"><span class="section-number-4">2.1.3</span> 货币供给的内生性与外生性</h4>
+<div class="outline-text-4" id="text-2-1-3">
+</div>
+<ol class="org-ol">
+<li><a id="org4a4fc43"></a>内生性<br />
+<div class="outline-text-5" id="text-2-1-3-1">
+<ul class="org-ul">
+<li>货币供应量由一个经济体系内多种因素和主体共同决定</li>
+
+<li>中央银行只是其中一部分，不能单独决定货币供应量</li>
+</ul>
+</div>
+</li>
+
+<li><a id="org6996f92"></a>外生性<br />
+<div class="outline-text-5" id="text-2-1-3-2">
+<ul class="org-ul">
+<li>货币供应量由中央银行在经济体系之外，独立控制</li>
+
+<li>基本思想：央行在体制上具有足够独立性，不受政治因素干扰，就能从源头上
+控制货币供给量</li>
+</ul>
+</div>
+</li>
+
+<li><a id="org457ab6e"></a>外生性与内生性理论与实际情况是否适应<br />
+<div class="outline-text-5" id="text-2-1-3-3">
+<p>
+无论从货币供应基本模型，还是货币供应理论的发展来看，货币供应在相当大程
+度上是“内生的”，而“外生论”则过于依赖严格假设
+</p>
+</div>
+</li>
+
+<li><a id="orgbd69b0a"></a>中国的现实国情（内生论）<br />
+<div class="outline-text-5" id="text-2-1-3-4">
+<ol class="org-ol">
+<li>央行本省并非独立决策主体，其控制货币供应的能力在制度上缺乏保证</li>
+
+<li>大量的国有企业和地方政府，出于自身利益，往往压迫商业银行不断增加贷
+款，从而压迫中央银行被动地增加货币供给，形成所谓“倒逼机制”</li>
+
+<li>从国外净资产的运作角度来看，近年来我国出口贸易顺差持续增大，外汇储
+备不断增加，成为央行释放基础货币的主要渠道，这在一定程度上增加了我
+国货币供应的内生性</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org7129662" class="outline-3">
+<h3 id="org7129662"><span class="section-number-3">2.2</span> 货币需求</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+货币需求主要指货币的流动性，用 \(L(Liquidity)\) 来表示。
+</p>
+</div>
+
+<div id="outline-container-orgc27b2c3" class="outline-4">
+<h4 id="orgc27b2c3"><span class="section-number-4">2.2.1</span> 传统货币数量理论</h4>
+<div class="outline-text-4" id="text-2-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="org620a293"></a>现金交易说<br />
+<div class="outline-text-5" id="text-2-2-1-1">
+<p>
+费雪方程式 \(MV = PY\)
+</p>
+
+<p>
+货币需求仅是收入的函数，利率对货币需求没有影响。
+</p>
+</div>
+</li>
+
+<li><a id="orgf8cc01f"></a>剑桥学派的现金余额说<br />
+<div class="outline-text-5" id="text-2-2-1-2">
+<p>
+剑桥方程式 \(M_d = kPY\)
+</p>
+
+<p>
+其中 \(k\) 表示多大比率用现金来保存资产。
+</p>
+
+<p>
+\(k\) 的大小取决与持有货币的机会成本，或者说取决与其他类型金融资产的预期
+收益率。
+</p>
+
+<p>
+货币需求看作是一种资产选择的结果，隐含承认了利率因素会影响货币的需求。
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org053e5c2" class="outline-4">
+<h4 id="org053e5c2"><span class="section-number-4">2.2.2</span> 凯恩斯主义的货币需求理论</h4>
+<div class="outline-text-4" id="text-2-2-2">
+</div>
+<ol class="org-ol">
+<li><a id="orgd7960fb"></a>凯恩斯流动性偏好理论<br />
+<div class="outline-text-5" id="text-2-2-2-1">
+<p>
+这个理论在宏观经济中也有讲述，可以参照起来一起复习。
+</p>
+
+<p>
+比起传统货币数量理论，凯恩斯的货币需求函数中明确的提出了货币投机需求受
+到利率的影响。
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="orgc9f240a"></a>货币需求三大动机<br />
+<div class="outline-text-6" id="text-2-2-2-1-1">
+<ol class="org-ol">
+<li>交易动机</li>
+
+<li>谨慎动机</li>
+
+<li>投机动机</li>
+</ol>
+</div>
+</li>
+
+<li><a id="org7f72d1b"></a>货币需求函数<br />
+<div class="outline-text-6" id="text-2-2-2-1-2">
+\begin{equation}
+ M  = L_1(Y) + L_2(r)
+\end{equation}
+</div>
+</li>
+</ol>
+</li>
+
+<li><a id="orgb12a3df"></a><del>凯恩斯理论的发展</del><br />
+<div class="outline-text-5" id="text-2-2-2-2">
+<p>
+2020年暂时不用关心【待补充】
+</p>
+
+<ol class="org-ol">
+<li>鲍莫尔对交易性货币需求的修正</li>
+
+<li>托宾对投机性货币需求的修正</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-orgba55f30" class="outline-4">
+<h4 id="orgba55f30"><span class="section-number-4">2.2.3</span> 弗里德曼的现代货币数量论</h4>
+<div class="outline-text-4" id="text-2-2-3">
+</div>
+<ol class="org-ol">
+<li><a id="org7c5b067"></a>货币需求函数<br />
+<div class="outline-text-5" id="text-2-2-3-1">
+\begin{equation}
+\frac{M_d}{P} = f(Y_p,w,r_m,r_b,r_e,\frac{1}{P}\cdot\frac{dP}{dt},u)
+\end{equation}
+
+<p>
+其中:
+</p>
+
+<ul class="org-ul">
+<li>\(Y_p\) 代表永久性收入，预期未来收入的折现值，或者预期的长期平均收入</li>
+
+<li>\(r_m, r_b, r_e\) 分别为货币、债券和股票的预期回报率</li>
+
+<li>\(\frac{1}{P}\cdot\frac{dP}{dt}\) 为预期的通货膨胀率</li>
+
+<li>\(u\) 为主观偏好以及风险等综合变数</li>
+
+<li>\(w\) 为非人力财富占个人总财富的比率，比率越大，谨慎动机的货币需求就越大</li>
+</ul>
+</div>
+</li>
+
+<li><a id="org55d5f2e"></a>规则货币供给（单一规则）的政策主张<br />
+<div class="outline-text-5" id="text-2-2-3-2">
+<p>
+弗里德曼认为，由于永久性收入的波动幅度比现期收入小得多，而且货币流动速
+度也相对稳定，因而货币需求是比较稳定的，进而货币供应也应该是相对稳定的。
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-orgb9c76b9" class="outline-4">
+<h4 id="orgb9c76b9"><span class="section-number-4">2.2.4</span> 货币需求理论的发展脉络</h4>
+<div class="outline-text-4" id="text-2-2-4">
+<ul class="org-ul">
+<li>多样化，货币需求理论中所考察的货币，马克思及其前人重视的是贵金属。从
+费雪方程开始，逐渐从黄金到纸币，再到一切可以被称之为货币的金融资产；</li>
+
+<li>内容多样化，将宏观总量作为考察货币需求这一问题的出发点是费雪及其前人
+一贯的思路。剑桥方程将微观主体的持币动机也纳入考察货币需求的因素；</li>
+
+<li>功能多样化，仅从宏观角度考察这一问题，货币需求发展仅仅是货币的支付需
+求，但是随着将个人微观行为纳入分析范畴，货币的价值储藏职能也被考察；</li>
+
+<li>决定因素多样化，货币需求函数不断的纳入更多自变量。</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2d2118a" class="outline-3">
+<h3 id="org2d2118a"><span class="section-number-3">2.3</span> 货币均衡与总供求</h3>
+<div class="outline-text-3" id="text-2-3">
+</div>
+<div id="outline-container-org04d4284" class="outline-4">
+<h4 id="org04d4284"><span class="section-number-4">2.3.1</span> 简单的货币供求均衡 \(M_s = M_d\)</h4>
+<div class="outline-text-4" id="text-2-3-1">
+<p>
+基本思想：在发达的货币市场中，货币供求关系的变化引起利率变化，利率变化
+进一步影响货币供求，如此相互作用，最终实现货币供求均衡并决定利率。
+</p>
+
+<ol class="org-ol">
+<li><p>
+货币供给作为内生变量条件下的简单货币均衡
+</p>
+
+<p>
+<i>参照大纲均衡图表</i>
+</p></li>
+
+<li><p>
+货币供给作为外生变量条件下的简单货币均衡
+</p>
+
+<p>
+<i>参照大纲均衡图表</i>
+</p></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgfc9a659" class="outline-4">
+<h4 id="orgfc9a659"><span class="section-number-4">2.3.2</span> 货币均衡与市场均衡</h4>
+<div class="outline-text-4" id="text-2-3-2">
+</div>
+<ol class="org-ol">
+<li><a id="org1733cbd"></a>作用过程<br />
+<div class="outline-text-5" id="text-2-3-2-1">
+<ol class="org-ol">
+<li>总供给决定货币需求，但是同等的总供给可能会引起偏大或者偏小的货币需求</li>
+
+<li>货币需求引出货币供给。但是数额绝非等量</li>
+
+<li>货币供给成为总需求的载体</li>
+
+<li>总需求的偏大、偏小会对总供给产生巨大的影响</li>
+
+<li>总需求的偏大或偏小也可以通过紧缩或者扩张的政策予以调节，但是单纯控
+制需求也难以保证实现均衡</li>
+</ol>
+
+\begin{matrix}
+AS & \longleftarrow & AD \\
+\downarrow &  & \uparrow \\
+M_d & \longrightarrow & M_s
+\end{matrix}
+</div>
+</li>
+
+
+<li><a id="org76b9950"></a>货币均衡与市场均衡的关系<br />
+<div class="outline-text-5" id="text-2-3-2-2">
+<ol class="org-ol">
+<li>货币均衡有助于实现市场均衡</li>
+
+<li>货币均衡不必然意味着市场均衡
+
+<ol class="org-ol">
+<li>并非所有的货币供给都构成了市场需求</li>
+
+<li>市场供给要求货币使之实现</li>
+</ol></li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org0540a37" class="outline-4">
+<h4 id="org0540a37"><span class="section-number-4">2.3.3</span> 货币供给的产出效应及其扩张界限</h4>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgebf8204" class="outline-2">
+<h2 id="orgebf8204"><span class="section-number-2">3</span> 利率理论</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgff1cb19" class="outline-3">
+<h3 id="orgff1cb19"><span class="section-number-3">3.1</span> 利率及利率体系</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-orgdfd4431" class="outline-4">
+<h4 id="orgdfd4431"><span class="section-number-4">3.1.1</span> 利息的本质</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<p>
+利息是指投资人让渡资本使用权而索要的补偿，对机会成本的补偿和对风险的
+补偿。
+</p>
+
+<p>
+收益资本化，由于利息已转化为收益的一般形态，于是任何有收益的事物，都
+可以通过收益与利率的对比倒过来算出它相当于多大的资本金额，这被称为收
+益资本化。
+</p>
+</div>
+</div>
+
+<div id="outline-container-org36789e5" class="outline-4">
+<h4 id="org36789e5"><span class="section-number-4">3.1.2</span> 利率体系</h4>
+<div class="outline-text-4" id="text-3-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="orge72ea24"></a>基准利率<br />
+<div class="outline-text-5" id="text-3-1-2-1">
+<ul class="org-ul">
+<li>指带动和影响其他利率的利率，也叫中心利率</li>
+
+<li>我国利率体系中为中央银行的再贴现率</li>
+</ul>
+</div>
+</li>
+
+<li><a id="org04de742"></a>金融市场利率<br />
+<div class="outline-text-5" id="text-3-1-2-2">
+<p>
+资金市场密切相连，利率波动会导致资金在各个市场间流动。资本市场和货币市
+场主要的区别是涉及的风险不同。资本市场上，利率与证券价格成反比。
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="org74356af"></a>长期资本市场（资本市场）<br />
+<div class="outline-text-6" id="text-3-1-2-2-1">
+<ul class="org-ul">
+<li>债卷市场</li>
+
+<li>股票市场</li>
+
+<li>长期信贷市场</li>
+</ul>
+</div>
+</li>
+
+<li><a id="org0713945"></a>短期资金市场（货币市场）<br />
+<div class="outline-text-6" id="text-3-1-2-2-2">
+<ul class="org-ul">
+<li>短期政府债卷</li>
+
+<li>商业票据</li>
+
+<li>银行短期信贷</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org400146a" class="outline-4">
+<h4 id="org400146a"><span class="section-number-4">3.1.3</span> 名义利率与实际利率</h4>
+<div class="outline-text-4" id="text-3-1-3">
+<ol class="org-ol">
+<li>名义利率是借款契约和有价证券上载明的利率，也是金融市场的市场利率。</li>
+
+<li>实际利率是作为债务人因使用资金而支付的真实成本（物价变动的影响）</li>
+
+<li>名义利率=实际利率+通货膨胀膨胀率</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgd539241" class="outline-4">
+<h4 id="orgd539241"><span class="section-number-4">3.1.4</span> 利率与收益率</h4>
+<div class="outline-text-4" id="text-3-1-4">
+<p>
+收益率用来衡量投资者的实际收益，计算公式为
+</p>
+
+<p>
+\(RET = \frac{C + P_{t+1} - P_t}{P_t} = \frac{C}{P_t} + \frac{P_{t+1} - P_t}{P_t}\)
+</p>
+
+<p>
+\(\frac{C}{P_t}\) 是当期收益率
+</p>
+
+<p>
+\(\frac{P_{t+1} - P_t}{P_t}\) 是资本利得率
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9ff39de" class="outline-3">
+<h3 id="org9ff39de"><span class="section-number-3">3.2</span> 利率理论</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-org939da07" class="outline-4">
+<h4 id="org939da07"><span class="section-number-4">3.2.1</span> 马克思利率理论</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<p>
+利息在本质上同利润一样，是剩余价值的转化形式，平均利润率是利率的最高上
+限
+</p>
+
+<ol class="org-ol">
+<li>资本使用权的让渡</li>
+
+<li>资本生产和流通过程</li>
+
+<li>货币本金和利息的回流</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orge2cebb4" class="outline-4">
+<h4 id="orge2cebb4"><span class="section-number-4">3.2.2</span> 西方利率理论</h4>
+<div class="outline-text-4" id="text-3-2-2">
+</div>
+<ol class="org-ol">
+<li><a id="org2d5338e"></a>古典利率理论<br />
+<div class="outline-text-5" id="text-3-2-2-1">
+<p>
+利率由投资需求与储蓄意愿的均衡决定 \(I = S\)
+</p>
+</div>
+</li>
+
+<li><a id="org230d770"></a>可贷资金理论<br />
+<div class="outline-text-5" id="text-3-2-2-2">
+<p>
+\(I + \Delta H = S + \Delta M\)
+</p>
+
+<p>
+\(\Delta H\) 是因投机动机而放生的休闲货币所储存金额的增加
+</p>
+
+<p>
+\(\Delta M\) 是银行新创造的货币量
+</p>
+</div>
+</li>
+
+<li><a id="orgfa0bcaa"></a>流动性偏好利率理论<br />
+<div class="outline-text-5" id="text-3-2-2-3">
+<p>
+<i>参考大纲中的介绍</i>
+</p>
+</div>
+</li>
+
+<li><a id="orgf496660"></a>IS-LM模型中利率决定<br />
+<div class="outline-text-5" id="text-3-2-2-4">
+<p>
+<i>参照宏观经济学中的介绍</i>
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgadfe959" class="outline-3">
+<h3 id="orgadfe959"><span class="section-number-3">3.3</span> 利率的作用</h3>
+</div>
+</div>
+
+<div id="outline-container-orgd363a11" class="outline-2">
+<h2 id="orgd363a11"><span class="section-number-2">4</span> 通货膨胀和通货紧缩</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org55b0155" class="outline-3">
+<h3 id="org55b0155"><span class="section-number-3">4.1</span> 通货膨胀的定义与度量</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li><p>
+定义
+</p>
+
+<p>
+商品和服务的货币价格总水平持续上涨的现象
+</p></li>
+
+<li>度量
+
+<ul class="org-ul">
+<li>居民消费物价指数（CPI）</li>
+
+<li>批发物价指数（WPI）</li>
+
+<li>生产品价格指数（PPI）</li>
+
+<li>国民生产总值或国内生产总值冲减指数（deflater）</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb8b7e4b" class="outline-3">
+<h3 id="orgb8b7e4b"><span class="section-number-3">4.2</span> 通货膨胀的社会经济效应</h3>
+<div class="outline-text-3" id="text-4-2">
+<ol class="org-ol">
+<li>强制储蓄效应</li>
+
+<li>收入分配效应</li>
+
+<li>资产结构调整效应</li>
+
+<li><p>
+就业与通货膨胀的替代理论与滞涨
+</p>
+
+<p>
+菲利普斯曲线
+</p></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org48410fd" class="outline-3">
+<h3 id="org48410fd"><span class="section-number-3">4.3</span> 通货膨胀的原因及其治理</h3>
+<div class="outline-text-3" id="text-4-3">
+</div>
+<div id="outline-container-orgf0440b5" class="outline-4">
+<h4 id="orgf0440b5"><span class="section-number-4">4.3.1</span> 需求拉动型</h4>
+<div class="outline-text-4" id="text-4-3-1">
+<ul class="org-ul">
+<li><p>
+原因
+</p>
+
+<p>
+过多的货币追求过少的商品
+</p></li>
+
+<li>对策
+
+<ul class="org-ul">
+<li>紧缩性财政政策</li>
+
+<li>紧缩性货币政策</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orga1e7bab" class="outline-4">
+<h4 id="orga1e7bab"><span class="section-number-4">4.3.2</span> 成本推动型</h4>
+<div class="outline-text-4" id="text-4-3-2">
+</div>
+<ol class="org-ol">
+<li><a id="orgd4bafe1"></a>工资推动性<br />
+<div class="outline-text-5" id="text-4-3-2-1">
+<ul class="org-ul">
+<li><p>
+原因
+</p>
+
+<p>
+存在不完全竞争的劳动力市场，例如工会，面对高工资，企业就会因为人力成
+本的加大而提高产品价格，以维持盈利水平。
+</p></li>
+
+<li>对策</li>
+
+<li>紧缩性收入政策，工资、价格控制</li>
+
+<li>收入指数化</li>
+</ul>
+</div>
+</li>
+
+<li><a id="org6da9105"></a>利润推动性<br />
+<div class="outline-text-5" id="text-4-3-2-2">
+<ul class="org-ul">
+<li><p>
+原因
+</p>
+
+<p>
+存在物品和服务销售的不完全竞争市场，例如在煤气、电力等单位，卖方操纵
+价格，以赚取垄断利润
+</p></li>
+
+<li><p>
+对策
+</p>
+
+<p>
+反垄断，制定限制垄断价格政策
+</p></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-orgd27d1a4" class="outline-4">
+<h4 id="orgd27d1a4"><span class="section-number-4">4.3.3</span> 供求混合推动说</h4>
+<div class="outline-text-4" id="text-4-3-3">
+<p>
+"拉中有推，推中有拉"
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf2986c8" class="outline-4">
+<h4 id="orgf2986c8"><span class="section-number-4">4.3.4</span> 通货膨胀目标制</h4>
+<div class="outline-text-4" id="text-4-3-4">
+<p>
+参照<a href="#org8483fe9">第七章货币政策</a>
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5d4e494" class="outline-3">
+<h3 id="org5d4e494"><span class="section-number-3">4.4</span> 通货紧缩</h3>
+<div class="outline-text-3" id="text-4-4">
+<ul class="org-ul">
+<li><p>
+定义
+</p>
+
+<p>
+商品或服务的价格总水平持续下跌的现象
+</p></li>
+
+<li><p>
+社会经济效应
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">影响方面</th>
+<th scope="col" class="org-left">影响</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">对投资</td>
+<td class="org-left">实际利率上升、预期收益下降、投资下降</td>
+</tr>
+
+<tr>
+<td class="org-left">对消费</td>
+<td class="org-left">短期有利，长期不利</td>
+</tr>
+
+<tr>
+<td class="org-left">对收入再分配</td>
+<td class="org-left">有利债权人，不利于债务人</td>
+</tr>
+
+<tr>
+<td class="org-left">对工人工资</td>
+<td class="org-left">实际工资初期不下降，长期下降</td>
+</tr>
+
+<tr>
+<td class="org-left">对经济增长</td>
+<td class="org-left">一般经济负增长</td>
+</tr>
+</tbody>
+</table></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc6a99c7" class="outline-2">
+<h2 id="orgc6a99c7"><span class="section-number-2">5</span> 金融中介体系&#xa0;&#xa0;&#xa0;<span class="tag"><span class="2020__">2020重点</span></span></h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org83e3531" class="outline-3">
+<h3 id="org83e3531"><span class="section-number-3">5.1</span> 金融中介体系的构成和国际金融体系</h3>
+<div class="outline-text-3" id="text-5-1">
+</div>
+<div id="outline-container-org41021de" class="outline-4">
+<h4 id="org41021de"><span class="section-number-4">5.1.1</span> 金融中介体系的构成</h4>
+<div class="outline-text-4" id="text-5-1-1">
+<ul class="org-ul">
+<li>众多银行与非银行金融机构并存的格局，其中银行居支配地位。</li>
+
+<li>我国经过40年的改革开发，目前已经形成了以中国人民银行为中心，国有商业
+银行为主体，多种金融机构并存，分工协作的金融中介机构体系格局。</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>银行
+
+<ul class="org-ul">
+<li>中央银行是核心</li>
+
+<li>存款货币银行，例如工农中建</li>
+
+<li>各式各样的专业银行，例如国开行、农发行</li>
+</ul></li>
+
+<li>非银机构
+
+<ul class="org-ul">
+<li>保险公司</li>
+
+<li>投资公司</li>
+
+<li>基金组织</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org5b81a44" class="outline-4">
+<h4 id="org5b81a44"><span class="section-number-4">5.1.2</span> 国际金融机构体系</h4>
+<div class="outline-text-4" id="text-5-1-2">
+<ul class="org-ul">
+<li>主要作用
+
+<ol class="org-ol">
+<li>稳定汇率</li>
+
+<li>协调银行结构</li>
+
+<li>缓解国际收支逆差和提供长期贷款</li>
+</ol></li>
+
+<li>主要组织
+
+<ul class="org-ul">
+<li>国际清算银行（Bank for International Settlements, BIS）</li>
+
+<li>国际货币基金组织（International Monetary Fund, IMF）</li>
+
+<li>世界银行（the World Bank）</li>
+
+<li>国际开发协会（International Development Association, IDA）</li>
+
+<li>国际金融公司（International Finance Corporation, IFC）</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org51a2b01" class="outline-3">
+<h3 id="org51a2b01"><span class="section-number-3">5.2</span> 存款货币银行（商业银行）</h3>
+<div class="outline-text-3" id="text-5-2">
+</div>
+<ol class="org-ol">
+<li><a id="orga2605fa"></a>作用<br />
+<div class="outline-text-5" id="text-5-2-0-1">
+<ul class="org-ul">
+<li>充当企业之间的信用中介
+
+<ol class="org-ol">
+<li>吸收存款，动员和集中社会上的闲散的货币资本</li>
+
+<li>通过贷款或者投资的方式将这些货币资本提供给经营产业的资本家使用</li>
+
+<li>是货币资本贷出者和借入者之间的中介人</li>
+</ol></li>
+
+<li><p>
+充当企业之间的支付中介
+</p>
+
+<p>
+通过给各个企业开通账户，充当企业之间货币结算与货币收支的中间人
+</p></li>
+
+<li><p>
+变社会各阶层的储蓄和收入为资本
+</p>
+
+<p>
+将原本预定用于消费的储蓄和收入，通过银行汇集起来，提供给企业家作为资本运用
+</p></li>
+
+<li><p>
+创造信用流通工具
+</p>
+
+<p>
+商业银行成为银行卷和存款货币的创造者
+</p></li>
+</ul>
+</div>
+</li>
+
+<li><a id="orga73d082"></a>业务<br />
+<ol class="org-ol">
+<li><a id="org82a2580"></a>负债业务<br />
+<div class="outline-text-6" id="text-5-2-0-2-1">
+<p>
+形成资金来源的业务
+</p>
+
+<ol class="org-ol">
+<li><p>
+自有资本
+</p>
+
+<p>
+自有资本也叫权益资本，按巴塞尔协议应该至少占总资产的8%
+</p>
+
+<ul class="org-ul">
+<li>发行的股票</li>
+
+<li>公积金</li>
+
+<li>未分配利润</li>
+</ul></li>
+
+<li>吸收的外来资金（债务资本）</li>
+</ol>
+</div>
+</li>
+
+<li><a id="org661b0b3"></a>资产业务<br />
+<div class="outline-text-6" id="text-5-2-0-2-2">
+<p>
+将通过负债业务所聚集的货币资金加以运用的业务，取得收益的主要途径
+</p>
+
+<ul class="org-ul">
+<li>贴现</li>
+
+<li>贷款</li>
+
+<li>证券投资</li>
+</ul>
+</div>
+</li>
+
+<li><a id="org0096b2d"></a>表外业务<br />
+<div class="outline-text-6" id="text-5-2-0-2-3">
+<p>
+凡未列入银行资产负载表且不影响资产负债总额的业务
+</p>
+
+<ol class="org-ol">
+<li>广义表外业务
+
+<ol class="org-ol">
+<li>传统中间业务，同行拆借</li>
+
+<li>金融创新中产生的风险业务
+
+<ol class="org-ol">
+<li>互换</li>
+
+<li>期权</li>
+
+<li>期货</li>
+
+<li>远期利率协议</li>
+
+<li>票据发行便利</li>
+
+<li>贷款承诺</li>
+
+<li>备用信用证</li>
+</ol></li>
+</ol></li>
+
+<li><p>
+通常表外业务
+</p>
+
+<p>
+狭义表外业务，指代广义表外业务中金融创新中产生的风险业务
+</p></li>
+</ol>
+</div>
+</li>
+</ol>
+</li>
+
+<li><a id="orgf8b36d3"></a>商业银行的两种类型<br />
+<div class="outline-text-5" id="text-5-2-0-3">
+<ol class="org-ol">
+<li><p>
+职能分工型
+</p>
+
+<p>
+法律限定金融机构必须分门类各有专营业务；有专营信托、长期金融、短期
+金融，有价证券买卖等的专门结构。这种情况下商业银行具有显著特征：
+</p>
+
+<ul class="org-ul">
+<li>只有商业银行能够吸收使用支票的活期存款；</li>
+
+<li>商业银行一般以发行1年期以下的短期工商信贷为主要业务。</li>
+</ul></li>
+
+<li><p>
+全能型
+</p>
+
+<p>
+全能型商业银行可以直接经营包括各种期限和种类的存款与贷款的一切银行
+业务，同时还可以经营全面的证劵业务等，它被称为混业经营、混业监管模式
+</p></li>
+</ol>
+</div>
+</li>
+
+<li><a id="orgc4b4203"></a>金融创新<br />
+<div class="outline-text-5" id="text-5-2-0-4">
+<ol class="org-ol">
+<li><p>
+规避风险的创新
+</p>
+
+<p>
+开发可变利率的金融产品
+</p></li>
+
+<li>技术进步的创新
+
+<ol class="org-ol">
+<li>银行结算、清算系统和支付制度的创新</li>
+
+<li>为现代金融工程提供了技术保障</li>
+
+<li>突破时间和空间的界限</li>
+</ol></li>
+
+<li><p>
+规避行政管理的创新
+</p>
+
+<p>
+利用法规漏洞，推出许多新的业务形式
+</p></li>
+</ol>
+</div>
+</li>
+
+<li><a id="org22d25a7"></a>资产证劵化&#xa0;&#xa0;&#xa0;<span class="tag"><span class="2020__">2020重点</span></span><br />
+<ol class="org-ol">
+<li><a id="org776fdd5"></a>定义与本质<br />
+<div class="outline-text-6" id="text-5-2-0-5-1">
+<p>
+将已经存在的信贷资产集中起来并重新分割为证券进而转卖给市场上的投资者，
+从而使此项资产在原持有者的资产负载标上消失。本质含义是：将贷款或者应收
+账款转换为可流通的金融工具过程。
+</p>
+
+<p>
+例子：
+</p>
+
+<p>
+银行贷款给个人买房个人把房本给银行，房本是银行的资产
+</p>
+
+<p>
+银行把房本打包拿到资本市场出售，房本不再是银行资产
+</p>
+
+<p>
+<i>这个例子目前在国内是不行了，美国08年次贷危机有体现</i>
+</p>
+</div>
+</li>
+
+<li><a id="org702863f"></a>意义和作用<br />
+<div class="outline-text-6" id="text-5-2-0-5-2">
+<ol class="org-ol">
+<li>降低成本</li>
+
+<li>避免信用过度集中</li>
+
+<li>实现规模经济</li>
+
+<li>增加流动性</li>
+
+<li>提高资本比率</li>
+</ol>
+</div>
+</li>
+</ol>
+</li>
+
+<li><a id="org4f3c17d"></a>存款保险制度<br />
+<ol class="org-ol">
+<li><a id="org767cb6f"></a>定义<br />
+<div class="outline-text-6" id="text-5-2-0-6-1">
+<p>
+是一种对存款人利益提供保护、稳定金融体系的制度安排。在这一制度安排下，
+吸收存款的金融机构根据其吸收存款的数额，按规定的保费率向存款保险机构投
+保，当存款机构破产而无法满足存款人的提款要求时，由存款保险机构承担支付
+法定保险金的责任。
+</p>
+</div>
+</li>
+
+<li><a id="org7b08ece"></a>功能<br />
+<div class="outline-text-6" id="text-5-2-0-6-2">
+<ol class="org-ol">
+<li>维护存款人利益</li>
+
+<li>维护金融体系的稳定</li>
+</ol>
+</div>
+</li>
+
+<li><a id="org4e1cfd6"></a>问题<br />
+<div class="outline-text-6" id="text-5-2-0-6-3">
+<ol class="org-ol">
+<li>降低了存款人关心银行经营业绩和对银行业务经营活动进行必要监督的积极性</li>
+
+<li>风险转移，银行不担心存款人挤兑，倾向于从事利润率较高但是风险较大的
+银行业务</li>
+</ol>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org2d8f5d7" class="outline-3">
+<h3 id="org2d8f5d7"><span class="section-number-3">5.3</span> 中央银行</h3>
+<div class="outline-text-3" id="text-5-3">
+</div>
+<ol class="org-ol">
+<li><a id="org7baa45f"></a>产生的必要性<br />
+<div class="outline-text-5" id="text-5-3-0-1">
+<ol class="org-ol">
+<li>统一发行银行卷的必要
+
+<ol class="org-ol">
+<li>小银行实力薄弱，银行卷容易不能兑现</li>
+
+<li>小银行比较分散，信用活动存在地区限制</li>
+</ol></li>
+
+<li>客观需要建立一个全国统一而有权威的、公正的清算机构</li>
+
+<li>客观上需要一个强大的金融机构为商业银行提供货币资金</li>
+
+<li>客观上需要一个代表政府意志的机构专司金融业管理、监督、协调的工作</li>
+</ol>
+</div>
+</li>
+
+<li><a id="org0eb2abb"></a>职能<br />
+<div class="outline-text-5" id="text-5-3-0-2">
+<ol class="org-ol">
+<li><p>
+发行的银行
+</p>
+
+<p>
+垄断银行卷的发行权，全国唯一的现钞发行机构
+</p></li>
+
+<li>银行的银行
+
+<ol class="org-ol">
+<li>集中存款准备</li>
+
+<li>最终贷款人</li>
+
+<li>组织全国清算</li>
+</ol></li>
+
+<li>国家的银行
+
+<ol class="org-ol">
+<li>代表国家贯彻执行财务金融政策</li>
+
+<li>代理国库收支以及为国家提供各种金融服务</li>
+</ol></li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgb6b78ba" class="outline-2">
+<h2 id="orgb6b78ba"><span class="section-number-2">6</span> 金融市场&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_____">未考过大题</span></span></h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-orga2c1f62" class="outline-3">
+<h3 id="orga2c1f62"><span class="section-number-3">6.1</span> 金融市场体系及其功能</h3>
+<div class="outline-text-3" id="text-6-1">
+</div>
+<div id="outline-container-org96350cb" class="outline-4">
+<h4 id="org96350cb"><span class="section-number-4">6.1.1</span> 金融市场体系</h4>
+<div class="outline-text-4" id="text-6-1-1">
+<p>
+金融市场是指所有金融交易关系的总和，交易各方可以借助这个市场实现资金融
+通、交换风险，从而提高整个社会资源配置的效率。主要包括货币市场和资本市
+场。
+</p>
+
+<p>
+按照金融工具交易期限划分为：
+</p>
+
+<ul class="org-ul">
+<li><p>
+货币市场
+</p>
+
+<p>
+是指一年和一年以下短期资金融通的市场，包括同行拆解市场、银行间债卷市
+场、大额定期存单市场、商业票据市场等子市场。货币市场是金融机构调节流
+动性的重要场所，是中央银行货币政策操作的基础。
+</p></li>
+
+<li><p>
+资本市场
+</p>
+
+<p>
+一般指交易期限在一年以上的市场，主要包括股票市场和债卷市场，长期借债
+市场，满足工商企业的中长期投资需求和政府财政赤字的需要。
+</p></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgac46883" class="outline-4">
+<h4 id="orgac46883"><span class="section-number-4">6.1.2</span> 金融市场功能</h4>
+<div class="outline-text-4" id="text-6-1-2">
+<ol class="org-ol">
+<li><p>
+资金融通
+</p>
+
+<p>
+帮助实现资金在盈余部门和短缺部门之间的调剂。在良好的市场环境和价格
+信号引导下，有利于实现资源的最佳配置。
+</p></li>
+
+<li><p>
+风险分散和转移
+</p>
+
+<p>
+通过金融资产的交易，对于某个局部来说，风险由于分散、转移到了别处而
+在此处消失；至于对于总体来说，并非消除了风险。
+</p></li>
+
+<li><p>
+确定价格
+</p>
+
+<p>
+金融资产均有票面金额。在金融资产中可以直接作为货币的金融资产，一般
+来说，其内在价值就是票面标注的金额。但相当多的金融资产，如股票，其
+票面标注的金额并不能代表其内在价值。每一股份的内在价值是多少，只有
+通过金融市场交易中买卖双方相互作用的过程才能"发现"。
+</p></li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4daa260" class="outline-3">
+<h3 id="org4daa260"><span class="section-number-3">6.2</span> 金融工具的发展</h3>
+<div class="outline-text-3" id="text-6-2">
+</div>
+<div id="outline-container-org62bce9d" class="outline-4">
+<h4 id="org62bce9d"><span class="section-number-4">6.2.1</span> 金融工具类型</h4>
+<div class="outline-text-4" id="text-6-2-1">
+<p>
+金融工具又称金融资产，具有以下三个特征
+</p>
+
+<ol class="org-ol">
+<li>是一种能够证明金融交易的金额、期限以及价格的书面文件</li>
+
+<li>对于债权、债务双方的权利和义务具有法律上的约束意义</li>
+
+<li>一般具有流动性、风险性和收益性</li>
+</ol>
+</div>
+
+<ol class="org-ol">
+<li><a id="orgbf64a14"></a>类型<br />
+<ol class="org-ol">
+<li><a id="org0f2ee05"></a>原生金融工具<br />
+<div class="outline-text-6" id="text-6-2-1-1-1">
+<ul class="org-ul">
+<li>货币市场
+
+<ol class="org-ol">
+<li>短期国债</li>
+
+<li>可转让定期存单</li>
+
+<li>商业票据</li>
+
+<li>回购协议</li>
+
+<li>银行承兑汇票</li>
+</ol></li>
+
+<li>资本市场
+
+<ol class="org-ol">
+<li>股票</li>
+
+<li>债卷</li>
+
+<li>抵押贷款</li>
+</ol></li>
+</ul>
+</div>
+</li>
+
+<li><a id="org911a2ec"></a>衍生金融工具<br />
+<div class="outline-text-6" id="text-6-2-1-1-2">
+<ol class="org-ol">
+<li><p>
+远期（forward）
+</p>
+
+<p>
+确定未来某一时期，按照确定的价格买卖一定数量的某种资产的协议
+</p></li>
+
+<li><p>
+期货（future）
+</p>
+
+<p>
+在远期合约的基础上发展起来的一种标准化的买卖合约，由交易所保证合约
+的履行
+</p></li>
+
+<li><p>
+期权（option）
+</p>
+
+<p>
+赋予其持有者一种权利，使其可以（但不必须）在未来约定的时期内以一定
+的价格向期权合约的出售者买入（看涨期权），卖出（看跌期权）一定数量
+的资产
+</p></li>
+
+<li>互换（swap）
+
+<ol class="org-ol">
+<li><p>
+货币互换
+</p>
+
+<p>
+交易双发按照既定的汇率交换两种货币，并约定在将来一定时期内按照该
+汇率相互购回原来的货币
+</p></li>
+
+<li><p>
+汇率互换
+</p>
+
+<p>
+交易双方将自己拥有的债券（债务）的利息收入（支出）相交换
+</p></li>
+</ol></li>
+</ol>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org1e212f1" class="outline-4">
+<h4 id="org1e212f1"><span class="section-number-4">6.2.2</span> 金融工程</h4>
+<div class="outline-text-4" id="text-6-2-2">
+<p>
+指自20世纪80年代以来，金融部门将现代金融理论与工程技术方法相结合，针对
+投资者不同的风险偏好，创造性地设计、开发和应用新的金融产品。
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="org7bdc534"></a>方法背景&#xa0;&#xa0;&#xa0;<span class="tag"><span class="____">大概了解</span></span><br />
+<div class="outline-text-5" id="text-6-2-2-1">
+<ul class="org-ul">
+<li>现代金融理论</li>
+
+<li>MM定理</li>
+
+<li><p>
+无套利均衡
+</p>
+
+<p>
+当某种资产的价格违背了"同值同价"的"一价定律"时，市场出于不均衡状态，
+出现了套利机会，市场参与者的套利动机促使市场达到均衡；在市场均衡状态
+下，不存在套利机会。
+</p></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org134c4bb" class="outline-3">
+<h3 id="org134c4bb"><span class="section-number-3">6.3</span> 风险投资</h3>
+<div class="outline-text-3" id="text-6-3">
+<p>
+风险投资基金（venture fund）是一种以私下募集资金的方式组建的基金。它所
+运作的资本称风险资本，就是说，在风险投资中，是投资人主动冒风险投入资本，
+以期取得比谨慎投资更高的回报。通常只对处于初创期、增长期、成熟期的新项
+目、新企业投资，特别是以高科技企业为投资对象。
+</p>
+</div>
+
+<div id="outline-container-orgbcc46bc" class="outline-4">
+<h4 id="orgbcc46bc"><span class="section-number-4">6.3.1</span> 投资过程</h4>
+<div class="outline-text-4" id="text-6-3-1">
+<ol class="org-ol">
+<li>交易发起（deal origination）</li>
+
+<li>筛选投资机会（screening）</li>
+
+<li>评价（evaluation）</li>
+
+<li>交易设计（deal structure）</li>
+
+<li>投资后管理（post investment activities）</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc1b57c9" class="outline-3">
+<h3 id="orgc1b57c9"><span class="section-number-3">6.4</span> 金融市场理论的发展</h3>
+<div class="outline-text-3" id="text-6-4">
+</div>
+<div id="outline-container-org4e1aff6" class="outline-4">
+<h4 id="org4e1aff6"><span class="section-number-4">6.4.1</span> 风险与收益</h4>
+<div class="outline-text-4" id="text-6-4-1">
+<ul class="org-ul">
+<li>风险与收益是对称的
+
+<ul class="org-ul">
+<li>高风险则高收益</li>
+
+<li>低风险则低收益</li>
+</ul></li>
+
+<li>所有的收益都是要经过风险调整的</li>
+
+<li>期望收益率 \(\bar r = \sum_{i=1}^n P_i \cdot r_i\)</li>
+
+<li>风险是指未来收益的不确定性，可以用对预期收益的偏离（标准差）来反映
+\(\sigma = \bigg[\sum_{i=1}^n (r_i - \bar r)^2 \cdot P_i \bigg]^{\frac{1}{2}}\)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org651b07f" class="outline-4">
+<h4 id="org651b07f"><span class="section-number-4">6.4.2</span> 有效市场假说</h4>
+<div class="outline-text-4" id="text-6-4-2">
+<p>
+有效性指的是资本市场的有效性是指市场根据新信息迅速调整证劵价格的能力
+</p>
+
+<p>
+按照有效性将市场资本市场分为三类
+</p>
+
+<ol class="org-ol">
+<li><p>
+弱有效市场
+</p>
+
+<p>
+证劵价格只反映过去的价格和交易信息
+</p></li>
+
+<li><p>
+中度有效市场
+</p>
+
+<p>
+证劵价格反映包括历史的价格和交易信息在内的所有公开发表的信息
+</p></li>
+
+<li><p>
+强有效市场
+</p>
+
+<p>
+证劵价格反映了所有公开和不公开的信息
+</p></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org76683c8" class="outline-4">
+<h4 id="org76683c8"><span class="section-number-4">6.4.3</span> 投资组合理论&#xa0;&#xa0;&#xa0;<span class="tag"><span class="____">大概了解</span></span></h4>
+<div class="outline-text-4" id="text-6-4-3">
+<p>
+<i>参考大纲内容</i>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge7af4e2" class="outline-4">
+<h4 id="orge7af4e2"><span class="section-number-4">6.4.4</span> 资本资产定价模型&#xa0;&#xa0;&#xa0;<span class="tag"><span class="____">大概了解</span></span></h4>
+<div class="outline-text-4" id="text-6-4-4">
+<p>
+<i>参考大纲内容</i>
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2487abe" class="outline-2">
+<h2 id="org2487abe"><span class="section-number-2">7</span> 金融监管体系&#xa0;&#xa0;&#xa0;<span class="tag"><span class="2020___">2020小概率</span></span></h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-org8ee405e" class="outline-3">
+<h3 id="org8ee405e"><span class="section-number-3">7.1</span> 金融监管的原则和理论</h3>
+<div class="outline-text-3" id="text-7-1">
+<p>
+金融企业是信用组织，其经营特点是以货币为主题商品，以信用为营运
+基础，实行负债经营，还保管着黄金等社会财富，承担很大的风险。
+</p>
+
+<p>
+金融风险指人们在从事金融活动中遭受损失的不确定性。
+</p>
+</div>
+
+<div id="outline-container-org85c6b21" class="outline-4">
+<h4 id="org85c6b21"><span class="section-number-4">7.1.1</span> 金融风险类型</h4>
+<div class="outline-text-4" id="text-7-1-1">
+<ol class="org-ol">
+<li>信用风险</li>
+
+<li>利率风险</li>
+
+<li>汇率风险</li>
+
+<li>国家风险</li>
+
+<li><p>
+操作风险
+</p>
+
+<p>
+业务人员违章违规而造成的资金损失
+</p></li>
+
+<li>市场风险</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgd7c16e8" class="outline-4">
+<h4 id="orgd7c16e8"><span class="section-number-4">7.1.2</span> 金融监管原则&#xa0;&#xa0;&#xa0;<span class="tag"><span class="____">重点理解</span></span></h4>
+<div class="outline-text-4" id="text-7-1-2">
+<ol class="org-ol">
+<li>依法管理原则</li>
+
+<li>合理、适度竞争原则</li>
+
+<li>监管重心应该放在保护、维持、培育、创造一个公平、高效、适度和有序的
+竞争环境上</li>
+
+<li>自我约束和外部强制相结合的原则</li>
+
+<li>安全稳定与经济效率相结合的原则</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgdd6beb1" class="outline-4">
+<h4 id="orgdd6beb1"><span class="section-number-4">7.1.3</span> 金融监管理论&#xa0;&#xa0;&#xa0;<span class="tag"><span class="19__">19考过</span></span></h4>
+<div class="outline-text-4" id="text-7-1-3">
+<ol class="org-ol">
+<li>社会利益理论</li>
+
+<li>金融风险论</li>
+
+<li>投资者利益保护论</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6dcfd25" class="outline-3">
+<h3 id="org6dcfd25"><span class="section-number-3">7.2</span> 金融监管的成本</h3>
+<div class="outline-text-3" id="text-7-2">
+</div>
+<div id="outline-container-org22b4976" class="outline-4">
+<h4 id="org22b4976"><span class="section-number-4">7.2.1</span> 执法成本</h4>
+<div class="outline-text-4" id="text-7-2-1">
+<p>
+表现为监管机构的行政预算，也就是显性成本或直接成本
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7fc8d44" class="outline-4">
+<h4 id="org7fc8d44"><span class="section-number-4">7.2.2</span> 守法成本</h4>
+<div class="outline-text-4" id="text-7-2-2">
+<p>
+指金融机构为了满足监管要求而额外承担的成本损失，主要表现为金融机构在准
+守监管规定时造成的效率损失，属隐性成本
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8720520" class="outline-4">
+<h4 id="org8720520"><span class="section-number-4">7.2.3</span> 道德风险</h4>
+<div class="outline-text-4" id="text-7-2-3">
+<ul class="org-ul">
+<li>投资者的道德风险，缺乏监督意识</li>
+
+<li>金融机构的道德风险，通过高利率吸收存款</li>
+
+<li>金融机构通过选择高收益高风险的资产方式获利</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd0ff98c" class="outline-3">
+<h3 id="orgd0ff98c"><span class="section-number-3">7.3</span> 我国金融监管组织体系</h3>
+<div class="outline-text-3" id="text-7-3">
+<p>
+<b>大纲中已过时</b>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7802c55" class="outline-3">
+<h3 id="org7802c55"><span class="section-number-3">7.4</span> 金融监管的一般内容&#xa0;&#xa0;&#xa0;<span class="tag"><span class="____">重点理解</span></span></h3>
+<div class="outline-text-3" id="text-7-4">
+<ol class="org-ol">
+<li>对新设金融机构进行审批，即"市场准入"</li>
+
+<li>审定金融机构的业务范围</li>
+
+<li>对金融机构经常实施市场检查</li>
+
+<li>重视对有问题金融机构的挽救，尽量避免单个金融机构经营不善引发大的社
+会动荡</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org679f1d0" class="outline-3">
+<h3 id="org679f1d0"><span class="section-number-3">7.5</span> 国际金融监管协调</h3>
+<div class="outline-text-3" id="text-7-5">
+</div>
+<div id="outline-container-org39a5b46" class="outline-4">
+<h4 id="org39a5b46"><span class="section-number-4">7.5.1</span> 巴塞尔协议</h4>
+<div class="outline-text-4" id="text-7-5-1">
+</div>
+<ol class="org-ol">
+<li><a id="org1455ee9"></a>目的<br />
+<div class="outline-text-5" id="text-7-5-1-1">
+<ol class="org-ol">
+<li>通过制定银行的资本与资产间的比例，定出计算方法和标准，促进国际银行
+体系健康发展</li>
+
+<li>制定统一的标准，消除国际金融市场上各国银行之间的不平等竞争</li>
+</ol>
+</div>
+</li>
+
+<li><a id="org008b0a5"></a>主要内容<br />
+<ol class="org-ol">
+<li><a id="org53303a3"></a>关于资本的组成<br />
+<div class="outline-text-6" id="text-7-5-1-2-1">
+<ol class="org-ol">
+<li>核心资本，至少占全部资本的50%
+
+<ul class="org-ul">
+<li>股本</li>
+
+<li>公开准备金</li>
+</ul></li>
+
+<li>附属资本
+
+<ul class="org-ul">
+<li>未公开准备金</li>
+
+<li>资产重估准备金</li>
+
+<li>普通准备金</li>
+
+<li>呆帐准备金</li>
+</ul></li>
+</ol>
+</div>
+</li>
+
+<li><a id="org2c5ccbc"></a>关于风险加权的计算<br /></li>
+
+<li><a id="org42b0736"></a>关于标准比率的目标<br />
+<div class="outline-text-6" id="text-7-5-1-2-3">
+<ul class="org-ul">
+<li>银行的资本对风险加权化资产的标准比率为8%</li>
+
+<li>核心资本至少为%4</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org708e8a3" class="outline-4">
+<h4 id="org708e8a3"><span class="section-number-4">7.5.2</span> 新资本协议（新巴塞尔协议）</h4>
+<div class="outline-text-4" id="text-7-5-2">
+</div>
+<ol class="org-ol">
+<li><a id="org138e602"></a>背景<br />
+<div class="outline-text-5" id="text-7-5-2-1">
+<ol class="org-ol">
+<li>巴塞尔协议中风险权重的确定方法遇到了新的挑战</li>
+
+<li>危机的警示，亚洲金融危机</li>
+
+<li>技术可行性，现代风险量化模型的出现</li>
+</ol>
+</div>
+</li>
+
+<li><a id="orgd79bbe8"></a>三大支柱<br />
+<ol class="org-ol">
+<li><a id="orgad3c9d8"></a>最低资本要求<br />
+<div class="outline-text-6" id="text-7-5-2-2-1">
+<ol class="org-ol">
+<li>受规章限制的资本的定义</li>
+
+<li>风险加权资产，考虑信用风险基础上进一步考虑市场风险和操作风险</li>
+
+<li>风险加权资产资产的最小比率，8%没变</li>
+</ol>
+</div>
+</li>
+
+<li><a id="org2943767"></a>监管当局的监管<br />
+<div class="outline-text-6" id="text-7-5-2-2-2">
+<p>
+确保各银行建立起合理有效的内部评估程序。监管当局要对银行的风险管理和化
+解状况、不同风险间相互关系的处理情况、所处市场性质、收益的有效性和可靠
+性等因素进行监督。
+</p>
+</div>
+</li>
+
+<li><a id="orgc671aff"></a>市场纪律<br />
+<div class="outline-text-6" id="text-7-5-2-2-3">
+<p>
+核心是信息披露，建立健全的银行业信息披露制度，推出标准统一的信息披露框
+架。
+</p>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org13f7bb1" class="outline-2">
+<h2 id="org13f7bb1"><span class="section-number-2">8</span> 货币政策&#xa0;&#xa0;&#xa0;<span class="tag"><span class="____">重点理解</span></span></h2>
+<div class="outline-text-2" id="text-8">
+<p>
+货币政策是货币当局为了实现既定的经济目标，运用各种工具调节货币供应和利
+率，进而影响宏观经济运行状态的各类方针和措施的总和。
+</p>
+</div>
+
+<div id="outline-container-org69f3112" class="outline-3">
+<h3 id="org69f3112"><span class="section-number-3">8.1</span> 货币政策目标</h3>
+<div class="outline-text-3" id="text-8-1">
+</div>
+<div id="outline-container-org2c5cda3" class="outline-4">
+<h4 id="org2c5cda3"><span class="section-number-4">8.1.1</span> 政策目标</h4>
+<div class="outline-text-4" id="text-8-1-1">
+<ul class="org-ul">
+<li>充分就业</li>
+
+<li>经济增长</li>
+
+<li>稳定物价</li>
+
+<li>国际收支平衡</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7aa5c73" class="outline-4">
+<h4 id="org7aa5c73"><span class="section-number-4">8.1.2</span> 目标之间的统一与冲突</h4>
+<div class="outline-text-4" id="text-8-1-2">
+<ul class="org-ul">
+<li>稳定物价与充分就业矛盾</li>
+
+<li>稳定物价与促进经济增长之间的矛盾</li>
+
+<li>稳定物价与平衡国际收支之间的矛盾</li>
+
+<li>促进经济增长和平衡国际收支之间的矛盾</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org308afe6" class="outline-3">
+<h3 id="org308afe6"><span class="section-number-3">8.2</span> 货币政策目标的选择</h3>
+<div class="outline-text-3" id="text-8-2">
+</div>
+<div id="outline-container-org7e5e78d" class="outline-4">
+<h4 id="org7e5e78d"><span class="section-number-4">8.2.1</span> 两种选择</h4>
+<div class="outline-text-4" id="text-8-2-1">
+<ol class="org-ol">
+<li>侧重于统筹兼顾，力求协调</li>
+
+<li>侧重于权衡和选择，根据经济情况突出重点</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgca6afb2" class="outline-4">
+<h4 id="orgca6afb2"><span class="section-number-4">8.2.2</span> 中国的货币政策目标及其争论</h4>
+<div class="outline-text-4" id="text-8-2-2">
+<ol class="org-ol">
+<li>单一目标论，物价稳定或者经济增长</li>
+
+<li>双重目标论，物件稳定和经济增长</li>
+
+<li>多重目标论，四大目标</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org129acb6" class="outline-4">
+<h4 id="org129acb6"><span class="section-number-4">8.2.3</span> <a id="org8483fe9"></a>通货膨胀目标制</h4>
+<div class="outline-text-4" id="text-8-2-3">
+<ol class="org-ol">
+<li>提前公布通货膨胀预期期间</li>
+
+<li>定期公布实际通货膨胀率</li>
+
+<li>开放、透明沟通与监督
+
+<ul class="org-ul">
+<li>增强公众对政策的信心</li>
+
+<li>利于公众评估货币政策的实绩</li>
+</ul></li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga0e2fff" class="outline-3">
+<h3 id="orga0e2fff"><span class="section-number-3">8.3</span> 货币政策规则</h3>
+<div class="outline-text-3" id="text-8-3">
+</div>
+<div id="outline-container-org56153bf" class="outline-4">
+<h4 id="org56153bf"><span class="section-number-4">8.3.1</span> 货币政策的内涵</h4>
+<div class="outline-text-4" id="text-8-3-1">
+<p>
+货币政策规则是相对于货币政策操作中的相机抉择而言的，指的是规定基础货币
+或者利率等货币政策工具如何根据经济行为的变化而进行调整的一般要求。规则
+型政策的 <b>核心是在方法上遵循计划</b> ，不是随机地或者偶然地采取行动， <b>具
+有连续性和系统性，系统性也是货币政策规则的中心内容。</b>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd08d547" class="outline-4">
+<h4 id="orgd08d547"><span class="section-number-4">8.3.2</span> 需要货币政策的原因</h4>
+<div class="outline-text-4" id="text-8-3-2">
+<p>
+随意性会导致政策在时间上前后不能一贯以至相互矛盾，进而影响货币政策的效
+果
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge57ffff" class="outline-4">
+<h4 id="orge57ffff"><span class="section-number-4">8.3.3</span> 货币政策规则的设定</h4>
+<div class="outline-text-4" id="text-8-3-3">
+<p>
+货币政策规则是一个表明工具设定、目标变量以及路径选择的公式
+</p>
+
+<p>
+考虑因素：
+</p>
+
+<ol class="org-ol">
+<li>公众对中央银行未来行动的预期</li>
+
+<li>货币政策如何改变市场利率</li>
+
+<li>市场预期和投机的作用</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org8f467d3" class="outline-4">
+<h4 id="org8f467d3"><span class="section-number-4">8.3.4</span> 货币政策的各种规则</h4>
+<div class="outline-text-4" id="text-8-3-4">
+<ol class="org-ol">
+<li>货币数量规则，弗里德曼货币需求函数</li>
+
+<li><p>
+利率规则（泰勒规则）
+</p>
+
+<p>
+是根据产出和通货膨胀的相对变化而调整利率的操作方法。这一规则体现了
+中央银行的短期利率工具按照经济状态进行调整的方法。
+</p>
+
+<p>
+\(i = \pi + g \cdot y + h (\pi - \pi^*) + i^f\)
+</p></li>
+
+<li>名义收入规则</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org263a210" class="outline-3">
+<h3 id="org263a210"><span class="section-number-3">8.4</span> 货币政策工具</h3>
+<div class="outline-text-3" id="text-8-4">
+</div>
+<div id="outline-container-orge782737" class="outline-4">
+<h4 id="orge782737"><span class="section-number-4">8.4.1</span> 一般性政策工具</h4>
+<div class="outline-text-4" id="text-8-4-1">
+<ol class="org-ol">
+<li>再贴现率</li>
+
+<li>法定准备率</li>
+
+<li>公开市场业务</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgb73f066" class="outline-4">
+<h4 id="orgb73f066"><span class="section-number-4">8.4.2</span> 可选择性货币政策工具</h4>
+<div class="outline-text-4" id="text-8-4-2">
+<ol class="org-ol">
+<li>证劵市场信用控制</li>
+
+<li>消费信用控制</li>
+
+<li>不动产信贷控制</li>
+
+<li>预缴进口保证金制度</li>
+
+<li>优惠利率</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5de54bd" class="outline-3">
+<h3 id="org5de54bd"><span class="section-number-3">8.5</span> 货币政策传导机制理论，货币政策如何影响经济增长&#xa0;&#xa0;&#xa0;<span class="tag"><span class="____">重点理解</span></span></h3>
+<div class="outline-text-3" id="text-8-5">
+</div>
+<div id="outline-container-org363e5d7" class="outline-4">
+<h4 id="org363e5d7"><span class="section-number-4">8.5.1</span> 凯恩斯学派的货币政策传导机制</h4>
+<div class="outline-text-4" id="text-8-5-1">
+<p>
+主要环节是通过利率传导
+</p>
+
+<p>
+\(M \to r \to I \to E/AD \to Y\)
+</p>
+</div>
+</div>
+
+<div id="outline-container-org641d31e" class="outline-4">
+<h4 id="org641d31e"><span class="section-number-4">8.5.2</span> 货币学派的货币政策传导机制理论</h4>
+<div class="outline-text-4" id="text-8-5-2">
+<p>
+认为在货币传导机制中不起作用，强调货币供应量的直接效果
+</p>
+
+<p>
+\(M \to E \to Y\)
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfa9e7b8" class="outline-4">
+<h4 id="orgfa9e7b8"><span class="section-number-4">8.5.3</span> 货币传导机制的信用渠道</h4>
+<div class="outline-text-4" id="text-8-5-3">
+<ul class="org-ul">
+<li><p>
+银行贷款渠道
+</p>
+
+<p>
+\(M^\downarrow \to D^\downarrow \to L^\downarrow \to I^\downarrow \to
+  Y^\downarrow\)
+</p></li>
+
+<li><p>
+资产负债表渠道
+</p>
+
+<p>
+\(M^\downarrow \to r^\uparrow \to 现金流^\downarrow \to 道德风险
+  ^\uparrow \to L^\downarrow \to I^\downarrow \to Y^\downarrow\)
+</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6ee0946" class="outline-3">
+<h3 id="org6ee0946"><span class="section-number-3">8.6</span> 货币政策中介指标的选择</h3>
+<div class="outline-text-3" id="text-8-6">
+</div>
+<div id="outline-container-org0f10b75" class="outline-4">
+<h4 id="org0f10b75"><span class="section-number-4">8.6.1</span> 中介目标</h4>
+<div class="outline-text-4" id="text-8-6-1">
+<ul class="org-ul">
+<li>利率</li>
+
+<li>货币供给量</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc12a931" class="outline-4">
+<h4 id="orgc12a931"><span class="section-number-4">8.6.2</span> 中介指标应该具备的条件</h4>
+<div class="outline-text-4" id="text-8-6-2">
+<ol class="org-ol">
+<li>必须是货币当局可以控制的</li>
+
+<li>与最后目标之间必须存在稳定的关系</li>
+
+<li>可测性</li>
+
+<li>受外来因素或非政策因素干扰程度低</li>
+
+<li>与经济体制、金融体制又较好的适应性</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orge7f10dd" class="outline-4">
+<h4 id="orge7f10dd"><span class="section-number-4">8.6.3</span> 短期中介指标</h4>
+<div class="outline-text-4" id="text-8-6-3">
+<p>
+主要是影响货币供给M的因素
+</p>
+
+<ul class="org-ul">
+<li>超额准备金</li>
+
+<li>基础货币</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf75c5ee" class="outline-3">
+<h3 id="orgf75c5ee"><span class="section-number-3">8.7</span> 货币政策与财政政策的配合</h3>
+<div class="outline-text-3" id="text-8-7">
+</div>
+<div id="outline-container-org3efb723" class="outline-4">
+<h4 id="org3efb723"><span class="section-number-4">8.7.1</span> 配合基础</h4>
+<div class="outline-text-4" id="text-8-7-1">
+<ul class="org-ul">
+<li>财政政策和货币政策是政府宏观调控的两大政策，都是需求管理的政策</li>
+
+<li>国家关于经济的宏观调控，其焦点在于推动市场的总供给与总需求恢复均衡状
+态，以实现成长、就业、稳定和国际收支平衡等目标。就短期均衡来说，关键
+是调节短期内易于调节的总需求，是指与短期内比较难以调节的总供给达到均
+衡状态。这就是需求管理政策的含义。</li>
+
+<li>市场需求的载体是货币，所以调节市场需求也就是调节货币供给。</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org8dd887b" class="outline-4">
+<h4 id="org8dd887b"><span class="section-number-4">8.7.2</span> 配合模式</h4>
+<div class="outline-text-4" id="text-8-7-2">
+<ul class="org-ul">
+<li>经济萧条时，多用财政政策</li>
+
+<li>经济过热时，多采用货币政策</li>
+
+<li>相互搭配，减少副作用</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3bae2e0" class="outline-3">
+<h3 id="org3bae2e0"><span class="section-number-3">8.8</span> 货币政策效应（缺点）</h3>
+<div class="outline-text-3" id="text-8-8">
+</div>
+<div id="outline-container-org92753cb" class="outline-4">
+<h4 id="org92753cb"><span class="section-number-4">8.8.1</span> 货币政策时滞</h4>
+<div class="outline-text-4" id="text-8-8-1">
+<ul class="org-ul">
+<li><p>
+时滞含义
+</p>
+
+<p>
+任何政策从制定到获得主要的或全部的效果，必须经过一段时间，这段时间叫
+做"时滞"
+</p></li>
+
+<li><p>
+内部时滞
+</p>
+
+<p>
+政策制定到货币当局采取行动的这段时间。长短取决与货币当局对经济形势的
+预见能力、制定对策的效率和行动的决心等。
+</p></li>
+
+<li><p>
+外部时滞
+</p>
+
+<p>
+货币当局采取行动开始指导对政策目标产生影响为止的这段时间。长短由客观
+的经济和金融条件决定。
+</p></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org5acc3dd" class="outline-4">
+<h4 id="org5acc3dd"><span class="section-number-4">8.8.2</span> 微观主体预期的对消作用</h4>
+<div class="outline-text-4" id="text-8-8-2">
+<p>
+当一项货币政策提出时，微观经济行为主体会立即根据可能获得的各种信息预测
+政策的后果，从而很快地作出对策，而且极少又时滞，这就使得货币当局推出的
+政策，面对微观主体广泛采取的对消其对策，可能归于无效，货币政策效果可能
+无效或者大打折扣。
+</p>
+</div>
+</div>
+
+<div id="outline-container-org249580a" class="outline-4">
+<h4 id="org249580a"><span class="section-number-4">8.8.3</span> 透明度和取信于公众问题</h4>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc06d02b" class="outline-2">
+<h2 id="orgc06d02b"><span class="section-number-2">9</span> 汇率理论</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+本章内容和国际经济学的第六章重复，国际经济学中讲的更好，两者结合一起复
+习
+</p>
+</div>
+
+<div id="outline-container-orgc114d62" class="outline-3">
+<h3 id="orgc114d62"><span class="section-number-3">9.1</span> 汇率理论的历史脉络</h3>
+<div class="outline-text-3" id="text-9-1">
+</div>
+<div id="outline-container-orgb403b46" class="outline-4">
+<h4 id="orgb403b46"><span class="section-number-4">9.1.1</span> 汇率的两重含义</h4>
+<div class="outline-text-4" id="text-9-1-1">
+<ol class="org-ol">
+<li>汇率作为两国货币之间的交换比例，客观上是一国货币用另一国货币单位表
+示的价格</li>
+
+<li>汇率作为一种价格指标，对经济社会中其他价格变量具有特殊的影响力</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgafe9e2c" class="outline-4">
+<h4 id="orgafe9e2c"><span class="section-number-4">9.1.2</span> 汇率理论的研究内容</h4>
+<div class="outline-text-4" id="text-9-1-2">
+<ol class="org-ol">
+<li>汇率决定问题</li>
+
+<li>汇率变动</li>
+
+<li>汇率制度</li>
+
+<li>汇率政策</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orge0b789a" class="outline-4">
+<h4 id="orge0b789a"><span class="section-number-4">9.1.3</span> 汇率理论的发展</h4>
+<div class="outline-text-4" id="text-9-1-3">
+<p>
+<i>参照国际经济学第六章复习</i>
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9a87eb7" class="outline-3">
+<h3 id="org9a87eb7"><span class="section-number-3">9.2</span> 汇率制度安排</h3>
+<div class="outline-text-3" id="text-9-2">
+</div>
+<div id="outline-container-orgde785f1" class="outline-4">
+<h4 id="orgde785f1"><span class="section-number-4">9.2.1</span> 汇率制度的概念和内容</h4>
+<div class="outline-text-4" id="text-9-2-1">
+<p>
+汇率制度是货币制度的重要组成部分，是指一个国家、一个经济体、一个经济区
+域或国际社会对于确定、维持、调整与管理汇率的原则、方法、方式和机构等所
+作出的系统规定
+</p>
+
+<p>
+主要包括的内容：
+</p>
+
+<ol class="org-ol">
+<li>确定汇率的原则和依据</li>
+
+<li>维持和调整汇率的方法</li>
+
+<li>管理汇率的法令、体制和政策</li>
+
+<li>制定、维持与管理汇率的机构</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org097d185" class="outline-4">
+<h4 id="org097d185"><span class="section-number-4">9.2.2</span> 汇率制度的种类</h4>
+<div class="outline-text-4" id="text-9-2-2">
+</div>
+<ol class="org-ol">
+<li><a id="org05596f3"></a>固定汇率<br />
+<div class="outline-text-5" id="text-9-2-2-1">
+<ol class="org-ol">
+<li>无法定货币的汇率安排</li>
+
+<li><p>
+货币局制度
+</p>
+
+<p>
+从法律上隐含地承诺本国或地区按固定汇率兑换某种特定的外币，同时限制
+官方的货币发行，以确保履行法定义务
+</p></li>
+
+<li>传统盯住汇率安排</li>
+</ol>
+</div>
+</li>
+
+<li><a id="org72d9fae"></a>有管理的浮动汇率<br />
+<div class="outline-text-5" id="text-9-2-2-2">
+<ol class="org-ol">
+<li>平行盯住的汇率安排</li>
+
+<li>爬行盯住的汇率安排</li>
+
+<li>爬行区间互动的汇率安排</li>
+
+<li>无区间的有管理互动汇率</li>
+</ol>
+</div>
+</li>
+
+<li><a id="org63897ce"></a>自由浮动汇率<br />
+<div class="outline-text-5" id="text-9-2-2-3">
+<ol class="org-ol">
+<li>自由浮动的汇率安排</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-orgb5b3220" class="outline-4">
+<h4 id="orgb5b3220"><span class="section-number-4">9.2.3</span> 各种汇率安排的优劣</h4>
+<div class="outline-text-4" id="text-9-2-3">
+</div>
+<ol class="org-ol">
+<li><a id="orgf454dc6"></a>浮动汇率制度<br />
+<div class="outline-text-5" id="text-9-2-3-1">
+<p>
+可以发挥汇率杠杆对国际收支的自动调节作用，减少国际经济状况变化和外国经
+济政策的影响，降低国际游资冲击的风险。但是，汇率的频繁变动会带来不确定
+性，也会个本国经济带来不利影响。
+</p>
+</div>
+</li>
+
+<li><a id="orgf4b8cba"></a>固定汇率制度<br />
+<div class="outline-text-5" id="text-9-2-3-2">
+<p>
+给市场一个稳定的价格信号，稳定了预期，有利于对外贸易结算和资本的正常流
+动，由政府来承担市场变化的风险。但是，市场参与者丧失了风险意识和抵御风
+险的能力，容易导致资本大量流入，迫使货币当局升值或者贬值，引发金融动荡。
+</p>
+</div>
+</li>
+
+<li><a id="orgf131df6"></a>有管理的浮动<br />
+<div class="outline-text-5" id="text-9-2-3-3">
+<p>
+避免了两者的不足，但是既要固定，又要浮动，操作中有一定的难度。
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-orgd997171" class="outline-4">
+<h4 id="orgd997171"><span class="section-number-4">9.2.4</span> 汇率制度选择的理论依据</h4>
+<div class="outline-text-4" id="text-9-2-4">
+</div>
+<ol class="org-ol">
+<li><a id="org74e5276"></a>经济论<br />
+<div class="outline-text-5" id="text-9-2-4-1">
+<p>
+汇率的决定因素
+</p>
+
+<ol class="org-ol">
+<li>经济开发程度</li>
+
+<li>经济规模</li>
+
+<li>进出口贸易的商品结构和地域分布</li>
+
+<li>国内金融市场的发达程度与国际金融市场的一体化程度</li>
+
+<li>相对的通货膨胀率</li>
+</ol>
+
+<p>
+汇率的选择关系
+</p>
+
+<ol class="org-ol">
+<li>规模小，开放程度高，出口集中几种商品或某一国家，选择 <b>固定汇率或盯
+住汇率</b></li>
+
+<li>开放程度低，商品多地域分散，国际金融市场联系密切，资本流入可观，通
+货膨胀率不一致，选择 <b>浮动汇率或弹性汇率制度</b></li>
+</ol>
+</div>
+</li>
+
+<li><a id="org52226d3"></a>依附论<br />
+<div class="outline-text-5" id="text-9-2-4-2">
+<p>
+一国的汇率制度，主要依附与对外经济、政治、军事等诸方面决定
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8a8fb21" class="outline-2">
+<h2 id="org8a8fb21"><span class="section-number-2">10</span> 国际货币体系</h2>
+<div class="outline-text-2" id="text-10">
+</div>
+<div id="outline-container-orgcedf9c6" class="outline-3">
+<h3 id="orgcedf9c6"><span class="section-number-3">10.1</span> 国际货币体系概述</h3>
+<div class="outline-text-3" id="text-10-1">
+</div>
+<div id="outline-container-orgdc3d0b2" class="outline-4">
+<h4 id="orgdc3d0b2"><span class="section-number-4">10.1.1</span> 含义</h4>
+<div class="outline-text-4" id="text-10-1-1">
+<p>
+国际货币体系指国际间的货币安排
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge2d2b71" class="outline-4">
+<h4 id="orge2d2b71"><span class="section-number-4">10.1.2</span> 构成</h4>
+<div class="outline-text-4" id="text-10-1-2">
+<ol class="org-ol">
+<li>国际汇率体系</li>
+
+<li>国际收支</li>
+
+<li>国际储备资产</li>
+
+<li>国别经济政策</li>
+
+<li>国际经济政策的协调</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org008a605" class="outline-4">
+<h4 id="org008a605"><span class="section-number-4">10.1.3</span> 作用</h4>
+<div class="outline-text-4" id="text-10-1-3">
+<ul class="org-ul">
+<li>建立相对稳定合理的汇率机制，防止不必要的竞争性贬值</li>
+
+<li>为国际经济的发展提供足够的清偿力，并为国际收支失衡的调整提供有效手段</li>
+
+<li>促进各国的经济政策的协调</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb41fa8d" class="outline-3">
+<h3 id="orgb41fa8d"><span class="section-number-3">10.2</span> 国际金本位体系</h3>
+<div class="outline-text-3" id="text-10-2">
+</div>
+<div id="outline-container-org8860e49" class="outline-4">
+<h4 id="org8860e49"><span class="section-number-4">10.2.1</span> 特点</h4>
+<div class="outline-text-4" id="text-10-2-1">
+<ol class="org-ol">
+<li>黄金充当国际货币：金币可以自由铸造、自由兑换，黄金可以自由进出口</li>
+
+<li>严格的固定汇率制：含金量决定</li>
+
+<li>国际收支的自动调节机制</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org1b93e33" class="outline-4">
+<h4 id="org1b93e33"><span class="section-number-4">10.2.2</span> 历史地位</h4>
+<div class="outline-text-4" id="text-10-2-2">
+<p>
+好处：严格的固定汇率制度有利于生产、成本核算和国际支付，也有利于减少国
+际投资风险，从而推动了国际贸易与对外投资的极大发展
+</p>
+
+<p>
+不利：
+</p>
+
+<ol class="org-ol">
+<li>黄金增长远远落后与各国经济增长对国际支付手段和货币的需求，因而严重
+制约世界经济发展</li>
+
+<li>金本位所体现的自由放任原则与资本主义经济发展阶段所要求的干预职能相
+违背</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org613bb3b" class="outline-3">
+<h3 id="org613bb3b"><span class="section-number-3">10.3</span> 布雷顿森林体系</h3>
+<div class="outline-text-3" id="text-10-3">
+</div>
+<div id="outline-container-org2c41ded" class="outline-4">
+<h4 id="org2c41ded"><span class="section-number-4">10.3.1</span> 主要内容</h4>
+<div class="outline-text-4" id="text-10-3-1">
+<ol class="org-ol">
+<li>建立以美元为中心的汇率平价体系（双挂钩机制）
+
+<ul class="org-ul">
+<li>美元与黄金挂钩</li>
+
+<li>其他货币与美元挂钩</li>
+</ul></li>
+
+<li>美元充当国际货币</li>
+
+<li>建立一个永久性的国际金融机构，即国际货币基金组织。稳定了国际金融秩
+序。</li>
+
+<li>多种渠道调节国际收支不平衡
+
+<ul class="org-ul">
+<li>依赖IMP的融资（SDR）</li>
+
+<li>依赖汇率变动</li>
+
+<li>利用国际经济政策，调节内外均衡</li>
+</ul></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgd3ca653" class="outline-4">
+<h4 id="orgd3ca653"><span class="section-number-4">10.3.2</span> 崩溃及原因</h4>
+<div class="outline-text-4" id="text-10-3-2">
+<ol class="org-ol">
+<li>特里芬难题</li>
+
+<li>汇率体系僵化</li>
+
+<li>IMF协调解决国际收支不平衡的能力有限</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgf707025" class="outline-4">
+<h4 id="orgf707025"><span class="section-number-4">10.3.3</span> 评价</h4>
+<div class="outline-text-4" id="text-10-3-3">
+<ol class="org-ol">
+<li>促进贸易发展</li>
+
+<li>缓解各国国际收支困难</li>
+
+<li>消除了各货币集团的对立</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb6e8d7e" class="outline-3">
+<h3 id="orgb6e8d7e"><span class="section-number-3">10.4</span> 牙买加体系</h3>
+<div class="outline-text-3" id="text-10-4">
+</div>
+<div id="outline-container-orga3d2fb0" class="outline-4">
+<h4 id="orga3d2fb0"><span class="section-number-4">10.4.1</span> 主要内容</h4>
+<div class="outline-text-4" id="text-10-4-1">
+<ol class="org-ol">
+<li><p>
+浮动汇率合法化
+</p>
+
+<p>
+成员国可以选择汇率制度，可以固定汇率，也可以浮动汇率
+</p></li>
+
+<li>黄金非货币化</li>
+
+<li>增强SDRs的作用，使得SDRs逐步替代美元成为主要储备资产</li>
+
+<li>提高IMF的清偿力</li>
+
+<li><p>
+扩大融资
+</p>
+
+<p>
+建立信托基金，扩大对发展中国家的资金融通
+</p></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgb596502" class="outline-4">
+<h4 id="orgb596502"><span class="section-number-4">10.4.2</span> 体系的运行</h4>
+<div class="outline-text-4" id="text-10-4-2">
+<ol class="org-ol">
+<li><p>
+储备多元化
+</p>
+
+<p>
+美元、德国马克、日元、SDR等
+</p></li>
+
+<li><p>
+汇率安排多元化
+</p>
+
+<p>
+浮动汇率和固定汇率并存
+</p></li>
+
+<li>多种渠道调节国际收支
+
+<ol class="org-ol">
+<li>利用国内经济政策</li>
+
+<li>汇率政策</li>
+
+<li>国际融资</li>
+
+<li>国际协调</li>
+
+<li>外汇储备</li>
+</ol></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgd0e650f" class="outline-4">
+<h4 id="orgd0e650f"><span class="section-number-4">10.4.3</span> 评价</h4>
+<div class="outline-text-4" id="text-10-4-3">
+<ul class="org-ul">
+<li>积极作用
+
+<ol class="org-ol">
+<li>多元化的储备结构摆脱了布雷顿森林体系下各国货币间的僵硬体系，一定
+程度上解决了"特里芬"难题</li>
+
+<li>多样化的汇率安排适应了多元化的发展，为各国经济发展提供了活力和独
+立性</li>
+
+<li>多渠道并行，使得国际收支的调节更加有效及时</li>
+</ol></li>
+
+<li>不足
+
+<ol class="org-ol">
+<li>仍然存在"铸币税"，同时在多元化国际储备下，缺乏统以稳定的货币标准，
+可能造成国际金融不稳定</li>
+
+<li>汇率大起大落，变动不定，增加了外汇风险</li>
+
+<li>国际收支调节机制不健全</li>
+</ol></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org301b0d0" class="outline-3">
+<h3 id="org301b0d0"><span class="section-number-3">10.5</span> 国际货币体系改革</h3>
+<div class="outline-text-3" id="text-10-5">
+</div>
+<div id="outline-container-orgcb0ea93" class="outline-4">
+<h4 id="orgcb0ea93"><span class="section-number-4">10.5.1</span> 现存国际货币体系的脆弱性</h4>
+<div class="outline-text-4" id="text-10-5-1">
+<ol class="org-ol">
+<li>汇率制度的脆弱性</li>
+
+<li>多元化货币储备体系的不稳定性</li>
+
+<li>国际货币基金组织缺乏独立性和权威性</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org107418c" class="outline-4">
+<h4 id="org107418c"><span class="section-number-4">10.5.2</span> 国际货币体系改革的进展</h4>
+<div class="outline-text-4" id="text-10-5-2">
+<ol class="org-ol">
+<li>国际货币基金组织的改革
+
+<ul class="org-ul">
+<li>扩大资金实力</li>
+
+<li>加强信息交流和发布功能，督促成员国信息披露</li>
+
+<li>改革资金援助的限制条件</li>
+</ul></li>
+
+<li>区域合作机制建立
+
+<ul class="org-ul">
+<li>汇率制度合作</li>
+
+<li>区域监督机制</li>
+
+<li>威慑机制</li>
+
+<li>危机防范和互助机制</li>
+</ul></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8e9a4ec" class="outline-2">
+<h2 id="org8e9a4ec"><span class="section-number-2">11</span> 内外均衡理论</h2>
+<div class="outline-text-2" id="text-11">
+</div>
+<div id="outline-container-org89b672c" class="outline-3">
+<h3 id="org89b672c"><span class="section-number-3">11.1</span> 内外均衡理论的基本内容</h3>
+<div class="outline-text-3" id="text-11-1">
+</div>
+<div id="outline-container-org4000002" class="outline-4">
+<h4 id="org4000002"><span class="section-number-4">11.1.1</span> 米德内外均衡理论的基本内容</h4>
+<div class="outline-text-4" id="text-11-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="org0128369"></a>内外均衡理论<br />
+<div class="outline-text-5" id="text-11-1-1-1">
+<ul class="org-ul">
+<li>两种目标
+
+<ol class="org-ol">
+<li>内部均衡</li>
+
+<li>外部均衡</li>
+</ol></li>
+
+<li>两种工具
+
+<ol class="org-ol">
+<li>支出调整政策
+
+<ul class="org-ul">
+<li>财政政策</li>
+
+<li>货币政策</li>
+</ul></li>
+
+<li><p>
+支出转换政策
+</p>
+
+<p>
+能够影响贸易品的国际竞争力
+</p>
+
+<ul class="org-ul">
+<li>汇率调整</li>
+
+<li>关税</li>
+</ul></li>
+</ol></li>
+</ul>
+</div>
+</li>
+
+<li><a id="org6471488"></a>米德冲突<br />
+<div class="outline-text-5" id="text-11-1-1-2">
+<p>
+在某些情况下，单独使用指出调整政策追求内、外部均衡，将会导致一国内部均
+衡与外部均衡之间的冲突
+</p>
+</div>
+</li>
+
+<li><a id="org826f84d"></a>丁伯根法则<br />
+<div class="outline-text-5" id="text-11-1-1-3">
+<p>
+要实现n个经济目标，必须具备n种政策工具
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-orgf890ed9" class="outline-4">
+<h4 id="orgf890ed9"><span class="section-number-4">11.1.2</span> 实践中各国追求内外均衡的具体做法及原因</h4>
+<div class="outline-text-4" id="text-11-1-2">
+<p>
+以财政与货币政策维持内部均衡，并将汇率政策与直接管制结合起来维持外部均
+衡
+</p>
+
+<p>
+原因：
+</p>
+
+<ol class="org-ol">
+<li>财政政策与货币政策相对于支出转换政策对于达到内部均衡更有利，而汇率
+政策与直接控制对外部均衡的调节更有效</li>
+
+<li>直接控制与汇率政策的结合能够实现总量与结构调整的统一</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb22b2ce" class="outline-3">
+<h3 id="orgb22b2ce"><span class="section-number-3">11.2</span> 蒙带尔的"政策配合说"</h3>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: Wed Sep 16 2020 14:17:28 GMT+0800 (China Standard Time)</p>
+<p class="author">Author: Qing Yi</p>
+<p class="date">Created: 2020-12-02 Wed 17:53</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

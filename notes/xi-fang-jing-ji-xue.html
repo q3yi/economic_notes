@@ -1,0 +1,4555 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-12-02 Wed 17:53 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>西方经济学</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Qing Yi" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="../static/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="../static/readtheorg_theme/css/readtheorg.css"/>
+<script type="text/javascript" src="../static/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="../static/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../static/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="../static/readtheorg_theme/js/readtheorg.js"></script>
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">西方经济学</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org3e1f56f">1. 需求和供给</a>
+<ul>
+<li><a href="#org14673a3">1.1. 需求曲线与供给曲线</a>
+<ul>
+<li><a href="#orgd624452">1.1.1. 需求</a></li>
+<li><a href="#org1270e55">1.1.2. 需求量的变动与需求的变动</a></li>
+<li><a href="#org0598202">1.1.3. 商品的分类分类</a></li>
+<li><a href="#org331349d">1.1.4. 市场需求</a></li>
+<li><a href="#org58bb1e3">1.1.5. 需求规律</a></li>
+<li><a href="#org4a74a6a">1.1.6. 供给</a></li>
+<li><a href="#org394b2b2">1.1.7. 供给量的变动与供给的变动</a></li>
+<li><a href="#org9e913c7">1.1.8. 供给规律和特例</a></li>
+</ul>
+</li>
+<li><a href="#orge6f8b1b">1.2. 均衡与比较静态分析</a>
+<ul>
+<li><a href="#org0274c93">1.2.1. 均衡</a></li>
+<li><a href="#orga9a3729">1.2.2. 均衡价格与均衡数量</a></li>
+<li><a href="#org3730a57">1.2.3. 比较静态分析</a></li>
+</ul>
+</li>
+<li><a href="#org8c76d62">1.3. 弹性理论&#xa0;&#xa0;&#xa0;<span class="tag"><span class="2020__">2020重点</span></span></a>
+<ul>
+<li><a href="#org57ebe1b">1.3.1. 需求的价格弹性</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org71ce678">2. 效用论</a>
+<ul>
+<li><a href="#org455d393">2.1. 基本概念</a>
+<ul>
+<li><a href="#org0bd9559">2.1.1. 效用</a></li>
+<li><a href="#orgf2b0cf2">2.1.2. 效用理论分类</a></li>
+</ul>
+</li>
+<li><a href="#org2fa13cb">2.2. 基数效用理论</a></li>
+<li><a href="#org886be1b">2.3. 序数效用理论</a>
+<ul>
+<li><a href="#org1ffc30c">2.3.1. 偏好及特点</a></li>
+<li><a href="#org6594fea">2.3.2. 无差异曲线</a></li>
+<li><a href="#orgd9bc5e8">2.3.3. 商品的边际替代率</a></li>
+<li><a href="#org9a72a75">2.3.4. 商品的边际替代率递减规律</a></li>
+<li><a href="#org32ab625">2.3.5. 边际替代率与边际效用的关系</a></li>
+<li><a href="#org0216107">2.3.6. 消费者的预算约束</a></li>
+<li><a href="#orgc58c7f6">2.3.7. 消费者均衡（等斜率+耗光）</a></li>
+<li><a href="#orgcf4167c">2.3.8. 消费者均衡的比较静态分析</a></li>
+<li><a href="#orgb0ec132">2.3.9. 替代效应和收入效应</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org25778bf">3. 生产和成本论&#xa0;&#xa0;&#xa0;<span class="tag"><span class="2020__">2020计算</span></span></a>
+<ul>
+<li><a href="#orgda1731e">3.1. 生产函数</a>
+<ul>
+<li><a href="#org58f23ed">3.1.1. 常见的生产函数</a></li>
+</ul>
+</li>
+<li><a href="#org42f8787">3.2. 短期与长期</a></li>
+<li><a href="#org82b318c">3.3. 短期生产函数</a>
+<ul>
+<li><a href="#org0b91eca">3.3.1. 定义</a></li>
+<li><a href="#orgf54bbfc">3.3.2. 边际报酬递减规律</a></li>
+<li><a href="#org0a2cdfb">3.3.3. 总产量、平均产量和边际产量曲线</a></li>
+</ul>
+</li>
+<li><a href="#org120e6b6">3.4. 长期生产函数</a>
+<ul>
+<li><a href="#org3a3a5bf">3.4.1. 意义</a></li>
+<li><a href="#org47319c1">3.4.2. 等产量曲线</a></li>
+<li><a href="#org8add61d">3.4.3. 边际技术替代率</a></li>
+<li><a href="#org8dfe1bb">3.4.4. 边际技术替代率递减规律（凸向原点的原因）</a></li>
+<li><a href="#orgfdbbeb8">3.4.5. 规模收益（规模报酬）</a></li>
+</ul>
+</li>
+<li><a href="#org83af990">3.5. 长期生产要素的最优组合</a>
+<ul>
+<li><a href="#orgf49dedc">3.5.1. 等成本线方程</a></li>
+<li><a href="#org2e07fe6">3.5.2. 生产者行为（利润最大化）</a></li>
+<li><a href="#org0c7ccfb">3.5.3. 生产要素的最优组合</a></li>
+<li><a href="#org71eb982">3.5.4. 生产的扩展线</a></li>
+</ul>
+</li>
+<li><a href="#org1acd975">3.6. 厂商的生产成本</a>
+<ul>
+<li><a href="#org72205b0">3.6.1. 会计成本和机会成本</a></li>
+<li><a href="#org0d30c76">3.6.2. 显性成本和隐性成本</a></li>
+<li><a href="#org8d48a4c">3.6.3. 私人成本和社会成本</a></li>
+<li><a href="#orgff28262">3.6.4. 短期成本和长期成本</a></li>
+</ul>
+</li>
+<li><a href="#orgc88fdb5">3.7. 短期成本</a>
+<ul>
+<li><a href="#orgd76bfea">3.7.1. 成本分类</a></li>
+<li><a href="#org7dc9068">3.7.2. 短期成本曲线推导</a></li>
+</ul>
+</li>
+<li><a href="#orgc81ae90">3.8. 长期成本</a>
+<ul>
+<li><a href="#org4c0dcc4">3.8.1. 长期总成本</a></li>
+<li><a href="#org94ebd7a">3.8.2. 长期成本曲线</a></li>
+<li><a href="#org2336674">3.8.3. 规模经济与长期平均成本</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgb613b93">4. 市场理论</a>
+<ul>
+<li><a href="#orge0fca4e">4.1. 利润最大化条件</a></li>
+<li><a href="#org8637864">4.2. 不同市场划分</a></li>
+<li><a href="#org1da0088">4.3. 完全竞争市场</a>
+<ul>
+<li><a href="#orgce46620">4.3.1. MR的决定</a></li>
+<li><a href="#orge3210a6">4.3.2. 完全竞争市场的厂商短期均衡</a></li>
+<li><a href="#org456bf90">4.3.3. 完全竞争市场的短期供给曲线</a></li>
+<li><a href="#orgc1d1b91">4.3.4. 完全竞争市场的厂商产期均衡</a></li>
+<li><a href="#org8de0db2">4.3.5. 行业的长期供给曲线</a></li>
+</ul>
+</li>
+<li><a href="#orgf470883">4.4. 垄断市场</a>
+<ul>
+<li><a href="#org70182e9">4.4.1. 垄断市场结构及其特征</a></li>
+<li><a href="#orgf1266fe">4.4.2. 垄断市场的MR确定</a></li>
+<li><a href="#org0800387">4.4.3. 垄断市场的条件</a></li>
+<li><a href="#org7c4a58c">4.4.4. 垄断厂商的短期均衡</a></li>
+<li><a href="#org0956f81">4.4.5. 垄断厂商的长期均衡</a></li>
+<li><a href="#org0d4a10f">4.4.6. 价格歧视</a></li>
+</ul>
+</li>
+<li><a href="#org8ea8753">4.5. 垄断竞争市场</a>
+<ul>
+<li><a href="#orga7e1f16">4.5.1. 垄断市场的长期均衡条件</a></li>
+<li><a href="#org3c458f0">4.5.2. 垄断竞争市场的条件</a></li>
+<li><a href="#org36d75b1">4.5.3. 主观需求曲线与客观需求曲线</a></li>
+</ul>
+</li>
+<li><a href="#org8593bce">4.6. 寡头市场</a>
+<ul>
+<li><a href="#org97930a2">4.6.1. 寡头市场的特征</a></li>
+<li><a href="#org3625cb5">4.6.2. 古诺模型（数量竞争模型）</a></li>
+<li><a href="#org7027eca">4.6.3. 斯威齐模型（弯折的需求曲线模型）</a></li>
+<li><a href="#orgc093db7">4.6.4. 卡特尔模型</a></li>
+<li><a href="#org43a8f10">4.6.5. 博弈论</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org6d57b4e">5. 生产要素市场</a>
+<ul>
+<li><a href="#orgf0abb1b">5.1. 生产要素市场一般原则</a>
+<ul>
+<li><a href="#org482407f">5.1.1. 直接需求与引致需求</a></li>
+<li><a href="#org5f20a77">5.1.2. 厂商利润最大化的原则</a></li>
+<li><a href="#org8ceecf2">5.1.3. 完全竞争市场的要素需求曲线</a></li>
+</ul>
+</li>
+<li><a href="#orgbfa7584">5.2. 劳动供给和工资率的确定</a>
+<ul>
+<li><a href="#org1d5638d">5.2.1. 劳动与闲暇的替代效应与收入效应</a></li>
+</ul>
+</li>
+<li><a href="#org31bca3e">5.3. 欧拉定理</a>
+<ul>
+<li><a href="#org867ef39">5.3.1. 欧拉定理（产品分配尽净定理）</a></li>
+</ul>
+</li>
+<li><a href="#orgbe7bf99">5.4. 洛伦兹曲线和基尼系数</a></li>
+</ul>
+</li>
+<li><a href="#org21e3279">6. 一般均衡与福利经济学</a>
+<ul>
+<li><a href="#orge8dd3b8">6.1. 一般均衡基本概念</a>
+<ul>
+<li><a href="#org8b97556">6.1.1. 局部均衡和一般均衡</a></li>
+<li><a href="#org8101df4">6.1.2. 一般均衡的基本思想</a></li>
+<li><a href="#org02dcf13">6.1.3. 一般均衡的存在性问题</a></li>
+</ul>
+</li>
+<li><a href="#org9ed68f5">6.2. 纯交换经济的一般均衡</a>
+<ul>
+<li><a href="#org9a20e56">6.2.1. 埃奇沃斯框图</a></li>
+</ul>
+</li>
+<li><a href="#orgd76df02">6.3. 帕累托最优&#xa0;&#xa0;&#xa0;<span class="tag"><span class="2020__">2020重点</span></span></a>
+<ul>
+<li><a href="#org88a0413">6.3.1. 帕累托最优</a></li>
+<li><a href="#org0d3e4ec">6.3.2. 帕累托改进</a></li>
+<li><a href="#orgae3d324">6.3.3. 生产可能性边界</a></li>
+<li><a href="#org7dded33">6.3.4. 帕累托最优的条件</a></li>
+</ul>
+</li>
+<li><a href="#org6e92661">6.4. 完全竞争市场和帕累托最优</a></li>
+</ul>
+</li>
+<li><a href="#orgec5b164">7. 市场失灵与微观经济政策</a>
+<ul>
+<li><a href="#orgfeed687">7.1. 市场失灵及类型</a>
+<ul>
+<li><a href="#org0abc23d">7.1.1. 市场失灵</a></li>
+<li><a href="#orgc205fb0">7.1.2. 类型</a></li>
+</ul>
+</li>
+<li><a href="#org3aed426">7.2. 垄断</a></li>
+<li><a href="#org903ae9d">7.3. 外部性</a>
+<ul>
+<li><a href="#org707490f">7.3.1. 外部性含义</a></li>
+<li><a href="#orge54737c">7.3.2. 对策</a></li>
+</ul>
+</li>
+<li><a href="#org4247871">7.4. 公共物品</a>
+<ul>
+<li><a href="#org0e6a05f">7.4.1. 公共物品含义</a></li>
+<li><a href="#orgd3e43ac">7.4.2. 免费乘车问题</a></li>
+</ul>
+</li>
+<li><a href="#org8288b2f">7.5. 不对称信息</a>
+<ul>
+<li><a href="#orgaf3148a">7.5.1. 不对称信息含义</a></li>
+<li><a href="#org7b4316d">7.5.2. 解决对策</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgef1d99b">8. 宏观经济活动与宏观经济学</a>
+<ul>
+<li><a href="#org1ce9c09">8.1. 宏观经济学的特点</a></li>
+<li><a href="#orgf577ccd">8.2. 国内生产总值</a>
+<ul>
+<li><a href="#orgd508d72">8.2.1. 国内生产总值（GDP）</a></li>
+<li><a href="#orgb0a4788">8.2.2. GDP核算方法</a></li>
+<li><a href="#orgcf9da55">8.2.3. 几个重要的国民收入变量</a></li>
+<li><a href="#org09bdef7">8.2.4. 国民收入恒等式</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org32929ab">9. 简单国民收入决定理论</a>
+<ul>
+<li><a href="#org612eba5">9.1. 消费函数与需求函数</a>
+<ul>
+<li><a href="#org260f83c">9.1.1. 总需求（总支出）的构成</a></li>
+<li><a href="#org281bb71">9.1.2. 消费函数</a></li>
+<li><a href="#org3dc1ff1">9.1.3. 储蓄函数</a></li>
+<li><a href="#org5f980d3">9.1.4. 消费函数与储蓄函数的关系</a></li>
+</ul>
+</li>
+<li><a href="#orgd36a69b">9.2. 国民收入决定</a>
+<ul>
+<li><a href="#org0c2d9db">9.2.1. 两部门经济</a></li>
+<li><a href="#org22a65fd">9.2.2. 三部门经济</a></li>
+<li><a href="#org9abfca4">9.2.3. 四部门经济</a></li>
+<li><a href="#orge62a812">9.2.4. 注意</a></li>
+</ul>
+</li>
+<li><a href="#org717408b">9.3. 乘数理论</a>
+<ul>
+<li><a href="#orge09bed8">9.3.1. 投资乘数</a></li>
+<li><a href="#orga08833b">9.3.2. 政府购买乘数</a></li>
+<li><a href="#orgd71c48e">9.3.3. 税收乘数</a></li>
+<li><a href="#orgc940fee">9.3.4. 平衡预算乘数</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org44e7c39">10. 产品市场与货币市场的一般均衡</a>
+<ul>
+<li><a href="#org4783bbe">10.1. 投资的决定</a>
+<ul>
+<li><a href="#orgd7ddd15">10.1.1. 投资的边际效率（MEC）</a></li>
+<li><a href="#orga2e0c96">10.1.2. 投资决定</a></li>
+<li><a href="#org1635ae7">10.1.3. 投资函数</a></li>
+</ul>
+</li>
+<li><a href="#org88090bd">10.2. IS曲线及其推导</a></li>
+<li><a href="#org3fdb4f4">10.3. LM曲线及其推导</a>
+<ul>
+<li><a href="#org978a367">10.3.1. 货币需求</a></li>
+<li><a href="#orgebe3218">10.3.2. 货币供给</a></li>
+<li><a href="#orgf771ff2">10.3.3. LM曲线的推导</a></li>
+</ul>
+</li>
+<li><a href="#orgc2bebf2">10.4. 产品市场与货币市场同时均衡</a>
+<ul>
+<li><a href="#org63e922b">10.4.1. IS-LM模型</a></li>
+</ul>
+</li>
+<li><a href="#org2d0d97c">10.5. 凯恩斯理论的基本框架</a>
+<ul>
+<li><a href="#orgac47309">10.5.1. 凯恩斯理论认为萧条的三大原因</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgb7663ed">11. 宏观经济政策</a>
+<ul>
+<li><a href="#org0f39941">11.1. 宏观经济政策概述</a>
+<ul>
+<li><a href="#org04dd017">11.1.1. 宏观经济政策目标</a></li>
+<li><a href="#org28b1e48">11.1.2. 宏观经济政策理论基础</a></li>
+</ul>
+</li>
+<li><a href="#org46749af">11.2. 财政政策</a>
+<ul>
+<li><a href="#orgb8b183c">11.2.1. 财政政策</a></li>
+<li><a href="#org0e699fc">11.2.2. 自动稳定器</a></li>
+<li><a href="#org70a4e77">11.2.3. 斟酌使用财政政策</a></li>
+<li><a href="#org79e4e8d">11.2.4. 功能财政和政府充分就业预算盈余</a></li>
+</ul>
+</li>
+<li><a href="#org09054d4">11.3. 货币政策</a></li>
+</ul>
+</li>
+<li><a href="#org7210ccc">12. 总需求与总供给分析</a>
+<ul>
+<li><a href="#org7110bdb">12.1. 理解AD-AS分析需要注意的地方</a></li>
+<li><a href="#orgb2b3ae8">12.2. 总需求及其推导</a>
+<ul>
+<li><a href="#org2fea153">12.2.1. 总需求</a></li>
+<li><a href="#orgc33abe9">12.2.2. 推导</a></li>
+<li><a href="#org22e0799">12.2.3. 图形推导</a></li>
+</ul>
+</li>
+<li><a href="#org3c822c1">12.3. 总供给的一般说明</a>
+<ul>
+<li><a href="#org1cf045f">12.3.1. 总供给函数</a></li>
+<li><a href="#orgb148cd6">12.3.2. 劳动市场的均衡</a></li>
+<li><a href="#org2ed2201">12.3.3. 总供给曲线的图形推导</a></li>
+<li><a href="#org1a1a529">12.3.4. 长期的供给曲线</a></li>
+<li><a href="#org22f66bc">12.3.5. 完整的供给曲线</a></li>
+</ul>
+</li>
+<li><a href="#orgc0285ad">12.4. AD-AS模型的均衡及其政策含义</a></li>
+</ul>
+</li>
+<li><a href="#org9089708">13. 经济增长</a>
+<ul>
+<li><a href="#org2f972f3">13.1. 经济增长与经济发展</a></li>
+<li><a href="#org867bb7a">13.2. 哈罗德-多马模型</a>
+<ul>
+<li><a href="#org8e4c636">13.2.1. 基本假定</a></li>
+<li><a href="#orgd9c89e4">13.2.2. 基本模型</a></li>
+<li><a href="#org9363943">13.2.3. 增长条件</a></li>
+<li><a href="#org3114db1">13.2.4. 模型意义</a></li>
+</ul>
+</li>
+<li><a href="#org5c2c987">13.3. 新古典增长模型</a>
+<ul>
+<li><a href="#org37bcae8">13.3.1. 理论假定</a></li>
+<li><a href="#org6fedbc2">13.3.2. 基本方程</a></li>
+<li><a href="#orgab05b67">13.3.3. 稳定增长的条件</a></li>
+</ul>
+</li>
+<li><a href="#org73c9dc1">13.4. 新经济增长理论</a>
+<ul>
+<li><a href="#org4b7230c">13.4.1. 基本观点</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org4ebc072">14. 通货膨胀理论</a>
+<ul>
+<li><a href="#org4c85c32">14.1. 通货膨胀的种类和影响</a>
+<ul>
+<li><a href="#org91a1112">14.1.1. 通货膨胀含义及衡量</a></li>
+<li><a href="#org66e06c9">14.1.2. 通货膨胀的分类</a></li>
+<li><a href="#org5ab4dfe">14.1.3. 通货膨胀的效应</a></li>
+</ul>
+</li>
+<li><a href="#org46b6e14">14.2. 通货膨胀的原因</a>
+<ul>
+<li><a href="#org5e60e83">14.2.1. 需求拉动型</a></li>
+<li><a href="#orgcb3d571">14.2.2. 成本推动型</a></li>
+<li><a href="#org10f2949">14.2.3. 混合型通货膨胀</a></li>
+<li><a href="#org24727eb">14.2.4. 结构型通货膨胀</a></li>
+<li><a href="#org1dec469">14.2.5. 作为货币现象的通货膨胀</a></li>
+</ul>
+</li>
+<li><a href="#orge874e1b">14.3. 价格调整曲线</a>
+<ul>
+<li><a href="#org8eeba1c">14.3.1. 菲利普斯曲线</a></li>
+<li><a href="#org273a0da">14.3.2. 价格调整方程</a></li>
+<li><a href="#orgbe06746">14.3.3. 奥肯定律</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org0c2c906">15. 宏观经济学的意见分歧</a>
+<ul>
+<li><a href="#orgf4e5ecf">15.1. 宏观经济学意见分歧</a>
+<ul>
+<li><a href="#org973ff01">15.1.1. 古典宏观经济学和凯恩斯经济学</a></li>
+<li><a href="#orgc9137d9">15.1.2. 新古典综合派、货币主义、供给学派和理性预期学派</a></li>
+<li><a href="#org07f5e9b">15.1.3. 新古典宏观经济学和新凯恩斯主义经济学</a></li>
+</ul>
+</li>
+<li><a href="#orgf2cbed5">15.2. 货币主义</a>
+<ul>
+<li><a href="#org93a9246">15.2.1. 基本命题</a></li>
+<li><a href="#orgf4b5c1a">15.2.2. 新货币数量论</a></li>
+<li><a href="#org8b8a482">15.2.3. 自然率假说</a></li>
+<li><a href="#org34ee111">15.2.4. 货币主义政策分析</a></li>
+</ul>
+</li>
+<li><a href="#orgdea32c1">15.3. 新古典宏观经济学</a>
+<ul>
+<li><a href="#org08c9fe8">15.3.1. 基本假设</a></li>
+<li><a href="#org949b184">15.3.2. 结论</a></li>
+</ul>
+</li>
+<li><a href="#org74ed624">15.4. 新凯恩斯主义经济学</a>
+<ul>
+<li><a href="#org10010d0">15.4.1. 基本假定</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org3e1f56f" class="outline-2">
+<h2 id="org3e1f56f"><span class="section-number-2">1</span> 需求和供给</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org14673a3" class="outline-3">
+<h3 id="org14673a3"><span class="section-number-3">1.1</span> 需求曲线与供给曲线</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-orgd624452" class="outline-4">
+<h4 id="orgd624452"><span class="section-number-4">1.1.1</span> 需求</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<p>
+一种商品的需求指消费者在一定时期内，其他条件不变的条件下，在各种可能的
+价格水平原意并且能够购买的该商品的数量
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1270e55" class="outline-4">
+<h4 id="org1270e55"><span class="section-number-4">1.1.2</span> 需求量的变动与需求的变动</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<ul class="org-ul">
+<li>需求量变动：点动线不动，价格变动</li>
+
+<li>需求变动：线动，非价格变动</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org0598202" class="outline-4">
+<h4 id="org0598202"><span class="section-number-4">1.1.3</span> 商品的分类分类</h4>
+<div class="outline-text-4" id="text-1-1-3">
+<ol class="org-ol">
+<li>普通商品：价格上涨，数量下降</li>
+
+<li>吉芬商品：价格上涨，数量上涨（爱尔兰土豆、中国房产）</li>
+
+<li>正常品：收入上涨，数量上涨</li>
+
+<li>低档品：收入上涨，数量下降</li>
+
+<li>替代品：相关商品价格上涨，数量上涨（猪肉牛肉）</li>
+
+<li>互补品：相关商品价格上涨，数量下降（停车费，汽车）</li>
+
+<li>不相关商品</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org331349d" class="outline-4">
+<h4 id="org331349d"><span class="section-number-4">1.1.4</span> 市场需求</h4>
+<div class="outline-text-4" id="text-1-1-4">
+<p>
+单个需求的水平加总
+</p>
+</div>
+</div>
+
+<div id="outline-container-org58bb1e3" class="outline-4">
+<h4 id="org58bb1e3"><span class="section-number-4">1.1.5</span> 需求规律</h4>
+<div class="outline-text-4" id="text-1-1-5">
+<ul class="org-ul">
+<li>特征，一般都向右下方倾斜</li>
+
+<li>特殊情况
+
+<ol class="org-ol">
+<li>水平直线，单个厂商的需求曲线</li>
+
+<li>向右上方倾斜的曲线，吉芬商品</li>
+</ol></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org4a74a6a" class="outline-4">
+<h4 id="org4a74a6a"><span class="section-number-4">1.1.6</span> 供给</h4>
+<div class="outline-text-4" id="text-1-1-6">
+<p>
+一定时期，其他条件不变，各个可能价格水平上厂商愿意并能够提供的商品数量
+</p>
+</div>
+</div>
+
+<div id="outline-container-org394b2b2" class="outline-4">
+<h4 id="org394b2b2"><span class="section-number-4">1.1.7</span> 供给量的变动与供给的变动</h4>
+<div class="outline-text-4" id="text-1-1-7">
+<ol class="org-ol">
+<li>供给量的变动是指由某商品的价格变动所引起的该商品供给数量的变动</li>
+
+<li>供给的变动是指由于非价格因素变动所引起的该商品供给数量的变动</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org9e913c7" class="outline-4">
+<h4 id="org9e913c7"><span class="section-number-4">1.1.8</span> 供给规律和特例</h4>
+<div class="outline-text-4" id="text-1-1-8">
+<ul class="org-ul">
+<li>特征，一般都向右上方倾斜</li>
+
+<li>特殊
+
+<ol class="org-ol">
+<li>向后方弯曲 （劳动供给曲线）</li>
+
+<li>水平和竖直</li>
+</ol></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge6f8b1b" class="outline-3">
+<h3 id="orge6f8b1b"><span class="section-number-3">1.2</span> 均衡与比较静态分析</h3>
+<div class="outline-text-3" id="text-1-2">
+</div>
+<div id="outline-container-org0274c93" class="outline-4">
+<h4 id="org0274c93"><span class="section-number-4">1.2.1</span> 均衡</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<p>
+当一个经济量在其他经济量相互作用下达到一种相对静止状态是，称该经济量处
+于均衡状态
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga9a3729" class="outline-4">
+<h4 id="orga9a3729"><span class="section-number-4">1.2.2</span> 均衡价格与均衡数量</h4>
+<div class="outline-text-4" id="text-1-2-2">
+<p>
+一种商品的均衡价格是指该种商品的市场需求量和市场供给量相等时候的同一价
+格。在均衡价格水平下的相等的供求数量被称为均衡数量。
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3730a57" class="outline-4">
+<h4 id="org3730a57"><span class="section-number-4">1.2.3</span> 比较静态分析</h4>
+<div class="outline-text-4" id="text-1-2-3">
+<p>
+分析在外生变量变化时引起的内生变量的变化。即外生变量发生变化以后经济现
+象的均衡状态的相应变化，以及有关的经济变量在达到均衡状态时的相应变化。
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8c76d62" class="outline-3">
+<h3 id="org8c76d62"><span class="section-number-3">1.3</span> 弹性理论&#xa0;&#xa0;&#xa0;<span class="tag"><span class="2020__">2020重点</span></span></h3>
+<div class="outline-text-3" id="text-1-3">
+</div>
+<div id="outline-container-org57ebe1b" class="outline-4">
+<h4 id="org57ebe1b"><span class="section-number-4">1.3.1</span> 需求的价格弹性</h4>
+<div class="outline-text-4" id="text-1-3-1">
+<p>
+\(需求的价格弹性系数 = \frac{需求的变动率}{价格的变动率}\)
+</p>
+
+<p>
+\(E = - \frac{\frac{\Delta Q}{Q}}{\frac{\Delta P}{P}} = - \frac{\Delta
+Q}{\Delta P} \cdot \frac{P}{Q}\)
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="orgb5fdfe1"></a>本质：<br />
+<div class="outline-text-5" id="text-1-3-1-1">
+<ol class="org-ol">
+<li>变动速度之比</li>
+
+<li>数量变化对价格变化是否敏感</li>
+</ol>
+</div>
+</li>
+
+<li><a id="orgc71b6e0"></a>分类：<br />
+<div class="outline-text-5" id="text-1-3-1-2">
+<ol class="org-ol">
+<li>\(|E| > 1\) 富有弹性</li>
+
+<li>\(|E| = 1\) 单位弹性 反比例函数 \(Q = \frac{K}{P}\)</li>
+
+<li>\(|E| < 1\) 缺乏弹性</li>
+
+<li>\(|E| = +\infty\) 完全富有弹性</li>
+
+<li>\(|E| = 0\) 完全无弹性</li>
+</ol>
+</div>
+</li>
+
+<li><a id="org99f5c73"></a>影响弹性的因素<br />
+<div class="outline-text-5" id="text-1-3-1-3">
+<ol class="org-ol">
+<li>商品的可替代性，越多越大</li>
+
+<li>商品的用途的广泛性，越广泛越大</li>
+
+<li>商品多消费者生活的重要程度，越重要越小</li>
+
+<li>商品消费支出在消费者预算总支出中所占的比重，越小越小</li>
+
+<li>所考察的消费者调节需求量的时间，越短越小，例如香烟</li>
+</ol>
+</div>
+</li>
+
+<li><a id="org9d1e5f4"></a>弹性概念的扩大<br />
+<div class="outline-text-5" id="text-1-3-1-4">
+<ol class="org-ol">
+<li>需求的收入弹性 \(e_I = \frac{\frac{\Delta Q}{Q}}{\frac{\Delta I}{I}}
+   = \frac{\Delta Q}{\Delta I} \cdot \frac{I}{Q}\)
+
+<ul class="org-ul">
+<li>\(e_I > 0\) 正常品，需求量随收入水平增加而增加</li>
+
+<li>\(e_I < 0\) 劣等品，需求量随收入水平增加而减少</li>
+</ul></li>
+
+<li>恩格尔定律，对一个国价或者一个家庭而言，富裕程度越高，食物支出的收
+入弹性就越小</li>
+
+<li>需求的交叉弹性 \(e_{XY} = \frac{\frac{\Delta Q_X}{Q_X}}{\frac{\Delta
+   P_Y}{P_Y}} = \frac{\Delta Q_X}{\Delta P_Y} \cdot \frac{P_Y}{Q_X}\)
+
+<ul class="org-ul">
+<li>\(e_{XY} > 0\) 替代品</li>
+
+<li>\(e_{XY} < 0\) 互补品</li>
+
+<li>\(e_{XY} = 0\) 不相关商品</li>
+</ul></li>
+</ol>
+</div>
+</li>
+
+<li><a id="orgea0a7d7"></a>供给弹性<br />
+<div class="outline-text-5" id="text-1-3-1-5">
+<p>
+<b>看曲线与X轴（Q）的截距</b>
+</p>
+
+<ul class="org-ul">
+<li>小于0则弹性大于1</li>
+
+<li>过原点则弹性等于1</li>
+
+<li>大于0则弹性小于1</li>
+</ul>
+</div>
+</li>
+
+<li><a id="org7fcf22b"></a>供给弹性的应用<br />
+<div class="outline-text-5" id="text-1-3-1-6">
+<ol class="org-ol">
+<li>限价
+
+<ol class="org-ol">
+<li>支持价格（最低限价），$P<sub>c</sub> &gt; P<sub>E</sub>$，过剩经济，保护生产者（粮食最
+低收购价）</li>
+
+<li>限制价格（最高限价），$P<sub>f</sub> &lt; P<sub>E</sub>$，短缺经济，保护消费者（限价房）</li>
+</ol></li>
+
+<li><p>
+税收的分担
+</p>
+
+<p>
+税收负担更多地落在缺乏弹性的市场一方身上，若某一方完全缺乏弹性，则
+税收完全由它承担
+</p>
+
+<p>
+\(\frac{消费者承担部分}{厂商承担部分} = \frac{供给弹性}{需求弹性}\)
+</p></li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org71ce678" class="outline-2">
+<h2 id="org71ce678"><span class="section-number-2">2</span> 效用论</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+效用论的核心作用是从理论上推导需求曲线
+</p>
+</div>
+
+<div id="outline-container-org455d393" class="outline-3">
+<h3 id="org455d393"><span class="section-number-3">2.1</span> 基本概念</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org0bd9559" class="outline-4">
+<h4 id="org0bd9559"><span class="section-number-4">2.1.1</span> 效用</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<p>
+消费者在消费商品时所感受的满足程度（主观感受）
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf2b0cf2" class="outline-4">
+<h4 id="orgf2b0cf2"><span class="section-number-4">2.1.2</span> 效用理论分类</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<ol class="org-ol">
+<li>基数效用理论
+
+<ul class="org-ul">
+<li>效用可以具体衡量</li>
+
+<li>效用可以加总求和</li>
+
+<li>具体效用量之间可以比较</li>
+
+<li>分析方法：边际效用递减规律</li>
+</ul></li>
+
+<li>序数效用理论
+
+<ul class="org-ul">
+<li>效用不可度量</li>
+
+<li>效用不可加总</li>
+
+<li>效用可以比较排序</li>
+
+<li>分析方法：无差异曲线</li>
+</ul></li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2fa13cb" class="outline-3">
+<h3 id="org2fa13cb"><span class="section-number-3">2.2</span> 基数效用理论</h3>
+<div class="outline-text-3" id="text-2-2">
+<ol class="org-ol">
+<li>总效用 \(TU = f(Q)\)</li>
+
+<li>边际效用 \(MU = \frac{\Delta TU(Q)}{\Delta Q}\)</li>
+
+<li><p>
+边界效用递减规律
+</p>
+
+<p>
+在一定时间内，在其他商品的消费数量保持不变的条件下，随着消费者对某
+种商品消费量的增加，消费者从商品连续增加的每一消费单位中所等到的效
+用增量即边际效用是递减的
+</p></li>
+
+<li><p>
+货币的边际效用
+</p>
+
+<p>
+货币也符合边际效用递减规律，但是在消费者购买商品时，所拥有的货币数
+量是固定的，所以可以认为消费者在购买商品的时刻货币的边际效用是不变的
+</p></li>
+
+<li><p>
+消费者均衡
+</p>
+
+\begin{cases}
+  \frac{MU_1}{p_1} = \frac{MU_2}{p_2} = \cdots = \frac{MU_n}{p_n} = \lambda \\
+  p_1x_1 + \cdots + p_nx_n = m \\
+\end{cases}</li>
+
+<li><p>
+消费者需求曲线
+</p>
+
+<p>
+\(\frac{MU_x}{P} = \lambda\)
+</p>
+
+<p>
+\(x\) 数量上升时，\(MU_x\) 减小，\(P\) 减小，\(\lambda\) 维持不变，可以推导出需
+求曲线向右下方倾斜
+</p>
+
+<p>
+吉芬商品的需求曲线产生原因：
+</p>
+
+<p>
+一般造成价格上升数量也上升的原因是恐慌，在恐慌的情绪中\(\lambda\) 极
+速下降，接近于零，即使\(P\) 上升，\(MU_x\) 也在下降，\(x\) 数量在上升
+</p></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org886be1b" class="outline-3">
+<h3 id="org886be1b"><span class="section-number-3">2.3</span> 序数效用理论</h3>
+<div class="outline-text-3" id="text-2-3">
+</div>
+<div id="outline-container-org1ffc30c" class="outline-4">
+<h4 id="org1ffc30c"><span class="section-number-4">2.3.1</span> 偏好及特点</h4>
+<div class="outline-text-4" id="text-2-3-1">
+<ol class="org-ol">
+<li><p>
+偏好
+</p>
+
+<p>
+消费者对商品或者商品的喜好程度。对不同的商品组合而言，消费者的偏好
+意味着确定了这些商品组合之间的次序关系，既偏好关系。 效用其实就是用
+来描述偏好
+</p></li>
+
+<li>偏好关系的假设
+
+<ul class="org-ul">
+<li>完备性</li>
+
+<li>传递性</li>
+
+<li>连续性</li>
+</ul></li>
+
+<li><p>
+效用函数
+</p>
+
+<p>
+表示效用偏好关系的正数值函数。效用函数不唯一
+</p></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org6594fea" class="outline-4">
+<h4 id="org6594fea"><span class="section-number-4">2.3.2</span> 无差异曲线</h4>
+<div class="outline-text-4" id="text-2-3-2">
+<p>
+一定时期，带给消费者相同效用水平或满足程度的两种商品的所有组合点轨迹
+</p>
+
+<p>
+\(u = f(x_1, x_2) = u_0\)
+</p>
+
+<p>
+四个特征：
+</p>
+
+<ol class="org-ol">
+<li>离原点越远的无差异曲线代表效用水平越高</li>
+
+<li>同一坐标平面中任意两条无差异曲线不会相交</li>
+
+<li>无差异曲线上任意一点的边际替代率为负，无差异曲线从左上方向右下方倾斜</li>
+
+<li>无差异曲线上边际替代率绝对值有递减倾向，所以无差异曲线凸向原点</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgd9bc5e8" class="outline-4">
+<h4 id="orgd9bc5e8"><span class="section-number-4">2.3.3</span> 商品的边际替代率</h4>
+<div class="outline-text-4" id="text-2-3-3">
+<p>
+在维持效用水平不变的前提下，消费者增加一单位某种商品的消费数量时所需要
+放弃的另一种商品的消费数量
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9a72a75" class="outline-4">
+<h4 id="org9a72a75"><span class="section-number-4">2.3.4</span> 商品的边际替代率递减规律</h4>
+<div class="outline-text-4" id="text-2-3-4">
+<p>
+<i>凸显原点的特征</i>
+</p>
+
+<p>
+在维持效用水平不变的前提下，随着一种商品的消费数量的连续增加，消费者为
+得到每一单位的这种商品所需放弃的另一种商品的消费数量是递减的
+</p>
+</div>
+</div>
+
+<div id="outline-container-org32ab625" class="outline-4">
+<h4 id="org32ab625"><span class="section-number-4">2.3.5</span> 边际替代率与边际效用的关系</h4>
+<div class="outline-text-4" id="text-2-3-5">
+<p>
+<i>联系基数效用和序数效用</i>
+</p>
+
+<p>
+\(RCS_{1,2} = MRS_{1, 2} = - \frac{\Delta x_{2}}{ \Delta
+x_{1}} |_{u=u_{0}} = \frac{MU_{1}}{MU_{2}}\)
+</p>
+
+<p>
+推导过程：
+</p>
+
+\begin{aligned}
+& \Delta u = \Delta x_{1} \cdot MU_{1} + \Delta x_{2} \cdot MU_{2} = 0 \\
+& \implies -\frac{\Delta x_2}{\Delta x_1} = \frac{MU_1}{MU_2} \\
+\end{aligned}
+</div>
+</div>
+
+<div id="outline-container-org0216107" class="outline-4">
+<h4 id="org0216107"><span class="section-number-4">2.3.6</span> 消费者的预算约束</h4>
+<div class="outline-text-4" id="text-2-3-6">
+</div>
+<ol class="org-ol">
+<li><a id="org188ee49"></a>消费者预算线<br />
+<div class="outline-text-5" id="text-2-3-6-1">
+<p>
+在一定的消费者收入和商品价格条件下，消费者全部收入所能购买的两种商品的
+不同数量的最大组合。 \(P_1X_1 + P_2X_2 = I\)
+</p>
+</div>
+</li>
+
+<li><a id="org528fc0a"></a>预算线的变动<br />
+<div class="outline-text-5" id="text-2-3-6-2">
+<ol class="org-ol">
+<li>收入变动，平行移动</li>
+
+<li>相对价格变动，转动</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-orgc58c7f6" class="outline-4">
+<h4 id="orgc58c7f6"><span class="section-number-4">2.3.7</span> 消费者均衡（等斜率+耗光）</h4>
+<div class="outline-text-4" id="text-2-3-7">
+\begin{aligned}
+  & MRS_{1,2} = \frac{p_1}{p_2} = \frac{MU_1}{MU_2} \implies \frac{MU_1}{p_1} = \frac{MU_2}{p_2} \\
+  & p_1x_1 + p_2x_2 = I \\
+\end{aligned}
+</div>
+</div>
+
+<div id="outline-container-orgcf4167c" class="outline-4">
+<h4 id="orgcf4167c"><span class="section-number-4">2.3.8</span> 消费者均衡的比较静态分析</h4>
+<div class="outline-text-4" id="text-2-3-8">
+</div>
+<ol class="org-ol">
+<li><a id="orgc98d976"></a>收入-消费扩展线<br />
+<div class="outline-text-5" id="text-2-3-8-1">
+<p>
+在消费者的偏好和商品的价格不变的条件下，消费者收入变动引起的消费者效用
+最大化的均衡点的轨迹。它反应收入变化引起的消费量的变动情况。
+</p>
+
+<p>
+<i>可以推导恩格尔曲线</i>
+</p>
+</div>
+</li>
+
+<li><a id="orgd291701"></a>价格-消费扩展线<br />
+<div class="outline-text-5" id="text-2-3-8-2">
+<p>
+指收入不变条件下，商品价格变动引起的消费者均衡点移动的轨迹。它反应价格
+变化引起的需求量变动的情况。
+</p>
+
+<p>
+<b>可以推导消费者需求曲线</b>
+</p>
+</div>
+</li>
+
+<li><a id="orge56ae60"></a>需求曲线<br /></li>
+</ol>
+</div>
+
+<div id="outline-container-orgb0ec132" class="outline-4">
+<h4 id="orgb0ec132"><span class="section-number-4">2.3.9</span> 替代效应和收入效应</h4>
+<div class="outline-text-4" id="text-2-3-9">
+<ul class="org-ul">
+<li><p>
+总效应
+</p>
+
+<p>
+一种商品的价格变动引起的该商品的数量变动，分为替代效应和收入效应
+</p></li>
+
+<li><p>
+替代效应
+</p>
+
+<p>
+一种商品价格的变动引起商品相对价格的变动（预算线斜率变动），从而引起
+的商品数量变动 (维持效用不变）
+</p></li>
+
+<li><p>
+收入效应
+</p>
+
+<p>
+商品价格变动引起的实际收入变动，从而引起的商品数量的变动
+</p></li>
+</ul>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">商品类</th>
+<th scope="col" class="org-left">价格变化</th>
+<th scope="col" class="org-left">总效应</th>
+<th scope="col" class="org-left">替代效应</th>
+<th scope="col" class="org-left">收入效应</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">正常品</td>
+<td class="org-left">下降</td>
+<td class="org-left">增加</td>
+<td class="org-left">增加</td>
+<td class="org-left">增加</td>
+</tr>
+
+<tr>
+<td class="org-left">正常品</td>
+<td class="org-left">上涨</td>
+<td class="org-left">减少</td>
+<td class="org-left">减少</td>
+<td class="org-left">减少</td>
+</tr>
+
+<tr>
+<td class="org-left">低档品</td>
+<td class="org-left">下降</td>
+<td class="org-left">增加</td>
+<td class="org-left">增加</td>
+<td class="org-left">减小（收入效应&lt;替代效应）</td>
+</tr>
+
+<tr>
+<td class="org-left">低档品</td>
+<td class="org-left">上涨</td>
+<td class="org-left">减少</td>
+<td class="org-left">减少</td>
+<td class="org-left">增加（收入效应&lt;替代效应）</td>
+</tr>
+
+<tr>
+<td class="org-left">吉芬品</td>
+<td class="org-left">下降</td>
+<td class="org-left">减少</td>
+<td class="org-left">增加</td>
+<td class="org-left">减小（收入效应&gt;替代效应）</td>
+</tr>
+
+<tr>
+<td class="org-left">吉芬品</td>
+<td class="org-left">上涨</td>
+<td class="org-left">增加</td>
+<td class="org-left">减少</td>
+<td class="org-left">增加（收入效应&gt;替代效应）</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org25778bf" class="outline-2">
+<h2 id="org25778bf"><span class="section-number-2">3</span> 生产和成本论&#xa0;&#xa0;&#xa0;<span class="tag"><span class="2020__">2020计算</span></span></h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgda1731e" class="outline-3">
+<h3 id="orgda1731e"><span class="section-number-3">3.1</span> 生产函数</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+在一定时期内，在技术水平不变的情况下，生产中所用的各种生产要素的数量与
+所能生产的最大产量之间的关系。
+</p>
+
+<p>
+\(Q = Af(L, K, N, E, etc.)\)
+</p>
+
+<p>
+简化后为：
+</p>
+
+<p>
+\(Q = f(L, K)\)
+</p>
+
+<p>
+简化的原因：
+</p>
+
+<ul class="org-ul">
+<li>\(A\) 代表科学进步，对公司来说可以做为外生变量</li>
+
+<li>\(N\) 代表自然资源，可以使用\(K\) 来购买</li>
+
+<li>\(E\) 代表企业家才干，需要长时间的积累，短期不变</li>
+</ul>
+</div>
+
+<div id="outline-container-org58f23ed" class="outline-4">
+<h4 id="org58f23ed"><span class="section-number-4">3.1.1</span> 常见的生产函数</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<ol class="org-ol">
+<li>柯布-道格拉斯(C-D)生产函数：\(Q = AL^{\alpha}K^{\beta}\)
+
+<ol class="org-ol">
+<li>\(\alpha + \beta > 1\) 规模报酬递增（IRS）</li>
+
+<li>\(\alpha + \beta = 1\) 规模报酬不变（CRS）</li>
+
+<li>\(\alpha + \beta < 1\) 规模报酬递减（DRS）</li>
+</ol></li>
+
+<li>完全替代生产函数：\(Q = aL + bK\)</li>
+
+<li>完全互补生产函数：\(Q = min \lbrace \frac{L}{a}, \frac{K}{b}
+   \rbrace\)</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org42f8787" class="outline-3">
+<h3 id="org42f8787"><span class="section-number-3">3.2</span> 短期与长期</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>微观中短期指至少一种生产要素的数量是固定不变的时期，而长期则是指全部
+生产要素的数量都可以变动的时期。</li>
+
+<li>宏观中短期指物价不变的时期，长期则是物价可变的时期。</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org82b318c" class="outline-3">
+<h3 id="org82b318c"><span class="section-number-3">3.3</span> 短期生产函数</h3>
+<div class="outline-text-3" id="text-3-3">
+</div>
+<div id="outline-container-org0b91eca" class="outline-4">
+<h4 id="org0b91eca"><span class="section-number-4">3.3.1</span> 定义</h4>
+<div class="outline-text-4" id="text-3-3-1">
+<ol class="org-ol">
+<li>总产量 \(TP_L = f(L)\)</li>
+
+<li>平均产量 \(AL_L = \frac{TP_L}{L} = \frac{f(L)}{L}\)</li>
+
+<li><p>
+边际产量 \(MP_L = \frac{\Delta TP_L}{\Delta L}\)
+</p>
+
+<p>
+在其它条件不变的条件下，每增加一单位的劳动所能生产的总产出的增加量
+</p></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgf54bbfc" class="outline-4">
+<h4 id="orgf54bbfc"><span class="section-number-4">3.3.2</span> 边际报酬递减规律</h4>
+<div class="outline-text-4" id="text-3-3-2">
+<p>
+在技术水平和其他要素投入量不变的条件下，连续的增加一种可变生产要素的投
+入量，当这种可变生产要素的投入量小于某一阈值时，增加该要素的投入量所带
+来的边际产量是递增的，当超过这一阈值时，增加该要素的投入量所带来的边际
+产量是递减的
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0a2cdfb" class="outline-4">
+<h4 id="org0a2cdfb"><span class="section-number-4">3.3.3</span> 总产量、平均产量和边际产量曲线</h4>
+<div class="outline-text-4" id="text-3-3-3">
+<ol class="org-ol">
+<li>边际报酬递减规律的阈值 \(MP_L\) 最大点</li>
+
+<li>平均产量最大的点 \(MP_L = AP_L\)</li>
+
+<li>最大产量的点 \(MP_L = 0\)</li>
+
+<li>生产的合理区间：*平均产量最大的点到最大产量的点之间*</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org120e6b6" class="outline-3">
+<h3 id="org120e6b6"><span class="section-number-3">3.4</span> 长期生产函数</h3>
+<div class="outline-text-3" id="text-3-4">
+</div>
+<div id="outline-container-org3a3a5bf" class="outline-4">
+<h4 id="org3a3a5bf"><span class="section-number-4">3.4.1</span> 意义</h4>
+<div class="outline-text-4" id="text-3-4-1">
+<p>
+在长期内，在技术水平不变的条件下，两种可变要素投入量的组合与能生产的最
+大产量的依存关系
+</p>
+</div>
+</div>
+
+<div id="outline-container-org47319c1" class="outline-4">
+<h4 id="org47319c1"><span class="section-number-4">3.4.2</span> 等产量曲线</h4>
+<div class="outline-text-4" id="text-3-4-2">
+<p>
+在技术水平不变的条件下，生产同一产量的两种生产要素投入的所有不同组合点
+的轨迹
+</p>
+
+<p>
+特征：
+</p>
+
+<ol class="org-ol">
+<li>向右下方倾斜</li>
+
+<li>离原点越远产量越高</li>
+
+<li>任意两条不会相交</li>
+
+<li>凸向原点</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org8add61d" class="outline-4">
+<h4 id="org8add61d"><span class="section-number-4">3.4.3</span> 边际技术替代率</h4>
+<div class="outline-text-4" id="text-3-4-3">
+<p>
+在维持产量水平不变的条件下，增加一单位某种生产要素投入量时所减少的另一
+种要素投入量
+</p>
+
+<p>
+\(MRTS_{L,K} = RTS_{L,K} = - \frac{dK}{dL} = \frac{MP_L}{MP_K}\)
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8dfe1bb" class="outline-4">
+<h4 id="org8dfe1bb"><span class="section-number-4">3.4.4</span> 边际技术替代率递减规律（凸向原点的原因）</h4>
+<div class="outline-text-4" id="text-3-4-4">
+<p>
+在维持产量不变的前提下，当一种要素的投入量不断增加是，每一单位的这种要
+素所能代替的另一种生产要素的数量是递减的
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfdbbeb8" class="outline-4">
+<h4 id="orgfdbbeb8"><span class="section-number-4">3.4.5</span> 规模收益（规模报酬）</h4>
+<div class="outline-text-4" id="text-3-4-5">
+<p>
+分析厂商投入结构不发生变动的条件下生产规模的变动与产量变动之间的关系
+</p>
+
+<ol class="org-ol">
+<li>规模报酬递增</li>
+
+<li>规模报酬不变</li>
+
+<li>规模报酬递减</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org83af990" class="outline-3">
+<h3 id="org83af990"><span class="section-number-3">3.5</span> 长期生产要素的最优组合</h3>
+<div class="outline-text-3" id="text-3-5">
+</div>
+<div id="outline-container-orgf49dedc" class="outline-4">
+<h4 id="orgf49dedc"><span class="section-number-4">3.5.1</span> 等成本线方程</h4>
+<div class="outline-text-4" id="text-3-5-1">
+<p>
+\(C = w \cdot L + r \cdot K\)
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2e07fe6" class="outline-4">
+<h4 id="org2e07fe6"><span class="section-number-4">3.5.2</span> 生产者行为（利润最大化）</h4>
+<div class="outline-text-4" id="text-3-5-2">
+\begin{aligned}
+ & \pi = TR - TC \\
+ & \pi = P \cdot f(L, K) - (w \cdot L + r \cdot K) \\
+ & \text{对函数求偏导} \\
+ & \begin{cases}
+    \frac{d\pi}{dL} = 0 \implies P*MP_L(L, K) = w \\
+    \frac{d\pi}{dK} = 0 \implies P*MP_K(L, K) = r \\
+ \end{cases} \\
+ & \text{两个偏导方程相除} \\
+ & \frac{MP_L(L, K)}{MP_K(L, K)} = \frac{w}{r} \\
+\end{aligned}
+</div>
+</div>
+
+<div id="outline-container-org0c7ccfb" class="outline-4">
+<h4 id="org0c7ccfb"><span class="section-number-4">3.5.3</span> 生产要素的最优组合</h4>
+<div class="outline-text-4" id="text-3-5-3">
+<ul class="org-ul">
+<li><p>
+固定成本
+</p>
+
+\begin{cases}
+  \frac{MP_L(L, K)}{MP_K(L, K)} = \frac{w}{r} \qquad \text{等斜率} \\
+  w \cdot L + r \cdot = c \qquad \text{等成本} \\
+\end{cases}</li>
+
+<li><p>
+固定产量
+</p>
+
+\begin{cases}
+  \frac{MP_L(L, K)}{MP_K(L, K)} = \frac{w}{r} \qquad \text{等斜率}\\
+  f(L, K) = y \qquad \text{等产量} \\
+\end{cases}</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org71eb982" class="outline-4">
+<h4 id="org71eb982"><span class="section-number-4">3.5.4</span> 生产的扩展线</h4>
+<div class="outline-text-4" id="text-3-5-4">
+<p>
+其他条件不变的条件下，成本规模增加，生产要素最优组合的轨迹。
+</p>
+
+<p>
+\(\frac{MP_L(L, K)}{MP_K(L, K)} = \frac{w}{r}\)
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1acd975" class="outline-3">
+<h3 id="org1acd975"><span class="section-number-3">3.6</span> 厂商的生产成本</h3>
+<div class="outline-text-3" id="text-3-6">
+</div>
+<div id="outline-container-org72205b0" class="outline-4">
+<h4 id="org72205b0"><span class="section-number-4">3.6.1</span> 会计成本和机会成本</h4>
+<div class="outline-text-4" id="text-3-6-1">
+<ul class="org-ul">
+<li><p>
+会计成本
+</p>
+
+<p>
+厂商实际支付的费用
+</p></li>
+
+<li><p>
+机会成本
+</p>
+
+<p>
+指将一定资源用作某种用途时所放弃的其他各种用途中的最大收入，或者是将
+一定资源保持在这种用途上必须支付的成本
+</p></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org0d30c76" class="outline-4">
+<h4 id="org0d30c76"><span class="section-number-4">3.6.2</span> 显性成本和隐性成本</h4>
+<div class="outline-text-4" id="text-3-6-2">
+<ul class="org-ul">
+<li><p>
+显性成本
+</p>
+
+<p>
+厂商在要素市场上购买或者租用生产要素投入所需要的实际支出
+</p></li>
+
+<li><p>
+隐性成本
+</p>
+
+<p>
+厂商使用自己的生产要素所必须支付的机会成本
+</p></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org8d48a4c" class="outline-4">
+<h4 id="org8d48a4c"><span class="section-number-4">3.6.3</span> 私人成本和社会成本</h4>
+<div class="outline-text-4" id="text-3-6-3">
+<ul class="org-ul">
+<li><p>
+私人成本
+</p>
+
+<p>
+一种行为的当事人因为该行为而需要支付的成本
+</p></li>
+
+<li><p>
+社会成本
+</p>
+
+<p>
+一种行为给全社会造成的成本，其中既包含经济当事人本身承担的成本，也包
+含其他经济单位承担的成本。（养鸡场例子，外部性）
+</p></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgff28262" class="outline-4">
+<h4 id="orgff28262"><span class="section-number-4">3.6.4</span> 短期成本和长期成本</h4>
+<div class="outline-text-4" id="text-3-6-4">
+<ul class="org-ul">
+<li><p>
+短期成本
+</p>
+
+<p>
+考察期内，厂商不能够对所有生产要素加以调整，即至少有一种成本保持不变，
+这种成本被称为短期成本
+</p></li>
+
+<li><p>
+长期成本
+</p>
+
+<p>
+考察期内，所有成本都能够发生变化
+</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc88fdb5" class="outline-3">
+<h3 id="orgc88fdb5"><span class="section-number-3">3.7</span> 短期成本</h3>
+<div class="outline-text-3" id="text-3-7">
+</div>
+<div id="outline-container-orgd76bfea" class="outline-4">
+<h4 id="orgd76bfea"><span class="section-number-4">3.7.1</span> 成本分类</h4>
+<div class="outline-text-4" id="text-3-7-1">
+<ol class="org-ol">
+<li>总量类
+
+<ul class="org-ul">
+<li>总固定成本（Total Fixed Cost) \(TFC = r * \bar K\)</li>
+
+<li>总可变成本（Total Variable Cost）\(TVC = w * L(Q)\)</li>
+
+<li>总成本（Total Cost）\(TC = TFC + TVC\)</li>
+</ul></li>
+
+<li>平均类
+
+<ul class="org-ul">
+<li>平均固定成本（Average Fixed Cost）\(AFC = \frac{TFC}{Q}\)</li>
+
+<li>平均可变成本（Average Variable Cost）\(AVC = \frac{TVC}{Q} =
+     \frac{w \cdot L}{Q} = w \cdot \frac{1}{AP_L}\)</li>
+
+<li>平均成本（Average Cost）\(AC = \frac{TC}{Q} = AFC + AVC\)</li>
+</ul></li>
+
+<li>边际类
+
+<ul class="org-ul">
+<li>边际成本（Marginal Cost）\(MC = \frac{dTC}{dQ} = \frac{TVC}{dQ} =
+     \frac{w \cdot dL}{dQ} = w \cdot \frac{1}{MP_L}\)</li>
+</ul></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org7dc9068" class="outline-4">
+<h4 id="org7dc9068"><span class="section-number-4">3.7.2</span> 短期成本曲线推导</h4>
+<div class="outline-text-4" id="text-3-7-2">
+<p>
+边际报酬递减率推导边际产量，边际产量\(MP_L\) 推导边际成本\(MC\) ，边际成本
+推导总可变成本\(TVC\) ，总可变成本推导平均可变成本\(AVC\)
+</p>
+
+<ul class="org-ul">
+<li>MC，AVC，AC都是U型曲线</li>
+
+<li>MC的右半支穿过AVC和AC的最低点</li>
+
+<li>AVC与AC无限靠近</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc81ae90" class="outline-3">
+<h3 id="orgc81ae90"><span class="section-number-3">3.8</span> 长期成本</h3>
+<div class="outline-text-3" id="text-3-8">
+</div>
+<div id="outline-container-org4c0dcc4" class="outline-4">
+<h4 id="org4c0dcc4"><span class="section-number-4">3.8.1</span> 长期总成本</h4>
+<div class="outline-text-4" id="text-3-8-1">
+<p>
+指厂商长期中在各种产量水平上的最低总成本
+</p>
+
+\begin{cases}
+    MRTS_{L,K} = \frac{MP_L}{MP_K} = \frac{W}{r} \\
+    C = w \cdot L + r \cdot K \\
+    y = f(L, K)
+\end{cases}
+
+<p>
+消除方程组中的L和K，则等到C与Q的关系
+</p>
+</div>
+</div>
+
+<div id="outline-container-org94ebd7a" class="outline-4">
+<h4 id="org94ebd7a"><span class="section-number-4">3.8.2</span> 长期成本曲线</h4>
+<div class="outline-text-4" id="text-3-8-2">
+<p>
+<i>此处应该有图比较好理解【待补充】</i>
+</p>
+
+<ol class="org-ol">
+<li><p>
+长期总成本
+</p>
+
+<p>
+\(LTC = min \lbrace STC_i(Q) \rbrace\)
+</p>
+
+<p>
+LTC是短期成本STC的包络线
+</p></li>
+
+<li><p>
+长期平均成本
+</p>
+
+<p>
+\(LAC = min \lbrace \frac{STC_i{Q}}{Q} \rbrace\)
+</p>
+
+<p>
+LAC是短期平均成本SAC的包络线
+</p></li>
+
+<li><p>
+长期边际成本
+</p>
+
+<p>
+<i>同短期形状差不多，U型，右半支穿过LAC最低点</i>
+</p></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org2336674" class="outline-4">
+<h4 id="org2336674"><span class="section-number-4">3.8.3</span> 规模经济与长期平均成本</h4>
+<div class="outline-text-4" id="text-3-8-3">
+<p>
+<b>规模经济与规模报酬的概念不同，规模经济不要求生产要素投入机构不变，而
+规模报酬要求生产要素投入成比例变化</b>
+</p>
+
+<ol class="org-ol">
+<li><p>
+规模经济
+</p>
+
+<p>
+对于一个厂商而言，如果产量扩大一倍，而厂商的成本增加低于一倍，则称
+厂商的上产存在规模经济
+</p></li>
+
+<li><p>
+规模不经济
+</p>
+
+<p>
+如果产量扩大一本，而厂商的成本增加大于一倍，则生产存在规模不经济
+</p></li>
+
+<li><p>
+长期平均成本呈现U型的解释
+</p>
+
+<p>
+在左半支一定规模一下，存在规模经济，而大于生产大于某一规模是生产表
+现出规模不经济
+</p></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb613b93" class="outline-2">
+<h2 id="orgb613b93"><span class="section-number-2">4</span> 市场理论</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orge0fca4e" class="outline-3">
+<h3 id="orge0fca4e"><span class="section-number-3">4.1</span> 利润最大化条件</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+利润方程 \(\pi = TR(Q) - TC(Q)\)
+</p>
+
+<p>
+最大化求导，导数为零 \(\frac{d\pi}{dQ} = \frac{dTR(Q)}{dQ} -
+\frac{dTC(Q)}{dQ} = 0\)
+</p>
+
+<p>
+导数为零的条件 \(\frac{dTR(Q)}{dQ} = \frac{dTC(Q)}{dQ}\)
+</p>
+
+<p>
+最终得到 \(MR(Q) = MC(Q)\) 
+</p>
+
+<p>
+<b>注意</b> ，这里导数为零只是利润最大化的必要条件，不是充分条件，导数为零也
+可能是利润最小的点
+</p>
+
+<p>
+利润最大化中MR是市场决定，MC由企业决定，本章主要探讨不同市场的MR
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8637864" class="outline-3">
+<h3 id="org8637864"><span class="section-number-3">4.2</span> 不同市场划分</h3>
+<div class="outline-text-3" id="text-4-2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">市场</th>
+<th scope="col" class="org-left">企业数量</th>
+<th scope="col" class="org-left">价格控制力</th>
+<th scope="col" class="org-left">产品差异化程度</th>
+<th scope="col" class="org-left">企业进入行业难易程度</th>
+<th scope="col" class="org-left">例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">完全竞争市场</td>
+<td class="org-left">多</td>
+<td class="org-left">市场价格的接受者</td>
+<td class="org-left">无</td>
+<td class="org-left">自由</td>
+<td class="org-left">同一地区农产品市场</td>
+</tr>
+
+<tr>
+<td class="org-left">垄断竞争市场</td>
+<td class="org-left">数量多规模小</td>
+<td class="org-left">有一定控制力</td>
+<td class="org-left">有差别的同种产品</td>
+<td class="org-left">相对容易</td>
+<td class="org-left">饭店，酒店</td>
+</tr>
+
+<tr>
+<td class="org-left">寡头垄断市场</td>
+<td class="org-left">少数厂商，规模大，相互依存</td>
+<td class="org-left">有明显控制力，但价格相对稳定</td>
+<td class="org-left">不确定</td>
+<td class="org-left">比较困难</td>
+<td class="org-left">银行，石油</td>
+</tr>
+
+<tr>
+<td class="org-left">垄断市场</td>
+<td class="org-left">只有一家</td>
+<td class="org-left">厂商定价</td>
+<td class="org-left">无</td>
+<td class="org-left">难</td>
+<td class="org-left">铁路，电网</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org1da0088" class="outline-3">
+<h3 id="org1da0088"><span class="section-number-3">4.3</span> 完全竞争市场</h3>
+<div class="outline-text-3" id="text-4-3">
+</div>
+<div id="outline-container-orgce46620" class="outline-4">
+<h4 id="orgce46620"><span class="section-number-4">4.3.1</span> MR的决定</h4>
+<div class="outline-text-4" id="text-4-3-1">
+\begin{cases}
+  TR(Q) = P \cdot Q \\
+  AR(Q) = \frac{TR(Q)}{Q} = P \\
+  MR(Q) = \frac{dTR(Q)}{dQ} = \frac{d(P \cdot Q)}{dQ} = P \\
+\end{cases}
+</div>
+</div>
+
+<div id="outline-container-orge3210a6" class="outline-4">
+<h4 id="orge3210a6"><span class="section-number-4">4.3.2</span> 完全竞争市场的厂商短期均衡</h4>
+<div class="outline-text-4" id="text-4-3-2">
+<p>
+短期厂商的生产成本曲线无法调整（线动）所以均衡讨论的是市场价格与厂商成
+本曲线的5种相交情况
+</p>
+
+<p>
+<i>这里有图比较好【待补充】</i>
+</p>
+
+<ol class="org-ol">
+<li>\(P > min(AC)\) ，企业盈利 \(\pi = P * Q^*|_{MC(Q) = P}\)</li>
+
+<li>\(P = min(AC)\) ，企业的盈亏平衡点</li>
+
+<li>\(min(AVC) < P < min(AC)\) ，企业亏损，但是选择继续生产，因为收入大于
+平均可变成本</li>
+
+<li>\(P = min(AVC)\) ，企业关门的临界点</li>
+
+<li>\(P < min(AVC)\) ，企业关门</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org456bf90" class="outline-4">
+<h4 id="org456bf90"><span class="section-number-4">4.3.3</span> 完全竞争市场的短期供给曲线</h4>
+<div class="outline-text-4" id="text-4-3-3">
+<p>
+\(P > min(AVC)\) 时的企业\(MC(Q)\) 曲线
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc1d1b91" class="outline-4">
+<h4 id="orgc1d1b91"><span class="section-number-4">4.3.4</span> 完全竞争市场的厂商产期均衡</h4>
+<div class="outline-text-4" id="text-4-3-4">
+<p>
+完全竞争市场厂商进入退出自由，所有最终的均衡为
+</p>
+
+<p>
+\(P = AR = MR = min(LAC) = LMC = SMC_i = min(SAC_i)\)
+</p>
+
+<p>
+此时厂商的利润为0
+</p>
+
+<p>
+市场上厂商的数量可以通过市场总需求量除以单个厂商供给量得出
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8de0db2" class="outline-4">
+<h4 id="org8de0db2"><span class="section-number-4">4.3.5</span> 行业的长期供给曲线</h4>
+<div class="outline-text-4" id="text-4-3-5">
+<ol class="org-ol">
+<li><p>
+外在经济和外在不经济
+</p>
+
+<p>
+随着厂商数量的增加，整个行业中的产量也会增加，如果行业中单个缠上的
+成本降低，则称该行业存在外在经济。反之，存在外在不经济。
+</p></li>
+
+<li>成本不变行业的长期供给曲线：水平线</li>
+
+<li>成本递增行业的长期供给曲线：向右上方倾斜</li>
+
+<li>成本递减行业的长期供给曲线：向右下方倾斜</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf470883" class="outline-3">
+<h3 id="orgf470883"><span class="section-number-3">4.4</span> 垄断市场</h3>
+<div class="outline-text-3" id="text-4-4">
+</div>
+<div id="outline-container-org70182e9" class="outline-4">
+<h4 id="org70182e9"><span class="section-number-4">4.4.1</span> 垄断市场结构及其特征</h4>
+<div class="outline-text-4" id="text-4-4-1">
+<p>
+一家厂商控制了某种产品全部供给的市场结构
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf1266fe" class="outline-4">
+<h4 id="orgf1266fe"><span class="section-number-4">4.4.2</span> 垄断市场的MR确定</h4>
+<div class="outline-text-4" id="text-4-4-2">
+\begin{cases}
+  TR(Q) = P(Q) \cdot Q \\
+  MR(Q) = \frac{dTR(Q)}{dQ} = \frac{d(P(Q) \cdot Q)}{dQ} \\
+  MR(Q) = \frac{dP}{dQ}Q + P \cdot \frac{dQ}{dQ} = P \cdot (1 + \frac{dP}{dQ} \cdot \frac{Q}{P}) \\
+  MR(Q) = P \cdot (1 - \frac{1}{|e|})
+\end{cases}
+
+<p>
+从需求曲线上看，MR线穿过需求曲线在P上截距和需求曲线Q轴截距的中点
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0800387" class="outline-4">
+<h4 id="org0800387"><span class="section-number-4">4.4.3</span> 垄断市场的条件</h4>
+<div class="outline-text-4" id="text-4-4-3">
+<ol class="org-ol">
+<li>市场上只有唯一的一个厂商生产和销售商品</li>
+
+<li>该厂商生产和销售的商品没有任何相近的替代品</li>
+
+<li>其他任何厂商进入该行业都极为困难或者不可能</li>
+
+<li>厂商具有定价权</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org7c4a58c" class="outline-4">
+<h4 id="org7c4a58c"><span class="section-number-4">4.4.4</span> 垄断厂商的短期均衡</h4>
+<div class="outline-text-4" id="text-4-4-4">
+<p>
+<i>画图分析</i>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0956f81" class="outline-4">
+<h4 id="org0956f81"><span class="section-number-4">4.4.5</span> 垄断厂商的长期均衡</h4>
+<div class="outline-text-4" id="text-4-4-5">
+<p>
+\(MR = LMC\)
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0d4a10f" class="outline-4">
+<h4 id="org0d4a10f"><span class="section-number-4">4.4.6</span> 价格歧视</h4>
+<div class="outline-text-4" id="text-4-4-6">
+<p>
+同一厂商在同一时间对同一种产品向不同的购买者索取两种或两种以上的价格
+</p>
+
+<p>
+价格歧视分类：
+</p>
+
+<ol class="org-ol">
+<li><p>
+一级价格歧视
+</p>
+
+<p>
+完全价格歧视，厂商根据消费者意愿为每单位商品付出的最高价格而为每单
+位产品制定不同的销售价格
+</p></li>
+
+<li><p>
+二级价格歧视
+</p>
+
+<p>
+垄断厂商根据不同的购买量和消费者确定价格
+</p></li>
+
+<li><p>
+三级价格歧视
+</p>
+
+<p>
+垄断厂商对同一种铲平在不同的市场上，或不同的消费者群体，收取不同的
+价格
+</p></li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8ea8753" class="outline-3">
+<h3 id="org8ea8753"><span class="section-number-3">4.5</span> 垄断竞争市场</h3>
+<div class="outline-text-3" id="text-4-5">
+</div>
+<div id="outline-container-orga7e1f16" class="outline-4">
+<h4 id="orga7e1f16"><span class="section-number-4">4.5.1</span> 垄断市场的长期均衡条件</h4>
+<div class="outline-text-4" id="text-4-5-1">
+<p>
+\(MR = LMC, AR = LAC\)
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3c458f0" class="outline-4">
+<h4 id="org3c458f0"><span class="section-number-4">4.5.2</span> 垄断竞争市场的条件</h4>
+<div class="outline-text-4" id="text-4-5-2">
+<ol class="org-ol">
+<li>企业生产有差别的同种产品，这些产品彼此之间都是非常接近的替代品</li>
+
+<li>一个生产集团中的企业数量非常多，以至于*每个厂商都认为自己的行为的影
+响很小*，不会引起竞争对手的注意和反应</li>
+
+<li>厂商的生产规模比较小，进入或者退出是自由的</li>
+
+<li>厂商有一定的定价权</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org36d75b1" class="outline-4">
+<h4 id="org36d75b1"><span class="section-number-4">4.5.3</span> 主观需求曲线与客观需求曲线</h4>
+<div class="outline-text-4" id="text-4-5-3">
+<ol class="org-ol">
+<li><p>
+主观需求曲线
+</p>
+
+<p>
+单个厂商单独采取行动时所面临的需求曲线。也叫单个厂商的需求曲线
+</p></li>
+
+<li><p>
+客观需求曲线
+</p>
+
+<p>
+行业中所有企业都采取相同的行动时，单个厂商所面临的需求曲线。也叫市
+场份额曲线
+</p></li>
+
+<li>单个厂商的需求曲线比客观需求曲线要平缓一些</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8593bce" class="outline-3">
+<h3 id="org8593bce"><span class="section-number-3">4.6</span> 寡头市场</h3>
+<div class="outline-text-3" id="text-4-6">
+</div>
+<div id="outline-container-org97930a2" class="outline-4">
+<h4 id="org97930a2"><span class="section-number-4">4.6.1</span> 寡头市场的特征</h4>
+<div class="outline-text-4" id="text-4-6-1">
+<ol class="org-ol">
+<li>市场上存在少数厂商，单个厂商的销量占整个市场相当大的份额，进而对价
+格有明显的影响力</li>
+
+<li>少数寡头之间的行为相互依存</li>
+
+<li>寡头市场上的价格相对稳定</li>
+
+<li>市场存在进入壁垒</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org3625cb5" class="outline-4">
+<h4 id="org3625cb5"><span class="section-number-4">4.6.2</span> 古诺模型（数量竞争模型）</h4>
+<div class="outline-text-4" id="text-4-6-2">
+</div>
+<ol class="org-ol">
+<li><a id="org7df92b7"></a>两个假设<br />
+<div class="outline-text-5" id="text-4-6-2-1">
+<ol class="org-ol">
+<li>双寡头</li>
+
+<li><p>
+生产零成本
+</p>
+
+<p>
+这个假设意味着\(MC = 0\) ，厂商利润最大化的点（\(MR = MC = 0\) ）即是需
+求曲线Q轴截距的中点
+</p></li>
+</ol>
+</div>
+</li>
+
+<li><a id="orge51cc15"></a>结论<br />
+<div class="outline-text-5" id="text-4-6-2-2">
+\begin{cases}
+  \frac{1}{3} \cdot Q_1, & n = 2 \\
+  \frac{1}{n+1} \cdot Q_1, & n > 2 & n\text{为厂商数量}, Q_1\text{为市场容量} \\
+\end{cases}
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org7027eca" class="outline-4">
+<h4 id="org7027eca"><span class="section-number-4">4.6.3</span> 斯威齐模型（弯折的需求曲线模型）</h4>
+<div class="outline-text-4" id="text-4-6-3">
+<p>
+当一个寡头厂商提高价格时，其他厂商不会跟随，但若它降低价格时，其他厂商
+也会如此，结果单一厂商面临的需求曲线具有一个弯折点
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc093db7" class="outline-4">
+<h4 id="orgc093db7"><span class="section-number-4">4.6.4</span> 卡特尔模型</h4>
+<div class="outline-text-4" id="text-4-6-4">
+<p>
+<i>掌握计算题</i>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org43a8f10" class="outline-4">
+<h4 id="org43a8f10"><span class="section-number-4">4.6.5</span> 博弈论</h4>
+<div class="outline-text-4" id="text-4-6-5">
+</div>
+<ol class="org-ol">
+<li><a id="orgadf9434"></a>基础概念<br />
+<div class="outline-text-5" id="text-4-6-5-1">
+<p>
+参与方相互影响的情况下，如何作出最优决策的分析方法
+</p>
+
+<p>
+包含：
+</p>
+
+<ol class="org-ol">
+<li>参与者</li>
+
+<li>行动</li>
+
+<li>规则</li>
+</ol>
+</div>
+</li>
+
+<li><a id="orgeae4ddb"></a>占优策略均衡<br />
+<div class="outline-text-5" id="text-4-6-5-2">
+<p>
+无论其他参与者采取什么策略，某参与者的唯一的最优策略就是他的占优策略。
+由博弈所有参与者的占优策略组合所构成的均衡就是占优策略均衡
+</p>
+</div>
+</li>
+
+<li><a id="org25ff3cb"></a>纳什均衡<br />
+<div class="outline-text-5" id="text-4-6-5-3">
+<p>
+指的是参与人的这样一种策略组合，在该策略组合上，任何参与人单独改变策略
+都不会得到好处。换句话说，如果在一个策略组合上，当所有其他人都不改变策
+略时，没有人会改变自己的策略，则该策略组合就是一个纳什均衡
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6d57b4e" class="outline-2">
+<h2 id="org6d57b4e"><span class="section-number-2">5</span> 生产要素市场</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-orgf0abb1b" class="outline-3">
+<h3 id="orgf0abb1b"><span class="section-number-3">5.1</span> 生产要素市场一般原则</h3>
+<div class="outline-text-3" id="text-5-1">
+</div>
+<div id="outline-container-org482407f" class="outline-4">
+<h4 id="org482407f"><span class="section-number-4">5.1.1</span> 直接需求与引致需求</h4>
+<div class="outline-text-4" id="text-5-1-1">
+<ol class="org-ol">
+<li><p>
+直接需求
+</p>
+
+<p>
+消费者对产品的需求
+</p></li>
+
+<li><p>
+引致需求
+</p>
+
+<p>
+由消费者对产品的直接需求所引发的厂商对生产要素的需求被称为引致需求
+</p></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org5f20a77" class="outline-4">
+<h4 id="org5f20a77"><span class="section-number-4">5.1.2</span> 厂商利润最大化的原则</h4>
+<div class="outline-text-4" id="text-5-1-2">
+<p>
+\(\pi = TR(L) - TC(L)\)
+</p>
+
+<p>
+最大化导数为0:
+</p>
+
+<p>
+\(\frac{dTR(L)}{dL} - \frac{dTC(L)}{dL} = 0\)
+</p>
+
+<p>
+\(\frac{dTR(L)}{dL} = \frac{dTR}{dQ} \cdot \frac{dQ}{dL}  = \frac{dTC(L)}{dL}\)
+</p>
+
+<p>
+\(MRP = MR \cdot MP  = MFC\)
+</p>
+
+<p>
+\(MRP\) 为生产要素的边际收益，叫边际收益产品
+</p>
+
+<p>
+\(MPC\) 为生产要素的边际成本，叫做边际要素成本
+</p>
+
+<p>
+<b>对于完全竞争市场</b> ，\(MR = P\) ，\(MRP = P \cdot MP = VMP = MFC\)
+</p>
+
+<p>
+\(VMP\) 叫做边际产品价值
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8ceecf2" class="outline-4">
+<h4 id="org8ceecf2"><span class="section-number-4">5.1.3</span> 完全竞争市场的要素需求曲线</h4>
+<div class="outline-text-4" id="text-5-1-3">
+<p>
+<i>参考大纲和教材</i>
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbfa7584" class="outline-3">
+<h3 id="orgbfa7584"><span class="section-number-3">5.2</span> 劳动供给和工资率的确定</h3>
+<div class="outline-text-3" id="text-5-2">
+</div>
+<div id="outline-container-org1d5638d" class="outline-4">
+<h4 id="org1d5638d"><span class="section-number-4">5.2.1</span> 劳动与闲暇的替代效应与收入效应</h4>
+<div class="outline-text-4" id="text-5-2-1">
+<ul class="org-ul">
+<li><p>
+替代效应
+</p>
+
+<p>
+闲暇的需求量与闲暇的价格反方向变化
+</p></li>
+
+<li><p>
+收入效应
+</p>
+
+<p>
+闲暇的需求量与闲暇的价格正方向变化
+</p></li>
+
+<li>总效应取决与替代效应与收入效应的大小</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org31bca3e" class="outline-3">
+<h3 id="org31bca3e"><span class="section-number-3">5.3</span> 欧拉定理</h3>
+<div class="outline-text-3" id="text-5-3">
+</div>
+<div id="outline-container-org867ef39" class="outline-4">
+<h4 id="org867ef39"><span class="section-number-4">5.3.1</span> 欧拉定理（产品分配尽净定理）</h4>
+<div class="outline-text-4" id="text-5-3-1">
+<p>
+在完全竞争条件下，如果规模报酬不变，则全部产品正好足够分配给各个生产要
+素，不多也不少
+</p>
+
+<p>
+假设：\(Q = Q(L, K)\)
+</p>
+
+<p>
+则：
+</p>
+
+<p>
+\(Q = L \cdot \frac{\delta Q}{\delta L} + K \cdot \frac{\delta
+Q}{\delta K}\)
+</p>
+
+<p>
+\(Q = L \cdot MP_L + K \cdot MP_K\)
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbe7bf99" class="outline-3">
+<h3 id="orgbe7bf99"><span class="section-number-3">5.4</span> 洛伦兹曲线和基尼系数</h3>
+<div class="outline-text-3" id="text-5-4">
+<p>
+<i>大纲中没有，参考教材</i>
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org21e3279" class="outline-2">
+<h2 id="org21e3279"><span class="section-number-2">6</span> 一般均衡与福利经济学</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-orge8dd3b8" class="outline-3">
+<h3 id="orge8dd3b8"><span class="section-number-3">6.1</span> 一般均衡基本概念</h3>
+<div class="outline-text-3" id="text-6-1">
+</div>
+<div id="outline-container-org8b97556" class="outline-4">
+<h4 id="org8b97556"><span class="section-number-4">6.1.1</span> 局部均衡和一般均衡</h4>
+<div class="outline-text-4" id="text-6-1-1">
+<ol class="org-ol">
+<li><p>
+局部均衡
+</p>
+
+<p>
+在其他条件不变的情况下考察单个经济单位或市场的大分析是局部均衡，所
+涉及到的理论属于局部均衡范畴
+</p></li>
+
+<li><p>
+一般均衡
+</p>
+
+<p>
+将所有市场看成一个整体加以研究而进行的分析是一般均衡分析，相应的理
+论就是一般均衡理论
+</p></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org8101df4" class="outline-4">
+<h4 id="org8101df4"><span class="section-number-4">6.1.2</span> 一般均衡的基本思想</h4>
+</div>
+
+<div id="outline-container-org02dcf13" class="outline-4">
+<h4 id="org02dcf13"><span class="section-number-4">6.1.3</span> 一般均衡的存在性问题</h4>
+<div class="outline-text-4" id="text-6-1-3">
+<ul class="org-ul">
+<li><p>
+瓦尔拉斯定理
+</p>
+
+<p>
+对整个经济系统而言，所有的收入之和一定等于所有的支出之和
+</p>
+
+<p>
+\(\sum p_i x_i = \sum p_i y_i\)
+</p>
+
+<p>
+完全竞争市场条件下，存在着一个价格体系，使得一般均衡实现
+</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9ed68f5" class="outline-3">
+<h3 id="org9ed68f5"><span class="section-number-3">6.2</span> 纯交换经济的一般均衡</h3>
+<div class="outline-text-3" id="text-6-2">
+</div>
+<div id="outline-container-org9a20e56" class="outline-4">
+<h4 id="org9a20e56"><span class="section-number-4">6.2.1</span> 埃奇沃斯框图</h4>
+<div class="outline-text-4" id="text-6-2-1">
+<p>
+埃奇沃斯框图指方形的长和高分别代表两个消费者（或生产者）所拥有的两种商
+品（或生产要素）的总量，盒状图中各点表示两种商品（或要素）的总供给量在
+两个消费者（生产者）之间的配置状态
+</p>
+
+<p>
+两个消费者（或者生产者）无差异曲线的相切点的轨迹就是契约曲线线，契约曲
+线上的资源分配都符合拍累托最优，但是可能存在分配不公
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd76df02" class="outline-3">
+<h3 id="orgd76df02"><span class="section-number-3">6.3</span> 帕累托最优&#xa0;&#xa0;&#xa0;<span class="tag"><span class="2020__">2020重点</span></span></h3>
+<div class="outline-text-3" id="text-6-3">
+</div>
+<div id="outline-container-org88a0413" class="outline-4">
+<h4 id="org88a0413"><span class="section-number-4">6.3.1</span> 帕累托最优</h4>
+<div class="outline-text-4" id="text-6-3-1">
+<p>
+经济状态的任何改变都不能使此状态中的任何一个人的境况变得更好而不使别人
+的境况变坏，或者说如果不使别人的境况变坏，就无法使任何一个人的境况变得
+更好，这种经济状态就称为帕累托最优
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0d3e4ec" class="outline-4">
+<h4 id="org0d3e4ec"><span class="section-number-4">6.3.2</span> 帕累托改进</h4>
+<div class="outline-text-4" id="text-6-3-2">
+<p>
+如果既定的资源配置状态的改变，能够让一部分社会成员的状况改善，而其他人
+的状况并没有变坏，这就可以看作是一种资源配置的改善，称为帕累托改进
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgae3d324" class="outline-4">
+<h4 id="orgae3d324"><span class="section-number-4">6.3.3</span> 生产可能性边界</h4>
+<div class="outline-text-4" id="text-6-3-3">
+<p>
+<b>这个概念在这里出现有点儿奇怪，只是和帕累托生产和交换最优条件相关，之
+前没有出场的时机，所以在这里补充，国际经济学中也有用到</b>
+</p>
+
+<p>
+厂商将所有的要素\((L, K)\) 全部投入生产产品\((X, Y)\) 两种产品，所能得到的
+最大产量的组合轨迹
+</p>
+
+<p>
+生产可能性边界的斜率叫\(MRT\) 边际转换率
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7dded33" class="outline-4">
+<h4 id="org7dded33"><span class="section-number-4">6.3.4</span> 帕累托最优的条件</h4>
+<div class="outline-text-4" id="text-6-3-4">
+<ul class="org-ul">
+<li><p>
+消费者的帕累托最优
+</p>
+
+<p>
+\(MRS_{XY}^A = MRS_{XY}^B\)
+</p></li>
+
+<li><p>
+生产的帕累托最优
+</p>
+
+<p>
+\(MRTS_{LK}^C = MRTS_{LK}^D\)
+</p></li>
+
+<li><p>
+生产和交换的帕累托最优
+</p>
+
+<p>
+\(MRS_{XY}^A = MRT_{XY}^C\)
+</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6e92661" class="outline-3">
+<h3 id="org6e92661"><span class="section-number-3">6.4</span> 完全竞争市场和帕累托最优</h3>
+<div class="outline-text-3" id="text-6-4">
+<p>
+<i>证明完全竞争市场可以实现帕累托最优</i>
+</p>
+
+<ul class="org-ul">
+<li><p>
+消费者的拍累托最优
+</p>
+
+<p>
+\(MRS_{XY}^A = MRS_{XY}^B = \frac{P_X}{P_Y}\)
+</p></li>
+
+<li><p>
+生产的帕累托最优
+</p>
+
+<p>
+\(MRTS_{XY}^C = MRTS_{XY}^D = \frac{w}{r}\)
+</p></li>
+
+<li><p>
+生产和交换的拍累托最优
+</p>
+
+<p>
+\(MRT_{XY}^C = - \frac{\Delta Y}{\Delta X}\)
+</p>
+
+<p>
+意思是减少生产一单位X产品，可以增加多少Y产品的生产可以表示为
+\(\frac{MC_X}{MC_Y}\)
+</p>
+
+<p>
+因为完全竞争市场\(P_X = MR_X = MC_X, P_Y = MR_Y = MC_Y\)
+</p>
+
+<p>
+所以
+</p>
+
+<p>
+\(MRT_{XY}^C = \frac{MC_X}{MC_Y} = \frac{P_X}{P_Y} = MRS_{XY}^A\)
+</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgec5b164" class="outline-2">
+<h2 id="orgec5b164"><span class="section-number-2">7</span> 市场失灵与微观经济政策</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-orgfeed687" class="outline-3">
+<h3 id="orgfeed687"><span class="section-number-3">7.1</span> 市场失灵及类型</h3>
+<div class="outline-text-3" id="text-7-1">
+</div>
+<div id="outline-container-org0abc23d" class="outline-4">
+<h4 id="org0abc23d"><span class="section-number-4">7.1.1</span> 市场失灵</h4>
+<div class="outline-text-4" id="text-7-1-1">
+<p>
+指市场机制不能有效的配置资源（实现帕累托最优）。
+</p>
+
+<ul class="org-ul">
+<li><p>
+狭义的市场失灵
+</p>
+
+<p>
+指完全竞争市场所假定的条件得不到满足而导致的市场配置资源的能力不足从
+而缺乏效率的表现。
+</p></li>
+
+<li><p>
+广义的市场失灵
+</p>
+
+<p>
+还包括市场机制在配置资源过程中所出现的经济波动以及按市场分配原则导致
+的收入分配不公的现象。
+</p></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc205fb0" class="outline-4">
+<h4 id="orgc205fb0"><span class="section-number-4">7.1.2</span> 类型</h4>
+<div class="outline-text-4" id="text-7-1-2">
+<ul class="org-ul">
+<li>不完全信息（非对称信息）</li>
+
+<li>垄断</li>
+
+<li>外部性</li>
+
+<li>公共物品（财政学主要关注的）</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3aed426" class="outline-3">
+<h3 id="org3aed426"><span class="section-number-3">7.2</span> 垄断</h3>
+<div class="outline-text-3" id="text-7-2">
+<p>
+价高量少无效率
+</p>
+
+<p>
+对策：
+</p>
+
+<ul class="org-ul">
+<li>限价反垄断有效</li>
+
+<li>开放市场反垄断有效</li>
+
+<li>征税反垄断无效</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org903ae9d" class="outline-3">
+<h3 id="org903ae9d"><span class="section-number-3">7.3</span> 外部性</h3>
+<div class="outline-text-3" id="text-7-3">
+</div>
+<div id="outline-container-org707490f" class="outline-4">
+<h4 id="org707490f"><span class="section-number-4">7.3.1</span> 外部性含义</h4>
+<div class="outline-text-4" id="text-7-3-1">
+<p>
+指一个经济主体的行为对另一个经济主体的福利所产生的影响，而这种影响并没
+有通过货币或市场交易反映出来。外部性有正负之分，称为外在经济和外在不经
+济
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge54737c" class="outline-4">
+<h4 id="orge54737c"><span class="section-number-4">7.3.2</span> 对策</h4>
+<div class="outline-text-4" id="text-7-3-2">
+<ol class="org-ol">
+<li>税收与津贴</li>
+
+<li>外部影响内部化（合并）</li>
+
+<li><p>
+规定产权（科斯定理）
+</p>
+
+<p>
+在交易成本为零时，只要产权初始界定是清晰的，并允许当事人进行自由谈
+判，那么无论开始时将产权赋予谁，市场均衡的最终结果都会达到资源的有
+效配置
+</p></li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4247871" class="outline-3">
+<h3 id="org4247871"><span class="section-number-3">7.4</span> 公共物品</h3>
+<div class="outline-text-3" id="text-7-4">
+</div>
+<div id="outline-container-org0e6a05f" class="outline-4">
+<h4 id="org0e6a05f"><span class="section-number-4">7.4.1</span> 公共物品含义</h4>
+<div class="outline-text-4" id="text-7-4-1">
+<p>
+既无竞争性又无排他性的物品通常被称为公共物品
+</p>
+
+<ul class="org-ul">
+<li><p>
+排他性
+</p>
+
+<p>
+商品的生产者或者购买者可以很容易地把他人排斥在获得该商品带来的利益之
+外
+</p></li>
+
+<li><p>
+竞争性
+</p>
+
+<p>
+消费商品的数量与生产这一数量的成本有关
+</p></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd3e43ac" class="outline-4">
+<h4 id="orgd3e43ac"><span class="section-number-4">7.4.2</span> 免费乘车问题</h4>
+<div class="outline-text-4" id="text-7-4-2">
+<p>
+在公共物品的消费上隐瞒自己的真实偏好，以图“搭便车”，从而出现市场失灵
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8288b2f" class="outline-3">
+<h3 id="org8288b2f"><span class="section-number-3">7.5</span> 不对称信息</h3>
+<div class="outline-text-3" id="text-7-5">
+</div>
+<div id="outline-container-orgaf3148a" class="outline-4">
+<h4 id="orgaf3148a"><span class="section-number-4">7.5.1</span> 不对称信息含义</h4>
+<div class="outline-text-4" id="text-7-5-1">
+<p>
+不同经济主体拥有的信息量不想等或不平衡
+</p>
+
+<ul class="org-ul">
+<li>逆向选择</li>
+</ul>
+
+<p>
+低质量产品将高质量产品驱逐出市场的现象
+</p>
+
+<ul class="org-ul">
+<li>道德风险</li>
+</ul>
+
+<p>
+有信息优势的一方，在签订合同后，有可能采取有悖于合同规定的行为，以最大
+化自己的利益，同时损害另一交易方的利益
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7b4316d" class="outline-4">
+<h4 id="org7b4316d"><span class="section-number-4">7.5.2</span> 解决对策</h4>
+<div class="outline-text-4" id="text-7-5-2">
+<ul class="org-ul">
+<li>激励合同</li>
+
+<li>信息披露</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgef1d99b" class="outline-2">
+<h2 id="orgef1d99b"><span class="section-number-2">8</span> 宏观经济活动与宏观经济学</h2>
+<div class="outline-text-2" id="text-8">
+</div>
+<div id="outline-container-org1ce9c09" class="outline-3">
+<h3 id="org1ce9c09"><span class="section-number-3">8.1</span> 宏观经济学的特点</h3>
+<div class="outline-text-3" id="text-8-1">
+<ul class="org-ul">
+<li>微观经济学：价格理论</li>
+
+<li>宏观经济学：收入理论</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-orgf577ccd" class="outline-3">
+<h3 id="orgf577ccd"><span class="section-number-3">8.2</span> 国内生产总值</h3>
+<div class="outline-text-3" id="text-8-2">
+</div>
+<div id="outline-container-orgd508d72" class="outline-4">
+<h4 id="orgd508d72"><span class="section-number-4">8.2.1</span> 国内生产总值（GDP）</h4>
+<div class="outline-text-4" id="text-8-2-1">
+<p>
+经济社会（一国或一地区）在一定时期内运用生产要素所生产的全部最终产品
+（物品和劳务）的市场价值
+</p>
+
+<p>
+隐含的经济意义
+</p>
+
+<ol class="org-ol">
+<li>产出等于价值增值</li>
+
+<li>产出等于收入</li>
+
+<li>产出等于支出（存货看作厂商对自己商品的购买）</li>
+</ol>
+
+<p>
+需要注意的
+</p>
+
+<ol class="org-ol">
+<li>GDP是一个市场价值的概念</li>
+
+<li>GDP的测度是最终产品的价值，中间产品不计入，否则会造成重复计算</li>
+
+<li>GDP是一定时期内（往往为一年）所生产而不是所销售掉的最终产品的价值</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgb0a4788" class="outline-4">
+<h4 id="orgb0a4788"><span class="section-number-4">8.2.2</span> GDP核算方法</h4>
+<div class="outline-text-4" id="text-8-2-2">
+</div>
+<ol class="org-ol">
+<li><a id="org8940ac2"></a>支出法<br />
+<div class="outline-text-5" id="text-8-2-2-1">
+<p>
+用整个社会购买最终产品的总支出核算GDP（从总支出或者总需求角度），现实
+生活中，产品和劳务的最终使用是由居民购买、企业投资购买、政府购买和国外
+购买构成。
+</p>
+
+<p>
+\(GDP = C + I + G + (X - M)\)
+</p>
+</div>
+</li>
+
+<li><a id="orgaaf52df"></a>收入法<br />
+<div class="outline-text-5" id="text-8-2-2-2">
+<p>
+用要素收入，即企业生产成本核算国内生产总值
+</p>
+
+<p>
+\(GDP = L(工资) + K(利息) + E(利润) + N(租金) + 间接税和企业转移支付 +
+折旧\)
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-orgcf9da55" class="outline-4">
+<h4 id="orgcf9da55"><span class="section-number-4">8.2.3</span> 几个重要的国民收入变量</h4>
+<div class="outline-text-4" id="text-8-2-3">
+<ol class="org-ol">
+<li>国内生产总值（GDP）</li>
+
+<li><p>
+国内生产净值（NDP）
+</p>
+
+<p>
+\(NDP = GDP - \text{折旧}\)
+</p></li>
+
+<li><p>
+国民收入（NI）
+</p>
+
+<p>
+\(NI = NDP - (\text{间接税} + \text{企业转移支付}) + \text{政府补助}\)
+</p></li>
+
+<li><p>
+个人收入（PI）
+</p>
+
+<p>
+\(PI = NI - \text{企业留存} + \text{政府补助}\)
+</p></li>
+
+<li><p>
+个人可支配收入（DPI）
+</p>
+
+<p>
+\(DPI = PI - \text{税收}\)
+</p></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org09bdef7" class="outline-4">
+<h4 id="org09bdef7"><span class="section-number-4">8.2.4</span> 国民收入恒等式</h4>
+<div class="outline-text-4" id="text-8-2-4">
+\begin{cases}
+  AE(总支出) & = C + I + G + NX \\
+  AS(总收入) & = C + S + T + Kr \\
+\end{cases}
+
+<p>
+<i>\(Kr\) 为转移支付，给国外的资本，一般不考虑</i>
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="org87ee9bd"></a>两部门经济（简单经济）<br />
+<div class="outline-text-5" id="text-8-2-4-1">
+<p>
+消费者、企业
+</p>
+
+\begin{cases}
+  AE(总支出) & = C + I \\
+  AS(总收入) & = C + S \\
+  AE = AS \\
+  I = S \\
+\end{cases}
+</div>
+</li>
+
+<li><a id="org180e124"></a>三部门经济（封闭经济）<br />
+<div class="outline-text-5" id="text-8-2-4-2">
+<p>
+消费者、企业、政府
+</p>
+
+\begin{cases}
+  AE(总支出) & = C + I + G \\
+  AS(总收入) & = C + S + T \\
+  AE = AS \\
+  I = S + (T - G) \\
+\end{cases}
+
+<p>
+\(T - G\) 可以看作是政府的储蓄
+</p>
+</div>
+</li>
+
+<li><a id="org944fdab"></a>四部门经济（开放经济）<br />
+<div class="outline-text-5" id="text-8-2-4-3">
+\begin{cases}
+  AE(总支出) & = C + I + G + NX \\
+  AS(总收入) & = C + S + T + Kr \\
+  AE = AS \\
+  I = S + (T - G) + (Kr - Nx) \\
+\end{cases}
+
+<p>
+\(Kr - Nx\) 相当与外国的储蓄
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org32929ab" class="outline-2">
+<h2 id="org32929ab"><span class="section-number-2">9</span> 简单国民收入决定理论</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+<b>国民收入受哪些因素影响</b>
+</p>
+</div>
+
+<div id="outline-container-org612eba5" class="outline-3">
+<h3 id="org612eba5"><span class="section-number-3">9.1</span> 消费函数与需求函数</h3>
+<div class="outline-text-3" id="text-9-1">
+</div>
+<div id="outline-container-org260f83c" class="outline-4">
+<h4 id="org260f83c"><span class="section-number-4">9.1.1</span> 总需求（总支出）的构成</h4>
+<div class="outline-text-4" id="text-9-1-1">
+<p>
+总支出（总需求）指经济中各个部门对物品和劳务的支出总量，用\(E\) 表示总支
+出（总需求）。
+</p>
+
+<p>
+\(E = C + I\)
+</p>
+
+<p>
+均衡条件：\(Y = E = C + I\)
+</p>
+</div>
+</div>
+
+<div id="outline-container-org281bb71" class="outline-4">
+<h4 id="org281bb71"><span class="section-number-4">9.1.2</span> 消费函数</h4>
+<div class="outline-text-4" id="text-9-1-2">
+<p>
+\(C = \alpha + \beta Y\)
+</p>
+
+<p>
+\(\alpha\) 为自发消费（没收入也要消费）
+</p>
+
+<p>
+\(\beta\) 为边际消费倾向（MPC），大于0，小于等于1
+</p>
+
+\begin{cases}
+  Y = C + I \\
+  C = \alpha + \beta Y \\
+  Y = \frac{\alpha + I}{1 - \beta} \\
+\end{cases}
+</div>
+</div>
+
+<div id="outline-container-org3dc1ff1" class="outline-4">
+<h4 id="org3dc1ff1"><span class="section-number-4">9.1.3</span> 储蓄函数</h4>
+<div class="outline-text-4" id="text-9-1-3">
+<p>
+\(Y = C + S\)
+</p>
+
+<p>
+\(S = Y - (\alpha + \beta Y)\)
+</p>
+
+<p>
+\(S = - alpha + (1 - \beta)Y\)
+</p>
+
+<p>
+\(1 - \beta\) 边际储蓄倾向（MPS），MPS + MPC = 1
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5f980d3" class="outline-4">
+<h4 id="org5f980d3"><span class="section-number-4">9.1.4</span> 消费函数与储蓄函数的关系</h4>
+<div class="outline-text-4" id="text-9-1-4">
+<p>
+\(Y = C + S\)
+</p>
+
+<p>
+\(\frac{C}{Y} + \frac{S}{Y} = 1\)
+</p>
+
+<p>
+\(\frac{C}{Y}\) 为平均消费倾向（APS）
+</p>
+
+<p>
+\(\frac{S}{Y}\) 为平均消费倾向（APC）
+</p>
+
+<p>
+\(MPS + MPC = 1\)
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd36a69b" class="outline-3">
+<h3 id="orgd36a69b"><span class="section-number-3">9.2</span> 国民收入决定</h3>
+<div class="outline-text-3" id="text-9-2">
+</div>
+<div id="outline-container-org0c2d9db" class="outline-4">
+<h4 id="org0c2d9db"><span class="section-number-4">9.2.1</span> 两部门经济</h4>
+<div class="outline-text-4" id="text-9-2-1">
+<p>
+\(Y = \frac{\alpha + I}{1 - \beta}\)
+</p>
+</div>
+</div>
+
+<div id="outline-container-org22a65fd" class="outline-4">
+<h4 id="org22a65fd"><span class="section-number-4">9.2.2</span> 三部门经济</h4>
+<div class="outline-text-4" id="text-9-2-2">
+\begin{cases}
+  Y = C + I + G \\
+  C = \alpha + \beta(Y - T) + I + G \\
+\end{cases}
+
+<p>
+\(Y = \frac{\alpha - \beta T + I + G}{1 - \beta}\)
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9abfca4" class="outline-4">
+<h4 id="org9abfca4"><span class="section-number-4">9.2.3</span> 四部门经济</h4>
+<div class="outline-text-4" id="text-9-2-3">
+<p>
+\(Y = \frac{\alpha - \beta T + I + G + NX}{1 - \beta}\)
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge62a812" class="outline-4">
+<h4 id="orge62a812"><span class="section-number-4">9.2.4</span> 注意</h4>
+</div>
+</div>
+
+<div id="outline-container-org717408b" class="outline-3">
+<h3 id="org717408b"><span class="section-number-3">9.3</span> 乘数理论</h3>
+<div class="outline-text-3" id="text-9-3">
+</div>
+<div id="outline-container-orge09bed8" class="outline-4">
+<h4 id="orge09bed8"><span class="section-number-4">9.3.1</span> 投资乘数</h4>
+<div class="outline-text-4" id="text-9-3-1">
+<p>
+收入的变化与带来这种变化的投资支出变化的比率
+</p>
+
+<p>
+\(k_I = \frac{\Delta y}{\Delta i} = \frac{1}{1 - MPC} = \frac{1}{1 -
+\beta}\)
+</p>
+
+<p>
+结论，国民收入的增长会数倍于投资乘数的增长
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga08833b" class="outline-4">
+<h4 id="orga08833b"><span class="section-number-4">9.3.2</span> 政府购买乘数</h4>
+<div class="outline-text-4" id="text-9-3-2">
+<p>
+收入的变化与引起这种变化的政府投资变动的比率
+</p>
+
+<p>
+\(k_G = \frac{1}{1 - MPC} = \frac{1}{1 - \beta}\)
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd71c48e" class="outline-4">
+<h4 id="orgd71c48e"><span class="section-number-4">9.3.3</span> 税收乘数</h4>
+<div class="outline-text-4" id="text-9-3-3">
+<p>
+收入的变化与引起这种变化的税收变动的比率
+</p>
+
+<p>
+\(k_T = \frac{-\beta}{1 - \beta} = \frac{-MPC}{1-MPC}\)
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc940fee" class="outline-4">
+<h4 id="orgc940fee"><span class="section-number-4">9.3.4</span> 平衡预算乘数</h4>
+<div class="outline-text-4" id="text-9-3-4">
+<p>
+政府收入和支出同时以相等数量增加或减少是，国民收入变动与政府收支变动的
+比率
+</p>
+
+<p>
+\(k_b = k_G + K_T = 1\)
+</p>
+
+<p>
+政府通过税收收钱，在全部花光，是有效率的（维持经济增长）
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org44e7c39" class="outline-2">
+<h2 id="org44e7c39"><span class="section-number-2">10</span> 产品市场与货币市场的一般均衡</h2>
+<div class="outline-text-2" id="text-10">
+<p>
+<i>前一章中，投资（I）被看做是一个外生变量来讨论，这一章引入利率与投资的
+关系，再来讨论会如何影响总产出（Y）的增长</i>
+</p>
+</div>
+
+<div id="outline-container-org4783bbe" class="outline-3">
+<h3 id="org4783bbe"><span class="section-number-3">10.1</span> 投资的决定</h3>
+<div class="outline-text-3" id="text-10-1">
+</div>
+<div id="outline-container-orgd7ddd15" class="outline-4">
+<h4 id="orgd7ddd15"><span class="section-number-4">10.1.1</span> 投资的边际效率（MEC）</h4>
+<div class="outline-text-4" id="text-10-1-1">
+<p>
+是一种贴现率，这种贴现率正好使得一项资本物品的使用期限内各项预期收益的
+现值之和等于这项资本物品的供给价格或者重置成本
+</p>
+
+<p>
+\(R_0 = \frac{R_1}{1 + r_c} + \frac{R_2}{(1 + r_c)^2} + \cdots +
+\frac{R_n}{(1 + r_c)^n}\)
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga2e0c96" class="outline-4">
+<h4 id="orga2e0c96"><span class="section-number-4">10.1.2</span> 投资决定</h4>
+<div class="outline-text-4" id="text-10-1-2">
+<p>
+投资的条件是\(r_c > r\) ，资本边际效率大于市场的利息率，赚的钱大于借钱的
+成本
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1635ae7" class="outline-4">
+<h4 id="org1635ae7"><span class="section-number-4">10.1.3</span> 投资函数</h4>
+<div class="outline-text-4" id="text-10-1-3">
+<p>
+\(I = I(MEC, r)\) ，固定MEC不变，则简化为只与利率相关的函数\(I =
+I(\overline{MEC}, r) = I(r)\)
+</p>
+
+<p>
+凯恩斯的理论中
+</p>
+
+<p>
+\(I = e - d \cdot r \quad (d > 0)\)
+</p>
+
+<p>
+\(e\) 表示自主投资
+</p>
+
+<p>
+\(d\) 表示投资对利率的敏感系数
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org88090bd" class="outline-3">
+<h3 id="org88090bd"><span class="section-number-3">10.2</span> IS曲线及其推导</h3>
+<div class="outline-text-3" id="text-10-2">
+\begin{cases}
+  Y = AD \\
+  AD = C + I + G \\
+  I = e - d \cdot Y \\
+  C = \alpha + \beta Y \\
+\end{cases}
+
+<p>
+\(r = - \frac{1-\beta}{d}Y + \frac{\alpha - \beta T + e + G}{d}\)
+</p>
+
+<p>
+IS曲线表示产品市场均衡时（AS=AD），利率与总产出之间的关系
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3fdb4f4" class="outline-3">
+<h3 id="org3fdb4f4"><span class="section-number-3">10.3</span> LM曲线及其推导</h3>
+<div class="outline-text-3" id="text-10-3">
+<p>
+L（Liquidity）货币需求与M（Money Supply）货币供给之间的均衡
+</p>
+</div>
+
+<div id="outline-container-org978a367" class="outline-4">
+<h4 id="org978a367"><span class="section-number-4">10.3.1</span> 货币需求</h4>
+<div class="outline-text-4" id="text-10-3-1">
+</div>
+<ol class="org-ol">
+<li><a id="org41e87a6"></a>货币需求的动机<br />
+<div class="outline-text-5" id="text-10-3-1-1">
+<ul class="org-ul">
+<li><p>
+交易动机
+</p>
+
+<p>
+指个人和企业需要货币是为了进行正常的交易活动
+</p></li>
+
+<li><p>
+谨慎或预防动机
+</p>
+
+<p>
+指为预防意外支出而持有一部分货币的动机
+</p></li>
+
+<li><p>
+投机动机
+</p>
+
+<p>
+指人们为了抓住有利的购买有价证劵的机会而持有一部分货币的动机
+</p></li>
+</ul>
+</div>
+</li>
+
+<li><a id="org6f80d41"></a>货币需求函数<br />
+<div class="outline-text-5" id="text-10-3-1-2">
+<p>
+\(L = L_1(Y) + L_2(r) = k \cdot Y - h \cdot r\)
+</p>
+</div>
+</li>
+
+<li><a id="org1dc8b6f"></a>流动偏好陷阱<br />
+<div class="outline-text-5" id="text-10-3-1-3">
+<p>
+当利率极低，人们会认为这时利率不大可能再下降，或者说有价证劵市场价格不
+大可能再上升只会跌落，因而人们会将所持有的有价证劵全部换成货币，即使有
+了货币也不会去购买有价证券，以免证劵价格下跌而遭受损失。这种人们不管有
+多少货币都愿意持在手中，而不愿去购买有价证券的情况被成为“凯恩斯陷阱”或
+者“流动性陷阱”
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-orgebe3218" class="outline-4">
+<h4 id="orgebe3218"><span class="section-number-4">10.3.2</span> 货币供给</h4>
+<div class="outline-text-4" id="text-10-3-2">
+<ol class="org-ol">
+<li>\(M\) 为名义货币供给， \(m\) 为实际货币供给，\(m = \frac{M}{P}\)</li>
+
+<li>货币供给通常是常数，由央行决定</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgf771ff2" class="outline-4">
+<h4 id="orgf771ff2"><span class="section-number-4">10.3.3</span> LM曲线的推导</h4>
+<div class="outline-text-4" id="text-10-3-3">
+<p>
+\(m = L = L_1 + L_2 = L_1(y) + L_2(r) = k \cdot y - h \cdot r\)
+</p>
+
+<p>
+\(r = \frac{k}{h} \cdot y - \frac{m}{h}\)
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc2bebf2" class="outline-3">
+<h3 id="orgc2bebf2"><span class="section-number-3">10.4</span> 产品市场与货币市场同时均衡</h3>
+<div class="outline-text-3" id="text-10-4">
+</div>
+<div id="outline-container-org63e922b" class="outline-4">
+<h4 id="org63e922b"><span class="section-number-4">10.4.1</span> IS-LM模型</h4>
+<div class="outline-text-4" id="text-10-4-1">
+<p>
+<b>注意</b> IS-LM为短期市场的均衡，蕴含了价格是常数的意义
+</p>
+
+\begin{cases}
+  IS: \quad I(r) = S(y) \implies r = - \frac{1-\beta}{d}Y + \frac{\alpha - \beta T + e + G}{d} \\
+  LM: \quad L_1(y) + L_2(r) = m \implies r = \frac{k}{h} \cdot y - \frac{m}{h} \\
+\end{cases}
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2d0d97c" class="outline-3">
+<h3 id="org2d0d97c"><span class="section-number-3">10.5</span> 凯恩斯理论的基本框架</h3>
+<div class="outline-text-3" id="text-10-5">
+</div>
+<div id="outline-container-orgac47309" class="outline-4">
+<h4 id="orgac47309"><span class="section-number-4">10.5.1</span> 凯恩斯理论认为萧条的三大原因</h4>
+<div class="outline-text-4" id="text-10-5-1">
+<ol class="org-ol">
+<li>边际消费倾向递减</li>
+
+<li>流动性陷阱</li>
+
+<li>预期收益率不高</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb7663ed" class="outline-2">
+<h2 id="orgb7663ed"><span class="section-number-2">11</span> 宏观经济政策</h2>
+<div class="outline-text-2" id="text-11">
+</div>
+<div id="outline-container-org0f39941" class="outline-3">
+<h3 id="org0f39941"><span class="section-number-3">11.1</span> 宏观经济政策概述</h3>
+<div class="outline-text-3" id="text-11-1">
+</div>
+<div id="outline-container-org04dd017" class="outline-4">
+<h4 id="org04dd017"><span class="section-number-4">11.1.1</span> 宏观经济政策目标</h4>
+<div class="outline-text-4" id="text-11-1-1">
+<ul class="org-ul">
+<li>充分就业</li>
+
+<li>价格稳定</li>
+
+<li>经济增长</li>
+
+<li>国际收支平衡</li>
+
+<li>产业结构高级化（社会主义经济学中增加）</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org28b1e48" class="outline-4">
+<h4 id="org28b1e48"><span class="section-number-4">11.1.2</span> 宏观经济政策理论基础</h4>
+<div class="outline-text-4" id="text-11-1-2">
+<p>
+财政政策移动IS曲线，货币政策移动LM曲线。而且向右移动表示扩张，向左移动
+表示紧缩。
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org46749af" class="outline-3">
+<h3 id="org46749af"><span class="section-number-3">11.2</span> 财政政策</h3>
+<div class="outline-text-3" id="text-11-2">
+</div>
+<div id="outline-container-orgb8b183c" class="outline-4">
+<h4 id="orgb8b183c"><span class="section-number-4">11.2.1</span> 财政政策</h4>
+<div class="outline-text-4" id="text-11-2-1">
+<p>
+政府变动税收和支出以便影响总需求进而影响就业和国民收入的政策。
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0e699fc" class="outline-4">
+<h4 id="org0e699fc"><span class="section-number-4">11.2.2</span> 自动稳定器</h4>
+<div class="outline-text-4" id="text-11-2-2">
+<p>
+自动稳定器又称为“内在稳定器”。在国民经济中无需经常变动政府政策而有助于
+经济自动趋向稳定的因素。
+</p>
+
+<ul class="org-ul">
+<li><p>
+个人和公司所得税
+</p>
+
+<p>
+经济萧条，政府税收下降，相当于增加的政府投资。
+</p></li>
+
+<li><p>
+失业补助和其他福利转移支付
+</p>
+
+<p>
+经济萧条，政府失业补助和福利转移支付增加，拉动需求。
+</p></li>
+
+<li>农产品维持价格以及公司储蓄和家庭储蓄</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org70a4e77" class="outline-4">
+<h4 id="org70a4e77"><span class="section-number-4">11.2.3</span> 斟酌使用财政政策</h4>
+<div class="outline-text-4" id="text-11-2-3">
+<p>
+逆风向行事（购买、支付、税收和公债）
+</p>
+
+<ul class="org-ul">
+<li>经济衰退时，扩大政府支出，减少财政收入</li>
+
+<li>经济过热时，削减财政支出，增加税收</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org79e4e8d" class="outline-4">
+<h4 id="org79e4e8d"><span class="section-number-4">11.2.4</span> 功能财政和政府充分就业预算盈余</h4>
+<div class="outline-text-4" id="text-11-2-4">
+</div>
+<ol class="org-ol">
+<li><a id="orgbcd99af"></a>功能财政<br />
+<div class="outline-text-5" id="text-11-2-4-1">
+<p>
+不以财政预算收支平衡的观点来对待预算平衡和预算赤字，而应该从反周期的需
+要来利用预算赤字和预算盈余。当国民收入低于从分就业的收入水平时，即使出
+现财政赤字，政府也应该采取扩张性财政政策。
+</p>
+</div>
+</li>
+
+<li><a id="orgb0929b8"></a>充分就业的预算盈余<br />
+<div class="outline-text-5" id="text-11-2-4-2">
+<p>
+指既定的政府预算在充分就业的国民收入水平即潜在的国民收入水平上所产生的
+政府预算盈余，即潜在国民收入对应的财政收入和政府预算支出之间的差额。以
+此为表征，可以消除收入的周期性波动对预算状况的影响。
+</p>
+</div>
+</li>
+
+<li><a id="org3f2b94f"></a>挤出效应<br />
+<div class="outline-text-5" id="text-11-2-4-3">
+<p>
+指政府支出增加所引起的私人消费和投资降低的效果，进而是的GDP增长达不到
+乘数效应时的潜在产出。
+</p>
+
+<p>
+影响因素
+</p>
+
+<ul class="org-ul">
+<li>支出乘数的大小</li>
+
+<li>货币需求对产出变动的敏感程度</li>
+
+<li>货币需求对利率变动的敏感程度</li>
+
+<li>投资需求对利率变动的敏感程度</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org09054d4" class="outline-3">
+<h3 id="org09054d4"><span class="section-number-3">11.3</span> 货币政策</h3>
+<div class="outline-text-3" id="text-11-3">
+<p>
+中央银行通过银行体系变动货币供给量来调节总需求的政策
+</p>
+
+<p>
+<b>详细参考《货币银行学》第7章</b>
+</p>
+
+<p>
+货币政策措施：
+</p>
+
+<ol class="org-ol">
+<li>再贴现率</li>
+
+<li><p>
+公开市场业务
+</p>
+
+<p>
+中央银行在金融市场上公开买卖政府证劵以控制货币供给和利率的政策行为。
+</p></li>
+
+<li><p>
+法定准备金
+</p>
+
+<p>
+央行规定商业银行必须按照一定比率将吸收到的存款存放到中央银行以规避
+风险。
+</p></li>
+
+<li>其他手段：道义劝告、放宽信贷条件、信贷配额等</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7210ccc" class="outline-2">
+<h2 id="org7210ccc"><span class="section-number-2">12</span> 总需求与总供给分析</h2>
+<div class="outline-text-2" id="text-12">
+</div>
+<div id="outline-container-org7110bdb" class="outline-3">
+<h3 id="org7110bdb"><span class="section-number-3">12.1</span> 理解AD-AS分析需要注意的地方</h3>
+<div class="outline-text-3" id="text-12-1">
+<ol class="org-ol">
+<li>不同与IS-LM模型，AD-AS模型是长期模型，意味着价格可以变化</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgb2b3ae8" class="outline-3">
+<h3 id="orgb2b3ae8"><span class="section-number-3">12.2</span> 总需求及其推导</h3>
+<div class="outline-text-3" id="text-12-2">
+</div>
+<div id="outline-container-org2fea153" class="outline-4">
+<h4 id="org2fea153"><span class="section-number-4">12.2.1</span> 总需求</h4>
+<div class="outline-text-4" id="text-12-2-1">
+<p>
+总需求函数就是描述在各个价格水平下经济社会需要多高的产量水平
+</p>
+
+<p>
+\(p = P_{AS}(y)\)
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc33abe9" class="outline-4">
+<h4 id="orgc33abe9"><span class="section-number-4">12.2.2</span> 推导</h4>
+<div class="outline-text-4" id="text-12-2-2">
+\begin{cases}
+  IS: \quad I(r) = S(y) \implies r = - \frac{1-\beta}{d}Y + \frac{\alpha - \beta T + e + G}{d} \\
+  LM: \quad L_1(y) + L_2(r) = m \implies r = \frac{k}{h} \cdot y - \frac{m}{h} \\
+  m = \frac{M}{P}
+\end{cases}
+
+<p>
+消除变量\(r\) 可以等到价格水平\(P\) 与产量\(y\) 之间的关系
+</p>
+</div>
+</div>
+
+<div id="outline-container-org22e0799" class="outline-4">
+<h4 id="org22e0799"><span class="section-number-4">12.2.3</span> 图形推导</h4>
+<div class="outline-text-4" id="text-12-2-3">
+<p>
+<i>参考大纲或着教材</i>
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3c822c1" class="outline-3">
+<h3 id="org3c822c1"><span class="section-number-3">12.3</span> 总供给的一般说明</h3>
+<div class="outline-text-3" id="text-12-3">
+</div>
+<div id="outline-container-org1cf045f" class="outline-4">
+<h4 id="org1cf045f"><span class="section-number-4">12.3.1</span> 总供给函数</h4>
+<div class="outline-text-4" id="text-12-3-1">
+<p>
+总供给函数反映的是在各个不同的价格水平上，厂商愿意提供的总产出水平，总
+供给曲线体现了价格水平通过生产要素市场来影响产出
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb148cd6" class="outline-4">
+<h4 id="orgb148cd6"><span class="section-number-4">12.3.2</span> 劳动市场的均衡</h4>
+</div>
+
+<div id="outline-container-org2ed2201" class="outline-4">
+<h4 id="org2ed2201"><span class="section-number-4">12.3.3</span> 总供给曲线的图形推导</h4>
+<div class="outline-text-4" id="text-12-3-3">
+<p>
+<i>参考大纲或教材，这里稍微有点儿绕</i>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1a1a529" class="outline-4">
+<h4 id="org1a1a529"><span class="section-number-4">12.3.4</span> 长期的供给曲线</h4>
+<div class="outline-text-4" id="text-12-3-4">
+<p>
+一条竖直线
+</p>
+</div>
+</div>
+
+<div id="outline-container-org22f66bc" class="outline-4">
+<h4 id="org22f66bc"><span class="section-number-4">12.3.5</span> 完整的供给曲线</h4>
+<div class="outline-text-4" id="text-12-3-5">
+<p>
+短期（凯恩斯，水平线）、正常（向右上倾斜）、长期（竖直线）
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc0285ad" class="outline-3">
+<h3 id="orgc0285ad"><span class="section-number-3">12.4</span> AD-AS模型的均衡及其政策含义</h3>
+<div class="outline-text-3" id="text-12-4">
+<p>
+理解下面几种情况的含义
+</p>
+
+<ol class="org-ol">
+<li><p>
+AD-AS相交与凯恩斯区域
+</p>
+
+<p>
+存在失业，采用扩张性宏观政策，产出增加，物价水平保持不变
+</p></li>
+
+<li><p>
+AD-AS相交与正常区域
+</p>
+
+<p>
+扩张性宏观政策，产出增加，物价水平上升
+</p></li>
+
+<li><p>
+AD-AS相交与长期区域
+</p>
+
+<p>
+产出以达到充分产量，继续扩张性政策，产出不变，物价上涨
+</p></li>
+</ol>
+
+<p>
+结论
+</p>
+
+<ul class="org-ul">
+<li>短期而言，需求管理政策非常有效</li>
+
+<li>长期而言，需求管理政策无效</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9089708" class="outline-2">
+<h2 id="org9089708"><span class="section-number-2">13</span> 经济增长</h2>
+<div class="outline-text-2" id="text-13">
+</div>
+<div id="outline-container-org2f972f3" class="outline-3">
+<h3 id="org2f972f3"><span class="section-number-3">13.1</span> 经济增长与经济发展</h3>
+<div class="outline-text-3" id="text-13-1">
+<ul class="org-ul">
+<li><p>
+经济增长
+</p>
+
+<p>
+指一个国家一定时期生产的产品和服务总量不断增多的过程。（长期）
+</p></li>
+
+<li><p>
+经济发展
+</p>
+
+<p>
+包含经济增长和其他因素（制度、教育、寿命等）
+</p></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org867bb7a" class="outline-3">
+<h3 id="org867bb7a"><span class="section-number-3">13.2</span> 哈罗德-多马模型</h3>
+<div class="outline-text-3" id="text-13-2">
+</div>
+<div id="outline-container-org8e4c636" class="outline-4">
+<h4 id="org8e4c636"><span class="section-number-4">13.2.1</span> 基本假定</h4>
+<div class="outline-text-4" id="text-13-2-1">
+<ol class="org-ol">
+<li>全社会使用劳动和资本两种生产要素只生产一种产品</li>
+
+<li>资本-产出比保持不变</li>
+
+<li>储蓄率即储蓄在收入中所占的比重保持不变</li>
+
+<li>不存在技术进步，也不存在资本折旧</li>
+
+<li>人口按照一个固定速度增长</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgd9c89e4" class="outline-4">
+<h4 id="orgd9c89e4"><span class="section-number-4">13.2.2</span> 基本模型</h4>
+<div class="outline-text-4" id="text-13-2-2">
+<p>
+\(s\) 表示储蓄率\(\frac{S}{Y}\) ，\(v\) 表示边际资本-产量比率\(\frac{\Delta
+K}{\Delta Y}\)
+</p>
+
+<p>
+\(G = \frac{\Delta Y}{Y} = \frac{s}{v}\)
+</p>
+
+<p>
+经济增长与储蓄率成正比，与资本-产出比成反比
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9363943" class="outline-4">
+<h4 id="org9363943"><span class="section-number-4">13.2.3</span> 增长条件</h4>
+<div class="outline-text-4" id="text-13-2-3">
+<p>
+\(G_A = G_W = G_N\)
+</p>
+
+<p>
+\(G_A\) 是由有效需求决定的实际增长率
+</p>
+
+<p>
+\(G_W\) 是指有保证的增长率
+</p>
+
+<p>
+\(G_N\) 是指一国的人口增长率
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3114db1" class="outline-4">
+<h4 id="org3114db1"><span class="section-number-4">13.2.4</span> 模型意义</h4>
+<div class="outline-text-4" id="text-13-2-4">
+<p>
+在现实中，由于各种因素的影响，实际增长率、有保证的增长率和自然增长率很
+难达到一致，其增长途径成为“刃锋”。
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5c2c987" class="outline-3">
+<h3 id="org5c2c987"><span class="section-number-3">13.3</span> 新古典增长模型</h3>
+<div class="outline-text-3" id="text-13-3">
+</div>
+<div id="outline-container-org37bcae8" class="outline-4">
+<h4 id="org37bcae8"><span class="section-number-4">13.3.1</span> 理论假定</h4>
+<div class="outline-text-4" id="text-13-3-1">
+<ol class="org-ol">
+<li>全社会使用劳动和资本两种生产要素只生产一种产品</li>
+
+<li>劳动与资本之间可以相互替代，但并不能完全替代</li>
+
+<li>生产规模收益不变</li>
+
+<li>储蓄率即储蓄在收入中所占的比重保持不变</li>
+
+<li>不存在技术进步，也不存在资本折旧</li>
+
+<li>人口按照一个固定速度增长</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org6fedbc2" class="outline-4">
+<h4 id="org6fedbc2"><span class="section-number-4">13.3.2</span> 基本方程</h4>
+<div class="outline-text-4" id="text-13-3-2">
+<p>
+\(\Delta k = s \cdot f(k) - (n + \delta) \cdot k\)
+</p>
+
+<p>
+\(k\) 为人均资本量
+</p>
+
+<p>
+投资 = 资本的深化 + 资本的广化
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgab05b67" class="outline-4">
+<h4 id="orgab05b67"><span class="section-number-4">13.3.3</span> 稳定增长的条件</h4>
+<div class="outline-text-4" id="text-13-3-3">
+<ol class="org-ol">
+<li>技术进步</li>
+
+<li>降低储蓄率</li>
+
+<li>提高储蓄率</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org73c9dc1" class="outline-3">
+<h3 id="org73c9dc1"><span class="section-number-3">13.4</span> 新经济增长理论</h3>
+<div class="outline-text-3" id="text-13-4">
+</div>
+<div id="outline-container-org4b7230c" class="outline-4">
+<h4 id="org4b7230c"><span class="section-number-4">13.4.1</span> 基本观点</h4>
+<div class="outline-text-4" id="text-13-4-1">
+<ol class="org-ol">
+<li>内生因素推动经济增长</li>
+
+<li>技术进步很重要</li>
+
+<li>人力资源、知识积累具有外部性</li>
+
+<li>经济政策可以影响长期增长（产业政策）</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4ebc072" class="outline-2">
+<h2 id="org4ebc072"><span class="section-number-2">14</span> 通货膨胀理论</h2>
+<div class="outline-text-2" id="text-14">
+</div>
+<div id="outline-container-org4c85c32" class="outline-3">
+<h3 id="org4c85c32"><span class="section-number-3">14.1</span> 通货膨胀的种类和影响</h3>
+<div class="outline-text-3" id="text-14-1">
+</div>
+<div id="outline-container-org91a1112" class="outline-4">
+<h4 id="org91a1112"><span class="section-number-4">14.1.1</span> 通货膨胀含义及衡量</h4>
+<div class="outline-text-4" id="text-14-1-1">
+<ul class="org-ul">
+<li><p>
+含义
+</p>
+
+<p>
+一般价格总水平的持续和显著的上涨
+</p></li>
+
+<li>衡量
+
+<ol class="org-ol">
+<li>消费者物件指数CPI</li>
+
+<li>生产者物价指数PPI</li>
+
+<li>GNP折算数</li>
+</ol></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org66e06c9" class="outline-4">
+<h4 id="org66e06c9"><span class="section-number-4">14.1.2</span> 通货膨胀的分类</h4>
+<div class="outline-text-4" id="text-14-1-2">
+<ol class="org-ol">
+<li>按照价格上升的速度
+
+<ul class="org-ul">
+<li>温和的通货膨胀（年通货膨胀率&lt;10%）</li>
+
+<li>奔腾的通货膨胀（10%-100%）</li>
+
+<li>超级的通货膨胀（&gt;100%）</li>
+</ul></li>
+
+<li>按相对价格变动程度区分
+
+<ul class="org-ul">
+<li>平衡的通货膨胀</li>
+
+<li>非平衡的通货膨胀</li>
+</ul></li>
+
+<li>按人们的预料程度区分
+
+<ul class="org-ul">
+<li>预期到的通货膨胀</li>
+
+<li>未预期到的通货膨胀</li>
+</ul></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org5ab4dfe" class="outline-4">
+<h4 id="org5ab4dfe"><span class="section-number-4">14.1.3</span> 通货膨胀的效应</h4>
+<div class="outline-text-4" id="text-14-1-3">
+<p>
+<i>参《考货币银行学》</i>
+</p>
+
+<ol class="org-ol">
+<li>收入和财富分配效应
+
+<ul class="org-ul">
+<li>通货膨胀不利与靠固定的货币收入维持生活的人</li>
+
+<li>通货膨胀对储蓄者不利</li>
+
+<li>通货膨胀还可以影响债务人和债权人利益而使得债务人获益</li>
+</ul></li>
+
+<li>就业和产量效应
+
+<ul class="org-ul">
+<li>随着通货膨胀的出现，产出增加，收入增加</li>
+
+<li>成本推动型通货膨胀会使得收入或产量减少，从而引致失业</li>
+
+<li>超级通货膨胀导致经济崩溃</li>
+</ul></li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org46b6e14" class="outline-3">
+<h3 id="org46b6e14"><span class="section-number-3">14.2</span> 通货膨胀的原因</h3>
+<div class="outline-text-3" id="text-14-2">
+</div>
+<div id="outline-container-org5e60e83" class="outline-4">
+<h4 id="org5e60e83"><span class="section-number-4">14.2.1</span> 需求拉动型</h4>
+<div class="outline-text-4" id="text-14-2-1">
+<p>
+过多的货币追求过少的商品
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcb3d571" class="outline-4">
+<h4 id="orgcb3d571"><span class="section-number-4">14.2.2</span> 成本推动型</h4>
+<div class="outline-text-4" id="text-14-2-2">
+<ul class="org-ul">
+<li><p>
+工资推动型
+</p>
+
+<p>
+劳动力市场不完全竞争
+</p></li>
+
+<li><p>
+利润推动型
+</p>
+
+<p>
+不完全竞争的产品市场
+</p></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org10f2949" class="outline-4">
+<h4 id="org10f2949"><span class="section-number-4">14.2.3</span> 混合型通货膨胀</h4>
+<div class="outline-text-4" id="text-14-2-3">
+<p>
+“推中有拉，拉中有推”
+</p>
+</div>
+</div>
+
+<div id="outline-container-org24727eb" class="outline-4">
+<h4 id="org24727eb"><span class="section-number-4">14.2.4</span> 结构型通货膨胀</h4>
+<div class="outline-text-4" id="text-14-2-4">
+<p>
+由于经济结构变动引起，生产效率提高快的部门和生产率提高慢的部门，生产要
+素很难在部门转移，由于工资刚性造成全部门的工资和价格水平提高
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1dec469" class="outline-4">
+<h4 id="org1dec469"><span class="section-number-4">14.2.5</span> 作为货币现象的通货膨胀</h4>
+<div class="outline-text-4" id="text-14-2-5">
+<p>
+\(\pi = m - y + v\)
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge874e1b" class="outline-3">
+<h3 id="orge874e1b"><span class="section-number-3">14.3</span> 价格调整曲线</h3>
+<div class="outline-text-3" id="text-14-3">
+</div>
+<div id="outline-container-org8eeba1c" class="outline-4">
+<h4 id="org8eeba1c"><span class="section-number-4">14.3.1</span> 菲利普斯曲线</h4>
+<div class="outline-text-4" id="text-14-3-1">
+<p>
+经济学理论中用来表示失业率和通货膨胀率之间替换关系的曲线
+</p>
+
+<p>
+分为短期、长期、滞涨期三种
+</p>
+</div>
+</div>
+
+<div id="outline-container-org273a0da" class="outline-4">
+<h4 id="org273a0da"><span class="section-number-4">14.3.2</span> 价格调整方程</h4>
+<div class="outline-text-4" id="text-14-3-2">
+<p>
+\(\pi_t = \pi_t^e + (\mu + z) - \alpha u_t\)
+</p>
+
+<p>
+忽略供给方面的冲击
+</p>
+
+<p>
+\(\pi_t = \pi_t^e - \alpha u_t\)
+</p>
+
+<p>
+失业率借用总需求相对于潜在收入的增长率加以表示
+</p>
+
+<p>
+\(\pi_t = \pi_t^e + h \frac{Y_t - Y_f}{Y_f}\)
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbe06746" class="outline-4">
+<h4 id="orgbe06746"><span class="section-number-4">14.3.3</span> 奥肯定律</h4>
+<div class="outline-text-4" id="text-14-3-3">
+<p>
+失业率与经济增长率之间关系，失业率每高于自然失业率一个白分点，GDP将低
+于潜在GDP两个白分点
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0c2c906" class="outline-2">
+<h2 id="org0c2c906"><span class="section-number-2">15</span> 宏观经济学的意见分歧</h2>
+<div class="outline-text-2" id="text-15">
+</div>
+<div id="outline-container-orgf4e5ecf" class="outline-3">
+<h3 id="orgf4e5ecf"><span class="section-number-3">15.1</span> 宏观经济学意见分歧</h3>
+<div class="outline-text-3" id="text-15-1">
+</div>
+<div id="outline-container-org973ff01" class="outline-4">
+<h4 id="org973ff01"><span class="section-number-4">15.1.1</span> 古典宏观经济学和凯恩斯经济学</h4>
+<div class="outline-text-4" id="text-15-1-1">
+<ol class="org-ol">
+<li><p>
+古典宏观经济学
+</p>
+
+<p>
+指凯恩斯以前的在西方经济学界占统治地位的新古典经济学，是关于整个经
+济社会的产量、就业、货币数量、储蓄、投资、利息率和价格总水平的理论。
+萨伊定律是核心。
+</p></li>
+
+<li><p>
+凯恩斯主义经济学
+</p>
+
+<p>
+凯恩斯经济学否定了古典宏观经济学的基本假定，认为经济可以以处于低于
+充分就业的状态。在三大心理规律的作用下，消费和投资需求不足，从而导
+致整个经济的总需求不足，经济处于低于充分就业状态，所以需要利用经济
+政策对经济进行干预。
+</p></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgc9137d9" class="outline-4">
+<h4 id="orgc9137d9"><span class="section-number-4">15.1.2</span> 新古典综合派、货币主义、供给学派和理性预期学派</h4>
+<div class="outline-text-4" id="text-15-1-2">
+<ol class="org-ol">
+<li><p>
+新古典综合派
+</p>
+
+<p>
+指凯恩斯在20世纪20年代创立并为他的追随者所发展的宏观经济理论体系。
+以塞缪尔森、托宾、索洛为代表的凯恩斯主义者，把凯恩斯的经济理论同传
+统的微观经济理论综合在一起，形成了所谓新古典综合派，其主要思想为：
+</p>
+
+<ol class="org-ol">
+<li>以马歇尔理论为主的微观经济学</li>
+
+<li>以凯恩斯理论为核心，利用IS-LM分析说明经济的总需求</li>
+
+<li>以货币工资下降刚性说明向上倾斜的总供给</li>
+
+<li>以索洛的新古典增长模型说明经济增长</li>
+
+<li>以菲利普斯曲线说明价格调整和通货膨胀</li>
+</ol></li>
+
+<li><p>
+货币主义
+</p>
+
+<p>
+从货币理论出发考察宏观总量的变动，认为货币存量的变动是影响经济波动
+的主要因素，他们确信市场机制的自发作用，反对凯恩斯主义所采用的宏观
+经济政策，特别是财政政策。
+</p></li>
+
+<li><p>
+供给学派
+</p>
+
+<p>
+从凯恩斯主义忽略供给的角度批判凯恩斯理论，主张把经济分析的重点转向
+供给。
+</p></li>
+
+<li><p>
+理性预期学派
+</p>
+
+<p>
+从理性预期和经纪人的假设出发指出凯恩斯主义理论体系存在的问题，否定
+其政策的有效性。
+</p></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org07f5e9b" class="outline-4">
+<h4 id="org07f5e9b"><span class="section-number-4">15.1.3</span> 新古典宏观经济学和新凯恩斯主义经济学</h4>
+<div class="outline-text-4" id="text-15-1-3">
+<ol class="org-ol">
+<li><p>
+新古典宏观经济学
+</p>
+
+<p>
+是理性预期学派更为广泛的名称，这一学派以批判凯恩斯主义起家，以理性
+预期的市场出清为基本假定分析宏观经济总量决定和经济波动。
+</p></li>
+
+<li><p>
+新凯恩斯主义经济学
+</p>
+
+<p>
+在原有凯恩斯理论基础上重新对宏观经济理论作出解释的一个流派，它以价
+格黏性和非市场出清为假定条件，尝试把传统的微光经济学与凯恩斯主义的
+宏观经济学结合起来，说明宏观总量的决定，为政府干预提供依据。
+</p></li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf2cbed5" class="outline-3">
+<h3 id="orgf2cbed5"><span class="section-number-3">15.2</span> 货币主义</h3>
+<div class="outline-text-3" id="text-15-2">
+</div>
+<div id="outline-container-org93a9246" class="outline-4">
+<h4 id="org93a9246"><span class="section-number-4">15.2.1</span> 基本命题</h4>
+<div class="outline-text-4" id="text-15-2-1">
+<p>
+货币最要紧，货币的推动力是说明产量、就业和价格变化的最主要因素。货币供
+给量的变动是货币推动力的最可靠的度量标准，经济调控应该唯一地通过货币当
+局对货币供给量的控制加以调节。
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf4b5c1a" class="outline-4">
+<h4 id="orgf4b5c1a"><span class="section-number-4">15.2.2</span> 新货币数量论</h4>
+<div class="outline-text-4" id="text-15-2-2">
+<p>
+货币需求主要取决于社会的总财富、非人力财富在总财富中所占的比例和各种非
+人力财富的预期报酬率。
+</p>
+
+<p>
+结论，第一，价格总水平与货币供给量同方向变化；第二，短期内货币流动速度
+会受到利息率的影响，但波动是轻微的。
+</p>
+
+<p>
+根据\(MV = PV\) ，短期内，\(M\) 变动会影响到\(Y\) ，但是长期看，\(M\) 和\(V\) 同
+时变动，因而改变货币量不会影响产出。
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8b8a482" class="outline-4">
+<h4 id="org8b8a482"><span class="section-number-4">15.2.3</span> 自然率假说</h4>
+<div class="outline-text-4" id="text-15-2-3">
+<p>
+自然率一般指的是自然失业率，自然失业率为经济社会在正常情况下的失业率，
+它是劳动市场处于供求稳定状态时（达到潜在产出）的失业率，这里的稳定状态
+被认为是，既不会造成通货膨胀也不会导致通货紧缩的状态。
+</p>
+
+<p>
+货币主义认为，长期而言，经济总是趋向与自然失业率。
+</p>
+</div>
+</div>
+
+<div id="outline-container-org34ee111" class="outline-4">
+<h4 id="org34ee111"><span class="section-number-4">15.2.4</span> 货币主义政策分析</h4>
+<div class="outline-text-4" id="text-15-2-4">
+<ol class="org-ol">
+<li>反对财政政策</li>
+
+<li>反对相机抉择的货币政策</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgdea32c1" class="outline-3">
+<h3 id="orgdea32c1"><span class="section-number-3">15.3</span> 新古典宏观经济学</h3>
+<div class="outline-text-3" id="text-15-3">
+</div>
+<div id="outline-container-org08c9fe8" class="outline-4">
+<h4 id="org08c9fe8"><span class="section-number-4">15.3.1</span> 基本假设</h4>
+<div class="outline-text-4" id="text-15-3-1">
+<ol class="org-ol">
+<li><p>
+理性预期
+</p>
+
+<p>
+指经济当事人对价格、利率和收入等变量未来的变动可以做出符合理性的估计。
+</p>
+
+<ul class="org-ul">
+<li>预期平均来说是正确的</li>
+
+<li>利用所有有效信息对某个经济变量做出预期</li>
+
+<li>信息包含经济理论，因而结果与经济模型的预期相一致</li>
+</ul></li>
+
+<li>个人利益最大化</li>
+
+<li><p>
+市场出清
+</p>
+
+<p>
+无论劳动力市场的工资还是产品市场上的商品价格都具有充分的灵活性，可
+以根据供求情况迅速进行调整，以达到供求相等的均衡状态。（非黏性）
+</p></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org949b184" class="outline-4">
+<h4 id="org949b184"><span class="section-number-4">15.3.2</span> 结论</h4>
+<div class="outline-text-4" id="text-15-3-2">
+<p>
+政策导致经济波动，应该放弃干预经济的行为。
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org74ed624" class="outline-3">
+<h3 id="org74ed624"><span class="section-number-3">15.4</span> 新凯恩斯主义经济学</h3>
+<div class="outline-text-3" id="text-15-4">
+</div>
+<div id="outline-container-org10010d0" class="outline-4">
+<h4 id="org10010d0"><span class="section-number-4">15.4.1</span> 基本假定</h4>
+<div class="outline-text-4" id="text-15-4-1">
+<ol class="org-ol">
+<li><p>
+非市场出清
+</p>
+
+<p>
+工资和价格等不能迅速调整到使得市场出清的状态。
+</p>
+
+<ul class="org-ul">
+<li>菜单成本理论</li>
+
+<li>交错调整工资论</li>
+
+<li>不完全竞争理论</li>
+</ul></li>
+
+<li>经济当事人利益最大化</li>
+
+<li>理性预期</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: 2020-09-24 Thu 00:00</p>
+<p class="author">Author: Qing Yi</p>
+<p class="date">Created: 2020-12-02 Wed 17:53</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

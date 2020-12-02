@@ -1,0 +1,3588 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-12-02 Wed 17:53 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>财政学</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Qing Yi" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="../static/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="../static/readtheorg_theme/css/readtheorg.css"/>
+<script type="text/javascript" src="../static/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="../static/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../static/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="../static/readtheorg_theme/js/readtheorg.js"></script>
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">财政学</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orge9f6945">1. 考试分数分布</a></li>
+<li><a href="#org91779da">2. 财政职能</a>
+<ul>
+<li><a href="#org22e64fd">2.1. 政府与市场</a>
+<ul>
+<li><a href="#org34e3b37">2.1.1. 市场失灵</a></li>
+<li><a href="#orgc61f597">2.1.2. 公共物品和公共需要</a></li>
+<li><a href="#org37e33ae">2.1.3. 政府部门与市场部门间的最优资源配置</a></li>
+</ul>
+</li>
+<li><a href="#org008ea2c">2.2. 财政职能</a>
+<ul>
+<li><a href="#orgc5156f7">2.2.1. 财政职能的基本内容</a></li>
+<li><a href="#orgdd1ff85">2.2.2. 财政职能的演变</a></li>
+</ul>
+</li>
+<li><a href="#org27f9371">2.3. 政府失灵</a>
+<ul>
+<li><a href="#org2130c97">2.3.1. 政府失灵的表现</a></li>
+<li><a href="#org59677fa">2.3.2. 政府失灵的原因（公共选择理论）</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org1e712ec">3. 财政支出规模与结构</a>
+<ul>
+<li><a href="#org80262d1">3.1. 财政支持分类</a>
+<ul>
+<li><a href="#org3b5e185">3.1.1. 按照支出用途分类</a></li>
+<li><a href="#org5eee7cb">3.1.2. 按费用类别分类（按照国家职能分）</a></li>
+<li><a href="#org5c7c685">3.1.3. 按经济性质分类</a></li>
+</ul>
+</li>
+<li><a href="#orge41c615">3.2. 财政支出规模</a>
+<ul>
+<li><a href="#org8409c46">3.2.1. 衡量指标</a></li>
+<li><a href="#org788b1fe">3.2.2. 财政支出规模增长趋势的理论解释</a></li>
+<li><a href="#orga20f2f2">3.2.3. 影响财政支出规模的因素</a></li>
+</ul>
+</li>
+<li><a href="#orgd803eac">3.3. 财政支出结构</a>
+<ul>
+<li><a href="#orgf0a1208">3.3.1. 政府职能与财政支出结构</a></li>
+<li><a href="#org752d0ef">3.3.2. 财政支出结构的调整</a></li>
+<li><a href="#orgfe3d318">3.3.3. 财政支出结构的经济效应</a></li>
+</ul>
+</li>
+<li><a href="#orgfe998ba">3.4. 财政支出效益</a>
+<ul>
+<li><a href="#orgd610f47">3.4.1. 成本-效益分析法</a></li>
+<li><a href="#org45781f9">3.4.2. 最低费用选择法</a></li>
+<li><a href="#org31d64aa">3.4.3. 公共定价法</a></li>
+<li><a href="#org86ee3d8">3.4.4. 政府采购制度</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org684798e">4. 财政支出和社会保障指出</a>
+<ul>
+<li><a href="#orgbe34af3">4.1. 财政投资支出</a>
+<ul>
+<li><a href="#org2aef1bf">4.1.1. 财政投资的决策标准</a></li>
+<li><a href="#orgdf3aeeb">4.1.2. 经济基础设施投资</a></li>
+<li><a href="#orgcb0cb06">4.1.3. 农村和农业的财政投资</a></li>
+</ul>
+</li>
+<li><a href="#org574869f">4.2. 社会保障支出&#xa0;&#xa0;&#xa0;<span class="tag"><span class="2020__">2020重点</span></span></a>
+<ul>
+<li><a href="#org7a6bc8a">4.2.1. 社会保障制度</a></li>
+<li><a href="#orgff08d88">4.2.2. 社会保障支出</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgd6d0e19">5. 税收原理</a>
+<ul>
+<li><a href="#org1dd3c36">5.1. 财政收入的划分标准</a>
+<ul>
+<li><a href="#org3d1414a">5.1.1. 按收入形式分类</a></li>
+<li><a href="#org8e9abdc">5.1.2. 按照财政资金管理方式分类</a></li>
+<li><a href="#orgdfcdc34">5.1.3. 按照财政收入来源分类</a></li>
+</ul>
+</li>
+<li><a href="#org3d59d5d">5.2. 税收的基本问题</a>
+<ul>
+<li><a href="#orgc7323e2">5.2.1. 基本特征</a></li>
+<li><a href="#orgf947d66">5.2.2. 术语</a></li>
+<li><a href="#orgb37beec">5.2.3. 分类</a></li>
+</ul>
+</li>
+<li><a href="#orgacead34">5.3. 税收原则</a>
+<ul>
+<li><a href="#org000bc06">5.3.1. 概念</a></li>
+<li><a href="#org8f54c28">5.3.2. 理论发展</a></li>
+<li><a href="#orgb9dacfc">5.3.3. 效率原则</a></li>
+<li><a href="#orgcd57dea">5.3.4. 公平性原则</a></li>
+</ul>
+</li>
+<li><a href="#orgd64d1fe">5.4. 税负的转嫁与归宿</a>
+<ul>
+<li><a href="#org14d314a">5.4.1. 含义</a></li>
+<li><a href="#org8814739">5.4.2. 形式</a></li>
+<li><a href="#org183826e">5.4.3. 条件</a></li>
+<li><a href="#org881ecdd">5.4.4. 影响</a></li>
+</ul>
+</li>
+<li><a href="#orga6fd0fe">5.5. 税收的负担</a>
+<ul>
+<li><a href="#org242a658">5.5.1. 含义</a></li>
+<li><a href="#org350acbc">5.5.2. 拉弗曲线</a></li>
+</ul>
+</li>
+<li><a href="#orgc2e7ef6">5.6. 最适课税理论</a>
+<ul>
+<li><a href="#orgc6c7903">5.6.1. 含义</a></li>
+<li><a href="#orgd06800c">5.6.2. 主要内容</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org978ec83">6. 税收制度</a>
+<ul>
+<li><a href="#orgcb2e49a">6.1. 税制类型与结构</a>
+<ul>
+<li><a href="#org7c51dff">6.1.1. 税制类型</a></li>
+<li><a href="#orgfac6e7c">6.1.2. 税制结构</a></li>
+</ul>
+</li>
+<li><a href="#orgabe7e75">6.2. 税制体系</a>
+<ul>
+<li><a href="#org189d02f">6.2.1. 商品课税</a></li>
+<li><a href="#orge0ac708">6.2.2. 所得课税</a></li>
+<li><a href="#org5ae7ce6">6.2.3. 资源课税和财产课税</a></li>
+</ul>
+</li>
+<li><a href="#org6bc828d">6.3. 税制改革</a>
+<ul>
+<li><a href="#org4a5d82e">6.3.1. 基本问题</a></li>
+<li><a href="#org85ce515">6.3.2. 94年税改</a></li>
+<li><a href="#org75062da">6.3.3. 深化税制改革的基本思路</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org784e7a3">7. 国债理论与管理</a>
+<ul>
+<li><a href="#org957429c">7.1. 国债的功能与负担</a>
+<ul>
+<li><a href="#org6e62efc">7.1.1. 功能</a></li>
+<li><a href="#org6d6cd28">7.1.2. 负担与限度</a></li>
+</ul>
+</li>
+<li><a href="#orgaa2b73f">7.2. 国债制度与管理</a>
+<ul>
+<li><a href="#org3346f52">7.2.1. 国债的种类与结构</a></li>
+<li><a href="#orgc0e9142">7.2.2. 国债的发行与偿还</a></li>
+<li><a href="#orgae67ecd">7.2.3. 国债发行价格与国债利率</a></li>
+<li><a href="#org17ef476">7.2.4. 国债市场</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgee8ad84">8. 国家预算与预算管理体制</a>
+<ul>
+<li><a href="#org3c56550">8.1. 国家预算的组成与原则</a>
+<ul>
+<li><a href="#org64bc4f1">8.1.1. 国家预算的组成</a></li>
+<li><a href="#orge201390">8.1.2. 国家预算的原则</a></li>
+<li><a href="#orgc9f983d">8.1.3. 预算制度的完善</a></li>
+</ul>
+</li>
+<li><a href="#org53155bf">8.2. 国家预算法</a>
+<ul>
+<li><a href="#org7d4efb5">8.2.1. 概念</a></li>
+<li><a href="#org5153f21">8.2.2. 指导思想</a></li>
+<li><a href="#org99de6df">8.2.3. 预算编制、执行和决算程序</a></li>
+</ul>
+</li>
+<li><a href="#org084d29f">8.3. 预算外资金</a>
+<ul>
+<li><a href="#org5113ae7">8.3.1. 性质与范围</a></li>
+<li><a href="#orga0d439b">8.3.2. 管理</a></li>
+</ul>
+</li>
+<li><a href="#orgf0bef4f">8.4. 预算管理体制</a>
+<ul>
+<li><a href="#org98e6e78">8.4.1. 概念</a></li>
+<li><a href="#orgeb87b08">8.4.2. 类型</a></li>
+<li><a href="#org27c3946">8.4.3. 分级分税预算管理体制</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org27a11c5">9. 财政平衡与财政赤字</a>
+<ul>
+<li><a href="#org15a8084">9.1. 财政平衡</a>
+<ul>
+<li><a href="#orgb449c1f">9.1.1. 概念</a></li>
+<li><a href="#orgaf20492">9.1.2. 如何理解财政平衡</a></li>
+<li><a href="#org1fe91e2">9.1.3. 财政平衡与总量平衡的关系</a></li>
+<li><a href="#orga6ad84e">9.1.4. 不平衡的原因</a></li>
+</ul>
+</li>
+<li><a href="#org8bca51f">9.2. 财政赤字</a>
+<ul>
+<li><a href="#org8c590e2">9.2.1. 概念</a></li>
+<li><a href="#org079c63c">9.2.2. 衡量财政赤字规模</a></li>
+<li><a href="#org183696f">9.2.3. 对经济的影响</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orge9f6945" class="outline-2">
+<h2 id="orge9f6945"><span class="section-number-2">1</span> 考试分数分布</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>2个选择（4分）</li>
+
+<li>1个名词解释（3分）</li>
+
+<li>1个简答（8分）</li>
+</ul>
+
+<p>
+总共15分，重点抓住简答题
+</p>
+</div>
+</div>
+
+<div id="outline-container-org91779da" class="outline-2">
+<h2 id="org91779da"><span class="section-number-2">2</span> 财政职能</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org22e64fd" class="outline-3">
+<h3 id="org22e64fd"><span class="section-number-3">2.1</span> 政府与市场</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org34e3b37" class="outline-4">
+<h4 id="org34e3b37"><span class="section-number-4">2.1.1</span> 市场失灵</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<p>
+市场失灵是指市场在资源配置的某些方面是无效率或缺乏效率的，市场缺陷是指
+市场机制本身固有的缺陷。
+</p>
+
+<p>
+主要的表现有
+</p>
+
+<ol class="org-ol">
+<li><p>
+自然垄断
+</p>
+
+<p>
+产量达到相对较高的水平之后，规模收益递增和成本递减的问题。限制产量，
+抬高价格。
+</p></li>
+
+<li><p>
+外部性
+</p>
+
+<p>
+指一个行为主体的行为对其他行为主体产生影响。市场活动中没有得到补偿
+的额外成本和额外收益。
+</p></li>
+
+<li><p>
+公共物品
+</p>
+
+<p>
+免费搭便车
+</p></li>
+
+<li><p>
+信息不充分
+</p>
+
+<p>
+逆向选择和道德风险
+</p></li>
+
+<li>收入分配不公和经济波动</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgc61f597" class="outline-4">
+<h4 id="orgc61f597"><span class="section-number-4">2.1.2</span> 公共物品和公共需要</h4>
+<div class="outline-text-4" id="text-2-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="org18a0e60"></a>公共物品的概念<br />
+<div class="outline-text-5" id="text-2-1-2-1">
+<p>
+由政府部门（或公共部门）提供的，用来满足社会公共需要的物品和服务。
+</p>
+</div>
+</li>
+
+<li><a id="org4fd6d26"></a>公共物品的特征<br />
+<div class="outline-text-5" id="text-2-1-2-2">
+<ol class="org-ol">
+<li><p>
+非竞争性
+</p>
+
+<p>
+在生产水平既定的情况下，增加一个消费者不会减少其他消费者的消费数量。
+</p></li>
+
+<li><p>
+非排他性
+</p>
+
+<p>
+无法排除他人从各个物品获得利益，意味着可形成免费搭车现象，即可以免
+费享用公共物品。
+</p>
+
+<p>
+免费搭车是指不承担任何成本而消费或使用公共物品的行为，有这种行为的
+人或具有让别人付钱而自己享受公共物品收益动机的人成为免费搭车者。它
+是公共物品无法被市场体东的主要原因。
+</p></li>
+</ol>
+</div>
+</li>
+
+<li><a id="org785e14c"></a>公共物品的提供<br />
+<div class="outline-text-5" id="text-2-1-2-3">
+<p>
+公共物品由政府提供，准公共物品可以由政府提供，也可以由民间部门提供，但
+是需要监督。
+</p>
+</div>
+</li>
+
+<li><a id="orgd95a889"></a>社会公共需要的特征<br />
+<div class="outline-text-5" id="text-2-1-2-4">
+<ol class="org-ol">
+<li><p>
+共同需要性
+</p>
+
+<p>
+指社会公众在生产、生活和工作中的共同需要，不是简单的个人需求加总。
+</p></li>
+
+<li><p>
+共享性
+</p>
+
+<p>
+一个或者一些社会成员享用这种公共物品，并不能排斥其他社会成员享用。
+</p></li>
+
+<li><p>
+无代价或小代价性
+</p>
+
+<p>
+社会成员享用公共物品，无需付出任何代价，或者只支付与提供这些公共物
+品的成本极不对称的少量费用
+</p></li>
+
+<li>在市场机制不能解决外部效应产生的利益关系时，政府解决性</li>
+
+<li>满足社会公共需要的物质手段只能来自社会产品的剩余部分</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org37e33ae" class="outline-4">
+<h4 id="org37e33ae"><span class="section-number-4">2.1.3</span> 政府部门与市场部门间的最优资源配置</h4>
+<div class="outline-text-4" id="text-2-1-3">
+<ol class="org-ol">
+<li>政府部门与市场部门间的资源配置可能存在着某种最优组合</li>
+
+<li>利用无差异分析方法寻找部门间的最优配置</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org008ea2c" class="outline-3">
+<h3 id="org008ea2c"><span class="section-number-3">2.2</span> 财政职能</h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-orgc5156f7" class="outline-4">
+<h4 id="orgc5156f7"><span class="section-number-4">2.2.1</span> 财政职能的基本内容</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<ol class="org-ol">
+<li><p>
+资源配置职能
+</p>
+
+<p>
+指政府主要通过税收动员社会资源，通过财政指出提供公共物品，实现经济
+资源的合理流动和配置。
+</p></li>
+
+<li><p>
+收入分配职能
+</p>
+
+<p>
+指通过收入-指出制度，对不同收入阶层征税或不征税、不征税或少征税，增
+加低收入阶层的指出项目，实现对市场经济活动产生的收入分配状况的合理
+调整。
+</p></li>
+
+<li><p>
+经济稳定职能
+</p>
+
+<p>
+指政府在失业和经济萧条时期实行赤字政策，在充分就业和通货膨胀压力很
+大时期实行盈余财政，熨平经济波动。
+</p></li>
+
+<li><p>
+经济发展职能
+</p>
+
+<p>
+指通过税收优惠政策，调整指出结构，以经济增长为核心，以结构调整为重
+点，促进社会经济的持续发展。
+</p></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgdd1ff85" class="outline-4">
+<h4 id="orgdd1ff85"><span class="section-number-4">2.2.2</span> 财政职能的演变</h4>
+<div class="outline-text-4" id="text-2-2-2">
+<ol class="org-ol">
+<li><p>
+计划经济时期的财政职能
+</p>
+
+<p>
+分配和监督集中财力+分配到各地方、行业和个体
+</p></li>
+
+<li><p>
+有计划商品经济时期的财政职能
+</p>
+
+<p>
+分配、监督和调节改税和减税让利处理好国家、企业和个人三者之间的关系
+</p></li>
+
+<li><p>
+社会主义市场经济时期的财政职能
+</p>
+
+<p>
+资源配置、收入分配和经济稳定
+</p></li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org27f9371" class="outline-3">
+<h3 id="org27f9371"><span class="section-number-3">2.3</span> 政府失灵</h3>
+<div class="outline-text-3" id="text-2-3">
+</div>
+<div id="outline-container-org2130c97" class="outline-4">
+<h4 id="org2130c97"><span class="section-number-4">2.3.1</span> 政府失灵的表现</h4>
+<div class="outline-text-4" id="text-2-3-1">
+<p>
+政府失灵是指政府的活动或干预措施缺乏效率，或这政府做出了降低效率的决策
+或不能实施改善经济效率的政策。
+</p>
+
+<p>
+主要表现为
+</p>
+
+<ol class="org-ol">
+<li>短缺和过剩</li>
+
+<li>信息不足</li>
+
+<li><p>
+官僚主义
+</p>
+
+<p>
+决策过程高度僵化和严重的官僚主义问题，可能存在大量的重复劳动和繁文
+缛节。
+</p></li>
+
+<li>缺乏市场激励</li>
+
+<li>政府政策频繁变化</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org59677fa" class="outline-4">
+<h4 id="org59677fa"><span class="section-number-4">2.3.2</span> 政府失灵的原因（公共选择理论）</h4>
+<div class="outline-text-4" id="text-2-3-2">
+<ol class="org-ol">
+<li>政府决策的无效率
+
+<ol class="org-ol">
+<li>投票规则
+
+<ul class="org-ul">
+<li>一致同意原则，容易受到一票否决</li>
+
+<li>多数同意原则，容易出现循环投票和投票程序操控</li>
+</ul></li>
+
+<li><p>
+政治市场上行为主体动机
+</p>
+
+<p>
+政府是由政治家和官员组成。政治家的基本行为动机是追求个人利益最大
+化，其效用函数变量有权利、地位、名声和声望等，他们的个人目标可能
+与公共利益不一致，从而使得广大选民的利益受损。
+</p></li>
+
+<li><p>
+利益集团（压力集团）
+</p>
+
+<p>
+指那些有某种共同的目标并试图对公共政策施加影响的有组织的个人团体。
+通过竞选捐款、院外游说和直接贿赂等手段，对政治家产生影响，左右议
+案和投票行为，从而使得政府做出不利于公众的决策。
+</p></li>
+</ol></li>
+
+<li>政府运转的无效率
+
+<ol class="org-ol">
+<li>缺乏竞争激励
+
+<ul class="org-ul">
+<li>政府工作人员之间缺乏竞争（无法评价个人效率）</li>
+
+<li>政府部门之间缺乏竞争（无法评价部门效率）</li>
+</ul></li>
+
+<li>缺乏降低成本的激励
+
+<ul class="org-ul">
+<li>政府部门的活动大多不计成本，即使计算成本也很难做到准确；</li>
+
+<li>政府部门具有内在不断扩张的冲动，往往在公共物品的提供上出现过渡
+提供，造成社会资源的浪费</li>
+
+<li>政府部门对其提供的服务有垄断性，进而缺乏提供高质量服务的激励机
+制。</li>
+</ul></li>
+</ol></li>
+
+<li>政府干预的无效率
+
+<ol class="org-ol">
+<li><p>
+寻租行为
+</p>
+
+<p>
+指通过游说政府和院外活动获得某种垄断权或特许权，以赚取超常利润
+（租金）的行为。寻租行为越多，社会经济资源浪费越大。
+</p></li>
+
+<li>为了确保正常而顺畅的社会经济秩序，政府必须制定和实施一些法律规则
+及政府干预，但是有些政府干预形式，例如许可证、配额和批文等，就可
+能同时创造了寻租。</li>
+</ol></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1e712ec" class="outline-2">
+<h2 id="org1e712ec"><span class="section-number-2">3</span> 财政支出规模与结构</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org80262d1" class="outline-3">
+<h3 id="org80262d1"><span class="section-number-3">3.1</span> 财政支持分类</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org3b5e185" class="outline-4">
+<h4 id="org3b5e185"><span class="section-number-4">3.1.1</span> 按照支出用途分类</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<ol class="org-ol">
+<li><p>
+按用途分
+</p>
+
+<p>
+基本建设支出、增拨企业流动资金、科技三项、文教科学卫生事业费、国防
+费和行政管理费和价格补贴等13大项
+</p></li>
+
+<li>按总产品价值构成分
+
+<ul class="org-ul">
+<li>补偿性支出</li>
+
+<li>积累性支出</li>
+
+<li>消费性支出</li>
+</ul></li>
+
+<li>按动态再生产角度分
+
+<ul class="org-ul">
+<li>投资性支出</li>
+
+<li>消费性支出</li>
+</ul></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org5eee7cb" class="outline-4">
+<h4 id="org5eee7cb"><span class="section-number-4">3.1.2</span> 按费用类别分类（按照国家职能分）</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<p>
+经济建设费、社会文教费、国防费、行政管理费和其他支出5类。
+</p>
+
+<p>
+变化规律：经济建设费比重降低，社会文教费和行政管理费比重升高。
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5c7c685" class="outline-4">
+<h4 id="org5c7c685"><span class="section-number-4">3.1.3</span> 按经济性质分类</h4>
+<div class="outline-text-4" id="text-3-1-3">
+<ol class="org-ol">
+<li><p>
+购买性支出
+</p>
+
+<p>
+指政府在市场上购买商品和劳务的支出，包括购买日常政务活动和国家投资
+所需的商品和劳务的支出。它体现的是政府的市场再分配活动。（资源配置
+职能）
+</p></li>
+
+<li><p>
+转移性支出
+</p>
+
+<p>
+指政府资金无偿、单方面的转移。主要有补助支出、捐赠支出和债务利息支
+出。它体现的是政府非市场型再分配活动。（收入分配职能）
+</p></li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge41c615" class="outline-3">
+<h3 id="orge41c615"><span class="section-number-3">3.2</span> 财政支出规模</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-org8409c46" class="outline-4">
+<h4 id="org8409c46"><span class="section-number-4">3.2.1</span> 衡量指标</h4>
+<div class="outline-text-4" id="text-3-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="org499e774"></a>财政收支比率<br />
+<div class="outline-text-5" id="text-3-2-1-1">
+<ul class="org-ul">
+<li>财政收入比率（财政收入/GDP）</li>
+
+<li>财政支出比率（财政支出/GDP）</li>
+</ul>
+</div>
+</li>
+
+<li><a id="org9222bb5"></a>财政支出比率更能反映实际情况<br />
+<div class="outline-text-5" id="text-3-2-1-2">
+<ol class="org-ol">
+<li>集中程度，更加贴近实际，是实际发生的规模</li>
+
+<li>宏观经济调控，更能体现调控能，资源配置、收入调节和稳定经济的职能，
+都更多地由该指标体现</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org788b1fe" class="outline-4">
+<h4 id="org788b1fe"><span class="section-number-4">3.2.2</span> 财政支出规模增长趋势的理论解释</h4>
+<div class="outline-text-4" id="text-3-2-2">
+<ol class="org-ol">
+<li>财政增长似乎是市场经济国家经济发展中的一条规律</li>
+
+<li><p>
+政府活动扩张论（瓦格纳法则）
+</p>
+
+<p>
+随着人均收入的提高，财政支出的相对规模也随之提高。现代工业的发展会
+引起社会进步，社会进步必然是的国家活动的增长。
+</p>
+
+<p>
+政治因素：随着经济的工业化，进而要求更多的资源投入到提供治安和法律
+等方面的建设。
+</p>
+
+<p>
+经济因素：工业化推动了城市化，人口居住密集化，政府需要更多的投入进
+行管理。
+</p></li>
+
+<li><p>
+梯度渐进增长论（内外因素论）
+</p>
+
+<p>
+导致公共支出增长具有内在因素和外在因素，外在因素是说明公共支出增长
+超过GDP增长速度的主要原因。
+</p>
+
+<p>
+内因：经济发展，收入水平上升，以不变的税率所征得的税收也会上升，于
+是政府支出上升与GDP上升呈线性关系。
+</p>
+
+<p>
+外因：一旦发生外部冲击，例如战争等，政府会被迫提高税收，同时，公众
+的税收容忍度也提高了，公共支出替代了私人支出，但是危机过后，公共支
+出不会退回到上升前的水平。
+</p></li>
+
+<li><p>
+经济发展阶段论
+</p>
+
+<p>
+在经济发展的早起阶段，政府投资在社会总投资中占有较高的比重，公共部
+门为经济发展提供社会基础设施。
+</p>
+
+<p>
+在发展中期阶段，政府投资还应继续进行，但这时政府投资只是对私人投资
+的补充。
+</p>
+
+<p>
+经济达到成熟阶段，公共支出将从基础设施支出转向不断增加的教育、保健
+与福利服务的支出，且这方面的支出增长将大大超过其他方面支出的增长，
+也会快于GDP的增长速度，导致财政支出规模膨胀。
+</p></li>
+
+<li><p>
+官僚行为增长论（公共选择理论）
+</p>
+
+<p>
+官僚是指负责执行通过政治制度作出的集体选择的代理人集团，或更明确地
+说是指负责政府提供服务的部门。美国经济学家尼斯克认为，官僚以追求机
+构最大化为目标，机构规模越大，官僚们的权力越大。因此官僚机构通常以
+两种方式扩大其预算规模。一是千方百计让政府相信他们确定的产出水平是
+必要的；二是利用低效率的生产技术来增加生产既定的产出量所必须的投入
+量。官僚行为从产出和投入两个方面迫使财政支出规模不断膨胀。
+</p></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orga20f2f2" class="outline-4">
+<h4 id="orga20f2f2"><span class="section-number-4">3.2.3</span> 影响财政支出规模的因素</h4>
+<div class="outline-text-4" id="text-3-2-3">
+<ol class="org-ol">
+<li>经济性因素，水平、体制和政府干预</li>
+
+<li>政治性因素，政局稳定和行政效率等</li>
+
+<li>社会性因素，人口和文化背景等</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd803eac" class="outline-3">
+<h3 id="orgd803eac"><span class="section-number-3">3.3</span> 财政支出结构</h3>
+<div class="outline-text-3" id="text-3-3">
+</div>
+<div id="outline-container-orgf0a1208" class="outline-4">
+<h4 id="orgf0a1208"><span class="section-number-4">3.3.1</span> 政府职能与财政支出结构</h4>
+<div class="outline-text-4" id="text-3-3-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgc6eb246"></a>财政支出结构的概念&#xa0;&#xa0;&#xa0;<span class="tag"><span class="____">名词解释</span></span><br />
+<div class="outline-text-5" id="text-3-3-1-1">
+<p>
+各类财政支出占总支出的比重。它体现政府的经济管理职能和社会管理职能。它
+直接关系到政府动用社会资源的程度，从而对市场经济运行的影响可能比财政支
+出规模的影响更大。
+</p>
+</div>
+</li>
+
+<li><a id="org133b2be"></a>政府的经济管理职能和社会管理职能<br />
+<div class="outline-text-5" id="text-3-3-1-2">
+<p>
+经济建设支出比重呈现出下降的趋势
+</p>
+</div>
+</li>
+
+<li><a id="orgda4bdf8"></a>我国经济建设支出比重下降的主要原因<br />
+<div class="outline-text-5" id="text-3-3-1-3">
+<ol class="org-ol">
+<li>流动资金支出下降</li>
+
+<li>基础建设支出下降</li>
+</ol>
+</div>
+</li>
+
+<li><a id="org33f7576"></a>社会管理支出增长中的合理与不合理因素<br />
+<div class="outline-text-5" id="text-3-3-1-4">
+<ol class="org-ol">
+<li>教育、卫生和科学领域增长合理</li>
+
+<li>行政管理支出的增加有一定的必然性，但行政管理费的增长过快不合理</li>
+
+<li>行政费支出内部支出结构应该进一步优化</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org752d0ef" class="outline-4">
+<h4 id="org752d0ef"><span class="section-number-4">3.3.2</span> 财政支出结构的调整</h4>
+<div class="outline-text-4" id="text-3-3-2">
+</div>
+<ol class="org-ol">
+<li><a id="org266665e"></a>判断结构是否合理的标准<br />
+<div class="outline-text-5" id="text-3-3-2-1">
+<ol class="org-ol">
+<li>经济发展阶段及该阶段的主要经济政策目标</li>
+
+<li>财政支出各项目之间的相对增长速度</li>
+</ol>
+</div>
+</li>
+
+<li><a id="org21eb573"></a>我国目前的财政支出结构不尽合理<br />
+<div class="outline-text-5" id="text-3-3-2-2">
+<ol class="org-ol">
+<li>社会主义初级阶段，经济增长是主要经济政策目标，但是财政政策的财政投
+资规模虽然增加，但是国家预算内投资占全社会固定资产投资的比重在下降。</li>
+
+<li>消费性支出比重过大，而且增长速度远超过生产性支出的增长速度。</li>
+</ol>
+</div>
+</li>
+
+<li><a id="orge6655a2"></a>优化财政支出结构的基本思路<br />
+<div class="outline-text-5" id="text-3-3-2-3">
+<ol class="org-ol">
+<li>按照社会公共需求的先后秩序，合理界定财政支出范围</li>
+
+<li>根据当前的经济政策目标，在增长支出中逐步调整和理顺生产性支出和消费
+性支出的比例关系</li>
+
+<li>在适当提高财政投资支出比重的同时，重点应放在控制消费性支出的快速增
+长上。精简机构，控制行政机关人员，消减消费性支出。</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-orgfe3d318" class="outline-4">
+<h4 id="orgfe3d318"><span class="section-number-4">3.3.3</span> 财政支出结构的经济效应</h4>
+<div class="outline-text-4" id="text-3-3-3">
+</div>
+<ol class="org-ol">
+<li><a id="org600f112"></a>财政支出结构的增长效应<br />
+<div class="outline-text-5" id="text-3-3-3-1">
+<p>
+公共物品分为纯公共物品和补充私人部门生产的公共物品。
+</p>
+
+<p>
+纯公共物品：负的增长效应
+</p>
+
+<p>
+补充私人部门生产的公共物品：正的增长效应
+</p>
+</div>
+</li>
+
+<li><a id="org577627c"></a>财政支出结构的排挤效应<br />
+<div class="outline-text-5" id="text-3-3-3-2">
+<ul class="org-ul">
+<li>对私人投资的增减而言：影响不确定</li>
+
+<li>对国民收入增减而言，资本支出会增加国民收入，消费性支出对国民收入的影
+响不确定。因此，政府增加资本性支出不容一产生排挤效应。</li>
+</ul>
+</div>
+</li>
+
+<li><a id="orga212b61"></a>财政支出结构的储蓄效应<br />
+<div class="outline-text-5" id="text-3-3-3-3">
+<p>
+国民储蓄等于私人储蓄加上政府储蓄。而政府储蓄等于税收收入减去政府的消费
+性支出，即政府储蓄等于经常性收支差额。
+</p>
+
+<ul class="org-ul">
+<li><p>
+按照凯恩斯的观点
+</p>
+
+<p>
+政府消费支出增加可能会降低国民储蓄率，不管它是用税收融资还是公债融资；
+但是用税收融资和额外资本性支出对国民储蓄率可能觉有潜在的有利效应。
+</p></li>
+
+<li><p>
+按照李嘉图等价定理
+</p>
+
+<p>
+只要利用公债融资方式，政府增加消费性支出不影响国民储蓄率，而增加投资
+性支出将提高国民储蓄率。
+</p></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgfe998ba" class="outline-3">
+<h3 id="orgfe998ba"><span class="section-number-3">3.4</span> 财政支出效益</h3>
+<div class="outline-text-3" id="text-3-4">
+</div>
+<div id="outline-container-orgd610f47" class="outline-4">
+<h4 id="orgd610f47"><span class="section-number-4">3.4.1</span> 成本-效益分析法</h4>
+<div class="outline-text-4" id="text-3-4-1">
+<ol class="org-ol">
+<li><p>
+定义
+</p>
+
+<p>
+针对政府确定的建设目标，提出若干实现建设目标的方案，详列各种方案的
+全部预期成本和全部预期效益，通过分析比较，选择初最优的政府投资项目。
+</p></li>
+
+<li>成本-效益分析的过程
+
+<ol class="org-ol">
+<li>政府确定备选项目和备选方案</li>
+
+<li><p>
+政府选择方案和项目的过程
+</p>
+
+<p>
+详列各方案的成本与收益，并贴现；选择实施方案；选择投资组合；分析
+机会成本并选择。
+</p></li>
+</ol></li>
+
+<li>成本-收益分析法的运用。关键在于确定项目的收益、成本和贴现率。
+
+<ol class="org-ol">
+<li><p>
+收益和成本的确定
+</p>
+
+<p>
+微观经济主体核算，一切可用和不可用货币计量的成本与收益。
+</p></li>
+
+<li><p>
+贴现率的确定
+</p>
+
+<p>
+应至少等于举借外债的利率，或不低于国有企业因政府增加投入而取得的
+收益率。
+</p></li>
+
+<li><p>
+时间期界的确定
+</p>
+
+<p>
+依据不同项目的性质特点决定。
+</p></li>
+
+<li><p>
+优先次序的确定
+</p>
+
+<p>
+选择支出既定的情况下的社会净效益最大的项目。
+</p></li>
+</ol></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org45781f9" class="outline-4">
+<h4 id="org45781f9"><span class="section-number-4">3.4.2</span> 最低费用选择法</h4>
+<div class="outline-text-4" id="text-3-4-2">
+<ol class="org-ol">
+<li><p>
+概念
+</p>
+
+<p>
+最低费用选择法一般不用货币单位来计量备选的财政支出项目的社会效益，
+指计算各备选项目方案的有形成本，以最低成本作为选择标准的方法。
+</p></li>
+
+<li>步骤
+
+<ol class="org-ol">
+<li>根据项目目标，提出多种备选方案</li>
+
+<li>以货币为尺度，计算各备选方案各种有形费用之和</li>
+
+<li>按费用高低排出顺序，以供决策者选择</li>
+</ol></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org31d64aa" class="outline-4">
+<h4 id="org31d64aa"><span class="section-number-4">3.4.3</span> 公共定价法</h4>
+<div class="outline-text-4" id="text-3-4-3">
+<ol class="org-ol">
+<li><p>
+概念
+</p>
+
+<p>
+通过对公共劳务的定价，使公共劳务得到最节约，最有效的使用，从而达到
+提高公共支出效益的目的，提高整个社会资源配置的效率。
+</p></li>
+
+<li>分类
+
+<ol class="org-ol">
+<li><p>
+纯公共定价
+</p>
+
+<p>
+政府直接制定自然垄断性行业（通讯、交通等公共事业、煤、石油、原子
+能等基本品行业）的价格。
+</p></li>
+
+<li><p>
+管制定价或价格管制
+</p>
+
+<p>
+政府规定竞争性管制行业（如金融、教育和保健等行业）的价格。
+</p></li>
+</ol></li>
+
+<li>公共定价水平和定价体系
+
+<ul class="org-ul">
+<li><p>
+定价水平
+</p>
+
+<p>
+指政府提供每一单位“公共产品”的定价（或收费）是多少。
+</p></li>
+
+<li><p>
+定价体系
+</p>
+
+<p>
+指根据费用结构和需求结构形成的各种定价组合。费用结构，固定费用与
+可变费用的比率。需求结构，如家庭用、企业用或者高峰用。
+</p></li>
+</ul></li>
+
+<li>公共定价的三种方法
+
+<ol class="org-ol">
+<li><p>
+平均成本定价法
+</p>
+
+<p>
+政府在保持企业收支平衡的情况下，采取尽可能使经济福利最大化的定价
+方式。一般高于边际成本（理论最优）。
+</p></li>
+
+<li><p>
+二部定价法，基本费+从量费
+</p>
+
+<p>
+特点是“以收支平衡为条件实现经济福利最大化”（受管制的行业常用），
+基本费是固定的费用，有助与企业财务状况的稳定。
+</p></li>
+
+<li><p>
+负荷定价法
+</p>
+
+<p>
+指针对不同时间段和不同时期制定不同的价格。例如电力、煤气等。高峰
+收高价，低峰收低价。
+</p></li>
+</ol></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org86ee3d8" class="outline-4">
+<h4 id="org86ee3d8"><span class="section-number-4">3.4.4</span> 政府采购制度</h4>
+<div class="outline-text-4" id="text-3-4-4">
+</div>
+<ol class="org-ol">
+<li><a id="orgc8149e8"></a>政府采购制度概念<br />
+<div class="outline-text-5" id="text-3-4-4-1">
+<p>
+政府以公开招标、投标为主要方式选择供应商，从国内外市场上为政府部门或所
+属团体购买商品或劳务的一种制度。具有公开性、公正性，竞争性。其中公平竞
+争是政府采购制度的基石。
+</p>
+</div>
+</li>
+
+<li><a id="orgc46337b"></a>政府采购制度与财政支出效益的提高<br />
+<div class="outline-text-5" id="text-3-4-4-2">
+<ol class="org-ol">
+<li>从财政部门自身的角度来看，政府采购制度有利于政府部门强化支出管理，
+硬化预算约束，提高资金的使用效率</li>
+
+<li>从政府部门的代理人角度来看，通过招标竞价方式，优中选优，具体的采购
+实体将尽可能地节约资金，提高政府采购的实施效率</li>
+
+<li>从政府财政部门代理人与供应商之间关系的角度来看，由于政府采购制度引
+入了招标、投标的竞争机制，是的采购实体与供应商之间的“合谋”型博弈转
+化为“囚徒困境”型博弈，大大减少他们之间的共谋和腐败现象，在很大程度
+上避免了供应商和采购实体是最大利益者而国家是最大损失者问题。</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org684798e" class="outline-2">
+<h2 id="org684798e"><span class="section-number-2">4</span> 财政支出和社会保障指出</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orgbe34af3" class="outline-3">
+<h3 id="orgbe34af3"><span class="section-number-3">4.1</span> 财政投资支出</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-org2aef1bf" class="outline-4">
+<h4 id="org2aef1bf"><span class="section-number-4">4.1.1</span> 财政投资的决策标准</h4>
+<div class="outline-text-4" id="text-4-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="org04cca2d"></a>财政投资的特点<br />
+<div class="outline-text-5" id="text-4-1-1-1">
+<p>
+取决于政府在不同时期所要实现的政策目标，追求社会利益最大化，而且财政投
+资的资金来源有很大一部分是通过税收无偿取得的，因此政府最终依据怎样的投
+资决策标准，取决于政府在不同时期所要实现的政府目标。
+</p>
+</div>
+</li>
+
+<li><a id="orgb1334b8"></a>资本-产出比率最小化标准<br />
+<div class="outline-text-5" id="text-4-1-1-2">
+<p>
+稀缺要素标准。指政府在确定投资项目时，应当选择资本-产出比率最低的投资
+项目，或者说选择单位资本投入产生最大产出的投资项目。理由是，即使在一定
+时期内的储蓄率是既定的，但是资本-产出比率是可变的，在生产过程中，只要
+提高资本周转率或者产出-资本比率，就可以是产出最大化，实现预期增长率。
+</p>
+</div>
+</li>
+
+<li><a id="org5dd0929"></a>资本-劳动利比率最大标准<br />
+<div class="outline-text-5" id="text-4-1-1-3">
+<p>
+指政府投资支持应当选择使边际人均投资额最大化的投资项目。理由是，资本-
+劳动力比率越高，说明资本技术构成越高，劳动生产率越高，经济增长越快。因
+此，这种投资项目应该投资在资本密集型项目。
+</p>
+</div>
+</li>
+
+<li><a id="org9a759c6"></a>就业创造标准<br />
+<div class="outline-text-5" id="text-4-1-1-4">
+<p>
+单位投资额动员最大数量劳动力。指政府应选择单位投资能够动员最大数量劳动
+力的项目。这种标准要求政府不仅要在一定程度上扩大财政投资规模（外延增加
+就业机会），而且还要优先选择劳动力密集型技术的项目（内涵增加就业机会）
+</p>
+</div>
+</li>
+
+<li><a id="orge30e4cb"></a>我国现阶段的财政投资决策标准<br />
+<div class="outline-text-5" id="text-4-1-1-5">
+<p>
+就业创造标准，原因有4点：
+</p>
+
+<ol class="org-ol">
+<li>理论上说，劳动力是资源，浪费劳动力就是浪费资源。</li>
+
+<li>现实上看，我国是劳动力丰富国家，必须充分利用这一资源。</li>
+
+<li>失业的不良影响，无所事事，流浪，犯罪等</li>
+
+<li>有助于改善收入分配，提高福利水平</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-orgdf3aeeb" class="outline-4">
+<h4 id="orgdf3aeeb"><span class="section-number-4">4.1.2</span> 经济基础设施投资</h4>
+<div class="outline-text-4" id="text-4-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="org97f0273"></a>基础设施的分类<br />
+<div class="outline-text-5" id="text-4-1-2-1">
+<ul class="org-ul">
+<li>经济基础设施</li>
+
+<li>社会基础设施</li>
+</ul>
+</div>
+</li>
+
+<li><a id="org3dc4f5c"></a>经济基础设施投资的特点<br />
+<div class="outline-text-5" id="text-4-1-2-2">
+<ol class="org-ol">
+<li>规模大，设备笨重，资本成本远远大于维护成本和经营成本</li>
+
+<li>总成本中很大一部分在项目开始前已经发生，沉没成本高</li>
+
+<li>进入和推出成本很大，降低了基础设施服务的可竞争性</li>
+
+<li>较长的债务偿还期和较高的平均债务-权益比率</li>
+</ol>
+</div>
+</li>
+
+<li><a id="org15d6e42"></a>经济基础设施投资的投融资方式<br />
+<div class="outline-text-5" id="text-4-1-2-3">
+<ol class="org-ol">
+<li>政府直接投资，无偿提供使用（道路，天桥）</li>
+
+<li>政府直接投资，非商业性经营方式（机场，邮政等）</li>
+
+<li><p>
+财政投融资方式，指以国家的信用为基础，通过多种渠道筹集资金，有偿地
+投资与具有公共性地领域
+</p>
+
+<p>
+特点：有偿性、公共性、非利性，统筹性、灵活性
+</p></li>
+
+<li>BOT（建设-经营-转让-投资方式）</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-orgcb0cb06" class="outline-4">
+<h4 id="orgcb0cb06"><span class="section-number-4">4.1.3</span> 农村和农业的财政投资</h4>
+<div class="outline-text-4" id="text-4-1-3">
+</div>
+<ol class="org-ol">
+<li><a id="org4c98f59"></a>财政对农村和农业投资的必要性<br />
+<div class="outline-text-5" id="text-4-1-3-1">
+<ol class="org-ol">
+<li>我国农村人口众多，农村各项事业的发展相对落后</li>
+
+<li>国民经济基础，也是我国亟待发展的产业</li>
+
+<li>农业部门生产率较低，自身难以产生足够的积累</li>
+
+<li>许多农业投资项目只适于由政府投资</li>
+</ol>
+</div>
+</li>
+
+<li><a id="orgb861af4"></a>财政投资的重点&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">常考</span></span><br />
+<div class="outline-text-5" id="text-4-1-3-2">
+<ol class="org-ol">
+<li>基础设施</li>
+
+<li>生态环境</li>
+
+<li>研发和科技推广</li>
+</ol>
+</div>
+</li>
+
+<li><a id="orgf6ee817"></a>财政加大“三农”投入的主要措施（三综合+三补+基础+试点）<br />
+<div class="outline-text-5" id="text-4-1-3-3">
+<ol class="org-ol">
+<li>深化以税费为中心的农村综合改革</li>
+
+<li>三补贴，调整粮食风险基金使用结构，实现三补贴，按种植面积实行直接补
+贴，良种推广补贴和农机具购置补贴</li>
+
+<li>大力支持农业综合生产能力建设。主要表现在增大对农业和农村基础设施建
+设、生态建设、科技进步、综合开发等方面的投入。</li>
+
+<li>着力建立农村义务教育经费保障机制，全部免除西部地区农村中小学生学杂
+费。</li>
+
+<li>加大农村基本医疗、公共卫生和社会保障投入，促进城乡基本公共服务均等
+化。</li>
+
+<li>大力推进农村综合开发投资参股经营试点，带动社会资金投入农业和农村综
+合开发。</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org574869f" class="outline-3">
+<h3 id="org574869f"><span class="section-number-3">4.2</span> 社会保障支出&#xa0;&#xa0;&#xa0;<span class="tag"><span class="2020__">2020重点</span></span></h3>
+<div class="outline-text-3" id="text-4-2">
+</div>
+<div id="outline-container-org7a6bc8a" class="outline-4">
+<h4 id="org7a6bc8a"><span class="section-number-4">4.2.1</span> 社会保障制度</h4>
+<div class="outline-text-4" id="text-4-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="org303cc10"></a>社会保障的概念<br />
+<div class="outline-text-5" id="text-4-2-1-1">
+<p>
+政府通过专款专用税筹措资金，向老年人、无工作能力的人、失去工作机会的人、
+病人等提供基本生活保障的计划。
+</p>
+</div>
+</li>
+
+<li><a id="orgb48d86b"></a>政府提供社会保障的主要经济原因<br />
+<div class="outline-text-5" id="text-4-2-1-2">
+<p>
+保险市场的失灵
+</p>
+</div>
+</li>
+
+<li><a id="org30a7640"></a>我国社会保障制度的构成<br />
+<div class="outline-text-5" id="text-4-2-1-3">
+<p>
+社会保险、社会救济、社会福利和社会优抚。社会保险是社会保障制度的核心，
+由养老保险、失业保险、医疗保险、工伤保险和生育保险构成。
+</p>
+</div>
+</li>
+
+<li><a id="org3274c33"></a>养老保险制度的筹资方式<br />
+<div class="outline-text-5" id="text-4-2-1-4">
+<ol class="org-ol">
+<li><p>
+完全基金制
+</p>
+
+<p>
+即完全用过去积累的缴款所挣取的利息收入提供保险金的制度。
+</p></li>
+
+<li><p>
+现收现付制
+</p>
+
+<p>
+用当期的缴费提供保险金的制度。以同一时期正在工作的所有人的缴费，来
+支付现在保险收益人的开支的制度。（社会保障税）
+</p></li>
+
+<li><p>
+部分基金制
+</p>
+
+<p>
+既具有完全基金制的部分特点，又具有现收现付部分性质的混合制度。
+</p></li>
+</ol>
+</div>
+</li>
+
+<li><a id="orgb243c3e"></a>我国现行的养老保险制度<br />
+<div class="outline-text-5" id="text-4-2-1-5">
+<p>
+统帐结合（社会统筹和个人账户相结合）。各地要求按照职工个数缴费工资的
+28%的数额为职工建立基本养老保险个人账户，个人缴费全部记入个人账户，其
+余部分从企业缴费中划如。企业缴费出去划入个人账户的部分以外，其余部分进
+入社会统筹基金，用于向已经退休的职工发放各种退休费用。
+</p>
+</div>
+</li>
+
+<li><a id="orgaeb8d9c"></a>统账结合制与部分基金制的不同<br />
+<div class="outline-text-5" id="text-4-2-1-6">
+<p>
+从制度设计类似与部分基金制，即现收现付和将来支付两种方式相结合。但是，
+在具体内容上，我国的统账结合制与部分基金制又十分不同
+</p>
+
+<ol class="org-ol">
+<li>现收现付（社会统筹）部分的资金筹措方式不同。部分基金制用征税方式，
+我国的统账结合制用的是收费方式。</li>
+
+<li>基金（个人账户）部分的资金来源和运作方式不同。在资金来源上，部分基
+金制的基金部分的资金来源是社会保障税收入用于现付保险金后的余额，而
+我国的个人账户部分的资金来源是个人的直接缴费。在资金的运作上，部分
+基金制的基金部分的资金是以信托基金方式运作，而我国的个人账户部分资
+金目前也用于现付保险金+基金运作。</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-orgff08d88" class="outline-4">
+<h4 id="orgff08d88"><span class="section-number-4">4.2.2</span> 社会保障支出</h4>
+<div class="outline-text-4" id="text-4-2-2">
+<p>
+考察社会保障支出的考虑方面
+</p>
+
+<ul class="org-ul">
+<li>国家预算中的社会保障支出</li>
+
+<li>社会保险基金支出</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd6d0e19" class="outline-2">
+<h2 id="orgd6d0e19"><span class="section-number-2">5</span> 税收原理</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org1dd3c36" class="outline-3">
+<h3 id="org1dd3c36"><span class="section-number-3">5.1</span> 财政收入的划分标准</h3>
+<div class="outline-text-3" id="text-5-1">
+</div>
+<div id="outline-container-org3d1414a" class="outline-4">
+<h4 id="org3d1414a"><span class="section-number-4">5.1.1</span> 按收入形式分类</h4>
+<div class="outline-text-4" id="text-5-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="org086c267"></a>经常性收入<br />
+<div class="outline-text-5" id="text-5-1-1-1">
+<p>
+税收是主体，收费是辅助
+</p>
+
+<ul class="org-ul">
+<li>税收
+
+<ul class="org-ul">
+<li>商品课税（主要是增值税VAT）</li>
+
+<li>所得税</li>
+
+<li>企业所得税</li>
+
+<li>个人所得税</li>
+
+<li>资源课税</li>
+
+<li>财产课税</li>
+</ul></li>
+
+<li>各项收费
+
+<ul class="org-ul">
+<li>专项收入</li>
+
+<li>排污费收入</li>
+
+<li>破产资源补偿</li>
+
+<li>行政事业性收费</li>
+
+<li>国有资本经营收入</li>
+
+<li>国有资源有偿使用收入</li>
+
+<li>其他收入</li>
+</ul></li>
+</ul>
+</div>
+</li>
+
+<li><a id="org99db2cc"></a>非经常性收入<br />
+<ol class="org-ol">
+<li><a id="org354190a"></a>债务收入<br /></li>
+
+<li><a id="org9579b50"></a>其他收入<br /></li>
+</ol>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org8e9abdc" class="outline-4">
+<h4 id="org8e9abdc"><span class="section-number-4">5.1.2</span> 按照财政资金管理方式分类</h4>
+<div class="outline-text-4" id="text-5-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="org2fe1230"></a>财政收入<br /></li>
+
+<li><a id="orge2b59ec"></a>政府收入<br /></li>
+
+<li><a id="org7af8f98"></a>预算外收入<br />
+<ol class="org-ol">
+<li><a id="orgf61a4a2"></a>预算外资金<br />
+<div class="outline-text-6" id="text-5-1-2-3-1">
+<p>
+指国家机关、事业单位和社会团体为履行或者代行政府职能，依据法律、法规和
+具有法律效力的规章而收取、提取和安排使用而未统计在财政收入之内的各种财
+政性资金。预算外收入也属于政府收费，不过是预算外收费。或者说预算外资金
+是指按照国家制度规定不纳入国家预算的、允许地方财政部门和有预算拨款的行
+政事业单位自收自支的资金。它是属于不纳入国家预算的一种财政性资金。钱没
+有去到国库，预算时无法统计，容易产生"小金库"，所以国家在严查。例子，质
+检协会对外提供服务的收入。
+</p>
+</div>
+</li>
+
+<li><a id="org8485e19"></a>种类<br />
+<ol class="org-ol">
+<li><a id="orgd2ed848"></a>行政事业性收费<br /></li>
+
+<li><a id="orgef3c76e"></a>政府性基金收入<br /></li>
+
+<li><a id="orga53975f"></a>国有企业和主管部门收入<br /></li>
+
+<li><a id="org9c83009"></a>其他收入<br /></li>
+</ol>
+</li>
+</ol>
+</li>
+
+<li><a id="org75cb369"></a>社会保障收入<br /></li>
+
+<li><a id="org9409ead"></a>制度外收入<br /></li>
+</ol>
+</div>
+
+<div id="outline-container-orgdfcdc34" class="outline-4">
+<h4 id="orgdfcdc34"><span class="section-number-4">5.1.3</span> 按照财政收入来源分类</h4>
+<div class="outline-text-4" id="text-5-1-3">
+</div>
+<ol class="org-ol">
+<li><a id="org9d738d2"></a>国有经济收入<br /></li>
+
+<li><a id="orge5ee1fe"></a>集体经济收入<br /></li>
+
+<li><a id="orge703964"></a>中外合营经济收入<br /></li>
+
+<li><a id="orge87816c"></a>私营经济或外商独资经济收入<br /></li>
+
+<li><a id="orgc572767"></a>个体收入<br /></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org3d59d5d" class="outline-3">
+<h3 id="org3d59d5d"><span class="section-number-3">5.2</span> 税收的基本问题</h3>
+<div class="outline-text-3" id="text-5-2">
+</div>
+<div id="outline-container-orgc7323e2" class="outline-4">
+<h4 id="orgc7323e2"><span class="section-number-4">5.2.1</span> 基本特征</h4>
+<div class="outline-text-4" id="text-5-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgddabe11"></a>强制性<br /></li>
+
+<li><a id="org1631885"></a>无偿性<br /></li>
+
+<li><a id="org4a13c89"></a>固定性<br /></li>
+</ol>
+</div>
+
+<div id="outline-container-orgf947d66" class="outline-4">
+<h4 id="orgf947d66"><span class="section-number-4">5.2.2</span> 术语</h4>
+<div class="outline-text-4" id="text-5-2-2">
+</div>
+<ol class="org-ol">
+<li><a id="orga4cc62d"></a>纳税人<br /></li>
+
+<li><a id="org7c67221"></a>课税对象<br />
+<div class="outline-text-5" id="text-5-2-2-2">
+<p>
+税法规定的征税的目的物
+</p>
+</div>
+</li>
+
+<li><a id="org4cca25f"></a>课税标准<br />
+<div class="outline-text-5" id="text-5-2-2-3">
+<p>
+征税的实际依据：所得税、流转税和财产净值等
+</p>
+</div>
+</li>
+
+<li><a id="orgb8e5a39"></a>税率<br />
+<div class="outline-text-5" id="text-5-2-2-4">
+<p>
+指国家征税的比率
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="org268014c"></a>法律上的形式<br />
+<ol class="org-ol">
+<li><a id="orgc7362f4"></a>比例税率<br /></li>
+
+<li><a id="org51dda13"></a>定额税率<br /></li>
+
+<li><a id="org36b0214"></a>累进税率<br /></li>
+</ol>
+</li>
+
+<li><a id="org31de766"></a>经济上的形式<br />
+<ol class="org-ol">
+<li><a id="org2717a00"></a>名义税率<br /></li>
+
+<li><a id="orgd494715"></a>实际税率<br /></li>
+
+<li><a id="org94ac9bf"></a>边际税率<br /></li>
+
+<li><a id="org364e5a1"></a>平均税率<br /></li>
+</ol>
+</li>
+</ol>
+</li>
+
+<li><a id="org0c802dc"></a>起征点与免征额<br /></li>
+
+<li><a id="orgc8fea2c"></a>课税基础<br /></li>
+</ol>
+</div>
+
+<div id="outline-container-orgb37beec" class="outline-4">
+<h4 id="orgb37beec"><span class="section-number-4">5.2.3</span> 分类</h4>
+<div class="outline-text-4" id="text-5-2-3">
+</div>
+<ol class="org-ol">
+<li><a id="orgab31bab"></a>按照课税对象性质<br />
+<ol class="org-ol">
+<li><a id="org93dcb61"></a>所得税<br /></li>
+
+<li><a id="orgf517529"></a>商品税<br /></li>
+
+<li><a id="org7381c89"></a>财产税<br /></li>
+</ol>
+</li>
+
+<li><a id="orge93c96d"></a>按照是否能转嫁<br />
+<ol class="org-ol">
+<li><a id="org84de80c"></a>直接税<br />
+<div class="outline-text-6" id="text-5-2-3-2-1">
+<p>
+不能转嫁，比如所得税
+</p>
+</div>
+</li>
+
+<li><a id="org36010fb"></a>间接税<br /></li>
+</ol>
+</li>
+
+<li><a id="orgdae675b"></a>按照课税标准<br />
+<ol class="org-ol">
+<li><a id="orga30ebbf"></a>从量税<br /></li>
+
+<li><a id="org5baa2dd"></a>从价税<br /></li>
+</ol>
+</li>
+
+<li><a id="orgecde87a"></a>按照税收与价格关系<br />
+<ol class="org-ol">
+<li><a id="orgbf7ba66"></a>价内税<br /></li>
+
+<li><a id="orge9cbd8d"></a>价外税<br /></li>
+</ol>
+</li>
+
+<li><a id="orgd9d2e15"></a>按照税种的隶属关系<br />
+<div class="outline-text-5" id="text-5-2-3-5">
+<p>
+税改之后已不区分
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="orga9ac3c8"></a>中央税<br /></li>
+
+<li><a id="org9196bea"></a>地方税<br /></li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgacead34" class="outline-3">
+<h3 id="orgacead34"><span class="section-number-3">5.3</span> 税收原则</h3>
+<div class="outline-text-3" id="text-5-3">
+</div>
+<div id="outline-container-org000bc06" class="outline-4">
+<h4 id="org000bc06"><span class="section-number-4">5.3.1</span> 概念</h4>
+<div class="outline-text-4" id="text-5-3-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgf822b5d"></a>设计税制和实施税法过程中所遵循的理论原则<br /></li>
+
+<li><a id="orgb83ad38"></a>是评价税收制度优劣、考核税务行政管理状况的基本准则<br /></li>
+</ol>
+</div>
+
+<div id="outline-container-org8f54c28" class="outline-4">
+<h4 id="org8f54c28"><span class="section-number-4">5.3.2</span> 理论发展</h4>
+<div class="outline-text-4" id="text-5-3-2">
+</div>
+<ol class="org-ol">
+<li><a id="org5b93d94"></a>1. 斯密四大原则 ECCM<br />
+<ol class="org-ol">
+<li><a id="orgeb1fa02"></a>平等 Equal<br />
+<div class="outline-text-6" id="text-5-3-2-1-1">
+<p>
+国民应该按照收入比例向国家交税
+</p>
+</div>
+</li>
+
+<li><a id="orgf10cd4c"></a>确实 Certain<br />
+<div class="outline-text-6" id="text-5-3-2-1-2">
+<p>
+税目与条件、时间、地点等必须明确
+</p>
+</div>
+</li>
+
+<li><a id="org06b7177"></a>便利 Convenient<br />
+<div class="outline-text-6" id="text-5-3-2-1-3">
+<p>
+使得纳税人感觉方便，例如地点
+</p>
+</div>
+</li>
+
+<li><a id="org698c612"></a>最小征收原则 Minimum<br />
+<div class="outline-text-6" id="text-5-3-2-1-4">
+<p>
+国家拿到的与国民实际支付之间的差额最小
+</p>
+</div>
+</li>
+</ol>
+</li>
+
+<li><a id="org67ab989"></a>2. 瓦格纳四大原则<br />
+<ol class="org-ol">
+<li><a id="orga2d2344"></a>税收的财政政策原则<br />
+<div class="outline-text-6" id="text-5-3-2-2-1">
+<p>
+保证国家经费开支需要的原则
+</p>
+</div>
+</li>
+
+<li><a id="org2a5201e"></a>国民经济原则<br />
+<div class="outline-text-6" id="text-5-3-2-2-2">
+<p>
+不能阻碍国民经济的发展
+</p>
+</div>
+</li>
+
+<li><a id="orgefe46d3"></a>社会公正原则<br />
+<div class="outline-text-6" id="text-5-3-2-2-3">
+<p>
+税收负担应该普遍和平等分给各个阶层和纳税人
+</p>
+</div>
+</li>
+
+<li><a id="orgcfc3d7c"></a>税务行政原则<br />
+<div class="outline-text-6" id="text-5-3-2-2-4">
+<p>
+便于纳税人履行纳税义务
+</p>
+</div>
+</li>
+</ol>
+</li>
+
+<li><a id="org9e4c27e"></a>3. 效率原则与公平原则<br /></li>
+</ol>
+</div>
+
+<div id="outline-container-orgb9dacfc" class="outline-4">
+<h4 id="orgb9dacfc"><span class="section-number-4">5.3.3</span> 效率原则</h4>
+<div class="outline-text-4" id="text-5-3-3">
+</div>
+<ol class="org-ol">
+<li><a id="org5985f6d"></a>税收中性<br />
+<div class="outline-text-5" id="text-5-3-3-1">
+<p>
+指政府课税不扭曲市场机制的运行，或者说不影响私人部门原有的资源配置状况。
+如果政府课税改变市场中以获得最大效用为目的的消费者行为及为了获得最大利
+润为目的的生产者行为，就会改变原来私人部门的资源配置状况。这些改变就是
+税收的非中性。现实中都是非中性
+</p>
+</div>
+</li>
+
+<li><a id="org0d9d258"></a>税收的经济效率<br />
+<div class="outline-text-5" id="text-5-3-3-2">
+<p>
+指政府通过税收制度在把数量既定的资源转移给公共部门的过程中，尽量使不同
+税种对市场经济运行产生程度不同的扭曲所造成的无谓损失或超额负担最小化。
+</p>
+</div>
+</li>
+
+<li><a id="org15d4d31"></a>马歇尔-哈伯格超额负担理论<br />
+<div class="outline-text-5" id="text-5-3-3-3">
+<p>
+2020不考
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="org975c287"></a>哈伯格三角形<br /></li>
+
+<li><a id="org65388b6"></a>减小方法<br />
+<ol class="org-ol">
+<li><a id="org04f60f1"></a>对弹性为零的商品征税<br /></li>
+
+<li><a id="orgd1851c5"></a>对说有商品征税<br /></li>
+
+<li><a id="org8873722"></a>征所得税<br /></li>
+</ol>
+</li>
+</ol>
+</li>
+
+<li><a id="org1348a38"></a>税收的制度效率<br />
+<ol class="org-ol">
+<li><a id="org1478b99"></a>质量指标<br />
+<div class="outline-text-6" id="text-5-3-3-4-1">
+<p>
+集中性指标高，侵蚀性指标、时滞性指标低，处罚程度适中，则是一种高效的税
+制
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="orgd404b61"></a>集中性指标<br /></li>
+
+<li><a id="org505ee0d"></a>侵蚀性指标<br /></li>
+
+<li><a id="org94cd685"></a>时滞性指标<br /></li>
+
+<li><a id="org830dc93"></a>执行性指标<br /></li>
+</ol>
+</li>
+
+<li><a id="org7165894"></a>成本性指标<br />
+<ol class="org-ol">
+<li><a id="orgdcb7608"></a>税务成本最小化<br /></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-orgcd57dea" class="outline-4">
+<h4 id="orgcd57dea"><span class="section-number-4">5.3.4</span> 公平性原则</h4>
+<div class="outline-text-4" id="text-5-3-4">
+</div>
+<ol class="org-ol">
+<li><a id="org7c7d6b8"></a>1. 横向公平和纵向公平<br />
+<ol class="org-ol">
+<li><a id="orgfe3faa5"></a>横向公平<br />
+<div class="outline-text-6" id="text-5-3-4-1-1">
+<p>
+同样的对待同样的人。征税前，两人福利水平相同，征税后，福利水平也应该相同。
+</p>
+</div>
+</li>
+
+<li><a id="orge3f4a8c"></a>纵向公平<br />
+<div class="outline-text-6" id="text-5-3-4-1-2">
+<p>
+不但要根据富裕程度判断税收的多少，还要确定谁税高、课税方法和基础如何体
+现、高多少三大问题。累进税
+</p>
+</div>
+</li>
+</ol>
+</li>
+
+<li><a id="org99c68d5"></a>2. 受益原则<br />
+<ol class="org-ol">
+<li><a id="org567ca0f"></a>纳税人应根据从公共服务中获得的利益纳税<br /></li>
+</ol>
+</li>
+
+<li><a id="org7706ffb"></a>3. 能力原则<br />
+<div class="outline-text-5" id="text-5-3-4-3">
+<p>
+纳税人应该根据他们的支付能力纳税
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="orgf55cd8a"></a>所得标准<br /></li>
+
+<li><a id="org41e1292"></a>支出标准<br /></li>
+
+<li><a id="orgc2e21fe"></a>财富标准<br /></li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgd64d1fe" class="outline-3">
+<h3 id="orgd64d1fe"><span class="section-number-3">5.4</span> 税负的转嫁与归宿</h3>
+<div class="outline-text-3" id="text-5-4">
+</div>
+<div id="outline-container-org14d314a" class="outline-4">
+<h4 id="org14d314a"><span class="section-number-4">5.4.1</span> 含义</h4>
+<div class="outline-text-4" id="text-5-4-1">
+</div>
+<ol class="org-ol">
+<li><a id="org1496f6a"></a>税负转嫁的概念<br />
+<div class="outline-text-5" id="text-5-4-1-1">
+<p>
+通过提高售价或者压低购进价格的方法，将税负转移给购买者或者供应商的一种
+经济现象。
+</p>
+</div>
+</li>
+
+<li><a id="org886ee78"></a>税负转嫁机制的特征<br />
+<ol class="org-ol">
+<li><a id="orgdff2457"></a>1. 税负转嫁与价格升降直接联系，价格变动是税负引起<br /></li>
+
+<li><a id="org9a2e5cd"></a>2. 各主体之间的税负的再分配<br /></li>
+
+<li><a id="org0cef9f3"></a>3. 一般倾向行为，纳税人的主动行为<br /></li>
+</ol>
+</li>
+
+<li><a id="org547544d"></a>税收归宿<br />
+<ol class="org-ol">
+<li><a id="org49b5682"></a>税负的最终落脚点<br /></li>
+</ol>
+</li>
+
+<li><a id="orgd9243d4"></a>税收转嫁与逃税的区别<br />
+<ol class="org-ol">
+<li><a id="org92da08d"></a>合法与非法<br /></li>
+</ol>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org8814739" class="outline-4">
+<h4 id="org8814739"><span class="section-number-4">5.4.2</span> 形式</h4>
+<div class="outline-text-4" id="text-5-4-2">
+</div>
+<ol class="org-ol">
+<li><a id="orge299089"></a>1. 前转<br />
+<ol class="org-ol">
+<li><a id="org8e9de61"></a>抬高售价<br /></li>
+</ol>
+</li>
+
+<li><a id="org8c77519"></a>2. 后转<br />
+<ol class="org-ol">
+<li><a id="org6b4f67b"></a>压低进货价格<br /></li>
+</ol>
+</li>
+
+<li><a id="org56e1d82"></a>3. 消转<br />
+<div class="outline-text-5" id="text-5-4-2-3">
+<p>
+改善工艺，提高劳动生产率。本意上看不是税负转嫁方式
+</p>
+</div>
+</li>
+
+<li><a id="org571b110"></a>4. 税收资本化<br />
+<div class="outline-text-5" id="text-5-4-2-4">
+<p>
+指纳税人在购买不动产或有价证劵时，将以后应纳的税款在买价中预先扣除，以
+后虽然名义上是买方在按期缴纳税款，但实际上是由卖方承担。
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org183826e" class="outline-4">
+<h4 id="org183826e"><span class="section-number-4">5.4.3</span> 条件</h4>
+<div class="outline-text-4" id="text-5-4-3">
+</div>
+<ol class="org-ol">
+<li><a id="org636186e"></a>1. 供求弹性<br />
+<div class="outline-text-5" id="text-5-4-3-1">
+<p>
+供给弹性大、需求弹性小的易转移
+</p>
+</div>
+</li>
+
+<li><a id="org83ae779"></a>2. 税种的性质<br />
+<div class="outline-text-5" id="text-5-4-3-2">
+<ul class="org-ul">
+<li>商品税易转移</li>
+
+<li>所得税不能转移</li>
+</ul>
+</div>
+</li>
+
+<li><a id="orgfb01e3b"></a>3. 课税的范围<br />
+<ol class="org-ol">
+<li><a id="orgf59a906"></a>越宽越容易转移<br /></li>
+</ol>
+</li>
+
+<li><a id="orgf675ac5"></a>4. 经营者的目标<br /></li>
+</ol>
+</div>
+
+<div id="outline-container-org881ecdd" class="outline-4">
+<h4 id="org881ecdd"><span class="section-number-4">5.4.4</span> 影响</h4>
+<div class="outline-text-4" id="text-5-4-4">
+</div>
+<ol class="org-ol">
+<li><a id="orgf2410c5"></a>1. 税收负担的再分配<br /></li>
+
+<li><a id="org1ddc30c"></a>2. 影响税收政策的效果<br /></li>
+
+<li><a id="org0fdd3bc"></a>3. 强化纳税人的逃税动机<br /></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orga6fd0fe" class="outline-3">
+<h3 id="orga6fd0fe"><span class="section-number-3">5.5</span> 税收的负担</h3>
+<div class="outline-text-3" id="text-5-5">
+</div>
+<div id="outline-container-org242a658" class="outline-4">
+<h4 id="org242a658"><span class="section-number-4">5.5.1</span> 含义</h4>
+<div class="outline-text-4" id="text-5-5-1">
+</div>
+<ol class="org-ol">
+<li><a id="orga23cd5f"></a>税收负担<br />
+<div class="outline-text-5" id="text-5-5-1-1">
+<p>
+税收收入与可供征税的税基之间的比例关系，可分为宏观税负和微观税负。
+</p>
+</div>
+</li>
+
+<li><a id="org61cf071"></a>税收比率的一般趋势<br />
+<ol class="org-ol">
+<li><a id="org13c7a00"></a>1.<br />
+<div class="outline-text-6" id="text-5-5-1-2-1">
+<p>
+经济发展水平有关，发达国家税收比率高于发展中国家，但是升幅是递减的
+</p>
+</div>
+</li>
+
+<li><a id="orgba2c2e7"></a>2. 纵向看呈上升趋势，而且以中等收入国家上升幅度较大<br /></li>
+
+<li><a id="org2cbffd1"></a>3. 与国情有关<br /></li>
+</ol>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org350acbc" class="outline-4">
+<h4 id="org350acbc"><span class="section-number-4">5.5.2</span> 拉弗曲线</h4>
+</div>
+</div>
+
+<div id="outline-container-orgc2e7ef6" class="outline-3">
+<h3 id="orgc2e7ef6"><span class="section-number-3">5.6</span> 最适课税理论</h3>
+<div class="outline-text-3" id="text-5-6">
+</div>
+<div id="outline-container-orgc6c7903" class="outline-4">
+<h4 id="orgc6c7903"><span class="section-number-4">5.6.1</span> 含义</h4>
+<div class="outline-text-4" id="text-5-6-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgfb69d3b"></a>核心问题<br />
+<ol class="org-ol">
+<li><a id="org92661ba"></a>以资源配置的效率性和收支分配的公平性为准则，对构建经济合理的税制体系进行分析的理论。<br /></li>
+</ol>
+</li>
+
+<li><a id="org89d5162"></a>三大基石<br />
+<ol class="org-ol">
+<li><a id="org18f0fb6"></a>个人偏好、技术和市场结构要明确的表现出来<br /></li>
+
+<li><a id="org8a566a7"></a>有效的税收工具体系<br /></li>
+
+<li><a id="org679497a"></a>效用的社会福利函数作为标准函数<br /></li>
+</ol>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-orgd06800c" class="outline-4">
+<h4 id="orgd06800c"><span class="section-number-4">5.6.2</span> 主要内容</h4>
+<div class="outline-text-4" id="text-5-6-2">
+<p>
+一模式+两内容+三方法
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="org16f2cba"></a>直接税与间接税应当是相互补充的而非相互替代，因为这良达税系各自都有优缺点<br /></li>
+
+<li><a id="orgc7cc9ab"></a>税制模式的选择取决与政府的政策目标<br />
+<ol class="org-ol">
+<li><a id="orgf008ff2"></a>效率：商品税<br /></li>
+
+<li><a id="org7937d68"></a>公平：所得税<br /></li>
+</ol>
+</li>
+
+<li><a id="org435544c"></a>逆弹性命题<br />
+<ol class="org-ol">
+<li><a id="orgf4e4d53"></a>税率与弹性呈反比<br /></li>
+</ol>
+</li>
+
+<li><a id="org07fc98d"></a>最适商品课税要求开征扭曲性税收<br /></li>
+
+<li><a id="org8a4629c"></a>所得税的边际税率不能过高<br /></li>
+
+<li><a id="orgd24194d"></a>最适所得税应当呈倒"U"型。中等收入税率可以高些，低收入者和高收入者税率要低一些<br /></li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org978ec83" class="outline-2">
+<h2 id="org978ec83"><span class="section-number-2">6</span> 税收制度</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-orgcb2e49a" class="outline-3">
+<h3 id="orgcb2e49a"><span class="section-number-3">6.1</span> 税制类型与结构</h3>
+<div class="outline-text-3" id="text-6-1">
+</div>
+<div id="outline-container-org7c51dff" class="outline-4">
+<h4 id="org7c51dff"><span class="section-number-4">6.1.1</span> 税制类型</h4>
+<div class="outline-text-4" id="text-6-1-1">
+<p>
+指一个国家征收一种税还是多种税的税制。
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="orgca04fec"></a>单一税制<br />
+<div class="outline-text-5" id="text-6-1-1-1">
+<p>
+只征收一种税
+</p>
+</div>
+</li>
+
+<li><a id="org742a524"></a>复合税制<br />
+<div class="outline-text-5" id="text-6-1-1-2">
+<p>
+同时征收两种以上税种的税制
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-orgfac6e7c" class="outline-4">
+<h4 id="orgfac6e7c"><span class="section-number-4">6.1.2</span> 税制结构</h4>
+<div class="outline-text-4" id="text-6-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="org37f801e"></a>概念<br />
+<ol class="org-ol">
+<li><a id="orgb8a294b"></a>一国各税种的总体安排<br /></li>
+</ol>
+</li>
+
+<li><a id="org83b1a53"></a>演变<br />
+<ol class="org-ol">
+<li><a id="org69b3976"></a>简单直接税<br /></li>
+
+<li><a id="org42b61bd"></a>间接税为主<br /></li>
+
+<li><a id="org6918312"></a>发的直接税为主<br /></li>
+</ol>
+</li>
+
+<li><a id="orge80f83a"></a>发达国家<br />
+<ol class="org-ol">
+<li><a id="org4330c02"></a>所得税比重稍有下降<br /></li>
+
+<li><a id="orgbc9d0fb"></a>商品税和服务税比重提高<br /></li>
+</ol>
+</li>
+
+<li><a id="orgf16fd98"></a>我国<br />
+<ol class="org-ol">
+<li><a id="org6d7107c"></a>间接税为主<br /></li>
+
+<li><a id="orgfabc560"></a>所得税收入比重缓慢上升<br /></li>
+</ol>
+</li>
+
+<li><a id="orgd891144"></a>决定因素<br />
+<ol class="org-ol">
+<li><a id="orgb0d8358"></a>经济发展水平<br />
+<ol class="org-ol">
+<li><a id="orge8de7d1"></a>越高，所得税和社会保障税比率越高<br /></li>
+</ol>
+</li>
+
+<li><a id="orgbbc119f"></a>征收管理能力<br />
+<ol class="org-ol">
+<li><a id="org676f653"></a>越强，所得税越高<br /></li>
+</ol>
+</li>
+
+<li><a id="orge626537"></a>财政支出结构<br />
+<ol class="org-ol">
+<li><a id="orgd67c42b"></a>专税专用<br /></li>
+</ol>
+</li>
+
+<li><a id="orgf9e195c"></a>税收政策目标<br />
+<ol class="org-ol">
+<li><a id="org3a45bbb"></a>效率：商品税<br /></li>
+
+<li><a id="orgc2d4c6b"></a>公平：所得税<br /></li>
+</ol>
+</li>
+
+<li><a id="org47e0fad"></a>相邻国家的示范效应<br /></li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgabe7e75" class="outline-3">
+<h3 id="orgabe7e75"><span class="section-number-3">6.2</span> 税制体系</h3>
+<div class="outline-text-3" id="text-6-2">
+</div>
+<div id="outline-container-org189d02f" class="outline-4">
+<h4 id="org189d02f"><span class="section-number-4">6.2.1</span> 商品课税</h4>
+<div class="outline-text-4" id="text-6-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="orga2a8393"></a>一般特征<br />
+<ol class="org-ol">
+<li><a id="orgc9461f4"></a>课收普遍<br /></li>
+
+<li><a id="orgc2c2979"></a>以商品和非商品的流转为计税依据<br /></li>
+
+<li><a id="org91d347f"></a>实行比例税率<br /></li>
+
+<li><a id="org51981c9"></a>计征简便<br /></li>
+</ol>
+</li>
+
+<li><a id="org8520c55"></a>增值税<br />
+<div class="outline-text-5" id="text-6-2-1-2">
+<p>
+增值税是商品税，商品税不一定是增值税
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="orga3c0a92"></a>优点<br />
+<ol class="org-ol">
+<li><a id="org9fd02ae"></a>避免重复<br /></li>
+
+<li><a id="org0f20d9e"></a>道道课税，减少或者杜绝偷税行为<br /></li>
+
+<li><a id="org61b27b7"></a>增值税的课征与商品的流转环节适应，但是税收额的大小又不受流转环节多少的影响<br /></li>
+
+<li><a id="org075e62d"></a>企业兼并和分立都不影响增值税<br /></li>
+
+<li><a id="org15da4e9"></a>可以实行零税率（退税）<br /></li>
+</ol>
+</li>
+
+<li><a id="org40719be"></a>类型<br />
+<ol class="org-ol">
+<li><a id="org1955004"></a>生产型<br /></li>
+
+<li><a id="org46e9f8e"></a>收入型<br /></li>
+
+<li><a id="org8e0a68c"></a>消费型<br /></li>
+</ol>
+</li>
+
+<li><a id="org94c2227"></a>计征方法<br />
+<ol class="org-ol">
+<li><a id="orgf33b2af"></a>新创造的价值<br /></li>
+
+<li><a id="orgfe57542"></a>销售收入减去法定扣除额<br /></li>
+
+<li><a id="org239276e"></a>销售收入扣去已纳税金<br /></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-orge0ac708" class="outline-4">
+<h4 id="orge0ac708"><span class="section-number-4">6.2.2</span> 所得课税</h4>
+<div class="outline-text-4" id="text-6-2-2">
+<p>
+以所有所得额为课税对象的税种的总称
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="org523cf10"></a>一般特征<br />
+<ol class="org-ol">
+<li><a id="orgc3d53be"></a>税负相对公平<br /></li>
+
+<li><a id="org1e54f75"></a>一般不存在重复性征税问题<br /></li>
+
+<li><a id="org1d62e22"></a>有利于维护国家的经济权益<br /></li>
+
+<li><a id="orgf52a00d"></a>课税有弹性<br /></li>
+</ol>
+</li>
+
+<li><a id="org79fca6f"></a>按征收办法分类<br />
+<ol class="org-ol">
+<li><a id="orgf3e8490"></a>分类所得税<br />
+<div class="outline-text-6" id="text-6-2-2-2-1">
+<p>
+对纳税人的各种应纳税所得，分为若干类别，不同类别（或来源）的所得适用不同的税率，分别课征所得税。
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="orge9091bb"></a>税率<br />
+<ol class="org-ol">
+<li><a id="orgaa342ad"></a>比例税率<br /></li>
+</ol>
+</li>
+
+<li><a id="org2807475"></a>征收方法<br />
+<ol class="org-ol">
+<li><a id="orgb94dcb4"></a>课源法征收<br /></li>
+</ol>
+</li>
+
+<li><a id="org1dd86bf"></a>优点<br />
+<ol class="org-ol">
+<li><a id="org3e0f836"></a>征收简单<br /></li>
+
+<li><a id="orgb2b0b54"></a>税源易控<br /></li>
+
+<li><a id="org8c6ab5b"></a>可有效防止逃税行为<br /></li>
+</ol>
+</li>
+
+<li><a id="orgc4bb820"></a>缺点<br />
+<ol class="org-ol">
+<li><a id="orgd90c459"></a>不能按纳税能力原则课征<br /></li>
+</ol>
+</li>
+</ol>
+</li>
+
+<li><a id="org6563bf6"></a>综合所得税<br />
+<div class="outline-text-6" id="text-6-2-2-2-2">
+<p>
+对纳税人的各种应税所得综合征收。
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="orge15e29a"></a>税率<br />
+<ol class="org-ol">
+<li><a id="org7d4d25c"></a>累进税率<br /></li>
+</ol>
+</li>
+
+<li><a id="orgd2459a1"></a>征收方法<br />
+<ol class="org-ol">
+<li><a id="orgf15af83"></a>申报法征收<br /></li>
+</ol>
+</li>
+
+<li><a id="orgec420b9"></a>优点<br />
+<ol class="org-ol">
+<li><a id="org596284b"></a>能够量能课税<br /></li>
+
+<li><a id="orge64df6a"></a>公平税负<br /></li>
+</ol>
+</li>
+
+<li><a id="orgbde96fd"></a>缺点<br />
+<ol class="org-ol">
+<li><a id="orgfd13f39"></a>需要纳税人纳税意识强、服从程度高<br /></li>
+
+<li><a id="orgdc77a17"></a>需要征收机关征管手段先进、工作效率高<br /></li>
+</ol>
+</li>
+</ol>
+</li>
+
+<li><a id="org57c5a7f"></a>分类综合所得税<br />
+<div class="outline-text-6" id="text-6-2-2-2-3">
+<p>
+把分类所得税与综合所得税综合起来，采用并行征收制。先按照分类所得税课税，然后再对个人全年总所得超过规定数额以上的部分进行综合加总，另按累进税率计税。既能量能课税，又征收简单。
+</p>
+</div>
+</li>
+</ol>
+</li>
+
+<li><a id="orgb1850bb"></a>按课税对象分类<br />
+<ol class="org-ol">
+<li><a id="org1caadc0"></a>企业所得税<br />
+<ol class="org-ol">
+<li><a id="orgbc73b1a"></a>销售货物收入<br /></li>
+
+<li><a id="orgb8bf27c"></a>提供劳务收入<br /></li>
+
+<li><a id="org309b8ed"></a>转让财产收入<br /></li>
+
+<li><a id="org79fdd1a"></a>股息红利等权利性投资收益<br /></li>
+
+<li><a id="org14fdc8a"></a>利息收入<br /></li>
+
+<li><a id="org6c61d17"></a>租金收入<br /></li>
+
+<li><a id="orgc975121"></a>特许权使用费收入<br /></li>
+
+<li><a id="org0502d6e"></a>接受捐赠收入<br /></li>
+
+<li><a id="org512440a"></a>其他收入<br /></li>
+</ol>
+</li>
+
+<li><a id="org052aa5a"></a>个人所得税<br />
+<ol class="org-ol">
+<li><a id="orgff8b86a"></a>工资与薪金所得<br /></li>
+
+<li><a id="orgc75d223"></a>个体工商户的生产经营所得<br /></li>
+
+<li><a id="orgb275026"></a>对企事业单位的承包经营与承租经营所得<br /></li>
+
+<li><a id="org0fb0de4"></a>劳务报酬所得<br /></li>
+
+<li><a id="org8042f17"></a>稿酬所得<br /></li>
+
+<li><a id="orgb99239e"></a>特许权使用费所得<br /></li>
+
+<li><a id="orge0e63fa"></a>利息股息红利所得<br /></li>
+
+<li><a id="orged59e95"></a>财产租赁所得<br /></li>
+
+<li><a id="org44bf6fa"></a>财产转让所得<br /></li>
+
+<li><a id="org6161639"></a>偶然所得<br /></li>
+
+<li><a id="orgf80a8e5"></a>经国务院财政部门确定征税的其他所得<br /></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org5ae7ce6" class="outline-4">
+<h4 id="org5ae7ce6"><span class="section-number-4">6.2.3</span> 资源课税和财产课税</h4>
+<div class="outline-text-4" id="text-6-2-3">
+</div>
+<ol class="org-ol">
+<li><a id="orgdfbd584"></a>共同特征<br />
+<ol class="org-ol">
+<li><a id="orgdeed1f7"></a>课税比较公平<br /></li>
+
+<li><a id="org9ff93cd"></a>具有促进社会节约的效能<br /></li>
+
+<li><a id="orgdb2fc83"></a>课税不普遍<br /></li>
+</ol>
+</li>
+
+<li><a id="orgd1106b6"></a>资源税征收范围<br />
+<div class="outline-text-5" id="text-6-2-3-2">
+<p>
+实际上只限于少数煤炭、石油开采企业。
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="org14223aa"></a>原油<br /></li>
+
+<li><a id="org237fa73"></a>煤炭<br /></li>
+
+<li><a id="org76b91aa"></a>金属矿产品和非金属矿产品<br /></li>
+</ol>
+</li>
+
+<li><a id="orgb1f4e9b"></a>财产税的类型<br />
+<ol class="org-ol">
+<li><a id="org5c11f2d"></a>房产税<br /></li>
+
+<li><a id="org642e952"></a>城市房地产税<br /></li>
+
+<li><a id="org22354db"></a>土地使用税<br /></li>
+
+<li><a id="orgd818b47"></a>耕地占用税<br /></li>
+
+<li><a id="orgdf41876"></a>车船税和契税<br /></li>
+
+<li><a id="orgb755f64"></a>土地增值税<br /></li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org6bc828d" class="outline-3">
+<h3 id="org6bc828d"><span class="section-number-3">6.3</span> 税制改革</h3>
+<div class="outline-text-3" id="text-6-3">
+<p>
+太老了过时了，了解一下就行
+</p>
+</div>
+
+<div id="outline-container-org4a5d82e" class="outline-4">
+<h4 id="org4a5d82e"><span class="section-number-4">6.3.1</span> 基本问题</h4>
+<div class="outline-text-4" id="text-6-3-1">
+</div>
+<ol class="org-ol">
+<li><a id="org63bcde1"></a>概念<br />
+<div class="outline-text-5" id="text-6-3-1-1">
+<p>
+通过税制设计和税制结构的边际改革来增进社会福利的过程
+</p>
+</div>
+</li>
+
+<li><a id="org7c31d0c"></a>主要原因<br />
+<div class="outline-text-5" id="text-6-3-1-2">
+<p>
+以前的不好呗
+</p>
+</div>
+</li>
+
+<li><a id="org31e1233"></a>成功的评价标准<br />
+<ol class="org-ol">
+<li><a id="org3e98f4a"></a>政府目标<br /></li>
+
+<li><a id="orgbc7b384"></a>可持续性<br /></li>
+
+<li><a id="org84dc950"></a>副产品<br /></li>
+</ol>
+</li>
+
+<li><a id="orgaaef273"></a>成功的条件<br /></li>
+</ol>
+</div>
+
+<div id="outline-container-org85ce515" class="outline-4">
+<h4 id="org85ce515"><span class="section-number-4">6.3.2</span> 94年税改</h4>
+<div class="outline-text-4" id="text-6-3-2">
+</div>
+<ol class="org-ol">
+<li><a id="orgd4fd74e"></a>主要原因<br /></li>
+
+<li><a id="orgd5d3678"></a>总体指导思想<br /></li>
+
+<li><a id="orgd228b8c"></a>遵循的基本原则<br /></li>
+
+<li><a id="orgac437ea"></a>主要内容<br />
+<ol class="org-ol">
+<li><a id="org4a9e29a"></a>增值税为核心<br /></li>
+
+<li><a id="org9d7d62f"></a>统一企业所得税<br /></li>
+
+<li><a id="org192e37b"></a>统一个人所得税<br /></li>
+
+<li><a id="orgfa26df3"></a>调整开征其他一些税，如资源税<br /></li>
+</ol>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org75062da" class="outline-4">
+<h4 id="org75062da"><span class="section-number-4">6.3.3</span> 深化税制改革的基本思路</h4>
+<div class="outline-text-4" id="text-6-3-3">
+</div>
+<ol class="org-ol">
+<li><a id="org327e7ed"></a>宽税基<br /></li>
+
+<li><a id="org98c566f"></a>低税率<br /></li>
+
+<li><a id="org7b8a7b8"></a>差别待遇<br /></li>
+
+<li><a id="org3cc119a"></a>严格管理<br /></li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org784e7a3" class="outline-2">
+<h2 id="org784e7a3"><span class="section-number-2">7</span> 国债理论与管理</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-org957429c" class="outline-3">
+<h3 id="org957429c"><span class="section-number-3">7.1</span> 国债的功能与负担</h3>
+<div class="outline-text-3" id="text-7-1">
+</div>
+<div id="outline-container-org6e62efc" class="outline-4">
+<h4 id="org6e62efc"><span class="section-number-4">7.1.1</span> 功能</h4>
+<div class="outline-text-4" id="text-7-1-1">
+<p>
+李嘉图等价定理：政府支出是通过发行国债融资还是通过税收融资没有任何区别。
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="orged4ea5f"></a>弥补财政赤字<br /></li>
+
+<li><a id="org088fad7"></a>筹集建设资金<br /></li>
+
+<li><a id="orgb5530ef"></a>调节经济<br />
+<div class="outline-text-5" id="text-7-1-1-3">
+<p>
+财政政策
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org6d6cd28" class="outline-4">
+<h4 id="org6d6cd28"><span class="section-number-4">7.1.2</span> 负担与限度</h4>
+<div class="outline-text-4" id="text-7-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="orgb5b7665"></a>国债的负担<br />
+<div class="outline-text-5" id="text-7-1-2-1">
+<p>
+国债最终由谁来承担
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="org26b6637"></a>债权人负担：考虑实际负担能力（购买者）<br /></li>
+
+<li><a id="org8a1e047"></a>债务人负担：偿还能力<br /></li>
+
+<li><a id="org66d976d"></a>纳税人负担<br /></li>
+
+<li><a id="org11f242f"></a>代际负担<br /></li>
+</ol>
+</li>
+
+<li><a id="org53b5ee3"></a>国债的限度<br />
+<ol class="org-ol">
+<li><a id="org6bdc20a"></a>指国家债务规模的最高额度或国债的适度规模<br /></li>
+
+<li><a id="org8af5a61"></a>债务规模的三层含义<br />
+<ol class="org-ol">
+<li><a id="org9a83cc7"></a>历年累积债务的总规模<br /></li>
+
+<li><a id="org2153a0d"></a>当年发行国债总额<br /></li>
+
+<li><a id="org8040f3e"></a>当年到期需要还本付息的债务总额<br /></li>
+</ol>
+</li>
+
+<li><a id="org46cd7d4"></a>衡量指标<br />
+<ol class="org-ol">
+<li><a id="org274c383"></a>国债负担率<br />
+<ol class="org-ol">
+<li><a id="orgc0e2296"></a>国债余额占GDP的比率<br /></li>
+</ol>
+</li>
+
+<li><a id="orgc856a95"></a>国债依存度<br />
+<ol class="org-ol">
+<li><a id="org1bffcf3"></a>当年国债发行额占当年财政支出的比率<br /></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+
+<li><a id="org9167b3e"></a>国债规模的制约因素<br />
+<ol class="org-ol">
+<li><a id="org25be847"></a>认购人负担<br /></li>
+
+<li><a id="orgfc077af"></a>政府偿还能力<br /></li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgaa2b73f" class="outline-3">
+<h3 id="orgaa2b73f"><span class="section-number-3">7.2</span> 国债制度与管理</h3>
+<div class="outline-text-3" id="text-7-2">
+</div>
+<div id="outline-container-org3346f52" class="outline-4">
+<h4 id="org3346f52"><span class="section-number-4">7.2.1</span> 国债的种类与结构</h4>
+<div class="outline-text-4" id="text-7-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="org35fd0e0"></a>种类<br />
+<ol class="org-ol">
+<li><a id="org013cea1"></a>国家借款和发行债卷<br /></li>
+
+<li><a id="orge4691de"></a>内债和外债<br /></li>
+
+<li><a id="org5d326f5"></a>可转让国债和不可转让国债<br /></li>
+</ol>
+</li>
+
+<li><a id="org56f248b"></a>结构<br />
+<div class="outline-text-5" id="text-7-2-1-2">
+<p>
+各种性质的债务相互搭配以及债务收入来源和发行期限的有机组合。常见合理的国债结构主要有短期国债、中期国债和长期国债。
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-orgc0e9142" class="outline-4">
+<h4 id="orgc0e9142"><span class="section-number-4">7.2.2</span> 国债的发行与偿还</h4>
+<div class="outline-text-4" id="text-7-2-2">
+</div>
+<ol class="org-ol">
+<li><a id="org0aac98d"></a>平价发行<br /></li>
+
+<li><a id="org08e0833"></a>折价发行<br /></li>
+
+<li><a id="org1de0c54"></a>溢价发行<br /></li>
+</ol>
+</div>
+
+<div id="outline-container-orgae67ecd" class="outline-4">
+<h4 id="orgae67ecd"><span class="section-number-4">7.2.3</span> 国债发行价格与国债利率</h4>
+</div>
+
+<div id="outline-container-org17ef476" class="outline-4">
+<h4 id="org17ef476"><span class="section-number-4">7.2.4</span> 国债市场</h4>
+<div class="outline-text-4" id="text-7-2-4">
+</div>
+<ol class="org-ol">
+<li><a id="org353f1d4"></a>发行市场（一级市场）<br /></li>
+
+<li><a id="orgef6b47f"></a>流动市场（二级市场）<br /></li>
+
+<li><a id="org815042e"></a>作用<br />
+<ol class="org-ol">
+<li><a id="org94834fd"></a>实现国债的发行和偿还<br /></li>
+
+<li><a id="org88e1434"></a>调节社会资金的运行<br /></li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgee8ad84" class="outline-2">
+<h2 id="orgee8ad84"><span class="section-number-2">8</span> 国家预算与预算管理体制</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+19年考过，大题概率不大，重点掌握选择和名词解释
+</p>
+</div>
+
+<div id="outline-container-org3c56550" class="outline-3">
+<h3 id="org3c56550"><span class="section-number-3">8.1</span> 国家预算的组成与原则</h3>
+<div class="outline-text-3" id="text-8-1">
+</div>
+<div id="outline-container-org64bc4f1" class="outline-4">
+<h4 id="org64bc4f1"><span class="section-number-4">8.1.1</span> 国家预算的组成</h4>
+<div class="outline-text-4" id="text-8-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="org0e9e1d7"></a>概念<br />
+<div class="outline-text-5" id="text-8-1-1-1">
+<p>
+是政府的基本财政收支计划，是政府集中和分配资金、调节社会经济生活的主要财政机制，是国家的重要立法文件。它的功能首先是反映政府的财政收支状况。
+</p>
+</div>
+</li>
+
+<li><a id="org7742d82"></a>类别<br />
+<ol class="org-ol">
+<li><a id="org7e110e8"></a>单式预算<br /></li>
+
+<li><a id="org18559ef"></a>复式预算<br /></li>
+
+<li><a id="orga66b97a"></a>增量预算<br /></li>
+
+<li><a id="org9f60e22"></a>零基预算<br /></li>
+</ol>
+</li>
+
+<li><a id="orgd613a86"></a>组成<br />
+<ol class="org-ol">
+<li><a id="org3eac6ed"></a>中央预算<br /></li>
+
+<li><a id="org3b3c421"></a>地方预算（一级预算）<br /></li>
+</ol>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-orge201390" class="outline-4">
+<h4 id="orge201390"><span class="section-number-4">8.1.2</span> 国家预算的原则</h4>
+<div class="outline-text-4" id="text-8-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="orgdbec5bb"></a>公开性<br />
+<ol class="org-ol">
+<li><a id="orgce07f0a"></a>便于监督<br /></li>
+</ol>
+</li>
+
+<li><a id="orge786110"></a>可靠性<br />
+<ol class="org-ol">
+<li><a id="orgd2712cf"></a>科学的计算方法<br /></li>
+</ol>
+</li>
+
+<li><a id="orgb2e2f8f"></a>完整性<br />
+<ol class="org-ol">
+<li><a id="org75b0798"></a>反映一切财政支出<br /></li>
+</ol>
+</li>
+
+<li><a id="orgad72d32"></a>统一性<br />
+<ol class="org-ol">
+<li><a id="org4fb13cc"></a>各地方和中央要统一<br /></li>
+</ol>
+</li>
+
+<li><a id="org209a83e"></a>年度性<br />
+<ol class="org-ol">
+<li><a id="org7965bd3"></a>明确的时间界限<br /></li>
+</ol>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-orgc9f983d" class="outline-4">
+<h4 id="orgc9f983d"><span class="section-number-4">8.1.3</span> 预算制度的完善</h4>
+<div class="outline-text-4" id="text-8-1-3">
+</div>
+<ol class="org-ol">
+<li><a id="orgb26d6ac"></a>部门预算<br />
+<ol class="org-ol">
+<li><a id="org26cba5a"></a>按照部门编制预算<br />
+<ol class="org-ol">
+<li><a id="orgabc4cd6"></a>改变长期以来按支出功能和收入类别编制预算的做法<br /></li>
+</ol>
+</li>
+
+<li><a id="org204cc88"></a>反映部门的所有收入和支出<br />
+<ol class="org-ol">
+<li><a id="orgb02c80a"></a>一般预算收支与基金预算收支<br /></li>
+
+<li><a id="orgeb81027"></a>一般预算中的预算内收支与预算外收支<br /></li>
+
+<li><a id="org5d717ae"></a>预算内收支中的财政部门直接拨款与经济发展委员会、机关事务管理局和科技部门等具有预算分配权的部门安排的资金<br /></li>
+</ol>
+</li>
+
+<li><a id="orgf3dc20e"></a>全面反映部门收支活动<br /></li>
+</ol>
+</li>
+
+<li><a id="orge465b99"></a>国库集中收付制度<br />
+<div class="outline-text-5" id="text-8-1-3-2">
+<p>
+指对预算资金分配、资金使用、银行清算及资金到达商品和劳务供应者的全过程集中进行全面的监控制度
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="org2e903c7"></a>财政部门在国库或者国库指定的代理银行开设统一账户，各单位在统一账户下设立分类账户，实行集中管理<br /></li>
+
+<li><a id="org92bbc96"></a>各单位可以自行决定所有购买的商品和劳务，但是财政部门直接向供货商支付货款<br /></li>
+
+<li><a id="org3fafb83"></a>除了某些特殊的用途，购买商品和劳务的资金都要通过国库直接拨付给商品和劳务提供商<br /></li>
+</ol>
+</li>
+
+<li><a id="org1b62f2f"></a>"收支两条线"管理<br />
+<div class="outline-text-5" id="text-8-1-3-3">
+<p>
+指国家机关、事业单位、社会团体及其他组织，按照国家有关规定依法取得的政府非税收入全额纳入国库或者财政专户，支出通过财政部门编制预算进行统筹安排，资金通过国库或财政专户收缴和拨付的管理制度。
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org53155bf" class="outline-3">
+<h3 id="org53155bf"><span class="section-number-3">8.2</span> 国家预算法</h3>
+<div class="outline-text-3" id="text-8-2">
+<p>
+1995年1月1日执行
+</p>
+</div>
+
+<div id="outline-container-org7d4efb5" class="outline-4">
+<h4 id="org7d4efb5"><span class="section-number-4">8.2.1</span> 概念</h4>
+<div class="outline-text-4" id="text-8-2-1">
+<p>
+是国家预算管理的法律规范，是组织和管理国家预算的法律依据。主要任务是规定国家立法机关和国家执行机关、中央和地方、总预算和单位预算之间的权责关系和分配关系。
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5153f21" class="outline-4">
+<h4 id="org5153f21"><span class="section-number-4">8.2.2</span> 指导思想</h4>
+<div class="outline-text-4" id="text-8-2-2">
+</div>
+<ol class="org-ol">
+<li><a id="orgaa039f1"></a>强化预算的法律约束<br /></li>
+
+<li><a id="org3056065"></a>规范预算管理程序<br /></li>
+
+<li><a id="orgf8db23a"></a>将预算管理和促进改革和发展结合起来<br /></li>
+
+<li><a id="orge19e4fc"></a>把法律的科学性和可行性结合起来<br /></li>
+</ol>
+</div>
+
+<div id="outline-container-org99de6df" class="outline-4">
+<h4 id="org99de6df"><span class="section-number-4">8.2.3</span> 预算编制、执行和决算程序</h4>
+</div>
+</div>
+
+<div id="outline-container-org084d29f" class="outline-3">
+<h3 id="org084d29f"><span class="section-number-3">8.3</span> 预算外资金</h3>
+<div class="outline-text-3" id="text-8-3">
+</div>
+<div id="outline-container-org5113ae7" class="outline-4">
+<h4 id="org5113ae7"><span class="section-number-4">8.3.1</span> 性质与范围</h4>
+</div>
+
+<div id="outline-container-orga0d439b" class="outline-4">
+<h4 id="orga0d439b"><span class="section-number-4">8.3.2</span> 管理</h4>
+</div>
+</div>
+
+<div id="outline-container-orgf0bef4f" class="outline-3">
+<h3 id="orgf0bef4f"><span class="section-number-3">8.4</span> 预算管理体制</h3>
+<div class="outline-text-3" id="text-8-4">
+</div>
+<div id="outline-container-org98e6e78" class="outline-4">
+<h4 id="org98e6e78"><span class="section-number-4">8.4.1</span> 概念</h4>
+<div class="outline-text-4" id="text-8-4-1">
+</div>
+<ol class="org-ol">
+<li><a id="org8d9d512"></a>是中央财政和地方财政以及地方财政各级之间的财政关系的基本制度<br /></li>
+
+<li><a id="org6c995b9"></a>核心是各级预算主体的独立自主程度以及集权和分权的关系问题<br /></li>
+</ol>
+</div>
+
+<div id="outline-container-orgeb87b08" class="outline-4">
+<h4 id="orgeb87b08"><span class="section-number-4">8.4.2</span> 类型</h4>
+<div class="outline-text-4" id="text-8-4-2">
+</div>
+<ol class="org-ol">
+<li><a id="orgeff9020"></a>改革开发-1994<br />
+<ol class="org-ol">
+<li><a id="orgf829905"></a>换分收支、分级包干<br /></li>
+</ol>
+</li>
+
+<li><a id="org8cfb8ec"></a>1994年以后<br />
+<ol class="org-ol">
+<li><a id="org8a720ae"></a>分级分税预算管理体制<br /></li>
+</ol>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org27c3946" class="outline-4">
+<h4 id="org27c3946"><span class="section-number-4">8.4.3</span> 分级分税预算管理体制</h4>
+<div class="outline-text-4" id="text-8-4-3">
+</div>
+<ol class="org-ol">
+<li><a id="orgbf2e183"></a>主要特征<br />
+<ol class="org-ol">
+<li><a id="org816904d"></a>规范化<br /></li>
+
+<li><a id="org8828196"></a>法制化<br /></li>
+
+<li><a id="org58e8578"></a>长期相对稳定<br /></li>
+</ol>
+</li>
+
+<li><a id="org958bdd0"></a>基本内容<br />
+<ol class="org-ol">
+<li><a id="orgc473a84"></a>一级政权，一级预算主体，各级预算相对独立，自求平衡<br /></li>
+
+<li><a id="org44a2ddc"></a>明确政府职能边界，在划分事权基础上划分财权<br /></li>
+
+<li><a id="orgaa832db"></a>收入划分实行分税制<br /></li>
+
+<li><a id="org199c61b"></a>实行转移支付制度<br /></li>
+
+<li><a id="orgb074839"></a>各国分级预算体制与其政治制度和历史传统相适应<br /></li>
+</ol>
+</li>
+
+<li><a id="org090f953"></a>划分依据<br />
+<ol class="org-ol">
+<li><a id="org9926bdb"></a>社会公共需要的层次性<br />
+<ol class="org-ol">
+<li><a id="orga92a552"></a>从支出角度分析<br /></li>
+
+<li><a id="org2f32f5f"></a>为满足公共需要收入来源的层次性<br /></li>
+</ol>
+</li>
+
+<li><a id="org26264e2"></a>集权与分权的关系<br /></li>
+</ol>
+</li>
+
+<li><a id="org7f54a8c"></a>分税制改革主要内容<br />
+<div class="outline-text-5" id="text-8-4-3-4">
+<p>
+理清如何分税的结构
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="org785af82"></a>中央与地方的事权和支出划分，例如武警、国防费等<br /></li>
+
+<li><a id="orgb29760f"></a>中央与地方的收入划分，国税、地税、共享税<br /></li>
+
+<li><a id="org5a283ef"></a>中央财政对地方税收返还数额的确定<br /></li>
+
+<li><a id="orgc1d5d6a"></a>原体制中央补助、地方上解及有关结算事项的处理<br /></li>
+
+<li><a id="orgd2579e7"></a>过度期转移支付制度<br /></li>
+</ol>
+</li>
+
+<li><a id="org767a4f7"></a>进一步完善分税制思路<br />
+<ol class="org-ol">
+<li><a id="orge9f8c79"></a>进一步明确各级政府的事权范围和各级预算主体的支出职责<br /></li>
+
+<li><a id="org5343291"></a>规范收入划分<br /></li>
+
+<li><a id="org67c9922"></a>调整集权与分权关系<br /></li>
+
+<li><a id="orgbc595ca"></a>完善转移支付制度是完善分税制度的重点<br /></li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org27a11c5" class="outline-2">
+<h2 id="org27a11c5"><span class="section-number-2">9</span> 财政平衡与财政赤字</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+2020年可能出简答题
+</p>
+</div>
+
+<div id="outline-container-org15a8084" class="outline-3">
+<h3 id="org15a8084"><span class="section-number-3">9.1</span> 财政平衡</h3>
+<div class="outline-text-3" id="text-9-1">
+</div>
+<div id="outline-container-orgb449c1f" class="outline-4">
+<h4 id="orgb449c1f"><span class="section-number-4">9.1.1</span> 概念</h4>
+<div class="outline-text-4" id="text-9-1-1">
+<p>
+是指国家预算收支在量上的对比关系
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaf20492" class="outline-4">
+<h4 id="orgaf20492"><span class="section-number-4">9.1.2</span> 如何理解财政平衡</h4>
+<div class="outline-text-4" id="text-9-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="org6ac5a08"></a>略有结余和略有赤字可以被看作收支平衡<br /></li>
+
+<li><a id="orgd8a98dc"></a>动态平衡，不能局限与静态平衡<br /></li>
+
+<li><a id="org3c0cebc"></a>全局平衡<br /></li>
+
+<li><a id="org4181b28"></a>中央和地方分别考察<br /></li>
+</ol>
+</div>
+
+<div id="outline-container-org1fe91e2" class="outline-4">
+<h4 id="org1fe91e2"><span class="section-number-4">9.1.3</span> 财政平衡与总量平衡的关系</h4>
+<div class="outline-text-4" id="text-9-1-3">
+</div>
+<ol class="org-ol">
+<li><a id="org5524eed"></a>社会总供求平衡的组成部分<br /></li>
+
+<li><a id="org2ec5110"></a>是实现社会总供求平衡的一种手段<br /></li>
+
+<li><a id="orgf8ca32c"></a>可以直接调节社会总需求<br /></li>
+</ol>
+</div>
+
+<div id="outline-container-orga6ad84e" class="outline-4">
+<h4 id="orga6ad84e"><span class="section-number-4">9.1.4</span> 不平衡的原因</h4>
+<div class="outline-text-4" id="text-9-1-4">
+</div>
+<ol class="org-ol">
+<li><a id="orge0364b7"></a>具有必然性<br /></li>
+
+<li><a id="orgb46b988"></a>外部冲击<br /></li>
+
+<li><a id="orgade1e6f"></a>无弹性税制<br /></li>
+
+<li><a id="orgfb8bdc7"></a>国有企业经营状况<br /></li>
+
+<li><a id="org67982d8"></a>意外事件<br /></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org8bca51f" class="outline-3">
+<h3 id="org8bca51f"><span class="section-number-3">9.2</span> 财政赤字</h3>
+<div class="outline-text-3" id="text-9-2">
+</div>
+<div id="outline-container-org8c590e2" class="outline-4">
+<h4 id="org8c590e2"><span class="section-number-4">9.2.1</span> 概念</h4>
+<div class="outline-text-4" id="text-9-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="org61c6a07"></a>赤字<br />
+<div class="outline-text-5" id="text-9-2-1-1">
+<p>
+支出大于收入的差额
+</p>
+</div>
+</li>
+
+<li><a id="org980e444"></a>财政赤字<br />
+<div class="outline-text-5" id="text-9-2-1-2">
+<p>
+指在某一财政年度，计划的财政收支是平衡的，而在预算执行过程中，由于主客观不可预测的因素的影响，致使决算出现支出大于收入差额。强调的是预算执行结果，说明的是一种事实。
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="orge9b92f9"></a>预算是平衡的<br /></li>
+
+<li><a id="orga8d51b9"></a>结果是不平衡的<br /></li>
+</ol>
+</li>
+
+<li><a id="orgdf8bea0"></a>预算赤字<br />
+<div class="outline-text-5" id="text-9-2-1-3">
+<p>
+指在某一财政年度，政府计划安排的总支出超过正常性收入并且存在与决算中的差额。
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="orgb2984a9"></a>预算是赤字<br /></li>
+
+<li><a id="org346a53a"></a>决算也是赤字<br /></li>
+
+<li><a id="org2809660"></a>故意安排赤字可是是两个原因<br />
+<ol class="org-ol">
+<li><a id="orgd902eda"></a>扩张性的财政政策<br /></li>
+
+<li><a id="orgf655049"></a>刚性的支出<br /></li>
+</ol>
+</li>
+</ol>
+</li>
+
+<li><a id="orgd19d634"></a>赤字政策<br />
+<div class="outline-text-5" id="text-9-2-1-4">
+<p>
+政府有意识、有计划的利用预算赤字，以熨平经济波动，是一种扩张性财政政策。
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="org4045b9d"></a>扩张性的财政政策<br /></li>
+</ol>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org079c63c" class="outline-4">
+<h4 id="org079c63c"><span class="section-number-4">9.2.2</span> 衡量财政赤字规模</h4>
+<div class="outline-text-4" id="text-9-2-2">
+</div>
+<ol class="org-ol">
+<li><a id="orgd4166ba"></a>衡量指标<br />
+<ol class="org-ol">
+<li><a id="orgabb5335"></a>赤字依存度<br />
+<ol class="org-ol">
+<li><a id="orga9f58f2"></a>赤字/财政支出<br />
+<div class="outline-text-7" id="text-9-2-2-1-1-1">
+<p>
+说明一国在当年的总支出中有多大比率依赖赤字支出实现
+</p>
+</div>
+</li>
+</ol>
+</li>
+
+<li><a id="org49fb6fb"></a>赤字比率<br />
+<ol class="org-ol">
+<li><a id="org70fba3c"></a>赤字/GDP<br />
+<div class="outline-text-7" id="text-9-2-2-1-2-1">
+<p>
+说明一国在当年以赤字支出方式动员了多大比例的社会资源
+</p>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+
+<li><a id="org65dcffc"></a>社会经济制约因素<br />
+<ol class="org-ol">
+<li><a id="org4407357"></a>经济增长率的提高程度<br /></li>
+
+<li><a id="org00e579d"></a>货币化部门的增加程度<br /></li>
+
+<li><a id="org97150da"></a>国民经济各部门能力未利用的程度<br /></li>
+
+<li><a id="org4cd6b15"></a>赤字支出的投资项目性质<br /></li>
+
+<li><a id="orgc713edd"></a>国际贸易逆差程度<br /></li>
+
+<li><a id="org3afe486"></a>政府自身的管理能力<br /></li>
+
+<li><a id="org59c5a31"></a>公众的牺牲精神<br /></li>
+</ol>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org183696f" class="outline-4">
+<h4 id="org183696f"><span class="section-number-4">9.2.3</span> 对经济的影响</h4>
+<div class="outline-text-4" id="text-9-2-3">
+</div>
+<ol class="org-ol">
+<li><a id="org1e4db43"></a>货币供给效应<br /></li>
+
+<li><a id="orga43a17b"></a>总需求效应<br /></li>
+
+<li><a id="org876836c"></a>排挤效应<br />
+<div class="outline-text-5" id="text-9-2-3-3">
+<p>
+宏观经济学中的挤出效应
+</p>
+</div>
+</li>
+
+<li><a id="org3487de5"></a>发行国债<br /></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: 2020-10-08 Thu 00:00</p>
+<p class="author">Author: Qing Yi</p>
+<p class="date">Created: 2020-12-02 Wed 17:53</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

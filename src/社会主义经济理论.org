@@ -1,7 +1,7 @@
 #+TITLE: 社会主义经济理论
 #+STARTUP: indent
 #+DATE: <2020-09-21 Mon>
-#+SETUPFILE: https://fniessen.github.io/org-html-themes/setup/theme-readtheorg.setup
+#+SETUPFILE: readtheorg-theme.setup
 
 * 考试分数分布
 

@@ -1,7 +1,7 @@
 #+TITLE: 货币银行学笔记
 #+DATE: Wed Sep 16 2020 14:17:28 GMT+0800 (China Standard Time)
 #+STARTUP: indent
-#+SETUPFILE: https://fniessen.github.io/org-html-themes/setup/theme-bigblow.setup
+#+SETUPFILE: readtheorg-theme.setup
 
 * 考题分数分布
 
